@@ -1,0 +1,1263 @@
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/knigipodarki/config/environment.rb:5)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `roles_users`
+Mysql2::Error: Table 'knigipodarki.roles_users' doesn't exist: describe `roles_users`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `product_groups_products`[0m
+Mysql2::Error: Table 'knigipodarki.product_groups_products' doesn't exist: describe `product_groups_products`
+  [1m[35mSQL (0.0ms)[0m  describe `products_taxons`
+Mysql2::Error: Table 'knigipodarki.products_taxons' doesn't exist: describe `products_taxons`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `option_values_variants`[0m
+Mysql2::Error: Table 'knigipodarki.option_values_variants' doesn't exist: describe `option_values_variants`
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `product_groups_products`
+Mysql2::Error: Table 'knigipodarki.product_groups_products' doesn't exist: describe `product_groups_products`
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `products_promotion_rules`
+Mysql2::Error: Table 'knigipodarki.products_promotion_rules' doesn't exist: describe `products_promotion_rules`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `products_promotion_rules`[0m
+Mysql2::Error: Table 'knigipodarki.products_promotion_rules' doesn't exist: describe `products_promotion_rules`
+  [1m[35mSQL (0.0ms)[0m  describe `promotion_rules_users`
+Mysql2::Error: Table 'knigipodarki.promotion_rules_users' doesn't exist: describe `promotion_rules_users`
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/knigipodarki/config/environment.rb:5)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  describe `roles_users`
+Mysql2::Error: Table 'knigipodarki.roles_users' doesn't exist: describe `roles_users`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `product_groups_products`[0m
+Mysql2::Error: Table 'knigipodarki.product_groups_products' doesn't exist: describe `product_groups_products`
+  [1m[35mSQL (4.0ms)[0m  describe `products_taxons`
+Mysql2::Error: Table 'knigipodarki.products_taxons' doesn't exist: describe `products_taxons`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `option_values_variants`[0m
+Mysql2::Error: Table 'knigipodarki.option_values_variants' doesn't exist: describe `option_values_variants`
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `product_groups_products`
+Mysql2::Error: Table 'knigipodarki.product_groups_products' doesn't exist: describe `product_groups_products`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  describe `products_promotion_rules`
+Mysql2::Error: Table 'knigipodarki.products_promotion_rules' doesn't exist: describe `products_promotion_rules`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `products_promotion_rules`[0m
+Mysql2::Error: Table 'knigipodarki.products_promotion_rules' doesn't exist: describe `products_promotion_rules`
+  [1m[35mSQL (4.0ms)[0m  describe `promotion_rules_users`
+Mysql2::Error: Table 'knigipodarki.promotion_rules_users' doesn't exist: describe `promotion_rules_users`
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (12.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/knigipodarki/config/environment.rb:5)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `roles_users`
+Mysql2::Error: Table 'knigipodarki.roles_users' doesn't exist: describe `roles_users`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `product_groups_products`[0m
+Mysql2::Error: Table 'knigipodarki.product_groups_products' doesn't exist: describe `product_groups_products`
+  [1m[35mSQL (4.0ms)[0m  describe `products_taxons`
+Mysql2::Error: Table 'knigipodarki.products_taxons' doesn't exist: describe `products_taxons`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `option_values_variants`[0m
+Mysql2::Error: Table 'knigipodarki.option_values_variants' doesn't exist: describe `option_values_variants`
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `product_groups_products`
+Mysql2::Error: Table 'knigipodarki.product_groups_products' doesn't exist: describe `product_groups_products`
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `products_promotion_rules`
+Mysql2::Error: Table 'knigipodarki.products_promotion_rules' doesn't exist: describe `products_promotion_rules`
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (144.1ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (248.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (8.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreatePages (20081216193152)
+  [1m[35mSQL (188.1ms)[0m  CREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `slug` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20081216193152')
+Migrating to MakeUnicodeFriendly (20090311090247)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35mSQL (0.0ms)[0m  ALTER DATABASE `knigipodarki` CHARACTER SET utf8 COLLATE utf8_general_ci
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE pages CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci
+  [1m[36mSQL (236.1ms)[0m  [1mALTER TABLE schema_migrations CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20090311090247')[0m
+Migrating to ExtendPages (20090625125735)
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE `pages` ADD `show_in_header` tinyint(1) DEFAULT 0 NOT NULL
+  [1m[36mSQL (200.1ms)[0m  [1mALTER TABLE `pages` ADD `show_in_footer` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE `pages` ADD `foreign_link` varchar(255)
+  [1m[36mSQL (268.2ms)[0m  [1mALTER TABLE `pages` ADD `position` int(11) DEFAULT 1 NOT NULL[0m
+  [1m[35mPage Load (0.0ms)[0m  SELECT `pages`.* FROM `pages` ORDER BY position ASC, updated_at ASC
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20090625125735')
+Migrating to AddVisibleToPages (20090814113100)
+  [1m[36mSQL (196.1ms)[0m  [1mALTER TABLE `pages` ADD `visible` tinyint(1)[0m
+  [1m[35mAREL (4.0ms)[0m  UPDATE `pages` SET `visible` = 1
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20090814113100')
+Migrating to AddDefaultTrueToVisibleForPage (20090814142845)
+  [1m[36mSQL (92.1ms)[0m  [1mALTER TABLE `pages` CHANGE `visible` `visible` tinyint(1) DEFAULT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (52.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20090814142845')[0m
+Migrating to SpreeZeroNineZero (20090823005402)
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (160.1ms)[0m  [1mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstname` varchar(255), `lastname` varchar(255), `address1` varchar(255), `address2` varchar(255), `city` varchar(255), `state_id` int(11), `zipcode` varchar(255), `country_id` int(11), `phone` varchar(255), `created_at` datetime, `updated_at` datetime, `state_name` varchar(255), `alternative_phone` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (324.2ms)[0m  [1mCREATE TABLE `adjustments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `type` varchar(255), `amount` decimal(8,2) DEFAULT 0.0 NOT NULL, `description` varchar(255), `position` int(11), `created_at` datetime, `updated_at` datetime, `adjustment_source_id` int(11), `adjustment_source_type` varchar(255), `secondary_type` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (176.1ms)[0m  [1mCREATE TABLE `assets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `viewable_id` int(11), `viewable_type` varchar(50), `attachment_content_type` varchar(255), `attachment_file_name` varchar(255), `attachment_size` int(11), `position` int(11), `type` varchar(75), `attachment_updated_at` datetime, `attachment_width` int(11), `attachment_height` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (136.1ms)[0m  [1mCREATE TABLE `calculators` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `calculable_id` int(11) NOT NULL, `calculable_type` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (224.1ms)[0m  [1mCREATE TABLE `checkouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `email` varchar(255), `ip_address` varchar(255), `special_instructions` text, `bill_address_id` int(11), `completed_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `configurations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `type` varchar(50)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `configurations`
+  [1m[36mSQL (280.2ms)[0m  [1mCREATE INDEX `index_configurations_on_name_and_type` ON `configurations` (`name`, `type`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_name` varchar(255), `iso` varchar(255), `name` varchar(255), `iso3` varchar(255), `numcode` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (124.1ms)[0m  [1mCREATE TABLE `coupons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `description` varchar(255), `usage_limit` int(11), `combine` tinyint(1), `expires_at` datetime, `created_at` datetime, `updated_at` datetime, `starts_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (100.1ms)[0m  [1mCREATE TABLE `creditcard_txns` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `creditcard_payment_id` int(11), `amount` decimal(8,2) DEFAULT 0.0 NOT NULL, `txn_type` int(11), `response_code` varchar(255), `avs_response` text, `cvv_response` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (332.2ms)[0m  [1mCREATE TABLE `creditcards` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `number` text, `month` varchar(255), `year` varchar(255), `verification_value` text, `cc_type` varchar(255), `display_number` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `created_at` datetime, `updated_at` datetime, `start_month` varchar(255), `start_year` varchar(255), `issue_number` varchar(255), `address_id` int(11), `checkout_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (148.1ms)[0m  [1mCREATE TABLE `gateway_configurations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gateway_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (124.1ms)[0m  [1mCREATE TABLE `gateway_option_values` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gateway_configuration_id` int(11), `gateway_option_id` int(11), `value` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (112.1ms)[0m  [1mCREATE TABLE `gateway_options` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `gateway_id` int(11), `textarea` tinyint(1) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (144.1ms)[0m  [1mCREATE TABLE `gateways` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `clazz` varchar(255), `name` varchar(255), `description` text, `active` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `inventory_units` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `variant_id` int(11), `order_id` int(11), `state` varchar(255), `lock_version` int(11) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `line_items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `variant_id` int(11), `quantity` int(11) NOT NULL, `price` decimal(8,2) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `line_items`
+  [1m[36mSQL (368.2ms)[0m  [1mCREATE INDEX `index_line_items_on_order_id` ON `line_items` (`order_id`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `line_items`
+  [1m[36mSQL (308.2ms)[0m  [1mCREATE INDEX `index_line_items_on_variant_id` ON `line_items` (`variant_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (216.1ms)[0m  [1mCREATE TABLE `option_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100), `presentation` varchar(100), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (196.1ms)[0m  [1mCREATE TABLE `option_types_prototypes` (`prototype_id` int(11), `option_type_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (260.1ms)[0m  [1mCREATE TABLE `option_values` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `option_type_id` int(11), `name` varchar(255), `position` int(11), `presentation` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.1ms)[0m  [1mCREATE TABLE `option_values_variants` (`variant_id` int(11), `option_value_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `option_values_variants`
+  [1m[36mSQL (288.2ms)[0m  [1mCREATE INDEX `index_option_values_variants_on_variant_id` ON `option_values_variants` (`variant_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (140.1ms)[0m  [1mCREATE TABLE `orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `number` varchar(15), `item_total` decimal(8,2) DEFAULT 0.0 NOT NULL, `total` decimal(8,2) DEFAULT 0.0 NOT NULL, `created_at` datetime, `updated_at` datetime, `state` varchar(255), `token` varchar(255), `adjustment_total` decimal(8,2) DEFAULT 0.0 NOT NULL, `credit_total` decimal(8,2) DEFAULT 0.0 NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `orders`
+  [1m[36mSQL (312.2ms)[0m  [1mCREATE INDEX `index_orders_on_number` ON `orders` (`number`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `payments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `created_at` datetime, `updated_at` datetime, `amount` decimal(8,2) DEFAULT 0.0 NOT NULL, `creditcard_id` int(11), `type` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (124.1ms)[0m  [1mCREATE TABLE `preferences` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `attribute` varchar(100) NOT NULL, `owner_id` integer NOT NULL, `owner_type` varchar(50) NOT NULL, `group_id` int(11), `group_type` varchar(50), `value` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `preferences`
+  [1m[36mSQL (428.2ms)[0m  [1mCREATE UNIQUE INDEX `index_preferences_on_owner_and_attribute_and_preference` ON `preferences` (`owner_id`, `owner_type`, `attribute`, `group_id`, `group_type`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (568.3ms)[0m  [1mCREATE TABLE `product_option_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_id` int(11), `option_type_id` int(11), `position` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (164.1ms)[0m  [1mCREATE TABLE `product_properties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_id` int(11), `property_id` int(11), `value` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (148.1ms)[0m  [1mCREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT '' NOT NULL, `description` text, `created_at` datetime, `updated_at` datetime, `permalink` varchar(255), `available_on` datetime, `tax_category_id` int(11), `shipping_category_id` int(11), `deleted_at` datetime, `meta_description` varchar(255), `meta_keywords` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `products`
+  [1m[36mSQL (212.1ms)[0m  [1mCREATE INDEX `index_products_on_available_on` ON `products` (`available_on`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `products`
+  [1m[36mSQL (240.1ms)[0m  [1mCREATE INDEX `index_products_on_deleted_at` ON `products` (`deleted_at`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `products`
+  [1m[36mSQL (232.1ms)[0m  [1mCREATE INDEX `index_products_on_name` ON `products` (`name`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `products`
+  [1m[36mSQL (1320.7ms)[0m  [1mCREATE INDEX `index_products_on_permalink` ON `products` (`permalink`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (348.2ms)[0m  [1mCREATE TABLE `products_taxons` (`product_id` int(11), `taxon_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `products_taxons`
+  [1m[36mSQL (508.3ms)[0m  [1mCREATE INDEX `index_products_taxons_on_product_id` ON `products_taxons` (`product_id`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `products_taxons`
+  [1m[36mSQL (584.3ms)[0m  [1mCREATE INDEX `index_products_taxons_on_taxon_id` ON `products_taxons` (`taxon_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (140.1ms)[0m  [1mCREATE TABLE `properties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `presentation` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `properties_prototypes` (`prototype_id` int(11), `property_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (116.1ms)[0m  [1mCREATE TABLE `prototypes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `roles_users` (`role_id` int(11), `user_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `roles_users`
+  [1m[36mSQL (440.2ms)[0m  [1mCREATE INDEX `index_roles_users_on_role_id` ON `roles_users` (`role_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `roles_users`
+  [1m[36mSQL (236.1ms)[0m  [1mCREATE INDEX `index_roles_users_on_user_id` ON `roles_users` (`user_id`)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (200.1ms)[0m  [1mCREATE TABLE `shipments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `shipping_method_id` int(11), `tracking` varchar(255), `created_at` datetime, `updated_at` datetime, `number` varchar(255), `cost` decimal(8,2), `shipped_at` datetime, `address_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `shipping_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.1ms)[0m  [1mCREATE TABLE `shipping_methods` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `zone_id` int(11), `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.1ms)[0m  [1mCREATE TABLE `state_events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `user_id` int(11), `name` varchar(255), `created_at` datetime, `updated_at` datetime, `previous_state` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (152.1ms)[0m  [1mCREATE TABLE `states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abbr` varchar(255), `country_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (200.1ms)[0m  [1mCREATE TABLE `tax_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (100.1ms)[0m  [1mCREATE TABLE `tax_rates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `zone_id` int(11), `amount` decimal(8,4), `created_at` datetime, `updated_at` datetime, `tax_category_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.1ms)[0m  [1mCREATE TABLE `taxonomies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (148.1ms)[0m  [1mCREATE TABLE `taxons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `taxonomy_id` int(11) NOT NULL, `parent_id` int(11), `position` int(11) DEFAULT 0, `name` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime, `permalink` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(128) DEFAULT '' NOT NULL, `salt` varchar(128) DEFAULT '' NOT NULL, `remember_token` varchar(255), `remember_token_expires_at` varchar(255), `created_at` datetime, `updated_at` datetime, `persistence_token` varchar(255), `single_access_token` varchar(255), `perishable_token` varchar(255), `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `login` varchar(255), `ship_address_id` int(11), `bill_address_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (100.1ms)[0m  [1mCREATE TABLE `variants` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_id` int(11), `sku` varchar(255) DEFAULT '' NOT NULL, `price` decimal(8,2) NOT NULL, `weight` decimal(8,2), `height` decimal(8,2), `width` decimal(8,2), `depth` decimal(8,2), `deleted_at` datetime, `is_master` tinyint(1) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `variants`
+  [1m[36mSQL (240.1ms)[0m  [1mCREATE INDEX `index_variants_on_product_id` ON `variants` (`product_id`)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (100.1ms)[0m  [1mCREATE TABLE `zone_members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `zone_id` int(11), `zoneable_id` int(11), `zoneable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (116.1ms)[0m  [1mCREATE TABLE `zones` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (176.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20090823005402')[0m
+Migrating to AddSecondnameToAddresses (20090827180351)
+  [1m[35mSQL (572.3ms)[0m  ALTER TABLE `addresses` ADD `secondname` varchar(255)
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20090827180351')
+Migrating to AddIndexForPage (20090829000527)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `pages`[0m
+  [1m[35mSQL (240.1ms)[0m  CREATE INDEX `index_pages_on_slug` ON `pages` (`slug`)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20090829000527')
+Migrating to CreateIndexesForInventoryUnits (20090904192342)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW KEYS FROM `inventory_units`[0m
+  [1m[35mSQL (276.2ms)[0m  CREATE INDEX `index_inventory_units_on_variant_id` ON `inventory_units` (`variant_id`)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `inventory_units`[0m
+  [1m[35mSQL (232.1ms)[0m  CREATE INDEX `index_inventory_units_on_order_id` ON `inventory_units` (`order_id`)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20090904192342')
+Migrating to AddCountOnHandToVariantsAndProducts (20090923100315)
+  [1m[36mSQL (216.1ms)[0m  [1mALTER TABLE `variants` ADD `count_on_hand` int(11) DEFAULT 0 NOT NULL[0m
+  [1m[35mSQL (308.2ms)[0m  ALTER TABLE `products` ADD `count_on_hand` int(11) DEFAULT 0 NOT NULL
+  [1m[36mVariant Load (0.0ms)[0m  [1mSELECT `variants`.* FROM `variants`[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT `products`.* FROM `products`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (28.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20090923100315')
+Migrating to ChangeTaxonsToNestedSet (20091007134354)
+  [1m[36mSQL (216.1ms)[0m  [1mALTER TABLE `taxons` ADD `lft` int(11)[0m
+  [1m[35mSQL (212.1ms)[0m  ALTER TABLE `taxons` ADD `rgt` int(11)
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `products_taxons`[0m
+  [1m[35mSQL (0.0ms)[0m  describe `properties_prototypes`
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mProperty Load (4.0ms)[0m  [1mSELECT `properties`.* FROM `properties` WHERE `properties`.`name` = 'brand' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mTaxon Load (0.0ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE (parent_id IS NULL) ORDER BY position ASC[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (48.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091007134354')[0m
+Migrating to MoveToConfigurableGateways (20091008091614)
+  [1m[35mSQL (40.0ms)[0m  DROP TABLE `gateways`
+  [1m[36mSQL (40.0ms)[0m  [1mDROP TABLE `gateway_options`[0m
+  [1m[35mSQL (32.0ms)[0m  DROP TABLE `gateway_option_values`
+  [1m[36mSQL (44.0ms)[0m  [1mDROP TABLE `gateway_configurations`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (100.1ms)[0m  [1mCREATE TABLE `gateways` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `name` varchar(255), `description` text, `active` tinyint(1) DEFAULT 1, `environment` varchar(255) DEFAULT 'development', `server` varchar(255) DEFAULT 'test', `test_mode` tinyint(1) DEFAULT 1, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091008091614')[0m
+Migrating to ProductGroupsAndScopes (20091012120519)
+  [1m[35mSQL (116.1ms)[0m  CREATE TABLE `product_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `order` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (108.1ms)[0m  [1mCREATE TABLE `product_scopes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_group_id` int(11), `name` varchar(255), `arguments` text) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `product_groups`
+  [1m[36mSQL (236.1ms)[0m  [1mCREATE INDEX `index_product_groups_on_name` ON `product_groups` (`name`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `product_groups`
+  [1m[36mSQL (248.1ms)[0m  [1mCREATE INDEX `index_product_groups_on_permalink` ON `product_groups` (`permalink`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `product_scopes`
+  [1m[36mSQL (232.1ms)[0m  [1mCREATE INDEX `index_product_scopes_on_name` ON `product_scopes` (`name`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `product_scopes`
+  [1m[36mSQL (252.1ms)[0m  [1mCREATE INDEX `index_product_scopes_on_product_group_id` ON `product_scopes` (`product_group_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091012120519')[0m
+Migrating to AddOpenIdAuthenticationTables (20091015110842)
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.1ms)[0m  [1mCREATE TABLE `open_id_authentication_associations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `issued` int(11), `lifetime` int(11), `handle` varchar(255), `assoc_type` varchar(255), `server_url` blob, `secret` blob) ENGINE=InnoDB[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (116.1ms)[0m  [1mCREATE TABLE `open_id_authentication_nonces` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `timestamp` int(11) NOT NULL, `server_url` varchar(255), `salt` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091015110842')[0m
+Migrating to AddOpenidFieldToUsers (20091015153048)
+  [1m[35mSQL (272.2ms)[0m  ALTER TABLE `users` ADD `openid_identifier` varchar(255)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (220.1ms)[0m  CREATE INDEX `index_users_on_openid_identifier` ON `users` (`openid_identifier`)
+  [1m[36mSQL (76.0ms)[0m  [1mALTER TABLE `users` CHANGE `login` `login` varchar(255) DEFAULT NULL[0m
+  [1m[35mSQL (644.4ms)[0m  ALTER TABLE `users` CHANGE `crypted_password` `crypted_password` varchar(255) DEFAULT NULL
+  [1m[36mSQL (632.4ms)[0m  [1mALTER TABLE `users` CHANGE `salt` `salt` varchar(255) DEFAULT NULL[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (56.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091015153048')[0m
+Migrating to ChangePreferenceValueType (20091016174634)
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `preferences`
+  [1m[36mSQL (156.1ms)[0m  [1mDROP INDEX `index_preferences_on_owner_and_attribute_and_preference` ON `preferences`[0m
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `preferences` CHANGE `value` `value` text DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20091016174634')
+Migrating to CreateBillingIntegrations (20091017175558)
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `billing_integrations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `name` varchar(255), `description` text, `active` tinyint(1) DEFAULT 1, `environment` varchar(255) DEFAULT 'development', `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091017175558')[0m
+Migrating to ChargeRefactoring (20091021133257)
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE `orders` ADD `completed_at` datetime
+  [1m[36mChargeRefactoring::Order Load (4.0ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+  [1m[35mSQL (392.2ms)[0m  ALTER TABLE `checkouts` DROP `completed_at`
+  [1m[36mSQL (252.1ms)[0m  [1mALTER TABLE `adjustments` CHANGE `amount` `amount` decimal(8,2) DEFAULT NULL[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mAREL (4.0ms)[0m  [1mUPDATE `adjustments` SET type = secondary_type[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE `adjustments` SET type = 'CouponCredit' WHERE (type = 'Credit')
+  [1m[36mSQL (244.1ms)[0m  [1mALTER TABLE `adjustments` DROP `secondary_type`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091021133257')[0m
+Migrating to AddSomeIndexes (20091104151730)
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `taxons`
+  [1m[36mSQL (224.1ms)[0m  [1mCREATE INDEX `index_taxons_on_permalink` ON `taxons` (`permalink`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `taxons`
+  [1m[36mSQL (220.1ms)[0m  [1mCREATE INDEX `index_taxons_on_parent_id` ON `taxons` (`parent_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `taxons`
+  [1m[36mSQL (228.1ms)[0m  [1mCREATE INDEX `index_taxons_on_taxonomy_id` ON `taxons` (`taxonomy_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `assets`
+  [1m[36mSQL (228.1ms)[0m  [1mCREATE INDEX `index_assets_on_viewable_id` ON `assets` (`viewable_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `assets`
+  [1m[36mSQL (276.2ms)[0m  [1mCREATE INDEX `index_assets_on_viewable_type_and_type` ON `assets` (`viewable_type`, `type`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `product_properties`
+  [1m[36mSQL (304.2ms)[0m  [1mCREATE INDEX `index_product_properties_on_product_id` ON `product_properties` (`product_id`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `option_values_variants`
+  [1m[36mSQL (228.1ms)[0m  [1mCREATE INDEX `index_option_values_variants_on_variant_id_and_option_value_id` ON `option_values_variants` (`variant_id`, `option_value_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091104151730')[0m
+Migrating to CheckoutStateMachine (20091126190904)
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE `checkouts` ADD `state` varchar(255)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20091126190904')
+Migrating to StateForShipments (20091209153045)
+  [1m[36mSQL (252.1ms)[0m  [1mALTER TABLE `shipments` ADD `state` varchar(255)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091209153045')[0m
+Migrating to MakeStateEventsPolymorphic (20091209202200)
+  [1m[35mSQL (4.0ms)[0m  SHOW COLUMNS FROM `state_events` LIKE 'order_id'
+  [1m[36mSQL (296.2ms)[0m  [1mALTER TABLE `state_events` CHANGE `order_id` `stateful_id` int(11) DEFAULT NULL[0m
+  [1m[35mSQL (224.1ms)[0m  ALTER TABLE `state_events` ADD `stateful_type` varchar(255)
+  [1m[36mAREL (64.0ms)[0m  [1mUPDATE `state_events` SET `stateful_type` = 'Order'[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091209202200')[0m
+Migrating to ShipAddressIdForCheckouts (20091211203813)
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `checkouts` ADD `ship_address_id` int(11)
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (44.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20091211203813')
+Migrating to ShippingMethodIdForCheckouts (20091212161118)
+  [1m[36mSQL (284.2ms)[0m  [1mALTER TABLE `checkouts` ADD `shipping_method_id` int(11)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (188.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091212161118')[0m
+Migrating to CreditcardLastFourDigits (20091213222815)
+  [1m[35mSQL (4.0ms)[0m  SHOW COLUMNS FROM `creditcards` LIKE 'display_number'
+  [1m[36mSQL (224.1ms)[0m  [1mALTER TABLE `creditcards` CHANGE `display_number` `last_digits` varchar(255) DEFAULT NULL[0m
+  [1m[35mCreditcardLastFourDigits::Creditcard Load (4.0ms)[0m  SELECT `creditcards`.* FROM `creditcards`
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20091213222815')
+Migrating to PopulateLegacyShipmentState (20091214183826)
+  [1m[36mPopulateLegacyShipmentState::Shipment Load (4.0ms)[0m  [1mSELECT `shipments`.* FROM `shipments`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091214183826')[0m
+Migrating to AddMetaFieldsToPages (20091219021134)
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `pages` ADD `meta_keywords` varchar(255)
+  [1m[36mSQL (212.1ms)[0m  [1mALTER TABLE `pages` ADD `meta_description` varchar(255)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20091219021134')[0m
+Migrating to AddCostPrice (20100105090147)
+  [1m[35mSQL (256.1ms)[0m  ALTER TABLE `variants` ADD `cost_price` decimal(8,2) DEFAULT NULL
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100105090147')
+Migrating to ShipmentIdForInventoryUnits (20100105132138)
+  [1m[36mSQL (332.2ms)[0m  [1mALTER TABLE `inventory_units` ADD `shipment_id` int(11)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `inventory_units`
+  [1m[36mSQL (280.2ms)[0m  [1mCREATE INDEX `index_inventory_units_on_shipment_id` ON `inventory_units` (`shipment_id`)[0m
+  [1m[35mShipment Load (4.0ms)[0m  SELECT `shipments`.* FROM `shipments`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100105132138')
+Migrating to AddApiKeyToUsers (20100107141738)
+  [1m[36mSQL (284.2ms)[0m  [1mALTER TABLE `users` ADD `api_key` varchar(40)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100107141738')[0m
+Migrating to CimFieldsForCreditcards (20100111205525)
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE `creditcards` ADD `gateway_customer_profile_id` varchar(255)
+  [1m[36mSQL (216.1ms)[0m  [1mALTER TABLE `creditcards` ADD `gateway_payment_profile_id` varchar(255)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100111205525')[0m
+Migrating to CreateReturnAuthorizations (20100112151511)
+  [1m[35mSQL (100.1ms)[0m  CREATE TABLE `return_authorizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `number` varchar(255), `amount` decimal(8,2) DEFAULT 0.0 NOT NULL, `order_id` int(11), `reason` text, `state` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100112151511')
+Migrating to AddReturnAuthorizationToInventoryUnits (20100113090919)
+  [1m[36mSQL (252.1ms)[0m  [1mALTER TABLE `inventory_units` ADD `return_authorization_id` int(11)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100113090919')[0m
+Migrating to CreateTrackers (20100113203104)
+  [1m[35mSQL (148.1ms)[0m  CREATE TABLE `trackers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `environment` varchar(255), `analytics_id` varchar(255), `active` tinyint(1) DEFAULT 1, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100113203104')
+Migrating to CreditcardIdForCreditcardTxns (20100121160010)
+  [1m[36mSQL (264.1ms)[0m  [1mALTER TABLE `creditcard_txns` ADD `creditcard_id` int(11)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (48.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100121160010')[0m
+Migrating to OriginalCreditcardTxnIdForCreditcardTxns (20100121183934)
+  [1m[35mSQL (280.2ms)[0m  ALTER TABLE `creditcard_txns` ADD `original_creditcard_txn_id` int(11)
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100121183934')
+Migrating to AddTestModeToBillingIntegration (20100125145351)
+  [1m[36mSQL (908.5ms)[0m  [1mALTER TABLE `billing_integrations` ADD `test_mode` tinyint(1) DEFAULT 1[0m
+  [1m[35mSQL (744.4ms)[0m  ALTER TABLE `billing_integrations` ADD `server` varchar(255) DEFAULT 'test'
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (80.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100125145351')
+Migrating to CreateProductsProductGroups (20100126103714)
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `product_groups_products` (`product_id` int(11), `product_group_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (12.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100126103714')[0m
+Migrating to AddLayoutToPages (20100204105222)
+  [1m[35mSQL (216.1ms)[0m  ALTER TABLE `pages` ADD `layout` varchar(255)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (52.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100204105222')
+Migrating to CreatePaymentMethods (20100209025806)
+  [1m[36mSQL (128.1ms)[0m  [1mCREATE TABLE `payment_methods` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `name` varchar(255), `description` text, `active` tinyint(1) DEFAULT 1, `environment` varchar(255) DEFAULT 'development', `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (44.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100209025806')[0m
+Migrating to PolymorphicPayments (20100209144531)
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `payments` DROP `type`
+  [1m[36mSQL (208.1ms)[0m  [1mALTER TABLE `payments` DROP `creditcard_id`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW COLUMNS FROM `payments` LIKE 'order_id'
+  [1m[36mSQL (216.1ms)[0m  [1mALTER TABLE `payments` CHANGE `order_id` `payable_id` int(11) DEFAULT NULL[0m
+  [1m[35mSQL (256.1ms)[0m  ALTER TABLE `payments` ADD `payable_type` varchar(255)
+  [1m[36mSQL (880.5ms)[0m  [1mALTER TABLE `payments` ADD `payment_method` varchar(255)[0m
+  [1m[35mSQL (324.2ms)[0m  ALTER TABLE `payments` ADD `source_id` int(11)
+  [1m[36mSQL (208.1ms)[0m  [1mALTER TABLE `payments` ADD `source_type` varchar(255)[0m
+  [1m[35mSQL (4.0ms)[0m  UPDATE payments SET payable_type = 'Order'
+  [1m[36mCreditcard Load (4.0ms)[0m  [1mSELECT `creditcards`.* FROM `creditcards`[0m
+  [1m[35mSQL (296.2ms)[0m  ALTER TABLE `creditcards` DROP `checkout_id`
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100209144531')
+Migrating to ChangePaymentsPaymentMethodToBelongsTo (20100213103131)
+  [1m[36mSQL (268.2ms)[0m  [1mALTER TABLE `payments` DROP `payment_method`[0m
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `payments` ADD `payment_method_id` int(11)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100213103131')
+Migrating to AssignCreditcardTxnsToPayment (20100214212536)
+  [1m[36mSQL (260.1ms)[0m  [1mALTER TABLE `creditcard_txns` ADD `payment_id` int(11)[0m
+  [1m[35mSQL (4.0ms)[0m  SELECT * FROM creditcard_txns
+  [1m[36mSQL (212.1ms)[0m  [1mALTER TABLE `creditcard_txns` DROP `creditcard_payment_id`[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100214212536')[0m
+Migrating to StiForTransactions (20100223170312)
+  [1m[35mSQL (104.1ms)[0m  RENAME TABLE `creditcard_txns` TO `transactions`
+  [1m[36mSQL (212.1ms)[0m  [1mALTER TABLE `transactions` ADD `type` varchar(255)[0m
+  [1m[35mSQL (252.1ms)[0m  ALTER TABLE `transactions` DROP `creditcard_id`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (28.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100223170312')
+Migrating to DropBillingIntegrations (20100223183812)
+  [1m[36mSQL (40.0ms)[0m  [1mDROP TABLE `billing_integrations`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100223183812')[0m
+Migrating to DeletedAtForPaymentMethods (20100224153127)
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `payment_methods` ADD `deleted_at` datetime DEFAULT NULL
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (56.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100224153127')
+Migrating to AddAdjustmentsIndex (20100301163454)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `adjustments`[0m
+  [1m[35mSQL (260.1ms)[0m  CREATE INDEX `index_adjustments_on_order_id` ON `adjustments` (`order_id`)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100301163454')
+Migrating to FixByPopularity (20100306153445)
+  [1m[36mAREL (0.0ms)[0m  [1mUPDATE `product_scopes` SET name='descend_by_popularity' WHERE (name='by_popularity')[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100306153445')[0m
+Migrating to AddAltTextToImages (20100317120946)
+  [1m[35mSQL (212.1ms)[0m  ALTER TABLE `assets` ADD `alt` text
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (200.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100317120946')
+Migrating to AddShowInSidebarOptionToPages (20100323085528)
+  [1m[36mSQL (224.1ms)[0m  [1mALTER TABLE `pages` ADD `show_in_sidebar` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (28.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100323085528')[0m
+Migrating to RenameCouponsToPromotions (20100419190933)
+  [1m[35mSQL (0.0ms)[0m  DROP TABLE IF EXISTS promotions
+  [1m[36mSQL (36.0ms)[0m  [1mRENAME TABLE `coupons` TO `promotions`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100419190933')[0m
+Migrating to FixExistingCouponCredits (20100419194457)
+  [1m[35mSQL (0.0ms)[0m  UPDATE adjustments SET type='PromotionCredit' WHERE type='CouponCredit'
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE adjustments SET adjustment_source_type='Promotion' WHERE adjustment_source_type='Coupon'[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100419194457')[0m
+Migrating to CreatePromotionRules (20100426100726)
+  [1m[35mSQL (104.1ms)[0m  CREATE TABLE `promotion_rules` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `promotion_id` int(11), `user_id` int(11), `product_group_id` int(11), `created_at` datetime, `updated_at` datetime, `type` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW KEYS FROM `promotion_rules`[0m
+  [1m[35mSQL (252.1ms)[0m  CREATE INDEX `index_promotion_rules_on_product_group_id` ON `promotion_rules` (`product_group_id`)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW KEYS FROM `promotion_rules`[0m
+  [1m[35mSQL (272.2ms)[0m  CREATE INDEX `index_promotion_rules_on_user_id` ON `promotion_rules` (`user_id`)
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `products_promotion_rules` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_id` int(11), `promotion_rule_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `products_promotion_rules` DROP `id`
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `products_promotion_rules`[0m
+  [1m[35mSQL (248.1ms)[0m  CREATE INDEX `index_products_promotion_rules_on_product_id` ON `products_promotion_rules` (`product_id`)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `products_promotion_rules`[0m
+  [1m[35mSQL (236.1ms)[0m  CREATE INDEX `index_products_promotion_rules_on_promotion_rule_id` ON `products_promotion_rules` (`promotion_rule_id`)
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100426100726')
+Migrating to AddDisplayToPaymentMethods (20100427121301)
+  [1m[36mSQL (204.1ms)[0m  [1mALTER TABLE `payment_methods` ADD `display` varchar(255) DEFAULT NULL[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100427121301')[0m
+Migrating to MatchPolicyForPromotions (20100501084722)
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE `promotions` ADD `match_policy` varchar(255) DEFAULT 'all'
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (28.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100501084722')
+Migrating to CreatePromotionRulesUsers (20100501095202)
+  [1m[36mSQL (96.1ms)[0m  [1mCREATE TABLE `promotion_rules_users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `promotion_rule_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (216.1ms)[0m  ALTER TABLE `promotion_rules_users` DROP `id`
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `promotion_rules_users`[0m
+  [1m[35mSQL (412.2ms)[0m  CREATE INDEX `index_promotion_rules_users_on_user_id` ON `promotion_rules_users` (`user_id`)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW KEYS FROM `promotion_rules_users`[0m
+  [1m[35mSQL (640.4ms)[0m  CREATE INDEX `index_promotion_rules_users_on_promotion_rule_id` ON `promotion_rules_users` (`promotion_rule_id`)
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (80.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100501095202')
+Migrating to NameForPromotions (20100502163939)
+  [1m[36mSQL (468.3ms)[0m  [1mALTER TABLE `promotions` ADD `name` varchar(255)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100502163939')[0m
+Migrating to AddAddressesCheckoutsIndexes (20100504142133)
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `addresses`
+  [1m[36mSQL (256.1ms)[0m  [1mCREATE INDEX `index_addresses_on_firstname` ON `addresses` (`firstname`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `addresses`
+  [1m[36mSQL (244.1ms)[0m  [1mCREATE INDEX `index_addresses_on_lastname` ON `addresses` (`lastname`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `checkouts`
+  [1m[36mSQL (228.1ms)[0m  [1mCREATE INDEX `index_checkouts_on_order_id` ON `checkouts` (`order_id`)[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `checkouts`
+  [1m[36mSQL (216.1ms)[0m  [1mCREATE INDEX `index_checkouts_on_bill_address_id` ON `checkouts` (`bill_address_id`)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100504142133')[0m
+Migrating to AddIconToTaxons (20100506180619)
+  [1m[35mSQL (192.1ms)[0m  ALTER TABLE `taxons` ADD `icon_file_name` varchar(255)
+  [1m[36mSQL (216.1ms)[0m  [1mALTER TABLE `taxons` ADD `icon_content_type` varchar(255)[0m
+  [1m[35mSQL (276.2ms)[0m  ALTER TABLE `taxons` ADD `icon_file_size` int(11)
+  [1m[36mSQL (204.1ms)[0m  [1mALTER TABLE `taxons` ADD `icon_updated_at` datetime[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (48.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100506180619')[0m
+Migrating to AddDescriptionToTaxons (20100506185838)
+  [1m[35mSQL (220.1ms)[0m  ALTER TABLE `taxons` ADD `description` text
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (60.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100506185838')
+Migrating to IndexForShipmentsNumber (20100528155333)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `shipments`[0m
+  [1m[35mSQL (260.1ms)[0m  CREATE INDEX `index_shipments_on_number` ON `shipments` (`number`)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100528155333')
+Migrating to AddIndexOnUsersPersistenceToken (20100528185820)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (212.1ms)[0m  CREATE INDEX `index_users_on_persistence_token` ON `users` (`persistence_token`)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100528185820')
+Migrating to AddDefaultToTaxCategories (20100605152042)
+  [1m[36mSQL (212.1ms)[0m  [1mALTER TABLE `tax_categories` ADD `is_default` tinyint(1) DEFAULT 0[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100605152042')[0m
+Migrating to AddDisplayToShippingMethods (20100624110730)
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `shipping_methods` ADD `display_on` varchar(255) DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100624110730')
+Migrating to RenamePaymentMethodDisplay (20100624123336)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW COLUMNS FROM `payment_methods` LIKE 'display'[0m
+  [1m[35mSQL (220.1ms)[0m  ALTER TABLE `payment_methods` CHANGE `display` `display_on` varchar(255) DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100624123336')
+Migrating to RenamePreferencesField (20100624175547)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `preferences` LIKE 'attribute'[0m
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `preferences` CHANGE `attribute` `name` varchar(100) NOT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (56.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100624175547')
+Migrating to AddGuestFlag (20100811163637)
+  [1m[36mSQL (280.2ms)[0m  [1mALTER TABLE `users` ADD `guest` tinyint(1)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100811163637')[0m
+Migrating to DropOrderToken (20100811205836)
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE `orders` DROP `token`
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (44.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100811205836')
+Migrating to PaymentsStateAndAssignedToOrderOnly (20100812162326)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `payments` LIKE 'payable_id'[0m
+  [1m[35mSQL (620.3ms)[0m  ALTER TABLE `payments` CHANGE `payable_id` `order_id` int(11) DEFAULT NULL
+  [1m[36mSQL (212.1ms)[0m  [1mALTER TABLE `payments` DROP `payable_type`[0m
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `payments` ADD `state` varchar(255)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100812162326')
+Migrating to CreateAddressKeysForOrder (20100813023502)
+  [1m[36mSQL (200.1ms)[0m  [1mALTER TABLE `orders` ADD `bill_address_id` int(11)[0m
+  [1m[35mSQL (500.3ms)[0m  ALTER TABLE `orders` ADD `ship_address_id` int(11)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100813023502')
+Migrating to PaymentTotalForOrders (20100813185745)
+  [1m[36mSQL (268.2ms)[0m  [1mALTER TABLE `orders` ADD `payment_total` decimal(8,2) DEFAULT 0.0[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100813185745')[0m
+Migrating to ShippingMethodIdForOrders (20100816212146)
+  [1m[35mSQL (200.1ms)[0m  ALTER TABLE `orders` ADD `shipping_method_id` int(11)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100816212146')
+Migrating to AddShipmentAndPaymentState (20100817152723)
+  [1m[36mSQL (268.2ms)[0m  [1mALTER TABLE `orders` ADD `shipment_state` varchar(255)[0m
+  [1m[35mSQL (208.1ms)[0m  ALTER TABLE `orders` ADD `payment_state` varchar(255)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100817152723')
+Migrating to RefactorAdjustments (20100819170125)
+  [1m[36mSQL (408.2ms)[0m  [1mALTER TABLE `adjustments` ADD `mandatory` tinyint(1)[0m
+  [1m[35mSQL (384.2ms)[0m  ALTER TABLE `adjustments` ADD `frozen` tinyint(1)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `adjustments` LIKE 'adjustment_source_id'[0m
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `adjustments` CHANGE `adjustment_source_id` `source_id` int(11) DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `adjustments` LIKE 'adjustment_source_type'[0m
+  [1m[35mSQL (296.2ms)[0m  ALTER TABLE `adjustments` CHANGE `adjustment_source_type` `source_type` varchar(255) DEFAULT NULL
+  [1m[36mSQL (272.2ms)[0m  [1mALTER TABLE `adjustments` ADD `originator_id` int(11)[0m
+  [1m[35mSQL (248.1ms)[0m  ALTER TABLE `adjustments` ADD `originator_type` varchar(255)
+  [1m[36mSQL (552.3ms)[0m  [1mALTER TABLE `adjustments` DROP `type`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW COLUMNS FROM `adjustments` LIKE 'description'
+  [1m[36mSQL (636.4ms)[0m  [1mALTER TABLE `adjustments` CHANGE `description` `label` varchar(255) DEFAULT NULL[0m
+  [1m[35mSQL (544.3ms)[0m  ALTER TABLE `adjustments` DROP `position`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100819170125')
+Migrating to ResponseCodeAndAvsResponseForPayments (20100820135707)
+  [1m[36mSQL (268.2ms)[0m  [1mALTER TABLE `payments` ADD `response_code` varchar(255)[0m
+  [1m[35mSQL (212.1ms)[0m  ALTER TABLE `payments` ADD `avs_response` varchar(255)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (28.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100820135707')
+Migrating to ChangeGuestFlagToAnonymous (20100901171814)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'guest'[0m
+  [1m[35mSQL (240.1ms)[0m  ALTER TABLE `users` CHANGE `guest` `anonymous` tinyint(1) DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100901171814')
+Migrating to EmailForOrders (20100903203949)
+  [1m[36mSQL (236.1ms)[0m  [1mALTER TABLE `orders` ADD `email` varchar(255)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100903203949')[0m
+Migrating to UpdateCalculableTypeForPromotions (20100923095305)
+  [1m[35mAREL (0.0ms)[0m  UPDATE `calculators` SET calculable_type = 'Promotion' WHERE (calculable_type = 'Coupon')
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (68.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100923095305')
+Migrating to CreateMailMethods (20100923162011)
+  [1m[36mSQL (140.1ms)[0m  [1mCREATE TABLE `mail_methods` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `environment` varchar(255), `active` tinyint(1) DEFAULT 1, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (56.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100923162011')[0m
+Migrating to RenameFrozenToLocked (20100929151905)
+  [1m[35mSQL (4.0ms)[0m  SHOW COLUMNS FROM `adjustments` LIKE 'frozen'
+  [1m[36mSQL (272.2ms)[0m  [1mALTER TABLE `adjustments` CHANGE `frozen` `locked` tinyint(1) DEFAULT NULL[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100929151905')[0m
+Migrating to MoveSpecialInstructionsToOrders (20101008190536)
+  [1m[35mSQL (276.2ms)[0m  ALTER TABLE `orders` ADD `special_instructions` text
+  [1m[36mSQL (0.0ms)[0m  [1mupdate orders set special_instructions = (select special_instructions from checkouts where order_id = orders.id)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101008190536')[0m
+Migrating to CreateLogEntries (20101026184700)
+  [1m[35mSQL (108.1ms)[0m  CREATE TABLE `log_entries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `source_id` int(11), `source_type` varchar(255), `details` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101026184700')
+Migrating to MigrateTransactionsToPaymentState (20101026184714)
+  [1m[36mTransaction Load (4.0ms)[0m  [1mselect * from transactions group by payment_id having count(payment_id) = 1 and txn_type = 1[0m
+  [1m[35mTransaction Load (0.0ms)[0m  select * from transactions where txn_type=4
+  [1m[36mTransaction Load (4.0ms)[0m  [1mselect * from transactions where txn_type = 2[0m
+  [1m[35mTransaction Load (0.0ms)[0m  select * from transactions where txn_type = 3
+  [1m[36mTransaction Load (0.0ms)[0m  [1mselect * from transactions where txn_type = 5[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101026184714')[0m
+Migrating to DeleteInProgressOrders (20101026184746)
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mAREL (0.0ms)[0m  [1mDELETE FROM `orders` WHERE `orders`.`state` = 'in_progress'[0m
+  [1m[35mSQL (0.0ms)[0m  delete from adjustments where order_id not in (select id from orders)
+  [1m[36mSQL (0.0ms)[0m  [1mdelete from checkouts where order_id not in (select id from orders)[0m
+  [1m[35mSQL (4.0ms)[0m  delete from shipments where order_id not in (select id from orders)
+  [1m[36mSQL (0.0ms)[0m  [1mdelete from payments where order_id not in (select id from orders)[0m
+  [1m[35mSQL (4.0ms)[0m  delete from line_items where order_id not in (select id from orders)
+  [1m[36mSQL (0.0ms)[0m  [1mdelete from inventory_units where order_id not in (select id from orders)[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101026184746')[0m
+Migrating to MigrateCheckoutToOrders (20101026184808)
+  [1m[35mOrder Load (4.0ms)[0m  SELECT `orders`.* FROM `orders` WHERE (`orders`.`id` >= 0) ORDER BY `orders`.`id` ASC LIMIT 1000
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101026184808')
+Migrating to MigrateAdjustments (20101026184833)
+  [1m[36mSQL (4.0ms)[0m  [1mupdate adjustments set amount = 0.0 where amount is null[0m
+  [1m[35mSQL (0.0ms)[0m  update adjustments set mandatory = 'true', locked = 'true'
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (44.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101026184833')
+Migrating to RemoveShippedState (20101026184855)
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`state` = 'shipped'[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101026184855')[0m
+Migrating to PreventNilPaymentTotal (20101026184916)
+  [1m[35mSQL (4.0ms)[0m  update orders set payment_total = 0.0 where payment_total is null
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101026184916')
+Migrating to PreventNilEmail (20101026184932)
+  [1m[36mSQL (0.0ms)[0m  [1mupdate orders set email = 'guest@example.com' where email is null[0m
+  [1m[35mSQL (0.0ms)[0m  update orders set email = 'guest@example.com' where email = ''
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101026184932')
+Migrating to RenameColumnsForDevise (20101026184950)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'crypted_password'[0m
+  [1m[35mSQL (308.2ms)[0m  ALTER TABLE `users` CHANGE `crypted_password` `encrypted_password` varchar(255) DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'salt'[0m
+  [1m[35mSQL (396.2ms)[0m  ALTER TABLE `users` CHANGE `salt` `password_salt` varchar(255) DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'remember_token_expires_at'[0m
+  [1m[35mSQL (328.2ms)[0m  ALTER TABLE `users` CHANGE `remember_token_expires_at` `remember_created_at` varchar(255) DEFAULT NULL
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'login_count'[0m
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `users` CHANGE `login_count` `sign_in_count` int(11) DEFAULT 0 NOT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'failed_login_count'[0m
+  [1m[35mSQL (220.1ms)[0m  ALTER TABLE `users` CHANGE `failed_login_count` `failed_attempts` int(11) DEFAULT 0 NOT NULL
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'single_access_token'[0m
+  [1m[35mSQL (208.1ms)[0m  ALTER TABLE `users` CHANGE `single_access_token` `reset_password_token` varchar(255) DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'current_login_at'[0m
+  [1m[35mSQL (244.1ms)[0m  ALTER TABLE `users` CHANGE `current_login_at` `current_sign_in_at` datetime DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'last_login_at'[0m
+  [1m[35mSQL (304.2ms)[0m  ALTER TABLE `users` CHANGE `last_login_at` `last_sign_in_at` datetime DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'current_login_ip'[0m
+  [1m[35mSQL (256.1ms)[0m  ALTER TABLE `users` CHANGE `current_login_ip` `current_sign_in_ip` varchar(255) DEFAULT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW COLUMNS FROM `users` LIKE 'last_login_ip'[0m
+  [1m[35mSQL (204.1ms)[0m  ALTER TABLE `users` CHANGE `last_login_ip` `last_sign_in_ip` varchar(255) DEFAULT NULL
+  [1m[36mSQL (348.2ms)[0m  [1mALTER TABLE `users` ADD `authentication_token` varchar(255)[0m
+  [1m[35mSQL (208.1ms)[0m  ALTER TABLE `users` ADD `unlock_token` varchar(255)
+  [1m[36mSQL (472.3ms)[0m  [1mALTER TABLE `users` ADD `locked_at` datetime[0m
+  [1m[35mSQL (284.2ms)[0m  ALTER TABLE `users` DROP `api_key`
+  [1m[36mSQL (216.1ms)[0m  [1mALTER TABLE `users` DROP `openid_identifier`[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101026184950')[0m
+Migrating to GenerateAnonymousUsers (20101026184959)
+  [1m[35mOrder Load (4.0ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` IS NULL
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101026184959')
+Migrating to UpdateOrderState (20101026185022)
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (28.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101026185022')[0m
+Migrating to CleanupLegacyTables (20101026192225)
+  [1m[35mSQL (36.0ms)[0m  DROP TABLE `checkouts`
+  [1m[36mSQL (40.0ms)[0m  [1mDROP TABLE `transactions`[0m
+  [1m[35mSQL (36.0ms)[0m  DROP TABLE `open_id_authentication_associations`
+  [1m[36mSQL (32.0ms)[0m  [1mDROP TABLE `open_id_authentication_nonces`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101026192225')[0m
+Migrating to RemoveNumberAndCvvFromCredicard (20101028151745)
+  [1m[35mSQL (280.2ms)[0m  ALTER TABLE `creditcards` DROP `number`
+  [1m[36mSQL (208.1ms)[0m  [1mALTER TABLE `creditcards` DROP `verification_value`[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101028151745')[0m
+Migrating to DropAnonymousFieldForUser (20101103212716)
+  [1m[35mSQL (232.1ms)[0m  ALTER TABLE `users` DROP `anonymous`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101103212716')
+Migrating to RenamedRmaCancelledState (20101111133551)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mReturnAuthorization Load (0.0ms)[0m  SELECT `return_authorizations`.* FROM `return_authorizations` WHERE `return_authorizations`.`state` = 'cancelled'
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (64.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101111133551')
+Migrating to FixProblematicIndexNames (20101117031806)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW KEYS FROM `preferences`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `preferences`
+  [1m[36mSQL (240.1ms)[0m  [1mCREATE UNIQUE INDEX `ix_prefs_on_owner_attr_pref` ON `preferences` (`owner_id`, `owner_type`, `name`, `group_id`, `group_type`)[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101117031806')[0m
+Migrating to ConvertUserRememberField (20101214150824)
+  [1m[35mSQL (232.1ms)[0m  ALTER TABLE `users` DROP `remember_created_at`
+  [1m[36mSQL (516.3ms)[0m  [1mALTER TABLE `users` ADD `remember_created_at` datetime[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101214150824')[0m
+Migrating to CreateTokenizedPermissions (20101217012656)
+  [1m[35mSQL (484.3ms)[0m  CREATE TABLE `tokenized_permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `permissable_id` int(11), `permissable_type` varchar(255), `token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW KEYS FROM `tokenized_permissions`[0m
+  [1m[35mSQL (772.4ms)[0m  CREATE INDEX `index_tokenized_name_and_type` ON `tokenized_permissions` (`permissable_id`, `permissable_type`)
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (148.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101217012656')
+Migrating to TokensForLegacyOrders (20101219201531)
+  [1m[36mOrder Load (4.0ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (72.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101219201531')[0m
+Migrating to AddPositionToVariants (20101223215658)
+  [1m[35mSQL (436.2ms)[0m  ALTER TABLE `variants` ADD `position` int(11)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (28.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101223215658')
+Migrating to AddExportFlagToProduct (20110110094042)
+  [1m[36mSQL (280.2ms)[0m  [1mALTER TABLE `products` ADD `export_to_yandex_market` tinyint(1) DEFAULT 1 NOT NULL[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110110094042')[0m
+Migrating to AddNextStateToStateEvents (20110110130847)
+  [1m[35mSQL (280.2ms)[0m  ALTER TABLE `state_events` ADD `next_state` varchar(255)
+  [1m[36mSQL (12.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110110130847')
+Migrating to AddPositionToOptionTypes (20110111122537)
+  [1m[36mSQL (268.2ms)[0m  [1mALTER TABLE `option_types` ADD `position` int(11) DEFAULT 0 NOT NULL[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110111122537')[0m
+Migrating to AddUserIdAndDeletedAtToAddresses (20110302102208)
+  [1m[35mSQL (212.1ms)[0m  ALTER TABLE `addresses` ADD `user_id` int(11)
+  [1m[36mSQL (280.2ms)[0m  [1mALTER TABLE `addresses` ADD `deleted_at` datetime[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (28.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110302102208')[0m
+Migrating to RemoveTrailingSlashesInTaxonPermalinks (20110314192118)
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mTaxon Load (0.0ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE (`taxons`.`id` >= 0) ORDER BY `taxons`.`id` ASC LIMIT 1000[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (88.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110314192118')[0m
+Migrating to AddShowOnMainPageFlagToTaxonomies (20110330125354)
+  [1m[35mSQL (336.2ms)[0m  ALTER TABLE `taxonomies` ADD `show_on_homepage` tinyint(1) DEFAULT 0 NOT NULL
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110330125354')
+Migrating to ChangeColumnTitleInReviews (20110404120925)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (32.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110404120925')[0m
+Migrating to RevertChangesColumnTitleInReviews (20110510080413)
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (84.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110510080413')
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `addresses`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `adjustments`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `adjustments`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `assets`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `assets`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `calculators`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `calculators`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `configurations`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `configurations`
+  [1m[36mSQL (8.0ms)[0m  [1mdescribe `countries`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `countries`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `creditcards`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `creditcards`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `gateways`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `gateways`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `inventory_units`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `inventory_units`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `line_items`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `line_items`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `log_entries`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `log_entries`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `mail_methods`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `mail_methods`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `option_types`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `option_types`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `option_types_prototypes`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `option_types_prototypes`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `option_values`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `option_values`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `option_values_variants`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `option_values_variants`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `orders`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `orders`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `pages`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `pages`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `payment_methods`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `payment_methods`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `payments`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `payments`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `preferences`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `preferences`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `product_groups`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `product_groups`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `product_groups_products`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `product_groups_products`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `product_option_types`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `product_option_types`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `product_properties`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `product_properties`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `product_scopes`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `product_scopes`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `products`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `products`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `products_promotion_rules`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `products_promotion_rules`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `products_taxons`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `products_taxons`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `promotion_rules`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `promotion_rules`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `promotion_rules_users`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `promotion_rules_users`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `promotions`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `promotions`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `properties`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `properties`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `properties_prototypes`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `properties_prototypes`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `prototypes`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `prototypes`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `return_authorizations`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `return_authorizations`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `roles`[0m
+  [1m[35mSQL (16.0ms)[0m  SHOW KEYS FROM `roles`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `roles_users`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `shipments`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `shipments`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `shipping_categories`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `shipping_categories`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `shipping_methods`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `shipping_methods`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `state_events`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `state_events`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `states`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (16.0ms)[0m  [1mdescribe `tax_categories`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `tax_categories`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `tax_rates`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `tax_rates`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `taxonomies`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `taxonomies`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `taxons`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `taxons`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `tokenized_permissions`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `tokenized_permissions`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `trackers`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `trackers`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (8.0ms)[0m  [1mdescribe `variants`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `variants`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `zone_members`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `zone_members`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `zones`[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW KEYS FROM `zones`
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/knigipodarki/config/environment.rb:5)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mMailMethod Load (4.0ms)[0m  [1mSELECT `mail_methods`.* FROM `mail_methods` WHERE `mail_methods`.`environment` = 'development' LIMIT 1[0m
+  [1m[35mSQL (4.0ms)[0m  describe `roles_users`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `product_groups_products`[0m
+  [1m[35mSQL (4.0ms)[0m  describe `products_taxons`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `option_values_variants`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  describe `product_groups_products`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `products_promotion_rules`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAppConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND `configurations`.`name` = 'Default configuration' LIMIT 1
+  [1m[36mSQL (4.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (60.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') LIMIT 1
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `configurations`[0m
+  [1m[35mAREL (4.0ms)[0m  INSERT INTO `configurations` (`name`, `created_at`, `updated_at`, `type`) VALUES ('Default configuration', '2012-07-13 07:17:56', '2012-07-13 07:17:56', 'AppConfiguration')
+  [1m[36mSQL (64.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1[0m
+  [1m[35mPreference Load (4.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'default_locale' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `preferences`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('default_locale', 1, 'Configuration', NULL, NULL, 'ru', '2012-07-13 07:17:57', '2012-07-13 07:17:57')
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (40.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'default_country_id' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (4.0ms)[0m  INSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('default_country_id', 1, 'Configuration', NULL, NULL, 168, '2012-07-13 07:17:57', '2012-07-13 07:17:57')
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (36.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'allow_ssl_in_production' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('allow_ssl_in_production', 1, 'Configuration', NULL, NULL, 0, '2012-07-13 07:17:57', '2012-07-13 07:17:57')
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (28.0ms)[0m  COMMIT
+  [1m[36mSQL (4.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (4.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'disable_bill_address' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (4.0ms)[0m  INSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('disable_bill_address', 1, 'Configuration', NULL, NULL, 1, '2012-07-13 07:17:57', '2012-07-13 07:17:57')
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (40.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'admin_interface_logo' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('admin_interface_logo', 1, 'Configuration', NULL, NULL, 'admin/logo.png', '2012-07-13 07:17:57', '2012-07-13 07:17:57')
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (36.0ms)[0m  COMMIT
+  [1m[36mZone Load (0.0ms)[0m  [1mSELECT `zones`.* FROM `zones` LIMIT 1[0m
+  [1m[35mPreference Load (0.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration')
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1[0m
+  [1m[35mPreference Load (12.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'store_email' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1
+  [1m[36mAREL (4.0ms)[0m  [1mINSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('store_email', 1, 'Configuration', NULL, NULL, 'test@site.ru', '2012-07-13 07:17:57', '2012-07-13 07:17:57')[0m
+  [1m[35mConfiguration Load (4.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mSQL (36.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mPreference Load (4.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration')
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (4.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'store_phone' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('store_phone', 1, 'Configuration', NULL, NULL, '+7 (495) 1234567', '2012-07-13 07:17:57', '2012-07-13 07:17:57')
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (104.1ms)[0m  COMMIT
+  [1m[36mSQL (4.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'products_per_page' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('products_per_page', 1, 'Configuration', NULL, NULL, 9, '2012-07-13 07:17:57', '2012-07-13 07:17:57')
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (28.0ms)[0m  COMMIT
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(DISTINCT `users`.`id`) FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.`user_id` = `users`.`id` LEFT OUTER JOIN `roles` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles`.`name` = 'admin'[0m
+  [1m[35mSQL (4.0ms)[0m  describe `roles_users`
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'spree@example.com' LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: login
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('spree@example.com')) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('spree@example.com')) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(DISTINCT `users`.`id`) FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.`user_id` = `users`.`id` LEFT OUTER JOIN `roles` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles`.`name` = 'admin'[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`name` = 'admin' LIMIT 1
+  [1m[36mSQL (16.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `password_salt`, `remember_token`, `created_at`, `updated_at`, `persistence_token`, `reset_password_token`, `perishable_token`, `sign_in_count`, `failed_attempts`, `last_request_at`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `login`, `ship_address_id`, `bill_address_id`, `authentication_token`, `unlock_token`, `locked_at`, `remember_created_at`) VALUES ('spree@example.com', 'bae622163d254832844908968630bbcc5d4eace1467d0af9d1d077a851b4a0599304fdd5e0c4c81964c8e0575003c9c9a1c8adf136d4d6b2875a8ea87183a8ea', 'wc1pAVXOvYTkhTxVpyc7', NULL, '2012-07-13 07:18:11', '2012-07-13 07:18:11', NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 'spree@example.com', NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (1, 1)[0m
+  [1m[35mSQL (40.0ms)[0m  COMMIT
+  [1m[36mRole Load (4.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`name` = 'admin' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (1, 1)[0m
+  [1m[35mSQL (36.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('spree@example.com')) AND (`users`.id <> 1) LIMIT 1
+  [1m[36mSQL (4.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('spree@example.com')) AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(DISTINCT `users`.`id`) FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.`user_id` = `users`.`id` LEFT OUTER JOIN `roles` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles`.`name` = 'admin'
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/knigipodarki/config/environment.rb:5)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (12.0ms)[0m  SHOW TABLES
+  [1m[36mMailMethod Load (4.0ms)[0m  [1mSELECT `mail_methods`.* FROM `mail_methods` WHERE `mail_methods`.`environment` = 'development' LIMIT 1[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mSQL (4.0ms)[0m  describe `product_groups_products`
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `products_taxons`[0m
+  [1m[35mSQL (4.0ms)[0m  describe `option_values_variants`
+  [1m[36mSQL (8.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `product_groups_products`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mdescribe `products_promotion_rules`[0m
+  [1m[35mSQL (4.0ms)[0m  describe `products_promotion_rules`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `promotion_rules_users`[0m
+  [1m[35mSQL (16.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAppConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND `configurations`.`name` = 'Default configuration' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (4.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'default_locale' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE `preferences` SET `value` = 'ru', `updated_at` = '2012-07-13 07:18:37' WHERE `preferences`.`id` = 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (40.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'default_country_id' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE `preferences` SET `value` = 168, `updated_at` = '2012-07-13 07:18:37' WHERE `preferences`.`id` = 2
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (36.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'allow_ssl_in_production' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE `preferences` SET `value` = 0, `updated_at` = '2012-07-13 07:18:38' WHERE `preferences`.`id` = 3
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (44.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'disable_bill_address' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE `preferences` SET `value` = 1, `updated_at` = '2012-07-13 07:18:38' WHERE `preferences`.`id` = 4
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (28.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (4.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'admin_interface_logo' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+  [1m[36mZone Load (0.0ms)[0m  [1mSELECT `zones`.* FROM `zones` LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1[0m
+  [1m[35mPreference Load (4.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'checkout_zone' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1
+  [1m[36mSQL (8.0ms)[0m  [1mdescribe `preferences`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `preferences` (`name`, `owner_id`, `owner_type`, `group_id`, `group_type`, `value`, `created_at`, `updated_at`) VALUES ('checkout_zone', 1, 'Configuration', NULL, NULL, 'РФ', '2012-07-13 07:18:38', '2012-07-13 07:18:38')
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (28.0ms)[0m  COMMIT
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration')[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'products_per_page' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE `preferences` SET `value` = 9, `updated_at` = '2012-07-13 07:18:38' WHERE `preferences`.`id` = 8
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (32.0ms)[0m  COMMIT
+
+
+Started GET "/" for 10.0.2.2 at 2012-07-13 11:18:48 +0400
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  describe `products_promotion_rules`
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.0ms)[0m  BEGIN
+  [1m[36mSQL (20.0ms)[0m  [1mSELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1[0m
+  [1m[35mPreference Load (4.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'default_locale' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1
+  [1m[36mAREL (4.0ms)[0m  [1mUPDATE `preferences` SET `value` = 'ru', `updated_at` = '2012-07-13 07:18:48' WHERE `preferences`.`id` = 1[0m
+  [1m[35mConfiguration Load (4.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mSQL (36.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1[0m
+  [1m[35mPreference Load (4.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'default_country_id' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mUPDATE `preferences` SET `value` = 168, `updated_at` = '2012-07-13 07:18:48' WHERE `preferences`.`id` = 2[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mSQL (36.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (4.0ms)[0m  [1mSELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1[0m
+  [1m[35mPreference Load (0.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'allow_ssl_in_production' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mUPDATE `preferences` SET `value` = 0, `updated_at` = '2012-07-13 07:18:48' WHERE `preferences`.`id` = 3[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mSQL (36.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1[0m
+  [1m[35mPreference Load (4.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'disable_bill_address' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mUPDATE `preferences` SET `value` = 1, `updated_at` = '2012-07-13 07:18:48' WHERE `preferences`.`id` = 4[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mSQL (36.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (4.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1[0m
+  [1m[35mPreference Load (0.0ms)[0m  SELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'admin_interface_logo' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mZone Load (0.0ms)[0m  SELECT `zones`.* FROM `zones` LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'checkout_zone' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+  [1m[36mPreference Load (4.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration')[0m
+  [1m[35mConfiguration Load (4.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (4.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `configurations` WHERE `configurations`.`type` = 'AppConfiguration' AND (`configurations`.`name` = BINARY 'Default configuration') AND (`configurations`.id <> 1) LIMIT 1
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE `preferences`.`name` = 'products_per_page' AND `preferences`.`group_id` IS NULL AND `preferences`.`group_type` IS NULL AND (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE `preferences` SET `value` = 9, `updated_at` = '2012-07-13 07:18:48' WHERE `preferences`.`id` = 8
+  [1m[36mConfiguration Load (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (32.0ms)[0m  COMMIT
+  Processing by HomeController#index as HTML
+  [1m[36mPreference Load (4.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration')[0m
+  [1m[35mConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`id` = 1 LIMIT 1
+  [1m[36mPage Load (4.0ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`visible` = 1 AND `pages`.`slug` = '/' ORDER BY position ASC LIMIT 1[0m
+  [1m[35mTaxonomy Load (0.0ms)[0m  SELECT `taxonomies`.* FROM `taxonomies`
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/synergy_default_theme-1.0.2/app/views/shared/_taxonomies.html.erb (0.0ms)
+  [1m[36mSQL (4.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mOnlineSupportConfiguration Load (0.0ms)[0m  SELECT `configurations`.* FROM `configurations` WHERE `configurations`.`type` = 'OnlineSupportConfiguration' AND `configurations`.`name` = 'Online Support configuration' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  describe `configurations`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `configurations` (`name`, `created_at`, `updated_at`, `type`) VALUES ('Online Support configuration', '2012-07-13 07:18:50', '2012-07-13 07:18:50', 'OnlineSupportConfiguration')[0m
+  [1m[35mSQL (36.0ms)[0m  COMMIT
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT `preferences`.* FROM `preferences` WHERE (`preferences`.owner_id = 2 AND `preferences`.owner_type = 'Configuration')[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW TABLES
+  [1m[36mOnlineSupportConfiguration Load (4.0ms)[0m  [1mSELECT `configurations`.* FROM `configurations` WHERE `configurations`.`type` = 'OnlineSupportConfiguration' AND `configurations`.`name` = 'Online Support configuration' LIMIT 1[0m
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/spree_online_support-0.50.0/app/views/shared/_online_support.html.erb (116.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/synergy_default_theme-1.0.2/app/views/shared/_jgrowl_startup.html.erb (0.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/synergy_default_theme-1.0.2/app/views/shared/_head.html.erb (148.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/synergy_default_theme-1.0.2/app/views/shared/_search.html.erb (0.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/spree_auth-0.60.6/app/views/shared/_login.html.erb (4.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/synergy_default_theme-1.0.2/app/views/shared/_login_bar.html.erb (24.0ms)
+  [1m[35mPage Load (0.0ms)[0m  SELECT `pages`.* FROM `pages` WHERE (show_in_header = 1) ORDER BY position ASC
+  [1m[36mSQL (4.0ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE (show_in_sidebar = 1)[0m
+  [1m[35mPage Load (12.0ms)[0m  SELECT `pages`.* FROM `pages` WHERE (show_in_footer = 1) ORDER BY position ASC
+  [1m[36mTracker Load (4.0ms)[0m  [1mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`active` = 1 AND `trackers`.`environment` = 'development' LIMIT 1[0m
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/spree_core-0.60.6/app/views/shared/_google_analytics.html.erb (8.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/synergy_default_theme-1.0.2/app/views/home/index.html.erb within layouts/spree_application (252.1ms)
+Completed 200 OK in 2005ms (Views: 304.2ms | ActiveRecord: 372.2ms)
