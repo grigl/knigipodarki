@@ -1,0 +1,6 @@
+log/*
+tmp/*
+config/database.yml
+sync/*
+!sync/.gitempty
+/.project

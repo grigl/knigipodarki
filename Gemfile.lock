@@ -193,6 +193,7 @@ GEM
     warden (1.0.6)
       rack (>= 1.0)
     will_paginate (3.0.2)
+    xml-simple (1.1.1)
 
 PLATFORMS
   ruby
@@ -204,3 +205,4 @@ DEPENDENCIES
   spree_i18n!
   synergy (~> 0.60.0)
   synergy_default_theme (= 1.0.2)
+  xml-simple (~> 1.1.1)
