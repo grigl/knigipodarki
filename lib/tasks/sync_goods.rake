@@ -74,10 +74,12 @@ namespace :sync do
         product.external_id = external_id
         product.sku = sku
         product.permalink = sku
-        product.price = price
-        product.master.count_on_hand = count_on_hand
-        product.save
+      else
+        product = product[0]
       end
+      product.price = price
+      product.master.count_on_hand = count_on_hand
+      product.save
     end  
   end
 end
