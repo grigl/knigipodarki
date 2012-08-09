@@ -199,6 +199,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mail
   mysql2 (~> 0.2.7)
   rails (= 3.0.10)
   spree (~> 0.60.6)
