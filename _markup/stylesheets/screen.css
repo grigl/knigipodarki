@@ -59,8 +59,18 @@ a img {
   border: none;
 }
 
-/* line 12, ../src/screen.scss */
+/* line 10, ../src/screen.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 16, ../src/screen.scss */
 .b {
   width: 20px;
   background: green;
+}
+
+/* line 23, ../src/screen.scss */
+.header .header-in .logo {
+  color: green;
 }

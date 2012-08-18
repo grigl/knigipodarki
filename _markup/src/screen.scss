@@ -7,9 +7,21 @@ $atomy: 20px;
 
 $color: green;
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
 body {}
 
 .b {
     width: $module-width;
     background: $color;
+}
+
+.header {
+    .header-in {
+        .logo {
+            color: $color;
+        }
+    }
 }
