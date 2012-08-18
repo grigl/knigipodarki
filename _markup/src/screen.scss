@@ -1,0 +1,15 @@
+@import 'compass';
+@import 'compass/reset';
+
+$module-width: 20px;
+$atomx: 26px;
+$atomy: 20px;
+
+$color: green;
+
+body {}
+
+.b {
+    width: $module-width;
+    background: $color;
+}
