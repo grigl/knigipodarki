@@ -4,3 +4,4 @@ config/database.yml
 sync/*
 !sync/.gitempty
 /.project
+-markup/.sass-cache
