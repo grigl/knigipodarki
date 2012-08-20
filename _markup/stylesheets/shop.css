@@ -1,17 +1,26 @@
-/* line 1, ../src/shop.scss */
-.shop-item[structure=index-item] {
+/* line 5, ../src/shop.scss */
+.shop-box .shop-box-content .item {
   display: block;
+  text-decoration: none;
+}
+/* line 9, ../src/shop.scss */
+.shop-box .shop-box-content .item article .price {
   color: red;
 }
-/* line 4, ../src/shop.scss */
-.shop-item[structure=index-item] .add-to-cart {
-  color: green;
+/* line 12, ../src/shop.scss */
+.shop-box .shop-box-content .item article h3 {
+  font-weight: bold;
 }
-/* line 5, ../src/shop.scss */
-.shop-item[structure=index-item] figure {
-  border: 1px solid gray;
+/* line 15, ../src/shop.scss */
+.shop-box .shop-box-content .item article p {
+  font-style: italic;
 }
-/* line 7, ../src/shop.scss */
-.shop-item[structure=index-item] figure:hover:before {
-  content: "add";
+/* line 18, ../src/shop.scss */
+.shop-box .shop-box-content .item article:hover:after {
+  content: 'add';
+  color: red;
+}
+/* line 23, ../src/shop.scss */
+.shop-box .shop-box-content .item:hover {
+  border: 1px solid red;
 }
