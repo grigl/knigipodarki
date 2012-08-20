@@ -1,0 +1,17 @@
+/* line 1, ../src/shop.scss */
+.shop-item[structure=index-item] {
+  display: block;
+  color: red;
+}
+/* line 4, ../src/shop.scss */
+.shop-item[structure=index-item] .add-to-cart {
+  color: green;
+}
+/* line 5, ../src/shop.scss */
+.shop-item[structure=index-item] figure {
+  border: 1px solid gray;
+}
+/* line 7, ../src/shop.scss */
+.shop-item[structure=index-item] figure:hover:before {
+  content: "add";
+}

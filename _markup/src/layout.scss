@@ -11,17 +11,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
-body {}
-
-.b {
-    width: $module-width;
-    background: $color;
-}
-
-.header {
-    .header-in {
-        .logo {
-            color: $color;
+.panel {
+  nav {
+    ul {
+      li {
+        a {
+          color: red;
         }
+      }
     }
+  }
+  .phone {
+    color: green;
+  }
+  .login {
+    a {
+      color: blue;
+    }
+  }
 }

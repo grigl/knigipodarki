@@ -1,0 +1,11 @@
+.shop-item[structure=index-item] {
+  display: block;
+  color: red;
+  .add-to-cart {color: green;}
+  figure {
+    border: 1px solid gray;
+    &:hover:before {
+      content: "add";
+    }
+  }
+}

@@ -16,15 +16,14 @@
 </head>
 <body>
 
-  <!-- .header -->
-  <header class="header">
+  <!-- .site-header -->
+  <header class="site-header">
 
-    <!-- .top-panel -->
-    <div class="top-panel">
+    <!-- .sh-panel -->
+    <section class="panel">
       <div class="wrap">
-        
-        <!-- .top-nav -->
-        <nav class="top-nav">
+
+        <nav>
           <ul>
             <li><a href="">О нас</a></li>
             <li><a href="">Как покупать</a></li>
@@ -32,33 +31,29 @@
             <li><a href="">Контакты</a></li>
           </ul>
         </nav>
-        <!-- /.top-nav -->
 
-        <!-- .top-controls -->
-        <div class="top-controls">
-          <div class="top-phone"></div>
+        <div class="phone">+7 614-25-18</div><!-- .sh-phone -->
+
+        <!-- .sh-login -->
+        <div class="login">
           <a href="">Войти</a>
           <a href="">Зарегистрироваться</a>          
           </div>
         </div>
-        <!-- /.top-controls -->
+        <!-- /.sh-login -->
 
       </div>
-    </div>
-    <!-- /.top-panel -->
+    </section>
+    <!-- .sh-panel -->
 
-    <!-- .header-in -->
-    <section class="header-in wrap">
+    <!-- .navigation -->
+    <section class="navigations wrap">
 
-      <!-- logo & search -->
-      <div class="wrap-row">
-        <a href="" class="logo"></a>
-        <!-- .search -->
-        <nav class="search">
-          <form action=""><input type=""></form>
-        </nav>
-      </div>
-      <!-- logo & search -->
+      <a href="" class="logo"></a>
+
+      <nav class="search">
+        <form action=""><input type=""></form>
+      </nav>
 
       <!-- .direction-nav -->
       <nav class="direction-nav">
@@ -78,29 +73,40 @@
       <!-- /.direction-nav -->
 
     </section>
-    <!-- /.header-in -->
+    <!-- /.navigation -->
 
   </header>
   <!-- /.header -->
 
   <!-- .content -->
-  <section class="content">
-    <!-- .white-wrap -->
+  <section class="site-content">
     <div class="white-wrap">
-      <!-- .wrap -->
       <div class="wrap">
       
-        <!-- .baners -->
-        <div class="baners">
-          <!-- .baners-box - here rotate baners -->
-          <div class="baners-box">
+        <!-- .promo -->
+        <section class="promo">
+
+          <!-- .baners - here rotate baners -->
+          <div class="baners">
             
             <!-- .baner-item -->
-
+            <div class="item">
+              <img src="" alt="" />
+              <div class="item-content">
+                <hgroup>
+                  <h2>Кубизм</h2>
+                  <h3>Настольная скульптура от Professors</h3>
+                </hgroup>
+                <p>
+                  <!-- (!)text here -->
+                </p>
+                <span class="price"></span>
+              </div>
+            </div>
             <!-- /.baner-item -->
 
           </div>
-          <!-- /.baners-box -->
+          <!-- /.baners -->
 
           <!-- .baners-nav - circles -->
           <ul class="baners-nav">
@@ -114,21 +120,36 @@
           <!-- nav-left-right -->
           <a class="baners-nav-left" href=""></a>
           <a class="baners-nav-right" href=""></a>
-        </div>
-        <!-- /.baners -->
+
+        </section>
+        <!-- /.promo -->
 
         <!-- .shop-box -->
-        <div class="shop-box">
+        <section class="shop-box">
           
-          <header class="shop-header">
-            
+          <header>
+            <h2></h2>
+            <a href=""></a>
           </header>
           
-          <section class="shop-content">
+          <div class="shop-box-content">
             
-          </section>
+            <!-- .shop-item -->
+            <div structure="index-item" class="shop-item" href="#">
+              <a href="" class="add-to-cart"></a>  
+              <figure class="shop-item-im-preview">
+                <img src="tmp/shop-preview.png" alt="">
+                <figcaption class="shop-item-desc">
+                  <span class="shop-item-desc-name">Сага о Бобоине</span>
+                  <span class="shop-item-desc-desc"><I>Забавные рябты инкарпараейтед</I> сделали эту книжечку для вас!</span>
+                </figcaption>
+              </figure>
+            </div>
+            <!-- /.shop-item -->
 
-        </div>
+          </div>
+
+        </section>
         <!-- /.shop-box -->
 
       </div>
@@ -139,12 +160,10 @@
   <!-- /.content -->
 
   <!-- .footer -->
-  <footer class="footer">
-    <!-- wrap -->
+  <footer class="site-footer">
     <div class="wrap">
 
-      <!-- .foot-nav -->
-      <nav class="foot-nav">
+      <nav>
         <ul>
           <li><a href="">О нас</a></li>
           <li><a href="">Адреса магазинов</a></li>
@@ -152,19 +171,15 @@
           <li><a href="">Опт</a></li>
         </ul>
       </nav>
-      <!-- /.foot-nav -->
 
-      <!-- .foot-info -->
-      <section class="foot-info">
-        <div class="phone">+7 987 654-32-12</div>
-        <div class="phone">+7 987 654-32-12</div>
-        <div class="mail"><a href="">info@knigipodarki.ru</a></div>
-        <div class="social"></div>
-      </section>
-      <!-- /.foot-info -->
+      <span class="phone">+7 987 654-32-12</span>
+      <span class="phone">+7 987 654-32-12</span>
+      <span class="mail"><a href="">info@knigipodarki.ru</a></span>
+      <a href="" class="social"><img src="" alt=""></a>
+      <a href="" class="social"><img src="" alt=""></a>
+      <a href="" class="social"><img src="" alt=""></a>
 
     </div>
-    <!-- /.wrap -->
   </footer>
   <!-- /.footer -->
 

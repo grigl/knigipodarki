@@ -68,13 +68,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 16, ../src/layout.scss */
-.b {
-  width: 20px;
-  background: green;
+/* line 18, ../src/layout.scss */
+.panel nav ul li a {
+  color: red;
 }
-
-/* line 23, ../src/layout.scss */
-.header .header-in .logo {
+/* line 24, ../src/layout.scss */
+.panel .phone {
   color: green;
+}
+/* line 28, ../src/layout.scss */
+.panel .login a {
+  color: blue;
 }
