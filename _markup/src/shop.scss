@@ -1,28 +1,27 @@
 // shop
 
 .shop-box {
-  .shop-box-content {
-    .item {
-      display: block;
-      text-decoration: none;
-      article {
-        .price {
-          color: red;
-        }
-        h3 {
-          font-weight: bold;
-        }
-        p {
-          font-style: italic;
-        }
-        &:hover:after {
-          content: 'add';
-          color: red; 
-        }
+  .item {
+    display: block;
+    text-decoration: none;
+    article {
+      .price {
+        color: red;
       }
-      &:hover {
-        border: 1px solid red;
+      h3 {
+        font-weight: bold;
+      }
+      p {
+        font-style: italic;
+      }
+      &:hover:after {
+        content: 'add';
+        color: red; 
       }
     }
+    &:hover {
+      border: 1px solid red;
+    }
   }
+
 }
