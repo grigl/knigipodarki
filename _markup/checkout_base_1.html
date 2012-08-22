@@ -86,9 +86,17 @@
         <!-- .account -->
         <section class="account">
           <header>
-            <h1>Моя учетная запись</h1>
-            <span class="nickname">spree@wxample.com</span>
-            <a href="">Изменить</a>
+            <h1>Оформление заказа</h1>
+              <!-- .breadcrumps -->
+              <nav class="breadcrumps">
+                <ul>
+                  <li><a href="">item</a>&nbsp;></li>
+                  <li><a href="">item</a>&nbsp;></li>
+                  <li><a href="">item</a>&nbsp;></li>
+                  <li><a href="">item</a></li>
+                </ul>
+              </nav>
+              <!-- /.product -->
           </header>
         </section>
         <!-- /.account -->
@@ -99,6 +107,8 @@
           <table></table>
         </section>
         <!-- /.orders -->
+
+        <!-- тут закончил, нужно подумать, как обыграть колонки.  -->
 
         <!-- .adresses -->
         <section class="addresses">
@@ -123,21 +133,24 @@
                   <input type="text">
                 </fieldset>
                 <fieldset>
-                  <label for="">Телефон</label>
-                  <input type="text">
+                  <label for="">Страна</label>
+                  <select name="" id="">
+                    <option value="">Ленинградская область</option>
+                    <option value=""></option>
+                  </select>
+                </fieldset>
+                <fieldset>
+                  <label for="">Регион/область</label>
+                  <select name="" id="">
+                    <option value="">Ленинградская область</option>
+                    <option value=""></option>
+                  </select>
                 </fieldset>
               </div>
               <!-- /.formset -->
 
               <!-- .formset -->
               <div class="formset">
-                <fieldset>
-                  <label for="">Субъект РФ</label>
-                  <select name="" id="">
-                    <option value="">Ленинградская область</option>
-                    <option value=""></option>
-                  </select>
-                </fieldset>
                 <fieldset>
                   <label for="text">Город</label>
                   <input type="">
@@ -150,6 +163,10 @@
                   <label for="text">Адрес</label>
                   <input type="">
                 </fieldset>
+                <fieldset>
+                  <label for="text">Телефон</label>
+                  <input type="">
+                </fieldset>
               </div>
               <!-- /.formset -->
 
@@ -157,7 +174,7 @@
             <!-- .controls -->
             <div class="controls">
               <a href="" role="cancel">Отмена</a>
-              <input type="submit" value="sabmit">
+              <input type="submit" value="Сохранить">
             </div>
             <!-- /.controls -->
           </form>
