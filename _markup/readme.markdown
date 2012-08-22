@@ -11,3 +11,5 @@
 .product-social>ul>li>a>img
 
 И к тому же для скорости рендера лучше картинки по отдельности нежели спрайтом.
+
+[ссылка на код](https://github.com/whitescape/knigipodarki/blob/master/_markup/product.html#L115)
