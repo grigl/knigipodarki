@@ -44,7 +44,7 @@
     top: 300px;
     right: 0;
     li {
-      display: inline-block;
+      @include inline-block;
       margin-left: 10px;
       &:first-child {
         margin-left: 0;

@@ -18,7 +18,8 @@ $module-width: 20px;
 $atomx: 26px;
 $atomy: 20px;
 
-$color: green;
+$color: #404040;
+$light-gray: #a0a0a0;
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
@@ -27,7 +28,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font: 14px/20px Ubuntu;
   background: url(../images/back.png);
-  color: #404040;
+  color: $color;
 }
 
 a {
@@ -55,7 +56,7 @@ a {
 }
 
 .panel {
-  background: #404040;
+  background: $color;
   height: 30px;
   overflow: hidden;
   color: #fff;
@@ -126,6 +127,7 @@ a {
 
 .navigations {
   margin-top: 20px;
+  position: relative;
   .search {
     input {
       width: 280px;
@@ -141,7 +143,7 @@ a {
     float: right;
   }
   .direction-nav {
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid $color;
     padding-bottom: 6px;
     margin: 30px 0 62px 0;
     ul {
@@ -153,7 +155,7 @@ a {
           padding: 10px 10px;
           text-transform: uppercase;
           text-decoration: none;
-          color: #404040;
+          color: $color;
           &:hover {
             border: 3px solid #edf2f2;
           padding: 7px 7px;
@@ -167,6 +169,34 @@ a {
         a {
           background: #4c7f82;
           color: #fff;
+        }
+      }
+    }
+  }
+  .sub-direction-nav {
+    position: absolute;
+    top: 130px;
+    // margin-top: -62px;
+    // height: 24px;
+    // padding-top: 6px;
+    // background: $light-gray;
+    ul {
+      li {
+        display: inline;
+        margin-right: 24px;
+        a {
+          font-size: 14px;
+          font-style: italic;
+          color: #4c7f82;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .current {
+        a {
+          font-weight: bold;
         }
       }
     }

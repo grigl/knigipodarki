@@ -1,3 +1,5 @@
+@import 'layout';
+
 .catalogue {
   margin-bottom: 50px;
   .item {
@@ -7,7 +9,7 @@
     display: inline-block;
     padding: 30px 0 15px 0;
     a {
-      color: #404040;
+      color: $color;
       text-decoration: none;
     }
     &:hover {
@@ -64,7 +66,7 @@
     a {
       float: right;
       font-weight: 300;
-      color: #a0a0a0;
+      color: $light-gray;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
@@ -74,15 +76,37 @@
 }
 
 .sorting {
+  margin: 30px 0;
+  ul:first-child {
+    border-left: none;
+    margin-left: 0;
+  }
   ul {
     display: inline-block;
+    border-left: 1px solid $light-gray;
+    padding-left: 24px;
     li {
       display: inline;
+      margin-right: 24px;
+      color: $light-gray;
+      a {
+        // width: auto;
+        // display: block;
+        // background: url(../images/);
+        color: red;
+        text-decoration: none;
+        border-bottom: 1px dashed $color;
+        color: $color;
+        &:hover {
+          border-bottom: none;
+        }
+      }
     }
   }
 }
 
 .pagination {
+  margin-left: 30px;
   ul {
     li {
       display: inline-block;
