@@ -283,3 +283,102 @@ a:hover {
   display: inline;
   margin-right: 20px;
 }
+
+/* line 3, ../src/index.scss */
+.promo {
+  margin-bottom: 80px;
+  position: relative;
+}
+/* line 6, ../src/index.scss */
+.promo .baners {
+  border: 1px solid #f7941e;
+  padding: 20px 0;
+  height: 298px;
+}
+/* line 10, ../src/index.scss */
+.promo .baners .item {
+  width: 820px;
+  margin: 0 auto;
+}
+/* line 13, ../src/index.scss */
+.promo .baners .item image {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 16, ../src/index.scss */
+.promo .baners .item article {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: 480px;
+  margin-left: 36px;
+  padding: 26px 0 0 0;
+}
+/* line 21, ../src/index.scss */
+.promo .baners .item article hgroup {
+  margin: 0 0 16px 0;
+}
+/* line 23, ../src/index.scss */
+.promo .baners .item article hgroup h2 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+}
+/* line 27, ../src/index.scss */
+.promo .baners .item article hgroup h3 {
+  font-size: 21px;
+}
+/* line 31, ../src/index.scss */
+.promo .baners .item article .price {
+  display: block;
+  color: #4c7f82;
+  font-weight: bold;
+  font-size: 21px;
+  margin-top: 22px;
+}
+/* line 41, ../src/index.scss */
+.promo .baners-nav {
+  width: 540px;
+  position: absolute;
+  top: 300px;
+  right: 0;
+}
+/* line 46, ../src/index.scss */
+.promo .baners-nav li {
+  display: inline-block;
+  margin-left: 10px;
+}
+/* line 49, ../src/index.scss */
+.promo .baners-nav li:first-child {
+  margin-left: 0;
+}
+/* line 52, ../src/index.scss */
+.promo .baners-nav li a {
+  display: block;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 1px solid #f7941e;
+}
+/* line 58, ../src/index.scss */
+.promo .baners-nav li a:hover {
+  background: #f7941e;
+}
+/* line 61, ../src/index.scss */
+.promo .baners-nav li a.active {
+  background: #f7941e;
+}
+/* line 67, ../src/index.scss */
+.promo .baners-nav-left {
+  position: absolute;
+  top: 148px;
+  left: 12px;
+}
+/* line 72, ../src/index.scss */
+.promo .baners-nav-right {
+  position: absolute;
+  top: 148px;
+  right: 12px;
+}

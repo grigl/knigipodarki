@@ -1,26 +1,6 @@
 /* line 4, ../src/shop.scss */
-.shop-box .item {
-  display: block;
-  text-decoration: none;
-}
-/* line 8, ../src/shop.scss */
-.shop-box .item article .price {
-  color: red;
-}
-/* line 11, ../src/shop.scss */
-.shop-box .item article h3 {
-  font-weight: bold;
-}
-/* line 14, ../src/shop.scss */
-.shop-box .item article p {
-  font-style: italic;
-}
-/* line 17, ../src/shop.scss */
-.shop-box .item article:hover:after {
-  content: 'add';
-  color: red;
-}
-/* line 22, ../src/shop.scss */
-.shop-box .item:hover {
-  border: 1px solid red;
+.catalogue .item {
+  width: 240px;
+  display: inline-block;
+  background: gray;
 }

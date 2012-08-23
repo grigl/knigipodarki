@@ -1,0 +1,77 @@
+@import 'layout';
+
+.promo {
+  margin-bottom: 80px;
+  position: relative;
+  .baners {
+    border: 1px solid #f7941e;
+    padding: 20px 0;
+    height: 298px;
+    .item {
+      width: 820px;
+      margin: 0 auto;
+      image {
+        @include inline-block;
+      }
+      article {
+        @include inline-block;
+        width: 480px;
+        margin-left: 36px;
+        padding: 26px 0 0 0;
+        hgroup {
+          margin: 0 0 16px 0;
+          h2 {
+            font-size: 48px;
+            margin: 0 0 20px 0;
+          }
+          h3 {
+            font-size: 21px;
+          }
+        }
+        .price {
+          display: block;
+          color: #4c7f82;
+          font-weight: bold;
+          font-size: 21px;
+          margin-top: 22px;
+        }
+      }
+    }
+  }
+  .baners-nav {
+    width: 540px;
+    position: absolute;
+    top: 300px;
+    right: 0;
+    li {
+      display: inline-block;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        display: block;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        border: 1px solid #f7941e;
+        &:hover {
+          background: #f7941e;
+        }
+        &.active {
+          background: #f7941e;
+        }
+      }
+    }
+  }
+  .baners-nav-left {
+    position: absolute;
+    top: 148px;
+    left: 12px;
+  }
+  .baners-nav-right {
+    position: absolute;
+    top: 148px;
+    right: 12px;
+  }
+}
