@@ -1,4 +1,8 @@
-/* line 2, ../src/shop.scss */
+/* line 1, ../src/shop.scss */
+.catalogue {
+  margin-bottom: 50px;
+}
+/* line 3, ../src/shop.scss */
 .catalogue .item {
   width: 230px;
   border: 1px solid #fff;
@@ -6,12 +10,12 @@
   display: inline-block;
   padding: 30px 0 15px 0;
 }
-/* line 8, ../src/shop.scss */
+/* line 9, ../src/shop.scss */
 .catalogue .item a {
   color: #404040;
   text-decoration: none;
 }
-/* line 12, ../src/shop.scss */
+/* line 13, ../src/shop.scss */
 .catalogue .item:hover {
   width: 230px;
   border: 1px solid #fbc98e;
@@ -46,11 +50,63 @@
 }
 /* line 40, ../src/shop.scss */
 .catalogue .item .add-to-cart {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 60px;
-  background: #fbc98e;
+  width: 68px;
+  height: 57px;
+  background: url(../images/cart.png) right top no-repeat;
   z-index: 9999;
+}
+/* line 50, ../src/shop.scss */
+.catalogue .item:hover .add-to-cart {
+  display: block;
+}
+/* line 54, ../src/shop.scss */
+.catalogue header {
+  overflow: hidden;
+  border-top: 1px solid #7f7f7f;
+  padding: 18px 0 18px 0;
+}
+/* line 58, ../src/shop.scss */
+.catalogue header h2 {
+  float: left;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* line 64, ../src/shop.scss */
+.catalogue header a {
+  float: right;
+  font-weight: 300;
+  color: #a0a0a0;
+  text-decoration: none;
+}
+/* line 69, ../src/shop.scss */
+.catalogue header a:hover {
+  text-decoration: underline;
+}
+
+/* line 76, ../src/shop.scss */
+.tags {
+  width: 810px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #99b6b7;
+}
+/* line 82, ../src/shop.scss */
+.tags ul li {
+  display: inline;
+  margin-left: 10px;
+  line-height: 24px;
+}
+/* line 86, ../src/shop.scss */
+.tags ul li a {
+  color: #4c7f82;
+  text-decoration: none;
+}
+/* line 89, ../src/shop.scss */
+.tags ul li a:hover {
+  text-decoration: underline;
 }
