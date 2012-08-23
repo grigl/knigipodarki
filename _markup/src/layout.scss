@@ -1,6 +1,19 @@
 @import 'compass';
 @import 'compass/reset';
 
+
+@mixin inline-blocks {
+  letter-spacing: -.31em;
+  word-spacing: -.43em;  
+}
+
+@mixin inline-block {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+
 $module-width: 20px;
 $atomx: 26px;
 $atomy: 20px;
@@ -11,22 +24,56 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+body {
+  font: 14px/120% Ubuntu;
+}
+
+.wrap {
+  width: 940px;
+  margin: 0 auto;
+  background: blue;
+}
+
 .panel {
+  background: #404040;
+  height: 30px;
+  overflow: hidden;
+  color: #fff;
+  text-align: right;
+  a {
+    color: #fff;
+  }
   nav {
+    float: left;
     ul {
       li {
+        display: inline-block;
+        height: 23px;
+        padding-top: 7px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        vertical-align: text-bottom;
+        text-transform: uppercase;
         a {
-          color: red;
+          text-decoration: none;
         }
       }
     }
   }
   .phone {
-    color: green;
+    float: right;
+    width: right;
+    height: 24px;
+    padding: 6px 15px 0 15px;
+    font-size: 18px;
+    background: #535353;
   }
   .login {
-    a {
-      color: blue;
-    }
+    width: auto;
+    float: right;
+    height: 23px;
+    padding-top: 7px;
+    background: gray;
+    font-weight: bold;
   }
 }

@@ -1,26 +1,26 @@
-/* line 5, ../src/shop.scss */
-.shop-box .shop-box-content .item {
+/* line 4, ../src/shop.scss */
+.shop-box .item {
   display: block;
   text-decoration: none;
 }
-/* line 9, ../src/shop.scss */
-.shop-box .shop-box-content .item article .price {
+/* line 8, ../src/shop.scss */
+.shop-box .item article .price {
   color: red;
 }
-/* line 12, ../src/shop.scss */
-.shop-box .shop-box-content .item article h3 {
+/* line 11, ../src/shop.scss */
+.shop-box .item article h3 {
   font-weight: bold;
 }
-/* line 15, ../src/shop.scss */
-.shop-box .shop-box-content .item article p {
+/* line 14, ../src/shop.scss */
+.shop-box .item article p {
   font-style: italic;
 }
-/* line 18, ../src/shop.scss */
-.shop-box .shop-box-content .item article:hover:after {
+/* line 17, ../src/shop.scss */
+.shop-box .item article:hover:after {
   content: 'add';
   color: red;
 }
-/* line 23, ../src/shop.scss */
-.shop-box .shop-box-content .item:hover {
+/* line 22, ../src/shop.scss */
+.shop-box .item:hover {
   border: 1px solid red;
 }

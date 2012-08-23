@@ -63,20 +63,68 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 10, ../src/layout.scss */
+/* line 23, ../src/layout.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 18, ../src/layout.scss */
+/* line 27, ../src/layout.scss */
+body {
+  font: 14px/120% Ubuntu;
+}
+
+/* line 31, ../src/layout.scss */
+.wrap {
+  width: 940px;
+  margin: 0 auto;
+  background: blue;
+}
+
+/* line 37, ../src/layout.scss */
+.panel {
+  background: #404040;
+  height: 30px;
+  overflow: hidden;
+  color: #fff;
+  text-align: right;
+}
+/* line 43, ../src/layout.scss */
+.panel a {
+  color: #fff;
+}
+/* line 46, ../src/layout.scss */
+.panel nav {
+  float: left;
+}
+/* line 49, ../src/layout.scss */
+.panel nav ul li {
+  display: inline-block;
+  height: 23px;
+  padding-top: 7px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  vertical-align: text-bottom;
+  text-transform: uppercase;
+}
+/* line 57, ../src/layout.scss */
 .panel nav ul li a {
-  color: red;
+  text-decoration: none;
 }
-/* line 24, ../src/layout.scss */
+/* line 63, ../src/layout.scss */
 .panel .phone {
-  color: green;
+  float: right;
+  width: right;
+  height: 24px;
+  padding: 6px 15px 0 15px;
+  font-size: 18px;
+  background: #535353;
 }
-/* line 28, ../src/layout.scss */
-.panel .login a {
-  color: blue;
+/* line 71, ../src/layout.scss */
+.panel .login {
+  width: auto;
+  float: right;
+  height: 23px;
+  padding-top: 7px;
+  background: gray;
+  font-weight: bold;
 }
