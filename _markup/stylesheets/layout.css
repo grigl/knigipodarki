@@ -242,17 +242,43 @@ a:hover {
   text-align: right;
   overflow: hidden;
   margin-top: 60px;
-  padding: 30px 0;
+  padding: 30px 0 30px 0;
 }
 /* line 180, ../src/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 184, ../src/layout.scss */
+/* line 183, ../src/layout.scss */
+.site-footer .foot-right {
+  width: 560px;
+  float: right;
+}
+/* line 186, ../src/layout.scss */
+.site-footer .foot-right a.social {
+  width: 30px;
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+}
+/* line 191, ../src/layout.scss */
+.site-footer .foot-right a.social img {
+  position: absolute;
+  top: -20px;
+}
+/* line 196, ../src/layout.scss */
+.site-footer .foot-right span {
+  width: auto;
+  display: inline-block;
+}
+/* line 200, ../src/layout.scss */
+.site-footer .foot-right .mail {
+  margin-right: 10px;
+}
+/* line 205, ../src/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 186, ../src/layout.scss */
+/* line 207, ../src/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
