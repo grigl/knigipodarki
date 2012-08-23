@@ -72,29 +72,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font: 14px/20px Ubuntu;
   background: url(../images/back.png);
+  color: #404040;
 }
 
-/* line 32, ../src/layout.scss */
+/* line 33, ../src/layout.scss */
 a {
   text-decoration: underline;
 }
-/* line 34, ../src/layout.scss */
+/* line 35, ../src/layout.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 39, ../src/layout.scss */
+/* line 40, ../src/layout.scss */
 .wrap {
   width: 940px;
   margin: 0 auto;
 }
 
-/* line 44, ../src/layout.scss */
+/* line 45, ../src/layout.scss */
 .wrap-row {
   overflow: hidden;
 }
 
-/* line 48, ../src/layout.scss */
+/* line 49, ../src/layout.scss */
 .white-wrap {
   width: 1100px;
   margin: 0 auto;
@@ -102,7 +103,7 @@ a:hover {
   padding: 20px 0 60px 0;
 }
 
-/* line 56, ../src/layout.scss */
+/* line 57, ../src/layout.scss */
 .panel {
   background: #404040;
   height: 30px;
@@ -110,15 +111,15 @@ a:hover {
   color: #fff;
   text-align: right;
 }
-/* line 62, ../src/layout.scss */
+/* line 63, ../src/layout.scss */
 .panel a {
   color: #fff;
 }
-/* line 65, ../src/layout.scss */
+/* line 66, ../src/layout.scss */
 .panel nav {
   float: left;
 }
-/* line 68, ../src/layout.scss */
+/* line 69, ../src/layout.scss */
 .panel nav ul li {
   display: inline-block;
   height: 24px;
@@ -129,19 +130,19 @@ a:hover {
   text-transform: uppercase;
   margin-right: 26px;
 }
-/* line 77, ../src/layout.scss */
+/* line 78, ../src/layout.scss */
 .panel nav ul li a {
   text-decoration: none;
 }
-/* line 79, ../src/layout.scss */
+/* line 80, ../src/layout.scss */
 .panel nav ul li a:hover {
   color: #c0c0c0;
 }
-/* line 83, ../src/layout.scss */
+/* line 84, ../src/layout.scss */
 .panel nav ul li a.current {
   color: #c0c0c0;
 }
-/* line 89, ../src/layout.scss */
+/* line 90, ../src/layout.scss */
 .panel .phone {
   float: right;
   width: right;
@@ -150,7 +151,7 @@ a:hover {
   font-size: 18px;
   background: #535353;
 }
-/* line 97, ../src/layout.scss */
+/* line 98, ../src/layout.scss */
 .panel .login {
   width: auto;
   float: right;
@@ -158,62 +159,62 @@ a:hover {
   background: gray;
   font-weight: bold;
 }
-/* line 104, ../src/layout.scss */
+/* line 105, ../src/layout.scss */
 .panel .login a {
   display: inline-block;
   height: 26px;
   padding: 4px 15px 0 15px;
   text-decoration: none;
 }
-/* line 110, ../src/layout.scss */
+/* line 111, ../src/layout.scss */
 .panel .login .l-login {
   background: #4c7f82;
   margin-right: -3px;
 }
-/* line 113, ../src/layout.scss */
+/* line 114, ../src/layout.scss */
 .panel .login .l-login:hover {
   background: #81a5a7;
 }
-/* line 117, ../src/layout.scss */
+/* line 118, ../src/layout.scss */
 .panel .login .l-registration {
   background: #f7941e;
 }
-/* line 119, ../src/layout.scss */
+/* line 120, ../src/layout.scss */
 .panel .login .l-registration:hover {
   background: #f9b461;
 }
 
-/* line 126, ../src/layout.scss */
+/* line 127, ../src/layout.scss */
 .navigations {
   margin-top: 20px;
 }
-/* line 129, ../src/layout.scss */
+/* line 130, ../src/layout.scss */
 .navigations .search input {
   width: 280px;
   padding: 0 10px;
   height: 28px;
   border: 1px solid #e0e0e0;
 }
-/* line 136, ../src/layout.scss */
+/* line 137, ../src/layout.scss */
 .navigations .logo {
   float: left;
 }
-/* line 139, ../src/layout.scss */
+/* line 140, ../src/layout.scss */
 .navigations .search {
   float: right;
 }
-/* line 142, ../src/layout.scss */
+/* line 143, ../src/layout.scss */
 .navigations .direction-nav {
   border-bottom: 1px solid #404040;
   padding-bottom: 6px;
   margin: 30px 0 62px 0;
 }
-/* line 147, ../src/layout.scss */
+/* line 148, ../src/layout.scss */
 .navigations .direction-nav ul li {
   display: inline-block;
   margin-right: 1px;
 }
-/* line 150, ../src/layout.scss */
+/* line 151, ../src/layout.scss */
 .navigations .direction-nav ul li a {
   display: inline-block;
   padding: 10px 10px;
@@ -221,22 +222,22 @@ a:hover {
   text-decoration: none;
   color: #404040;
 }
-/* line 156, ../src/layout.scss */
+/* line 157, ../src/layout.scss */
 .navigations .direction-nav ul li a:hover {
   border: 3px solid #edf2f2;
   padding: 7px 7px;
 }
-/* line 161, ../src/layout.scss */
+/* line 162, ../src/layout.scss */
 .navigations .direction-nav ul li:last-child {
   margin-right: 0;
 }
-/* line 166, ../src/layout.scss */
+/* line 167, ../src/layout.scss */
 .navigations .direction-nav ul li.current a {
   background: #4c7f82;
   color: #fff;
 }
 
-/* line 175, ../src/layout.scss */
+/* line 176, ../src/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -244,41 +245,41 @@ a:hover {
   overflow: hidden;
   padding: 30px 0 30px 0;
 }
-/* line 181, ../src/layout.scss */
+/* line 182, ../src/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 184, ../src/layout.scss */
+/* line 185, ../src/layout.scss */
 .site-footer .foot-right {
   width: 560px;
   float: right;
 }
-/* line 187, ../src/layout.scss */
+/* line 188, ../src/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   display: inline-block;
   margin-left: 10px;
   position: relative;
 }
-/* line 192, ../src/layout.scss */
+/* line 193, ../src/layout.scss */
 .site-footer .foot-right a.social img {
   position: absolute;
   top: -20px;
 }
-/* line 197, ../src/layout.scss */
+/* line 198, ../src/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   display: inline-block;
 }
-/* line 201, ../src/layout.scss */
+/* line 202, ../src/layout.scss */
 .site-footer .foot-right .mail {
   margin-right: 10px;
 }
-/* line 206, ../src/layout.scss */
+/* line 207, ../src/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 208, ../src/layout.scss */
+/* line 209, ../src/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;

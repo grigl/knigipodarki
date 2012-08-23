@@ -1,10 +1,50 @@
-// shop
-
 .catalogue {
   .item {
-    width: 240px;
+    width: 230px;
+    border: 1px solid #fff;
+    position: relative;
     display: inline-block;
-    background: gray;
-
+    padding: 30px 0 15px 0;
+    a {
+      color: #404040;
+      text-decoration: none;
+    }
+    &:hover {
+      width: 230px;
+      // padding: 30px 0 15px 0;
+      border: 1px solid #fbc98e;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    article {
+      margin-top: 15px;
+      padding: 0 30px 0 30px;
+      .price {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        color: #e66f50;
+        margin-bottom: 18px;
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 14px;
+        font-style: italic;
+      }
+    }
+    .add-to-cart {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      background: #fbc98e;
+      z-index: 9999;
+    }
   }
 }

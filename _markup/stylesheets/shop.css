@@ -1,6 +1,56 @@
-/* line 4, ../src/shop.scss */
+/* line 2, ../src/shop.scss */
 .catalogue .item {
-  width: 240px;
+  width: 230px;
+  border: 1px solid #fff;
+  position: relative;
   display: inline-block;
-  background: gray;
+  padding: 30px 0 15px 0;
+}
+/* line 8, ../src/shop.scss */
+.catalogue .item a {
+  color: #404040;
+  text-decoration: none;
+}
+/* line 12, ../src/shop.scss */
+.catalogue .item:hover {
+  width: 230px;
+  border: 1px solid #fbc98e;
+}
+/* line 17, ../src/shop.scss */
+.catalogue .item img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 21, ../src/shop.scss */
+.catalogue .item article {
+  margin-top: 15px;
+  padding: 0 30px 0 30px;
+}
+/* line 24, ../src/shop.scss */
+.catalogue .item article .price {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e66f50;
+  margin-bottom: 18px;
+}
+/* line 31, ../src/shop.scss */
+.catalogue .item article h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 35, ../src/shop.scss */
+.catalogue .item article p {
+  font-size: 14px;
+  font-style: italic;
+}
+/* line 40, ../src/shop.scss */
+.catalogue .item .add-to-cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: #fbc98e;
+  z-index: 9999;
 }
