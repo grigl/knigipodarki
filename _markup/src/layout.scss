@@ -29,9 +29,20 @@ body {
   background: url(../images/back.png);
 }
 
+a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .wrap {
   width: 940px;
   margin: 0 auto;
+}
+
+.wrap-row {
+  overflow: hidden;
 }
 
 .white-wrap {
@@ -63,6 +74,12 @@ body {
         margin-right: 26px;
         a {
           text-decoration: none;
+          &:hover {
+            color: #c0c0c0;
+          }
+        }
+        a.current {
+          color: #c0c0c0;
         }
       }
     }
@@ -90,15 +107,30 @@ body {
     }
     .l-login {
       background: #4c7f82;
+      margin-right: -3px;
+      &:hover {
+        background: #81a5a7;
+      }
     }
     .l-registration {
       background: #f7941e;
+      &:hover {
+        background: #f9b461;
+      }
     }
   }
 }
 
 .navigations {
   margin-top: 20px;
+  .search {
+    input {
+      width: 280px;
+      padding: 0 10px;
+      height: 28px;
+      border: 1px solid #e0e0e0;
+    }
+  }
   .logo {
     float: left;
   }
@@ -106,10 +138,9 @@ body {
     float: right;
   }
   .direction-nav {
-    clear: both;
     border-bottom: 1px solid #404040;
     padding-bottom: 6px;
-    margin-bottom: 62px;
+    margin: 30px 0 62px 0;
     ul {
       li {
         display: inline-block;
@@ -134,6 +165,27 @@ body {
           background: #4c7f82;
           color: #fff;
         }
+      }
+    }
+  }
+}
+
+.site-footer {
+  background: #808080;
+  color: #fff;
+  text-align: right;
+  overflow: hidden;
+  margin-top: 60px;
+  padding: 30px 0;
+  a {
+    color: #fff;
+  }
+  nav {
+    ul {
+      float: left;
+      li {
+        display: inline;
+        margin-right: 20px;
       }
     }
   }

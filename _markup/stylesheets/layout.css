@@ -75,19 +75,33 @@ body {
 }
 
 /* line 32, ../src/layout.scss */
+a {
+  text-decoration: underline;
+}
+/* line 34, ../src/layout.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 39, ../src/layout.scss */
 .wrap {
   width: 940px;
   margin: 0 auto;
 }
 
-/* line 37, ../src/layout.scss */
+/* line 44, ../src/layout.scss */
+.wrap-row {
+  overflow: hidden;
+}
+
+/* line 48, ../src/layout.scss */
 .white-wrap {
   width: 1100px;
   margin: 0 auto;
   background: #fff;
 }
 
-/* line 43, ../src/layout.scss */
+/* line 54, ../src/layout.scss */
 .panel {
   background: #404040;
   height: 30px;
@@ -95,15 +109,15 @@ body {
   color: #fff;
   text-align: right;
 }
-/* line 49, ../src/layout.scss */
+/* line 60, ../src/layout.scss */
 .panel a {
   color: #fff;
 }
-/* line 52, ../src/layout.scss */
+/* line 63, ../src/layout.scss */
 .panel nav {
   float: left;
 }
-/* line 55, ../src/layout.scss */
+/* line 66, ../src/layout.scss */
 .panel nav ul li {
   display: inline-block;
   height: 23px;
@@ -114,11 +128,19 @@ body {
   text-transform: uppercase;
   margin-right: 26px;
 }
-/* line 64, ../src/layout.scss */
+/* line 75, ../src/layout.scss */
 .panel nav ul li a {
   text-decoration: none;
 }
-/* line 70, ../src/layout.scss */
+/* line 77, ../src/layout.scss */
+.panel nav ul li a:hover {
+  color: #c0c0c0;
+}
+/* line 81, ../src/layout.scss */
+.panel nav ul li a.current {
+  color: #c0c0c0;
+}
+/* line 87, ../src/layout.scss */
 .panel .phone {
   float: right;
   width: right;
@@ -127,7 +149,7 @@ body {
   font-size: 18px;
   background: #535353;
 }
-/* line 78, ../src/layout.scss */
+/* line 95, ../src/layout.scss */
 .panel .login {
   width: auto;
   float: right;
@@ -135,47 +157,62 @@ body {
   background: gray;
   font-weight: bold;
 }
-/* line 85, ../src/layout.scss */
+/* line 102, ../src/layout.scss */
 .panel .login a {
   display: inline-block;
   height: 23px;
   padding: 7px 15px 0 15px;
   text-decoration: none;
 }
-/* line 91, ../src/layout.scss */
+/* line 108, ../src/layout.scss */
 .panel .login .l-login {
   background: #4c7f82;
+  margin-right: -3px;
 }
-/* line 94, ../src/layout.scss */
+/* line 111, ../src/layout.scss */
+.panel .login .l-login:hover {
+  background: #81a5a7;
+}
+/* line 115, ../src/layout.scss */
 .panel .login .l-registration {
   background: #f7941e;
 }
+/* line 117, ../src/layout.scss */
+.panel .login .l-registration:hover {
+  background: #f9b461;
+}
 
-/* line 100, ../src/layout.scss */
+/* line 124, ../src/layout.scss */
 .navigations {
   margin-top: 20px;
 }
-/* line 102, ../src/layout.scss */
+/* line 127, ../src/layout.scss */
+.navigations .search input {
+  width: 280px;
+  padding: 0 10px;
+  height: 28px;
+  border: 1px solid #e0e0e0;
+}
+/* line 134, ../src/layout.scss */
 .navigations .logo {
   float: left;
 }
-/* line 105, ../src/layout.scss */
+/* line 137, ../src/layout.scss */
 .navigations .search {
   float: right;
 }
-/* line 108, ../src/layout.scss */
+/* line 140, ../src/layout.scss */
 .navigations .direction-nav {
-  clear: both;
   border-bottom: 1px solid #404040;
   padding-bottom: 6px;
-  margin-bottom: 62px;
+  margin: 30px 0 62px 0;
 }
-/* line 114, ../src/layout.scss */
+/* line 145, ../src/layout.scss */
 .navigations .direction-nav ul li {
   display: inline-block;
   margin-right: 1px;
 }
-/* line 117, ../src/layout.scss */
+/* line 148, ../src/layout.scss */
 .navigations .direction-nav ul li a {
   display: inline-block;
   padding: 10px 10px;
@@ -183,17 +220,40 @@ body {
   text-decoration: none;
   color: #404040;
 }
-/* line 123, ../src/layout.scss */
+/* line 154, ../src/layout.scss */
 .navigations .direction-nav ul li a:hover {
   border: 3px solid #edf2f2;
   padding: 7px 7px;
 }
-/* line 128, ../src/layout.scss */
+/* line 159, ../src/layout.scss */
 .navigations .direction-nav ul li:last-child {
   margin-right: 0;
 }
-/* line 133, ../src/layout.scss */
+/* line 164, ../src/layout.scss */
 .navigations .direction-nav ul li.current a {
   background: #4c7f82;
   color: #fff;
+}
+
+/* line 173, ../src/layout.scss */
+.site-footer {
+  background: #808080;
+  color: #fff;
+  text-align: right;
+  overflow: hidden;
+  margin-top: 60px;
+  padding: 30px 0;
+}
+/* line 180, ../src/layout.scss */
+.site-footer a {
+  color: #fff;
+}
+/* line 184, ../src/layout.scss */
+.site-footer nav ul {
+  float: left;
+}
+/* line 186, ../src/layout.scss */
+.site-footer nav ul li {
+  display: inline;
+  margin-right: 20px;
 }
