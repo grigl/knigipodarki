@@ -26,12 +26,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   font: 14px/120% Ubuntu;
+  background: url(../images/back.png);
 }
 
 .wrap {
   width: 940px;
   margin: 0 auto;
-  background: blue;
+}
+
+.white-wrap {
+  width: 1100px;
+  margin: 0 auto;
+  background: #fff;
 }
 
 .panel {
@@ -54,6 +60,7 @@ body {
         letter-spacing: 1px;
         vertical-align: text-bottom;
         text-transform: uppercase;
+        margin-right: 26px;
         a {
           text-decoration: none;
         }
@@ -71,9 +78,63 @@ body {
   .login {
     width: auto;
     float: right;
-    height: 23px;
-    padding-top: 7px;
+    height: 30px;
+    // padding-top: 7px;
     background: gray;
     font-weight: bold;
+    a {
+      display: inline-block;
+      height: 23px;
+      padding: 7px 15px 0 15px;
+      text-decoration: none;
+    }
+    .l-login {
+      background: #4c7f82;
+    }
+    .l-registration {
+      background: #f7941e;
+    }
+  }
+}
+
+.navigations {
+  margin-top: 20px;
+  .logo {
+    float: left;
+  }
+  .search {
+    float: right;
+  }
+  .direction-nav {
+    clear: both;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 6px;
+    margin-bottom: 62px;
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 1px;
+        a {
+          display: inline-block;
+          padding: 10px 10px;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #404040;
+          &:hover {
+            border: 3px solid #edf2f2;
+          padding: 7px 7px;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      li.current {
+        a {
+          background: #4c7f82;
+          color: #fff;
+        }
+      }
+    }
   }
 }
