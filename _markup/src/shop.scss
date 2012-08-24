@@ -25,14 +25,26 @@
       padding: 0 30px 0 30px;
       .price {
         display: block;
+        float: left;
         font-size: 18px;
         font-weight: bold;
         color: #e66f50;
         margin-bottom: 18px;
       }
+      .marker {
+        // display: block;
+        // width: auto;
+        // float: right;
+        margin-left: 20px;
+        color: #fff;
+        background: #c0c0c0;
+        text-transform: uppercase;
+        padding: 1px 3px;
+      }
       h2 {
         font-size: 16px;
         font-weight: bold;
+        clear: both;
       }
       p {
         font-size: 14px;

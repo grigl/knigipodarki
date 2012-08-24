@@ -1,0 +1,23 @@
+@import 'layout';
+
+.brand {
+  img {
+    @include inline-block;
+  }
+  article {
+    @include inline-block;
+    width: 590px;
+    margin-left: 46px;
+    hgroup {
+      margin-bottom: 25px;
+      h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      h2 {
+        font-size: 21px;
+      }
+    }
+  }
+}
