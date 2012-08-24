@@ -19,6 +19,20 @@
       vertical-align: middle;
       margin-left: 10px;
     }
+    .breadcrumps {
+      @include inline-block;
+      margin-left: 20px;
+      li {
+        @include inline-block;
+        vertical-align: middle;
+        &.step {
+          color: #c0c0c0;
+        }
+        &.current {
+          color: $color;
+        }
+      }
+    }
   }
 }
 

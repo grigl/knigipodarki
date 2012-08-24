@@ -2046,40 +2046,64 @@ p {
   vertical-align: middle;
   margin-left: 10px;
 }
-
+/* line 22, ../src/account.scss */
+.account header .breadcrumps {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+}
 /* line 25, ../src/account.scss */
+.account header .breadcrumps li {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+}
+/* line 28, ../src/account.scss */
+.account header .breadcrumps li.step {
+  color: #c0c0c0;
+}
+/* line 31, ../src/account.scss */
+.account header .breadcrumps li.current {
+  color: #404040;
+}
+
+/* line 39, ../src/account.scss */
 .orders {
   margin: 40px 0;
 }
-/* line 27, ../src/account.scss */
+/* line 41, ../src/account.scss */
 .orders h3 {
   font-size: 21px;
   margin-bottom: 25px;
 }
-/* line 31, ../src/account.scss */
+/* line 45, ../src/account.scss */
 .orders table {
   width: 100%;
 }
-/* line 35, ../src/account.scss */
+/* line 49, ../src/account.scss */
 .orders table tbody tr:nth-child(2n+2) {
   background: #f8f8f8;
 }
-/* line 38, ../src/account.scss */
+/* line 52, ../src/account.scss */
 .orders table tbody tr td {
   width: 16%;
   padding: 5px 10px;
 }
-/* line 42, ../src/account.scss */
+/* line 56, ../src/account.scss */
 .orders table tbody tr th {
   font-weight: bold;
   padding: 5px 10px;
 }
 
-/* line 52, ../src/account.scss */
+/* line 66, ../src/account.scss */
 .addresses header {
   margin-bottom: 25px;
 }
-/* line 54, ../src/account.scss */
+/* line 68, ../src/account.scss */
 .addresses header h3 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -2088,7 +2112,7 @@ p {
   vertical-align: middle;
   font-size: 21px;
 }
-/* line 59, ../src/account.scss */
+/* line 73, ../src/account.scss */
 .addresses header a {
   letter-spacing: normal;
   word-spacing: normal;
@@ -2097,12 +2121,12 @@ p {
   vertical-align: middle;
   margin-left: 25px;
 }
-/* line 65, ../src/account.scss */
+/* line 79, ../src/account.scss */
 .addresses .adress {
   background: #f8f8f8;
   padding: 20px;
 }
-/* line 68, ../src/account.scss */
+/* line 82, ../src/account.scss */
 .addresses .adress .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -2111,7 +2135,7 @@ p {
   vertical-align: middle;
   width: 620px;
 }
-/* line 73, ../src/account.scss */
+/* line 87, ../src/account.scss */
 .addresses .adress .controls {
   letter-spacing: normal;
   word-spacing: normal;
@@ -2121,40 +2145,40 @@ p {
   width: 220px;
   margin-left: 50px;
 }
-/* line 78, ../src/account.scss */
+/* line 92, ../src/account.scss */
 .addresses .adress .controls a {
   margin-right: 20px;
 }
 
-/* line 85, ../src/account.scss */
+/* line 99, ../src/account.scss */
 .order {
   margin: 30px 0;
 }
-/* line 87, ../src/account.scss */
+/* line 101, ../src/account.scss */
 .order h3 {
   font-size: 21px;
   margin-bottom: 25px;
 }
-/* line 91, ../src/account.scss */
+/* line 105, ../src/account.scss */
 .order table {
   width: 100%;
 }
-/* line 94, ../src/account.scss */
+/* line 108, ../src/account.scss */
 .order table tr th {
   background: #f8f8f8;
   width: 20%;
   padding: 5px 10px;
 }
-/* line 98, ../src/account.scss */
+/* line 112, ../src/account.scss */
 .order table tr th:last-child {
   width: 20%;
 }
-/* line 102, ../src/account.scss */
+/* line 116, ../src/account.scss */
 .order table tr td {
   width: 20%;
   padding: 5px 10px;
 }
-/* line 105, ../src/account.scss */
+/* line 119, ../src/account.scss */
 .order table tr td:last-child {
   width: 20%;
 }
@@ -2192,8 +2216,9 @@ p {
 .forms .controls {
   text-align: right;
   padding-top: 18px;
+  margin-bottom: 20px;
 }
-/* line 30, ../src/forms.scss */
+/* line 31, ../src/forms.scss */
 .forms .controls input {
   border: none;
   height: 30px;
@@ -2202,15 +2227,51 @@ p {
   color: #fff;
   margin-left: 20px;
 }
-/* line 39, ../src/forms.scss */
+/* line 40, ../src/forms.scss */
 .forms .top-decor {
   border-top: 1px solid #c0c0c0;
 }
-/* line 42, ../src/forms.scss */
+/* line 43, ../src/forms.scss */
 .forms .controls-big {
   width: 622px;
 }
-/* line 45, ../src/forms.scss */
+/* line 46, ../src/forms.scss */
 .forms .controls-small {
   width: 300px;
+}
+/* line 50, ../src/forms.scss */
+.forms .forms-info article {
+  padding: 10px 20px;
+  border: 6px solid #e66f50;
+  border-left: 20px solid #e66f50;
+  background: #f8f8f8;
+  margin-top: 20px;
+}
+/* line 58, ../src/forms.scss */
+.forms .info-big {
+  width: 622px;
+  margin-bottom: 20px;
+}
+
+/* line 2, ../src/checkout.scss */
+.checkout header {
+  margin-bottom: 25px;
+}
+/* line 4, ../src/checkout.scss */
+.checkout header h3 {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  font-size: 21px;
+}
+/* line 9, ../src/checkout.scss */
+.checkout header a {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  margin-left: 25px;
 }

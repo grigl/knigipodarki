@@ -1,0 +1,15 @@
+.checkout {
+  header {
+    margin-bottom: 25px;
+    h3 {
+      @include inline-block;
+      vertical-align: middle;
+      font-size: 21px;
+    }
+    a {
+      @include inline-block;
+      vertical-align: middle;
+      margin-left: 25px;
+    }
+  }
+}
