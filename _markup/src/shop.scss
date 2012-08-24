@@ -53,10 +53,18 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 68px;
-      height: 57px;
+      width: 32px;
+      height: 49px;
+      padding: 8px 0 0 36px;
+      font-family: kp_icons;
+      font-size: 24px;
+      color: #fff;
       background: url(../images/cart.png) right top no-repeat;
       z-index: 9999;
+      &:hover {
+        // очень и очень спорный момент!
+        color: #e66f50;
+      }
     }
     &:hover .add-to-cart {
       display: block;
@@ -186,6 +194,7 @@
 }
 
 .product {
+  margin-bottom: 45px;
   figure {
     @include inline-block;
     width: 300px;
@@ -263,11 +272,69 @@
       }
     }
     .cartline {
+      margin-bottom: 36px;
       .cart {
-        a {
-          font-family: kp_icons;
-          color: red;
+        @include inline-block;
+        vertical-align: middle;
+        width: auto;
+        background: #e66f50;
+        padding: 10px 18px 10px 12px;
+        span {
+          // display: block;
+          color: #fff;
+          border-right: 2px solid #eb8c73;
+          padding-right: 12px;
+          font-weight: bold;
+          font-size: 18px;
         }
+        a {
+          margin-left: 12px;
+          font-family: kp_icons;
+          text-decoration: none;
+          color: #fff;
+          font-size: 22px;
+        }
+      }
+      .stock {
+        @include inline-block;
+        vertical-align: middle;
+        width: auto;
+        margin-left: 20px;
+        font-size: 12px;
+        color: #e66f50;
+      }
+      .payment {
+        @include inline-block;
+        vertical-align: middle;
+        width: auto;
+        margin-left: 20px;
+        font-size: 12px;
+        color: #c0c0c0;
+      }
+    }
+  }
+  aside {
+    width: 590px;
+    margin-left: 350px;
+    // background: green; 
+    .specs {
+      @include inline-block;
+      width: 230px;
+      padding: 20px;
+      background: #f8f8f8;
+      h3 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #808080;
+        margin-bottom: 20px;
+      }
+    }
+    .product-tags {
+      @include inline-block;
+      width: 240px;
+      padding: 20px;
+      a {
+        color: #4c7f82;
       }
     }
   }
