@@ -1292,3 +1292,37 @@ p {
   vertical-align: top;
   width: 594px;
 }
+/* line 60, ../src/checkout.scss */
+.adress-choise .controls {
+  text-align: left;
+  margin: 0;
+}
+/* line 63, ../src/checkout.scss */
+.adress-choise .controls input {
+  margin-left: 0;
+}
+/* line 68, ../src/checkout.scss */
+.adress-choise .payment-comment h3 {
+  font-size: 21px;
+  margin-bottom: 25px;
+}
+/* line 72, ../src/checkout.scss */
+.adress-choise .payment-comment textarea {
+  width: 594px;
+  height: 68px;
+  border: 1px solid #c0c0c0;
+}
+
+/* line 80, ../src/checkout.scss */
+.approve {
+  width: 594px;
+  margin-bottom: 60px;
+}
+/* line 83, ../src/checkout.scss */
+.approve header {
+  margin-bottom: 0;
+}
+/* line 85, ../src/checkout.scss */
+.approve header h3 {
+  margin-bottom: 25px;
+}
