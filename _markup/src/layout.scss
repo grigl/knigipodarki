@@ -14,15 +14,23 @@
   vertical-align: top;
 }
 
-$module-width: 20px;
-$atomx: 26px;
-$atomy: 20px;
-
 $color: #404040;
 $light-gray: #a0a0a0;
 
+$twitter: #52afde;
+$facebook: #3c5e96;
+$vk: #285278;
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
+}
+
+@font-face {
+  font-family: 'kp_icons';
+  src: url("../fonts/kp_icons.eot");
+  src: url("../fonts/kp_icons.eot?#iefix") format('embedded-opentype'), url("../fonts/kp_icons.woff") format('woff'), url("../fonts/kp_icons.ttf") format('truetype'), url("../fonts/kp_icons.svg#kp_icons") format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {

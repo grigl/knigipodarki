@@ -32,9 +32,6 @@
         margin-bottom: 18px;
       }
       .marker {
-        // display: block;
-        // width: auto;
-        // float: right;
         margin-left: 20px;
         color: #fff;
         background: #c0c0c0;
@@ -182,6 +179,94 @@
         text-decoration: none;
         &:hover {
           text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.product {
+  figure {
+    @include inline-block;
+    width: 300px;
+    // background: green;
+    ul {
+      margin-left: -17px;
+      li {
+        @include inline-block;
+        margin-left: 17px;
+      }
+    }
+    img {
+      border: 1px solid #e8e8e8;
+      margin-bottom: 20px;
+    }
+  }
+  article {
+    @include inline-block;
+    width: 590px;
+    margin-left: 46px;
+    hgroup {
+      margin-bottom: 34px;
+      h4 {
+        color: #c0c0c0;
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        line-height: 40px;
+      }
+      h2 {
+        @include inline-block;
+        vertical-align: middle;
+        font-size: 21px;
+        float: left;
+      }
+      .marker {
+        @include inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+        color: #fff;
+        background: #c0c0c0;
+        text-transform: uppercase;
+        padding: 1px 3px;
+      }
+      .product-social {
+        @include inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+        li {
+          display: inline;
+          font-family: kp_icons;
+          font-size: 15px;
+          margin-right: 4px;
+          a {
+            text-decoration: none;
+          }
+        }
+        .icon-vk {
+          a {
+            color: $vk;
+          }
+        }
+        .icon-facebook {
+          a {
+            color: $facebook;
+          }
+        }
+        .icon-twitter {
+          a {
+            color: $twitter;
+          }
+        }
+      }
+    }
+    .cartline {
+      .cart {
+        a {
+          font-family: kp_icons;
+          color: red;
         }
       }
     }
