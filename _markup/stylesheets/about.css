@@ -315,3 +315,46 @@ p {
   display: inline;
   margin-right: 20px;
 }
+
+/* line 3, ../src/about.scss */
+.about {
+  margin-bottom: 45px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+/* line 7, ../src/about.scss */
+.about article {
+  width: 440px;
+  float: left;
+}
+/* line 10, ../src/about.scss */
+.about article:last-child {
+  float: right;
+}
+/* line 13, ../src/about.scss */
+.about article img {
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+/* line 16, ../src/about.scss */
+.about article img:first-child {
+  margin-top: 0;
+}
+/* line 20, ../src/about.scss */
+.about article h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+/* line 26, ../src/about.scss */
+.about h1 {
+  clear: both;
+  margin-bottom: 45px;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* line 33, ../src/about.scss */
+.about:first-child {
+  margin-top: 48px;
+}
