@@ -1,738 +1,84 @@
-/* line 17, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+/*
+Syntax error: Undefined variable: "$color".
+        on line 16 of /home/macgera/whitescape/knigipodarki/_markup/src/layout.scss
+        from line 1 of /home/macgera/whitescape/knigipodarki/_markup/src/shop.scss
 
-/* line 22, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 24, ../src/layout.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-@font-face {
-  font-family: 'kp_icons';
-  src: url("../fonts/kp_icons.eot");
-  src: url("../fonts/kp_icons.eot?#iefix") format("embedded-opentype"), url("../fonts/kp_icons.woff") format("woff"), url("../fonts/kp_icons.ttf") format("truetype"), url("../fonts/kp_icons.svg#kp_icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* line 36, ../src/layout.scss */
-body {
-  font: 14px/20px Ubuntu;
-  background: url(../images/back.png);
-  color: #404040;
-}
-
-/* line 42, ../src/layout.scss */
-a {
-  text-decoration: underline;
-}
-/* line 44, ../src/layout.scss */
-a:hover {
-  text-decoration: none;
-}
-
-/* line 49, ../src/layout.scss */
-p {
-  margin-bottom: 1em;
-}
-
-/* line 53, ../src/layout.scss */
-.wrap {
-  width: 940px;
-  margin: 0 auto;
-}
-
-/* line 58, ../src/layout.scss */
-.wrap-row {
-  overflow: hidden;
-}
-
-/* line 62, ../src/layout.scss */
-.white-wrap {
-  width: 1100px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 20px 0 60px 0;
-}
-
-/* line 70, ../src/layout.scss */
-.panel {
-  background: #404040;
-  height: 30px;
-  overflow: hidden;
-  color: #fff;
-  text-align: right;
-}
-/* line 76, ../src/layout.scss */
-.panel a {
-  color: #fff;
-}
-/* line 79, ../src/layout.scss */
-.panel nav {
-  float: left;
-}
-/* line 82, ../src/layout.scss */
-.panel nav ul li {
-  display: inline-block;
-  height: 24px;
-  padding-top: 6px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  vertical-align: text-bottom;
-  text-transform: uppercase;
-  margin-right: 26px;
-}
-/* line 91, ../src/layout.scss */
-.panel nav ul li a {
-  text-decoration: none;
-}
-/* line 93, ../src/layout.scss */
-.panel nav ul li a:hover {
-  color: #c0c0c0;
-}
-/* line 97, ../src/layout.scss */
-.panel nav ul li a.current {
-  color: #c0c0c0;
-}
-/* line 103, ../src/layout.scss */
-.panel .phone {
-  float: right;
-  width: right;
-  height: 25px;
-  padding: 5px 15px 0 15px;
-  font-size: 18px;
-  background: #535353;
-}
-/* line 111, ../src/layout.scss */
-.panel .login {
-  width: auto;
-  float: right;
-  height: 30px;
-  background: gray;
-  font-weight: bold;
-}
-/* line 118, ../src/layout.scss */
-.panel .login a {
-  display: inline-block;
-  height: 26px;
-  padding: 4px 15px 0 15px;
-  text-decoration: none;
-}
-/* line 124, ../src/layout.scss */
-.panel .login .l-login {
-  background: #4c7f82;
-  margin-right: -3px;
-}
-/* line 127, ../src/layout.scss */
-.panel .login .l-login:hover {
-  background: #81a5a7;
-}
-/* line 131, ../src/layout.scss */
-.panel .login .l-registration {
-  background: #f7941e;
-}
-/* line 133, ../src/layout.scss */
-.panel .login .l-registration:hover {
-  background: #f9b461;
-}
-
-/* line 140, ../src/layout.scss */
-.navigations {
-  margin-top: 20px;
-  position: relative;
-}
-/* line 144, ../src/layout.scss */
-.navigations .search input {
-  width: 280px;
-  padding: 0 10px;
-  height: 28px;
-  border: 1px solid #e0e0e0;
-}
-/* line 151, ../src/layout.scss */
-.navigations .logo {
-  float: left;
-}
-/* line 154, ../src/layout.scss */
-.navigations .search {
-  float: right;
-}
-/* line 157, ../src/layout.scss */
-.navigations .direction-nav {
-  border-bottom: 1px solid #404040;
-  padding-bottom: 6px;
-  margin: 30px 0 62px 0;
-}
-/* line 162, ../src/layout.scss */
-.navigations .direction-nav ul li {
-  display: inline-block;
-  margin-right: 1px;
-}
-/* line 165, ../src/layout.scss */
-.navigations .direction-nav ul li a {
-  display: inline-block;
-  padding: 10px 10px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #404040;
-}
-/* line 171, ../src/layout.scss */
-.navigations .direction-nav ul li a:hover {
-  border: 3px solid #edf2f2;
-  padding: 7px 7px;
-}
-/* line 176, ../src/layout.scss */
-.navigations .direction-nav ul li:last-child {
-  margin-right: 0;
-}
-/* line 181, ../src/layout.scss */
-.navigations .direction-nav ul li.current a {
-  background: #4c7f82;
-  color: #fff;
-}
-/* line 188, ../src/layout.scss */
-.navigations .sub-direction-nav {
-  position: absolute;
-  top: 130px;
-}
-/* line 196, ../src/layout.scss */
-.navigations .sub-direction-nav ul li {
-  display: inline;
-  margin-right: 24px;
-}
-/* line 199, ../src/layout.scss */
-.navigations .sub-direction-nav ul li a {
-  font-size: 14px;
-  font-style: italic;
-  color: #4c7f82;
-  text-decoration: none;
-}
-/* line 204, ../src/layout.scss */
-.navigations .sub-direction-nav ul li a:hover {
-  text-decoration: underline;
-}
-/* line 210, ../src/layout.scss */
-.navigations .sub-direction-nav ul .current a {
-  font-weight: bold;
-}
-
-/* line 218, ../src/layout.scss */
-.site-footer {
-  background: #808080;
-  color: #fff;
-  text-align: right;
-  overflow: hidden;
-  padding: 30px 0 30px 0;
-}
-/* line 224, ../src/layout.scss */
-.site-footer a {
-  color: #fff;
-}
-/* line 227, ../src/layout.scss */
-.site-footer .foot-right {
-  width: 560px;
-  float: right;
-}
-/* line 230, ../src/layout.scss */
-.site-footer .foot-right a.social {
-  width: 30px;
-  display: inline-block;
-  margin-left: 10px;
-  position: relative;
-}
-/* line 235, ../src/layout.scss */
-.site-footer .foot-right a.social img {
-  position: absolute;
-  top: -20px;
-}
-/* line 240, ../src/layout.scss */
-.site-footer .foot-right span {
-  width: auto;
-  display: inline-block;
-}
-/* line 244, ../src/layout.scss */
-.site-footer .foot-right .mail {
-  margin-right: 10px;
-}
-/* line 249, ../src/layout.scss */
-.site-footer nav ul {
-  float: left;
-}
-/* line 251, ../src/layout.scss */
-.site-footer nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-/* line 3, ../src/shop.scss */
-.catalogue {
-  margin-bottom: 50px;
-}
-/* line 5, ../src/shop.scss */
-.catalogue .item {
-  width: 230px;
-  border: 1px solid #fff;
-  position: relative;
-  display: inline-block;
-  padding: 30px 0 15px 0;
-}
-/* line 11, ../src/shop.scss */
-.catalogue .item a {
-  color: #404040;
-  text-decoration: none;
-}
-/* line 15, ../src/shop.scss */
-.catalogue .item:hover {
-  width: 230px;
-  border: 1px solid #fbc98e;
-}
-/* line 19, ../src/shop.scss */
-.catalogue .item img {
-  display: block;
-  margin: 0 auto;
-}
-/* line 23, ../src/shop.scss */
-.catalogue .item article {
-  margin-top: 15px;
-  padding: 0 30px 0 30px;
-}
-/* line 26, ../src/shop.scss */
-.catalogue .item article .price {
-  display: block;
-  float: left;
-  font-size: 18px;
-  font-weight: bold;
-  color: #e66f50;
-  margin-bottom: 18px;
-}
-/* line 34, ../src/shop.scss */
-.catalogue .item article .marker {
-  margin-left: 20px;
-  color: #fff;
-  background: #c0c0c0;
-  text-transform: uppercase;
-  padding: 1px 3px;
-}
-/* line 41, ../src/shop.scss */
-.catalogue .item article h2 {
-  font-size: 16px;
-  font-weight: bold;
-  clear: both;
-}
-/* line 46, ../src/shop.scss */
-.catalogue .item article p {
-  font-size: 14px;
-  font-style: italic;
-}
-/* line 51, ../src/shop.scss */
-.catalogue .item .add-to-cart {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 32px;
-  height: 49px;
-  padding: 8px 0 0 36px;
-  font-family: kp_icons;
-  font-size: 24px;
-  color: #fff;
-  background: url(../images/cart.png) right top no-repeat;
-  z-index: 9999;
-}
-/* line 64, ../src/shop.scss */
-.catalogue .item .add-to-cart:hover {
-  color: #e66f50;
-}
-/* line 69, ../src/shop.scss */
-.catalogue .item:hover .add-to-cart {
-  display: block;
-}
-/* line 73, ../src/shop.scss */
-.catalogue header {
-  overflow: hidden;
-  border-top: 1px solid #7f7f7f;
-  padding: 18px 0 18px 0;
-}
-/* line 77, ../src/shop.scss */
-.catalogue header h2 {
-  float: left;
-  font-size: 30px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-/* line 83, ../src/shop.scss */
-.catalogue header a {
-  float: right;
-  font-weight: 300;
-  color: #a0a0a0;
-  text-decoration: none;
-}
-/* line 88, ../src/shop.scss */
-.catalogue header a:hover {
-  text-decoration: underline;
-}
-
-/* line 95, ../src/shop.scss */
-.sorting {
-  margin: 30px 0;
-}
-/* line 97, ../src/shop.scss */
-.sorting ul:first-child {
-  border-left: none;
-  margin-left: 0;
-}
-/* line 101, ../src/shop.scss */
-.sorting ul {
-  display: inline-block;
-  border-left: 1px solid #a0a0a0;
-  padding-left: 24px;
-}
-/* line 105, ../src/shop.scss */
-.sorting ul li {
-  display: inline;
-  margin-right: 24px;
-  color: #a0a0a0;
-}
-/* line 109, ../src/shop.scss */
-.sorting ul li a {
-  color: red;
-  text-decoration: none;
-  border-bottom: 1px dashed #404040;
-  color: #404040;
-}
-/* line 117, ../src/shop.scss */
-.sorting ul li a:hover {
-  border-bottom: none;
-}
-
-/* line 125, ../src/shop.scss */
-.pagination {
-  margin-left: 30px;
-}
-/* line 128, ../src/shop.scss */
-.pagination ul li {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  margin-right: 8px;
-}
-/* line 133, ../src/shop.scss */
-.pagination ul li a {
-  display: block;
-  height: 30px;
-  padding: 12px 14px 0 14px;
-  font-size: 24px;
-  text-decoration: none;
-  color: #c0c0c0;
-  background: #f8f8f8;
-}
-/* line 142, ../src/shop.scss */
-.pagination ul li a:hover {
-  background: #f8f8f8;
-  color: #f7941e;
-}
-/* line 147, ../src/shop.scss */
-.pagination ul li span {
-  display: block;
-  width: 42px;
-  height: 30px;
-  padding: 12px 14px 0 14px;
-  font-size: 24px;
-}
-/* line 157, ../src/shop.scss */
-.pagination ul .current a {
-  color: #000;
-}
-/* line 162, ../src/shop.scss */
-.pagination ul .arrow a {
-  width: 50px;
-  height: 36px;
-  padding: 14px 0 0 0;
-  background: #f0f0f0;
-}
-/* line 167, ../src/shop.scss */
-.pagination ul .arrow a:hover {
-  background: #f0f0f0;
-}
-
-/* line 175, ../src/shop.scss */
-.tags {
-  width: 810px;
-  margin: 0 auto;
-  padding: 40px;
-  border: 1px solid #99b6b7;
-}
-/* line 181, ../src/shop.scss */
-.tags ul li {
-  display: inline;
-  margin-left: 10px;
-  line-height: 24px;
-}
-/* line 185, ../src/shop.scss */
-.tags ul li a {
-  color: #4c7f82;
-  text-decoration: none;
-}
-/* line 188, ../src/shop.scss */
-.tags ul li a:hover {
-  text-decoration: underline;
-}
-
-/* line 196, ../src/shop.scss */
-.product {
-  margin-bottom: 45px;
-}
-/* line 198, ../src/shop.scss */
-.product figure {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  width: 300px;
-}
-/* line 202, ../src/shop.scss */
-.product figure ul {
-  margin-left: -17px;
-}
-/* line 204, ../src/shop.scss */
-.product figure ul li {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 17px;
-}
-/* line 209, ../src/shop.scss */
-.product figure img {
-  border: 1px solid #e8e8e8;
-  margin-bottom: 20px;
-}
-/* line 214, ../src/shop.scss */
-.product article {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  width: 590px;
-  margin-left: 46px;
-}
-/* line 218, ../src/shop.scss */
-.product article hgroup {
-  margin-bottom: 34px;
-}
-/* line 220, ../src/shop.scss */
-.product article hgroup h4 {
-  color: #c0c0c0;
-  font-size: 12px;
-}
-/* line 224, ../src/shop.scss */
-.product article hgroup h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  line-height: 40px;
-}
-/* line 229, ../src/shop.scss */
-.product article hgroup h2 {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  vertical-align: middle;
-  font-size: 21px;
-  float: left;
-}
-/* line 235, ../src/shop.scss */
-.product article hgroup .marker {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  vertical-align: middle;
-  margin-left: 20px;
-  color: #fff;
-  background: #c0c0c0;
-  text-transform: uppercase;
-  padding: 1px 3px;
-}
-/* line 244, ../src/shop.scss */
-.product article hgroup .product-social {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  vertical-align: middle;
-  margin-left: 20px;
-}
-/* line 248, ../src/shop.scss */
-.product article hgroup .product-social li {
-  display: inline;
-  font-family: kp_icons;
-  font-size: 15px;
-  margin-right: 4px;
-}
-/* line 253, ../src/shop.scss */
-.product article hgroup .product-social li a {
-  text-decoration: none;
-}
-/* line 258, ../src/shop.scss */
-.product article hgroup .product-social .icon-vk a {
-  color: #285278;
-}
-/* line 263, ../src/shop.scss */
-.product article hgroup .product-social .icon-facebook a {
-  color: #3c5e96;
-}
-/* line 268, ../src/shop.scss */
-.product article hgroup .product-social .icon-twitter a {
-  color: #52afde;
-}
-/* line 274, ../src/shop.scss */
-.product article .cartline {
-  margin-bottom: 36px;
-}
-/* line 276, ../src/shop.scss */
-.product article .cartline .cart {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  vertical-align: middle;
-  width: auto;
-  background: #e66f50;
-  padding: 10px 18px 10px 12px;
-}
-/* line 282, ../src/shop.scss */
-.product article .cartline .cart span {
-  color: #fff;
-  border-right: 2px solid #eb8c73;
-  padding-right: 12px;
-  font-weight: bold;
-  font-size: 18px;
-}
-/* line 290, ../src/shop.scss */
-.product article .cartline .cart a {
-  margin-left: 12px;
-  font-family: kp_icons;
-  text-decoration: none;
-  color: #fff;
-  font-size: 22px;
-}
-/* line 298, ../src/shop.scss */
-.product article .cartline .stock {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  vertical-align: middle;
-  width: auto;
-  margin-left: 20px;
-  font-size: 12px;
-  color: #e66f50;
-}
-/* line 306, ../src/shop.scss */
-.product article .cartline .payment {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  vertical-align: middle;
-  width: auto;
-  margin-left: 20px;
-  font-size: 12px;
-  color: #c0c0c0;
-}
-/* line 316, ../src/shop.scss */
-.product aside {
-  width: 590px;
-  margin-left: 350px;
-}
-/* line 320, ../src/shop.scss */
-.product aside .specs {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  width: 230px;
-  padding: 20px;
-  background: #f8f8f8;
-}
-/* line 325, ../src/shop.scss */
-.product aside .specs h3 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #808080;
-  margin-bottom: 20px;
-}
-/* line 332, ../src/shop.scss */
-.product aside .product-tags {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  width: 240px;
-  padding: 20px;
-}
-/* line 336, ../src/shop.scss */
-.product aside .product-tags a {
-  color: #4c7f82;
-}
+Backtrace:
+/home/macgera/whitescape/knigipodarki/_markup/src/layout.scss:16
+/home/macgera/whitescape/knigipodarki/_markup/src/shop.scss:1
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/variable.rb:49:in `_perform'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:294:in `visit_prop'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `block in visit_import'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `map'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `visit_import'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/root_node.rb:20:in `render'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `block in modified'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `each'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `each'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `block in run'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `loop'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `call'
+/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/home/macgera/.rbenv/versions/1.9.3-p194/bin/compass:23:in `load'
+/home/macgera/.rbenv/versions/1.9.3-p194/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$color\".\A         on line 16 of /home/macgera/whitescape/knigipodarki/_markup/src/layout.scss\A         from line 1 of /home/macgera/whitescape/knigipodarki/_markup/src/shop.scss"; }

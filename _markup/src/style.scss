@@ -1,0 +1,29 @@
+@import 'compass';
+@import 'compass/reset';
+
+
+@mixin inline-blocks {
+  letter-spacing: -.31em;
+  word-spacing: -.43em;  
+}
+
+@mixin inline-block {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+
+$color: #404040;
+$light-gray: #a0a0a0;
+$link: #4c7f82;
+
+$twitter: #52afde;
+$facebook: #3c5e96;
+$vk: #285278;
+
+@import 'layout';
+@import 'index';
+@import 'shop';
+@import 'about';
+@import 'brands';

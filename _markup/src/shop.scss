@@ -164,6 +164,7 @@
         height: 36px;
         padding: 14px 0 0 0;
         background: #f0f0f0;
+        font-family: kp_icons;
         &:hover {
           background: #f0f0f0;
         }
@@ -183,7 +184,6 @@
       margin-left: 10px;
       line-height: 24px;
       a {
-        color: #4c7f82;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -333,9 +333,24 @@
       @include inline-block;
       width: 240px;
       padding: 20px;
-      a {
-        color: #4c7f82;
-      }
     }
+  }
+}
+
+.search-result {
+  margin-top: 40px;
+  padding-left: 20px;
+  h1 {
+    @include inline-block;
+    vertical-align: middle;
+    font-size: 21px;
+    span {
+      font-weight: 700;
+    }
+  }
+  a {
+    @include inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
   }
 }
