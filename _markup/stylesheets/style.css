@@ -2157,12 +2157,10 @@ p {
 }
 /* line 27, ../src/forms.scss */
 .forms .controls {
-  width: 622px;
-  border-top: 1px solid #c0c0c0;
   text-align: right;
   padding-top: 18px;
 }
-/* line 32, ../src/forms.scss */
+/* line 30, ../src/forms.scss */
 .forms .controls input {
   border: none;
   height: 30px;
@@ -2170,4 +2168,16 @@ p {
   background: #e66f50;
   color: #fff;
   margin-left: 20px;
+}
+/* line 39, ../src/forms.scss */
+.forms .top-decor {
+  border-top: 1px solid #c0c0c0;
+}
+/* line 42, ../src/forms.scss */
+.forms .controls-big {
+  width: 622px;
+}
+/* line 45, ../src/forms.scss */
+.forms .controls-small {
+  width: 300px;
 }
