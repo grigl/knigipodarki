@@ -2011,3 +2011,117 @@ p {
   font-style: italic;
   margin-bottom: 10px;
 }
+
+/* line 2, ../src/account.scss */
+.account header {
+  margin: 40px 0;
+}
+/* line 4, ../src/account.scss */
+.account header h1 {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  float: left;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* line 12, ../src/account.scss */
+.account header span {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  margin-left: 75px;
+}
+/* line 17, ../src/account.scss */
+.account header a {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* line 25, ../src/account.scss */
+.orders {
+  margin: 40px 0;
+}
+/* line 27, ../src/account.scss */
+.orders h3 {
+  font-size: 21px;
+  margin-bottom: 25px;
+}
+/* line 31, ../src/account.scss */
+.orders table {
+  width: 100%;
+}
+/* line 35, ../src/account.scss */
+.orders table tbody tr:nth-child(2n+2) {
+  background: #f8f8f8;
+}
+/* line 38, ../src/account.scss */
+.orders table tbody tr td {
+  width: 16%;
+  padding: 5px 10px;
+}
+/* line 42, ../src/account.scss */
+.orders table tbody tr th {
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+/* line 52, ../src/account.scss */
+.addresses header {
+  margin-bottom: 25px;
+}
+/* line 54, ../src/account.scss */
+.addresses header h3 {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  font-size: 21px;
+}
+/* line 59, ../src/account.scss */
+.addresses header a {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+/* line 65, ../src/account.scss */
+.addresses .adress {
+  background: #f8f8f8;
+  padding: 20px;
+}
+/* line 68, ../src/account.scss */
+.addresses .adress .desc {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  width: 620px;
+}
+/* line 73, ../src/account.scss */
+.addresses .adress .controls {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  width: 220px;
+  margin-left: 50px;
+}
+/* line 78, ../src/account.scss */
+.addresses .adress .controls a {
+  margin-right: 20px;
+}

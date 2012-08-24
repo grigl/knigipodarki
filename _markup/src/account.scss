@@ -1,0 +1,83 @@
+.account {
+  header {
+    margin: 40px 0;
+    h1 {
+      @include inline-block;
+      vertical-align: middle;
+      float: left;
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    span {
+      @include inline-block;
+      vertical-align: middle;
+      margin-left: 75px;
+    }
+    a {
+      @include inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+}
+
+.orders {
+  margin: 40px 0;
+  h3 {
+    font-size: 21px;
+    margin-bottom: 25px;
+  }
+  table {
+    width: 100%;
+    tbody {
+      tr {
+        &:nth-child(2n+2) {
+          background: #f8f8f8;
+        }
+        td {
+          width: 16%;
+          padding: 5px 10px;
+        }
+        th {
+          font-weight: bold;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}
+
+.addresses {
+  header {
+    margin-bottom: 25px;
+    h3 {
+      @include inline-block;
+      vertical-align: middle;
+      font-size: 21px;
+    }
+    a {
+      @include inline-block;
+      vertical-align: middle;
+      margin-left: 25px;
+    }
+  }
+  .adress {
+    background: #f8f8f8;
+    padding: 20px;
+    .desc {
+      @include inline-block;
+      vertical-align: middle;
+      width: 620px;
+    }
+    .controls {
+      @include inline-block;
+      vertical-align: middle;
+      width: 220px;
+      margin-left: 50px;
+      a {
+        margin-right: 20px;
+      }
+    }
+  }
+}
