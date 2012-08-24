@@ -341,3 +341,34 @@ a:hover {
 .brand article hgroup h2 {
   font-size: 21px;
 }
+
+/* line 26, ../src/brands.scss */
+.brands article {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: 270px;
+  margin: 0 40px 45px 0;
+}
+/* line 30, ../src/brands.scss */
+.brands article a {
+  color: #404040;
+  text-decoration: none;
+}
+/* line 33, ../src/brands.scss */
+.brands article a:hover {
+  text-decoration: underline;
+}
+/* line 37, ../src/brands.scss */
+.brands article h2 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 44, ../src/brands.scss */
+.brands article ul li {
+  font-style: italic;
+  margin-bottom: 10px;
+}
