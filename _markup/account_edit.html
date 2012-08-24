@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
+<!-- сделано в  whitescape.ru август 2012 -->
 <title>Магазин книг и подарков</title>
 <meta charset="UTF-8" />
-<meta name="author" content="Михаил Якименко" />
+<meta name="author" content="whitescape.ru" />
 
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 
 <!-- Render -->
-<link rel="stylesheet" type="text/css" media="all" href="stylesheets/layout.css" />
+<link rel="stylesheet" type="text/css" media="all" href="stylesheets/style.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
 <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 <!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } })(); </script> <![endif]-->
@@ -95,16 +99,12 @@
         </section>
         <!-- /.account -->
 
-        <!-- .orders -->
-        <section class="orders">
-          <h3>Мои Заказы</h3>
-          <table></table>
-        </section>
-        <!-- /.orders -->
-
         <!-- .forms -->
-        <section class="forms">
-          <h3>Адреса</h3><a href="">Добавить</a>
+        <section class="forms addresses">
+          <header>
+            <h3>Адреса</h3>
+            <a href="">Добавить</a>
+          </header>
 
           <!-- form .formset -->
           <form action="">
@@ -159,7 +159,7 @@
             <!-- .controls -->
             <div class="controls">
               <a href="" role="cancel">Отмена</a>
-              <input type="submit" value="sabmit">
+              <input type="submit" value="Сохранить">
             </div>
             <!-- /.controls -->
           </form>

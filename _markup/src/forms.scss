@@ -1,0 +1,42 @@
+.forms {
+  .formset {
+    .fields {
+      @include inline-block;
+      width: 282px;
+      margin-right: 38px;
+      fieldset {
+        height: 72px;
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        input {
+          width: 276px;
+          // height: 20px;
+          padding: 0 10px;
+        }
+        select {
+          width: 298px; // до ужаса спорная строка! нужно обсудить с Вадиком
+          // height: 20px;
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+  }
+  .controls {
+    width: 622px;
+    border-top: 1px solid #c0c0c0;
+    text-align: right;
+    padding-top: 18px;
+    input {
+      border: none;
+      height: 30px;
+      padding: 0 10px;
+      background: #e66f50;
+      color: #fff;
+      margin-left: 20px;
+    }
+  }
+}
+

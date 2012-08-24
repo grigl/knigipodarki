@@ -2125,3 +2125,49 @@ p {
 .addresses .adress .controls a {
   margin-right: 20px;
 }
+
+/* line 3, ../src/forms.scss */
+.forms .formset .fields {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: 282px;
+  margin-right: 38px;
+}
+/* line 7, ../src/forms.scss */
+.forms .formset .fields fieldset {
+  height: 72px;
+}
+/* line 9, ../src/forms.scss */
+.forms .formset .fields fieldset label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 14, ../src/forms.scss */
+.forms .formset .fields fieldset input {
+  width: 276px;
+  padding: 0 10px;
+}
+/* line 19, ../src/forms.scss */
+.forms .formset .fields fieldset select {
+  width: 298px;
+  padding: 0 0 0 10px;
+}
+/* line 27, ../src/forms.scss */
+.forms .controls {
+  width: 622px;
+  border-top: 1px solid #c0c0c0;
+  text-align: right;
+  padding-top: 18px;
+}
+/* line 32, ../src/forms.scss */
+.forms .controls input {
+  border: none;
+  height: 30px;
+  padding: 0 10px;
+  background: #e66f50;
+  color: #fff;
+  margin-left: 20px;
+}
