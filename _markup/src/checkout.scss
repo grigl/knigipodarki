@@ -1,6 +1,7 @@
 .checkout {
+  position: relative;
   header {
-    margin-bottom: 25px;
+    margin-bottom: 45px;
     h3 {
       @include inline-block;
       vertical-align: middle;
@@ -10,6 +11,50 @@
       @include inline-block;
       vertical-align: middle;
       margin-left: 25px;
+    }
+  }
+  .summary {
+    position: absolute;
+    top: 40px;
+    right: 0; 
+    width: 230px;
+    padding: 20px;
+    background: #f8f8f8;
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #808080;
+    }
+    .item {
+      overflow: hidden;
+      color: #202020;
+      .name {
+        float: left;
+      }
+      .price {
+        float: right;
+        font-weight: bold;
+      }
+      &.all {
+        font-size: 18px;
+        padding-top: 15px;
+        margin-top: 15px;
+        border-top: 1px solid #c0c0c0;
+      }
+    }
+  }
+}
+
+.adress-choise {
+  fieldset {
+    width: 622px;
+    margin-bottom: 18px;
+    input {
+      @include inline-block;
+    }
+    label {
+      @include inline-block;
+      width: 594px;
     }
   }
 }
