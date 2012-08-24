@@ -2126,6 +2126,39 @@ p {
   margin-right: 20px;
 }
 
+/* line 85, ../src/account.scss */
+.order {
+  margin: 30px 0;
+}
+/* line 87, ../src/account.scss */
+.order h3 {
+  font-size: 21px;
+  margin-bottom: 25px;
+}
+/* line 91, ../src/account.scss */
+.order table {
+  width: 100%;
+}
+/* line 94, ../src/account.scss */
+.order table tr th {
+  background: #f8f8f8;
+  width: 20%;
+  padding: 5px 10px;
+}
+/* line 98, ../src/account.scss */
+.order table tr th:last-child {
+  width: 20%;
+}
+/* line 102, ../src/account.scss */
+.order table tr td {
+  width: 20%;
+  padding: 5px 10px;
+}
+/* line 105, ../src/account.scss */
+.order table tr td:last-child {
+  width: 20%;
+}
+
 /* line 3, ../src/forms.scss */
 .forms .formset .fields {
   letter-spacing: normal;
