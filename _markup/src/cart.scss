@@ -1,6 +1,17 @@
 .cart {
   background: #fff;
-    .panel {}
+    .panel {
+      overflow: hidden;
+      .items {
+        float: left;
+      }
+      .order {
+        float: left;
+      }
+      .control {
+        float: right;
+      }
+    }
     .forsale {
       width: 1100px;
         margin: 0 auto;

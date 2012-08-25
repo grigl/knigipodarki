@@ -45,152 +45,155 @@ p {
   padding: 20px 0 60px 0;
 }
 
-.panel {
-  background: $color;
-  height: 30px;
-  overflow: hidden;
-  color: #fff;
-  text-align: right;
-  a {
+.site-header {
+  .panel {
+    background: $color;
+    height: 30px;
+    overflow: hidden;
     color: #fff;
-  }
-  nav {
-    float: left;
-    ul {
-      li {
-        display: inline-block;
-        height: 24px;
-        padding-top: 6px;
-        font-size: 14px;
-        letter-spacing: 1px;
-        vertical-align: text-bottom;
-        text-transform: uppercase;
-        margin-right: 26px;
-        a {
-          text-decoration: none;
-          &:hover {
+    text-align: right;
+    a {
+      color: #fff;
+    }
+    nav {
+      float: left;
+      ul {
+        li {
+          display: inline-block;
+          height: 24px;
+          padding-top: 6px;
+          font-size: 14px;
+          letter-spacing: 1px;
+          vertical-align: text-bottom;
+          text-transform: uppercase;
+          margin-right: 26px;
+          a {
+            text-decoration: none;
+            &:hover {
+              color: #c0c0c0;
+            }
+          }
+          a.current {
             color: #c0c0c0;
           }
         }
-        a.current {
-          color: #c0c0c0;
+      }
+    }
+    .phone {
+      float: right;
+      width: right;
+      height: 25px;
+      padding: 5px 15px 0 15px;
+      font-size: 18px;
+      background: #535353;
+    }
+    .login {
+      width: auto;
+      float: right;
+      height: 30px;
+      // padding-top: 7px;
+      background: gray;
+      font-weight: bold;
+      a {
+        display: inline-block;
+        height: 26px;
+        padding: 4px 15px 0 15px;
+        text-decoration: none;
+      }
+      .l-login {
+        background: $link;
+        margin-right: -3px;
+        &:hover {
+          background: #81a5a7;
+        }
+      }
+      .l-registration {
+        background: #f7941e;
+        &:hover {
+          background: #f9b461;
         }
       }
     }
   }
-  .phone {
-    float: right;
-    width: right;
-    height: 25px;
-    padding: 5px 15px 0 15px;
-    font-size: 18px;
-    background: #535353;
-  }
-  .login {
-    width: auto;
-    float: right;
-    height: 30px;
-    // padding-top: 7px;
-    background: gray;
-    font-weight: bold;
-    a {
-      display: inline-block;
-      height: 26px;
-      padding: 4px 15px 0 15px;
-      text-decoration: none;
-    }
-    .l-login {
-      background: $link;
-      margin-right: -3px;
-      &:hover {
-        background: #81a5a7;
+  .navigations {
+    margin-top: 20px;
+    position: relative;
+    .search {
+      input {
+        width: 280px;
+        padding: 0 10px;
+        height: 28px;
+        border: 1px solid #e0e0e0;
       }
     }
-    .l-registration {
-      background: #f7941e;
-      &:hover {
-        background: #f9b461;
+    .logo {
+      float: left;
+    }
+    .search {
+      float: right;
+    }
+    .direction-nav {
+      border-bottom: 1px solid $color;
+      padding-bottom: 6px;
+      margin: 30px 0 62px 0;
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 1px;
+          a {
+            display: inline-block;
+            padding: 10px 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color;
+            &:hover {
+              border: 3px solid #edf2f2;
+            padding: 7px 7px;
+            }
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        li.current {
+          a {
+            background: $link;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .sub-direction-nav {
+      position: absolute;
+      top: 130px;
+      // margin-top: -62px;
+      // height: 24px;
+      // padding-top: 6px;
+      // background: $light-gray;
+      ul {
+        li {
+          display: inline;
+          margin-right: 24px;
+          a {
+            font-size: 14px;
+            font-style: italic;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .current {
+          a {
+            font-weight: bold;
+          }
+        }
       }
     }
   }
 }
 
-.navigations {
-  margin-top: 20px;
-  position: relative;
-  .search {
-    input {
-      width: 280px;
-      padding: 0 10px;
-      height: 28px;
-      border: 1px solid #e0e0e0;
-    }
-  }
-  .logo {
-    float: left;
-  }
-  .search {
-    float: right;
-  }
-  .direction-nav {
-    border-bottom: 1px solid $color;
-    padding-bottom: 6px;
-    margin: 30px 0 62px 0;
-    ul {
-      li {
-        display: inline-block;
-        margin-right: 1px;
-        a {
-          display: inline-block;
-          padding: 10px 10px;
-          text-transform: uppercase;
-          text-decoration: none;
-          color: $color;
-          &:hover {
-            border: 3px solid #edf2f2;
-          padding: 7px 7px;
-          }
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-      li.current {
-        a {
-          background: $link;
-          color: #fff;
-        }
-      }
-    }
-  }
-  .sub-direction-nav {
-    position: absolute;
-    top: 130px;
-    // margin-top: -62px;
-    // height: 24px;
-    // padding-top: 6px;
-    // background: $light-gray;
-    ul {
-      li {
-        display: inline;
-        margin-right: 24px;
-        a {
-          font-size: 14px;
-          font-style: italic;
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-      .current {
-        a {
-          font-weight: bold;
-        }
-      }
-    }
-  }
-}
+
 
 .site-footer {
   background: #808080;
