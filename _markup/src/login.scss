@@ -1,0 +1,24 @@
+.login-form {
+  background: $link;
+  height: 30px;
+  overflow: hidden;
+  color: #fff;
+  .login-form-left {
+    float: left;
+    width: 620px;
+    height: 30px;
+    background: gray;
+  }
+  .login-form-right {
+    float: right;
+    width: 320px;
+    height: 30px;
+    background: gray;
+    a {
+      color: #fff;
+    }
+    .mleft {
+      margin-left: 60px;
+    }
+  }
+}
