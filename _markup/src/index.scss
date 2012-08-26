@@ -3,11 +3,12 @@
   position: relative;
   .baners {
     border: 1px solid #f7941e;
-    padding: 20px 0;
+    padding: 20px 0 20px 50px;
     height: 298px;
     .item {
       width: 820px;
       margin: 0 auto;
+      z-index: 1000;
       image {
         @include inline-block;
       }
@@ -41,6 +42,7 @@
     position: absolute;
     top: 300px;
     right: 0;
+    z-index: 999999;
     li {
       @include inline-block;
       margin-left: 10px;
@@ -53,23 +55,46 @@
         height: 19px;
         border-radius: 50%;
         border: 1px solid #f7941e;
+        font-size: 12px;
+        text-decoration: none;
+        color: #fff;
         &:hover {
           background: #f7941e;
+          color: #f7941e;
         }
         &.active {
+          color: #f7941e;
           background: #f7941e;
         }
       }
     }
   }
+  .baners-nav-ctl {
+    height: 50px;
+    padding-top: 30px;
+    font-family: kp_icons;
+    font-size: 26px;
+    text-decoration: none;
+    color: #f7941e;
+  }
   .baners-nav-left {
     position: absolute;
-    top: 148px;
-    left: 12px;
+    top: 138px;
+    padding-left: 12px;
+    left: 0;
+    &:hover {
+      padding-left: 7px;
+      border-left: 5px solid #f7941e;
+    }
   }
   .baners-nav-right {
     position: absolute;
-    top: 148px;
-    right: 12px;
+    top: 138px;
+    padding-right: 12px;
+    right: 0;
+    &:hover {
+      padding-right: 7px;
+      border-right: 5px solid #f7941e;
+    }
   }
 }

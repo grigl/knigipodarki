@@ -336,22 +336,23 @@ p {
 /* line 4, ../src/index.scss */
 .promo .baners {
   border: 1px solid #f7941e;
-  padding: 20px 0;
+  padding: 20px 0 20px 50px;
   height: 298px;
 }
 /* line 8, ../src/index.scss */
 .promo .baners .item {
   width: 820px;
   margin: 0 auto;
+  z-index: 1000;
 }
-/* line 11, ../src/index.scss */
+/* line 12, ../src/index.scss */
 .promo .baners .item image {
   letter-spacing: normal;
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
 }
-/* line 14, ../src/index.scss */
+/* line 15, ../src/index.scss */
 .promo .baners .item article {
   letter-spacing: normal;
   word-spacing: normal;
@@ -361,20 +362,20 @@ p {
   margin-left: 36px;
   padding: 26px 0 0 0;
 }
-/* line 19, ../src/index.scss */
+/* line 20, ../src/index.scss */
 .promo .baners .item article hgroup {
   margin: 0 0 16px 0;
 }
-/* line 21, ../src/index.scss */
+/* line 22, ../src/index.scss */
 .promo .baners .item article hgroup h2 {
   font-size: 48px;
   margin: 0 0 20px 0;
 }
-/* line 25, ../src/index.scss */
+/* line 26, ../src/index.scss */
 .promo .baners .item article hgroup h3 {
   font-size: 21px;
 }
-/* line 29, ../src/index.scss */
+/* line 30, ../src/index.scss */
 .promo .baners .item article .price {
   display: block;
   color: #4c7f82;
@@ -382,14 +383,15 @@ p {
   font-size: 21px;
   margin-top: 22px;
 }
-/* line 39, ../src/index.scss */
+/* line 40, ../src/index.scss */
 .promo .baners-nav {
   width: 540px;
   position: absolute;
   top: 300px;
   right: 0;
+  z-index: 999999;
 }
-/* line 44, ../src/index.scss */
+/* line 46, ../src/index.scss */
 .promo .baners-nav li {
   letter-spacing: normal;
   word-spacing: normal;
@@ -397,37 +399,63 @@ p {
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 47, ../src/index.scss */
+/* line 49, ../src/index.scss */
 .promo .baners-nav li:first-child {
   margin-left: 0;
 }
-/* line 50, ../src/index.scss */
+/* line 52, ../src/index.scss */
 .promo .baners-nav li a {
   display: block;
   width: 19px;
   height: 19px;
   border-radius: 50%;
   border: 1px solid #f7941e;
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
 }
-/* line 56, ../src/index.scss */
+/* line 61, ../src/index.scss */
 .promo .baners-nav li a:hover {
   background: #f7941e;
-}
-/* line 59, ../src/index.scss */
-.promo .baners-nav li a.active {
-  background: #f7941e;
+  color: #f7941e;
 }
 /* line 65, ../src/index.scss */
+.promo .baners-nav li a.active {
+  color: #f7941e;
+  background: #f7941e;
+}
+/* line 72, ../src/index.scss */
+.promo .baners-nav-ctl {
+  height: 50px;
+  padding-top: 30px;
+  font-family: kp_icons;
+  font-size: 26px;
+  text-decoration: none;
+  color: #f7941e;
+}
+/* line 80, ../src/index.scss */
 .promo .baners-nav-left {
   position: absolute;
-  top: 148px;
-  left: 12px;
+  top: 138px;
+  padding-left: 12px;
+  left: 0;
 }
-/* line 70, ../src/index.scss */
+/* line 85, ../src/index.scss */
+.promo .baners-nav-left:hover {
+  padding-left: 7px;
+  border-left: 5px solid #f7941e;
+}
+/* line 90, ../src/index.scss */
 .promo .baners-nav-right {
   position: absolute;
-  top: 148px;
-  right: 12px;
+  top: 138px;
+  padding-right: 12px;
+  right: 0;
+}
+/* line 95, ../src/index.scss */
+.promo .baners-nav-right:hover {
+  padding-right: 7px;
+  border-right: 5px solid #f7941e;
 }
 
 /* line 1, ../src/shop.scss */
