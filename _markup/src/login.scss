@@ -27,6 +27,23 @@
         margin-left: 30px;
       }
     }
+    .forgot-mess {
+      overflow: hidden;
+      width: 540px;
+      height: 25px;
+      padding-top: 5px;
+      background: #e66f4f;
+      font-weight: bold;
+      text-align: center;
+      .close-little {
+        float: right;
+        font-family: kp_icons;
+        font-weight: normal;
+        color: #fff;
+        text-decoration: none;
+        margin-right: 10px;
+      }
+    }
   }
   .login-form-right {
     float: right;
@@ -37,6 +54,10 @@
       color: #fff;
       font-weight: bold;
       margin-left: 40px;
+      &.forgot {
+        display: block;
+        margin-top: 5px;
+      }
     }
     .mleft {
       margin-left: 60px;

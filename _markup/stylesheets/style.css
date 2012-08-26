@@ -1592,24 +1592,48 @@ p {
   padding: 0 10px;
   margin-left: 30px;
 }
-/* line 31, ../src/login.scss */
+/* line 30, ../src/login.scss */
+.login-form .login-form-left .forgot-mess {
+  overflow: hidden;
+  width: 540px;
+  height: 25px;
+  padding-top: 5px;
+  background: #e66f4f;
+  font-weight: bold;
+  text-align: center;
+}
+/* line 38, ../src/login.scss */
+.login-form .login-form-left .forgot-mess .close-little {
+  float: right;
+  font-family: kp_icons;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+/* line 48, ../src/login.scss */
 .login-form .login-form-right {
   float: right;
   width: 280px;
   padding-left: 40px;
   height: 30px;
 }
-/* line 36, ../src/login.scss */
+/* line 53, ../src/login.scss */
 .login-form .login-form-right a {
   color: #fff;
   font-weight: bold;
   margin-left: 40px;
 }
-/* line 41, ../src/login.scss */
+/* line 57, ../src/login.scss */
+.login-form .login-form-right a.forgot {
+  display: block;
+  margin-top: 5px;
+}
+/* line 62, ../src/login.scss */
 .login-form .login-form-right .mleft {
   margin-left: 60px;
 }
-/* line 44, ../src/login.scss */
+/* line 65, ../src/login.scss */
 .login-form .login-form-right .input-black {
   background: #000;
   color: #fff;
@@ -1617,7 +1641,7 @@ p {
   border: none;
   padding: 0 20px;
 }
-/* line 52, ../src/login.scss */
+/* line 73, ../src/login.scss */
 .login-form .close {
   position: absolute;
   z-index: 9000;
