@@ -7,7 +7,7 @@ development:
   database: knigipodarki
   pool: 5
   username: knigipodarki
-  password: Y3yRrVTh
+  password: wrle2la5m
   host: localhost
 
 production:
@@ -17,5 +17,5 @@ production:
   database: knigipodarki
   pool: 5
   username: knigipodarki
-  password: Y3yRrVTh
+  password: wrle2la5m
   host: localhost
