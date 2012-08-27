@@ -1,0 +1,119 @@
+.cart {
+  background: #fff;
+    .panel {
+      overflow: hidden;
+      background: $color;
+      height: 30px;
+      color: #fff;
+      font-weight: bold;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .items {
+        display: block;
+        height: 25px;
+        padding: 5px 10px 0 10px;
+        float: left;
+        background: #e66f50;
+      }
+      .cart-order {
+        display: block;
+        height: 25px;
+        padding: 5px 10px 0 10px;
+        float: left;
+        background: #f3a062;
+      }
+      .control {
+        display: block;
+        height: 25px;
+        padding: 5px 10px 0 10px;
+        float: right;
+        font-family: kp_icons;
+        .close {
+          display: none;
+        }
+        &.active {
+          .open {
+            display: none;
+          }
+          .close {
+            display: block;
+          }
+        }
+      }
+    }
+    .forsale {
+      width: 1100px;
+      margin: 0 auto;
+      padding-top: 30px;
+      .item {
+        @include inline-block;
+        width: 220px;
+        padding: 0 52px 0 0;
+        margin-bottom: 30px;
+        img {
+          @include inline-block;
+          width: 60px;
+        }
+        .desc {
+          @include inline-block;
+          width: 140px;
+          padding: 0 0 0 20px;
+          margin-left: -3px;
+          span {
+            display: block;
+          }
+          .name {
+            color: #202020;
+            font-weight: bold;
+            margin-bottom: 20px;
+          }
+          .price {
+            font-size: 14px;
+            font-weight: bold;
+            color: #e66f50;
+            margin-bottom: 10px;
+          }
+          .controls {
+            .inputs {
+              @include inline-block;
+              overflow: hidden;
+              width: 62px;
+              // height: 18px;
+              padding: 0;
+              margin-right: 22px;
+              border: 1px solid #e2e2e2;
+              a {
+                display: block;
+                float: left;
+                width: 20px;
+                height: 22px;
+                background: #e2e2e2;
+                text-decoration: none;
+                text-align: center;
+                color: #808080;
+              }
+              input {
+                display: block;
+                float: left;
+                width: 22px;
+                height: 22px;
+                padding: 0;
+                margin: 0;
+                border: none;
+                text-align: center;
+              }
+            }
+            .delete {
+              @include inline-block;
+              width: auto;
+              font-family: kp_icons;
+              text-decoration: none;
+              color: #e2e2e2;
+            }
+          }
+        }
+      }
+    }
+}

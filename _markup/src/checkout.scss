@@ -1,0 +1,147 @@
+.checkout {
+  position: relative;
+  header {
+    margin-bottom: 45px;
+    h3 {
+      @include inline-block;
+      vertical-align: middle;
+      font-size: 21px;
+    }
+    a {
+      @include inline-block;
+      vertical-align: middle;
+      margin-left: 25px;
+    }
+  }
+  .summary {
+    position: absolute;
+    top: 40px;
+    right: 0; 
+    width: 230px;
+    padding: 20px;
+    background: #f8f8f8;
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #808080;
+    }
+    .item {
+      overflow: hidden;
+      color: #202020;
+      .name {
+        float: left;
+      }
+      .price {
+        float: right;
+        font-weight: bold;
+      }
+      &.all {
+        font-size: 18px;
+        padding-top: 15px;
+        margin-top: 15px;
+        border-top: 1px solid #c0c0c0;
+      }
+    }
+  }
+}
+
+.auth {
+  @include inline-block;
+  width: 280px;
+  margin-right: 100px;
+  h3 {
+    font-size: 21px;
+    margin-bottom: 40px;
+  }
+  fieldset {
+    margin-bottom: 20px;
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 260px;
+      padding: 0 10px;
+    }
+    .remember {
+      overflow: hidden;
+      margin-top: 10px;
+      label {
+        float: left;
+        input {
+          width: auto;
+        }
+      }
+      a {
+        float: right;
+        display: block;
+      }
+    }
+  }
+  .controls {
+    overflow: hidden;
+    margin-top: -20px;
+    input {
+      float: left;
+      margin-left: 0;
+      font-weight: bold;
+      padding: 0 20px;
+      &.blue {
+        background: #4c7f82;
+      }
+    }
+    a {
+      float: right;
+      border: none;
+      height: 26px;
+      padding: 4px 20px 0 20px;
+      background: #f7941e;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+.adress-choise {
+  fieldset {
+    width: 622px;
+    margin-bottom: 18px;
+    input {
+      @include inline-block;
+    }
+    label {
+      @include inline-block;
+      width: 594px;
+    }
+  }
+  .controls {
+    text-align: left;
+    margin: 0;
+    input {
+      margin-left: 0;
+    }
+  }
+  .payment-comment {
+    h3 {
+      font-size: 21px;
+      margin-bottom: 25px;
+    }
+    textarea {
+      width: 594px;
+      height: 68px;
+      border: 1px solid #c0c0c0;
+    }
+  }
+}
+
+.approve {
+  width: 594px;
+  margin-bottom: 60px;
+  header {
+    margin-bottom: 0;
+    h3 {
+      margin-bottom: 25px;
+    }
+  }
+}
