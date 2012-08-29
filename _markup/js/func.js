@@ -5,9 +5,6 @@ var SortLinks = function(){
         }[this.className];
         return false;
     });
-}
-
-var ResetSorting = function() {
     $('reset-sorting').click(function() {
         $('.sorting li a').removeClass('none').removeClass('up').removeClass('down').addClass('none');
         return false;
