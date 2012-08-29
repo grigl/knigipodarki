@@ -34,3 +34,4 @@ gem 'synergy_default_theme', '1.0.2'
 #   gem 'webrat'
 # end
 gem "xml-simple", "~> 1.1.1"
+gem "mail"
