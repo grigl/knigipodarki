@@ -99,22 +99,27 @@ p {
 }
 
 /* line 31, ../src/layout.scss */
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* line 33, ../src/layout.scss */
 .sp_show {
   display: none;
 }
 
-/* line 35, ../src/layout.scss */
+/* line 37, ../src/layout.scss */
 .wrap {
   width: 940px;
   margin: 0 auto;
 }
 
-/* line 40, ../src/layout.scss */
+/* line 42, ../src/layout.scss */
 .wrap-row {
   overflow: hidden;
 }
 
-/* line 44, ../src/layout.scss */
+/* line 46, ../src/layout.scss */
 .white-wrap {
   width: 1100px;
   margin: 0 auto;
@@ -122,7 +127,7 @@ p {
   padding: 20px 0 60px 0;
 }
 
-/* line 53, ../src/layout.scss */
+/* line 55, ../src/layout.scss */
 .site-header .panel {
   background: #404040;
   height: 30px;
@@ -130,15 +135,15 @@ p {
   color: #fff;
   text-align: right;
 }
-/* line 59, ../src/layout.scss */
+/* line 61, ../src/layout.scss */
 .site-header .panel a {
   color: #fff;
 }
-/* line 62, ../src/layout.scss */
+/* line 64, ../src/layout.scss */
 .site-header .panel nav {
   float: left;
 }
-/* line 65, ../src/layout.scss */
+/* line 67, ../src/layout.scss */
 .site-header .panel nav ul li {
   display: inline-block;
   height: 24px;
@@ -149,19 +154,19 @@ p {
   text-transform: uppercase;
   margin-right: 26px;
 }
-/* line 74, ../src/layout.scss */
+/* line 76, ../src/layout.scss */
 .site-header .panel nav ul li a {
   text-decoration: none;
 }
-/* line 76, ../src/layout.scss */
+/* line 78, ../src/layout.scss */
 .site-header .panel nav ul li a:hover {
   color: #c0c0c0;
 }
-/* line 80, ../src/layout.scss */
+/* line 82, ../src/layout.scss */
 .site-header .panel nav ul li a.current {
   color: #c0c0c0;
 }
-/* line 86, ../src/layout.scss */
+/* line 88, ../src/layout.scss */
 .site-header .panel .phone {
   float: right;
   width: right;
@@ -170,7 +175,7 @@ p {
   font-size: 18px;
   background: #535353;
 }
-/* line 94, ../src/layout.scss */
+/* line 96, ../src/layout.scss */
 .site-header .panel .login {
   width: auto;
   float: right;
@@ -178,62 +183,75 @@ p {
   background: gray;
   font-weight: bold;
 }
-/* line 101, ../src/layout.scss */
+/* line 103, ../src/layout.scss */
 .site-header .panel .login a {
   display: inline-block;
   height: 26px;
   padding: 4px 15px 0 15px;
   text-decoration: none;
 }
-/* line 107, ../src/layout.scss */
+/* line 109, ../src/layout.scss */
 .site-header .panel .login .l-login {
   background: #4c7f82;
   margin-right: -3px;
 }
-/* line 110, ../src/layout.scss */
+/* line 112, ../src/layout.scss */
 .site-header .panel .login .l-login:hover {
   background: #81a5a7;
 }
-/* line 114, ../src/layout.scss */
+/* line 116, ../src/layout.scss */
 .site-header .panel .login .l-registration {
   background: #f7941e;
 }
-/* line 116, ../src/layout.scss */
+/* line 118, ../src/layout.scss */
 .site-header .panel .login .l-registration:hover {
   background: #f9b461;
 }
-/* line 122, ../src/layout.scss */
+/* line 124, ../src/layout.scss */
 .site-header .navigations {
   margin-top: 20px;
   position: relative;
 }
-/* line 126, ../src/layout.scss */
+/* line 128, ../src/layout.scss */
 .site-header .navigations .search input {
   width: 280px;
   padding: 0 10px;
   height: 28px;
   border: 1px solid #e0e0e0;
+  position: relative;
 }
-/* line 133, ../src/layout.scss */
+/* line 135, ../src/layout.scss */
+.site-header .navigations .search input:last-child {
+  width: auto;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-family: kp_icons;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: -3px;
+}
+/* line 147, ../src/layout.scss */
 .site-header .navigations .logo {
   float: left;
 }
-/* line 136, ../src/layout.scss */
+/* line 150, ../src/layout.scss */
 .site-header .navigations .search {
   float: right;
 }
-/* line 139, ../src/layout.scss */
+/* line 153, ../src/layout.scss */
 .site-header .navigations .direction-nav {
   border-bottom: 1px solid #404040;
   padding-bottom: 6px;
   margin: 30px 0 62px 0;
 }
-/* line 144, ../src/layout.scss */
+/* line 158, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li {
   display: inline-block;
   margin-right: 1px;
 }
-/* line 147, ../src/layout.scss */
+/* line 161, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li a {
   display: inline-block;
   padding: 10px 10px;
@@ -241,46 +259,46 @@ p {
   text-decoration: none;
   color: #404040;
 }
-/* line 153, ../src/layout.scss */
+/* line 167, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li a:hover {
   border: 3px solid #edf2f2;
   padding: 7px 7px;
 }
-/* line 158, ../src/layout.scss */
+/* line 172, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li:last-child {
   margin-right: 0;
 }
-/* line 163, ../src/layout.scss */
+/* line 177, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li.current a {
   background: #4c7f82;
   color: #fff;
 }
-/* line 170, ../src/layout.scss */
+/* line 184, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav {
   position: absolute;
   top: 130px;
 }
-/* line 178, ../src/layout.scss */
+/* line 192, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav ul li {
   display: inline;
   margin-right: 24px;
 }
-/* line 181, ../src/layout.scss */
+/* line 195, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a {
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
 }
-/* line 185, ../src/layout.scss */
+/* line 199, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 191, ../src/layout.scss */
+/* line 205, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav ul .current a {
   font-weight: bold;
 }
 
-/* line 202, ../src/layout.scss */
+/* line 216, ../src/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -288,41 +306,41 @@ p {
   overflow: hidden;
   padding: 30px 0 30px 0;
 }
-/* line 208, ../src/layout.scss */
+/* line 222, ../src/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 211, ../src/layout.scss */
+/* line 225, ../src/layout.scss */
 .site-footer .foot-right {
   width: 560px;
   float: right;
 }
-/* line 214, ../src/layout.scss */
+/* line 228, ../src/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   display: inline-block;
   margin-left: 10px;
   position: relative;
 }
-/* line 219, ../src/layout.scss */
+/* line 233, ../src/layout.scss */
 .site-footer .foot-right a.social img {
   position: absolute;
   top: -20px;
 }
-/* line 224, ../src/layout.scss */
+/* line 238, ../src/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   display: inline-block;
 }
-/* line 228, ../src/layout.scss */
+/* line 242, ../src/layout.scss */
 .site-footer .foot-right .mail {
   margin-right: 10px;
 }
-/* line 233, ../src/layout.scss */
+/* line 247, ../src/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 235, ../src/layout.scss */
+/* line 249, ../src/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
@@ -1040,58 +1058,59 @@ p {
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
+  vertical-align: bottom;
   margin-left: 20px;
 }
-/* line 25, ../src/account.scss */
+/* line 26, ../src/account.scss */
 .account header .breadcrumps li {
   letter-spacing: normal;
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
-/* line 28, ../src/account.scss */
+/* line 29, ../src/account.scss */
 .account header .breadcrumps li.step {
   color: #c0c0c0;
 }
-/* line 31, ../src/account.scss */
+/* line 32, ../src/account.scss */
 .account header .breadcrumps li.current {
   color: #404040;
 }
 
-/* line 39, ../src/account.scss */
+/* line 40, ../src/account.scss */
 .orders {
   margin: 40px 0;
 }
-/* line 41, ../src/account.scss */
+/* line 42, ../src/account.scss */
 .orders h3 {
   font-size: 21px;
   margin-bottom: 45px;
 }
-/* line 45, ../src/account.scss */
+/* line 46, ../src/account.scss */
 .orders table {
   width: 100%;
 }
-/* line 49, ../src/account.scss */
+/* line 50, ../src/account.scss */
 .orders table tbody tr:nth-child(2n+2) {
   background: #f8f8f8;
 }
-/* line 52, ../src/account.scss */
+/* line 53, ../src/account.scss */
 .orders table tbody tr td {
   width: 16%;
   padding: 5px 10px;
 }
-/* line 56, ../src/account.scss */
+/* line 57, ../src/account.scss */
 .orders table tbody tr th {
   font-weight: bold;
   padding: 5px 10px;
 }
 
-/* line 66, ../src/account.scss */
+/* line 67, ../src/account.scss */
 .addresses header {
   margin-bottom: 25px;
 }
-/* line 68, ../src/account.scss */
+/* line 69, ../src/account.scss */
 .addresses header h3 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1100,7 +1119,7 @@ p {
   vertical-align: middle;
   font-size: 21px;
 }
-/* line 73, ../src/account.scss */
+/* line 74, ../src/account.scss */
 .addresses header a {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1109,12 +1128,12 @@ p {
   vertical-align: middle;
   margin-left: 25px;
 }
-/* line 79, ../src/account.scss */
+/* line 80, ../src/account.scss */
 .addresses .adress {
   background: #f8f8f8;
   padding: 20px;
 }
-/* line 82, ../src/account.scss */
+/* line 83, ../src/account.scss */
 .addresses .adress .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1123,7 +1142,7 @@ p {
   vertical-align: middle;
   width: 620px;
 }
-/* line 87, ../src/account.scss */
+/* line 88, ../src/account.scss */
 .addresses .adress .controls {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1133,40 +1152,40 @@ p {
   width: 220px;
   margin-left: 50px;
 }
-/* line 92, ../src/account.scss */
+/* line 93, ../src/account.scss */
 .addresses .adress .controls a {
   margin-right: 20px;
 }
 
-/* line 99, ../src/account.scss */
+/* line 100, ../src/account.scss */
 .order {
   margin: 30px 0;
 }
-/* line 101, ../src/account.scss */
+/* line 102, ../src/account.scss */
 .order h3 {
   font-size: 21px;
   margin-bottom: 25px;
 }
-/* line 105, ../src/account.scss */
+/* line 106, ../src/account.scss */
 .order table {
   width: 100%;
 }
-/* line 108, ../src/account.scss */
+/* line 109, ../src/account.scss */
 .order table tr th {
   background: #f8f8f8;
   width: 20%;
   padding: 5px 10px;
 }
-/* line 112, ../src/account.scss */
+/* line 113, ../src/account.scss */
 .order table tr th:last-child {
   width: 20%;
 }
-/* line 116, ../src/account.scss */
+/* line 117, ../src/account.scss */
 .order table tr td {
   width: 20%;
   padding: 5px 10px;
 }
-/* line 119, ../src/account.scss */
+/* line 120, ../src/account.scss */
 .order table tr td:last-child {
   width: 20%;
 }
@@ -1182,7 +1201,7 @@ p {
 }
 /* line 7, ../src/forms.scss */
 .forms .formset .fields fieldset {
-  height: 72px;
+  height: 80px;
 }
 /* line 9, ../src/forms.scss */
 .forms .formset .fields fieldset label {
@@ -1193,11 +1212,13 @@ p {
 /* line 14, ../src/forms.scss */
 .forms .formset .fields fieldset input {
   width: 276px;
+  height: 28px;
   padding: 0 10px;
 }
 /* line 19, ../src/forms.scss */
 .forms .formset .fields fieldset select {
   width: 298px;
+  height: 28px;
   padding: 0 0 0 10px;
 }
 /* line 27, ../src/forms.scss */
@@ -1331,42 +1352,43 @@ p {
 .auth fieldset input {
   width: 260px;
   padding: 0 10px;
+  height: 28px;
 }
-/* line 66, ../src/checkout.scss */
+/* line 67, ../src/checkout.scss */
 .auth fieldset .remember {
   overflow: hidden;
   margin-top: 10px;
 }
-/* line 69, ../src/checkout.scss */
+/* line 70, ../src/checkout.scss */
 .auth fieldset .remember label {
   float: left;
 }
-/* line 71, ../src/checkout.scss */
+/* line 72, ../src/checkout.scss */
 .auth fieldset .remember label input {
   width: auto;
 }
-/* line 75, ../src/checkout.scss */
+/* line 76, ../src/checkout.scss */
 .auth fieldset .remember a {
   float: right;
   display: block;
 }
-/* line 81, ../src/checkout.scss */
+/* line 82, ../src/checkout.scss */
 .auth .controls {
   overflow: hidden;
   margin-top: -20px;
 }
-/* line 84, ../src/checkout.scss */
+/* line 85, ../src/checkout.scss */
 .auth .controls input {
   float: left;
   margin-left: 0;
   font-weight: bold;
   padding: 0 20px;
 }
-/* line 89, ../src/checkout.scss */
+/* line 90, ../src/checkout.scss */
 .auth .controls input.blue {
   background: #4c7f82;
 }
-/* line 93, ../src/checkout.scss */
+/* line 94, ../src/checkout.scss */
 .auth .controls a {
   float: right;
   border: none;
@@ -1378,19 +1400,19 @@ p {
   text-decoration: none;
 }
 
-/* line 107, ../src/checkout.scss */
+/* line 108, ../src/checkout.scss */
 .adress-choise fieldset {
   width: 622px;
   margin-bottom: 18px;
 }
-/* line 110, ../src/checkout.scss */
+/* line 111, ../src/checkout.scss */
 .adress-choise fieldset input {
   letter-spacing: normal;
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
 }
-/* line 113, ../src/checkout.scss */
+/* line 114, ../src/checkout.scss */
 .adress-choise fieldset label {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1398,39 +1420,39 @@ p {
   vertical-align: top;
   width: 594px;
 }
-/* line 118, ../src/checkout.scss */
+/* line 119, ../src/checkout.scss */
 .adress-choise .controls {
   text-align: left;
   margin: 0;
 }
-/* line 121, ../src/checkout.scss */
+/* line 122, ../src/checkout.scss */
 .adress-choise .controls input {
   margin-left: 0;
 }
-/* line 126, ../src/checkout.scss */
+/* line 127, ../src/checkout.scss */
 .adress-choise .payment-comment h3 {
   font-size: 21px;
   margin-bottom: 25px;
 }
-/* line 130, ../src/checkout.scss */
+/* line 131, ../src/checkout.scss */
 .adress-choise .payment-comment textarea {
   width: 594px;
   height: 68px;
   border: 1px solid #c0c0c0;
 }
 
-/* line 138, ../src/checkout.scss */
+/* line 139, ../src/checkout.scss */
 .approve {
   width: 594px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
-/* line 141, ../src/checkout.scss */
+/* line 142, ../src/checkout.scss */
 .approve header {
   margin-bottom: 0;
 }
-/* line 143, ../src/checkout.scss */
+/* line 144, ../src/checkout.scss */
 .approve header h3 {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 /* line 1, ../src/cart.scss */

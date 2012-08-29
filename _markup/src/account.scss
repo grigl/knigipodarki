@@ -21,10 +21,11 @@
     }
     .breadcrumps {
       @include inline-block;
+      vertical-align: bottom;
       margin-left: 20px;
       li {
         @include inline-block;
-        vertical-align: middle;
+        vertical-align: bottom;
         &.step {
           color: #c0c0c0;
         }

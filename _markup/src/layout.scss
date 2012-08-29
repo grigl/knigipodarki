@@ -28,6 +28,8 @@ p {
   margin-bottom: 1em;
 }
 
+input[type="text"]:focus {outline: none;}
+
 .sp_show {
   display: none;
 }
@@ -128,7 +130,19 @@ p {
         padding: 0 10px;
         height: 28px;
         border: 1px solid #e0e0e0;
+        position: relative;
       }
+      input:last-child {
+        width: auto;
+        background: none;
+        border: none;
+        color: #e0e0e0;
+        font-family: kp_icons;
+        font-size: 18px;
+        position: absolute;
+        top: 0;
+        right: -3px;
+      } 
     }
     .logo {
       float: left;
