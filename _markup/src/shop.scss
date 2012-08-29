@@ -115,6 +115,9 @@
         &:hover {
           border-bottom: none;
         }
+        &.none {}
+        &.up {color: red;}
+        &.down {color: green;}
       }
     }
   }
