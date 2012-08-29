@@ -407,7 +407,7 @@ input[type="text"]:focus {
   position: absolute;
   top: 300px;
   right: 0;
-  z-index: 999999;
+  z-index: 100;
 }
 /* line 46, ../src/index.scss */
 .promo .baners-nav li {
@@ -1479,11 +1479,21 @@ input[type="text"]:focus {
   margin-bottom: 15px;
 }
 
-/* line 1, ../src/cart.scss */
-.cart {
-  background: #fff;
+/* line 2, ../src/cart.scss */
+.scrolled-to-bottom .cart {
+  position: static;
 }
-/* line 3, ../src/cart.scss */
+
+/* line 6, ../src/cart.scss */
+.cart {
+  position: fixed;
+  background: #fff;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 200;
+}
+/* line 13, ../src/cart.scss */
 .cart .panel {
   overflow: hidden;
   background: #404040;
@@ -1491,12 +1501,12 @@ input[type="text"]:focus {
   color: #fff;
   font-weight: bold;
 }
-/* line 9, ../src/cart.scss */
+/* line 19, ../src/cart.scss */
 .cart .panel a {
   color: #fff;
   text-decoration: none;
 }
-/* line 13, ../src/cart.scss */
+/* line 23, ../src/cart.scss */
 .cart .panel .items {
   display: block;
   height: 25px;
@@ -1504,7 +1514,7 @@ input[type="text"]:focus {
   float: left;
   background: #e66f50;
 }
-/* line 20, ../src/cart.scss */
+/* line 30, ../src/cart.scss */
 .cart .panel .cart-order {
   display: block;
   height: 25px;
@@ -1512,7 +1522,7 @@ input[type="text"]:focus {
   float: left;
   background: #f3a062;
 }
-/* line 27, ../src/cart.scss */
+/* line 37, ../src/cart.scss */
 .cart .panel .control {
   display: block;
   height: 25px;
@@ -1520,25 +1530,25 @@ input[type="text"]:focus {
   float: right;
   font-family: kp_icons;
 }
-/* line 33, ../src/cart.scss */
+/* line 43, ../src/cart.scss */
 .cart .panel .control .close {
   display: none;
 }
-/* line 37, ../src/cart.scss */
+/* line 47, ../src/cart.scss */
 .cart .panel .control.active .open {
   display: none;
 }
-/* line 40, ../src/cart.scss */
+/* line 50, ../src/cart.scss */
 .cart .panel .control.active .close {
   display: block;
 }
-/* line 46, ../src/cart.scss */
+/* line 56, ../src/cart.scss */
 .cart .forsale {
   width: 1100px;
   margin: 0 auto;
   padding-top: 30px;
 }
-/* line 50, ../src/cart.scss */
+/* line 60, ../src/cart.scss */
 .cart .forsale .item {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1548,7 +1558,7 @@ input[type="text"]:focus {
   padding: 0 52px 0 0;
   margin-bottom: 30px;
 }
-/* line 55, ../src/cart.scss */
+/* line 65, ../src/cart.scss */
 .cart .forsale .item img {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1556,7 +1566,7 @@ input[type="text"]:focus {
   vertical-align: top;
   width: 60px;
 }
-/* line 59, ../src/cart.scss */
+/* line 69, ../src/cart.scss */
 .cart .forsale .item .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1566,24 +1576,24 @@ input[type="text"]:focus {
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 64, ../src/cart.scss */
+/* line 74, ../src/cart.scss */
 .cart .forsale .item .desc span {
   display: block;
 }
-/* line 67, ../src/cart.scss */
+/* line 77, ../src/cart.scss */
 .cart .forsale .item .desc .name {
   color: #202020;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 72, ../src/cart.scss */
+/* line 82, ../src/cart.scss */
 .cart .forsale .item .desc .price {
   font-size: 14px;
   font-weight: bold;
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 79, ../src/cart.scss */
+/* line 89, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1595,7 +1605,7 @@ input[type="text"]:focus {
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 87, ../src/cart.scss */
+/* line 97, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -1606,7 +1616,7 @@ input[type="text"]:focus {
   text-align: center;
   color: #808080;
 }
-/* line 97, ../src/cart.scss */
+/* line 107, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs input {
   display: block;
   float: left;
@@ -1617,7 +1627,7 @@ input[type="text"]:focus {
   border: none;
   text-align: center;
 }
-/* line 108, ../src/cart.scss */
+/* line 118, ../src/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;

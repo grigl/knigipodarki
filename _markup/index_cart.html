@@ -16,29 +16,9 @@
 <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 <script src="js/slides.jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/func.js"></script>
 
 <!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } })(); </script> <![endif]-->
-
-<script type="text/javascript">
-    $(document).ready(function() {
-
-       $(".sp").click(function() {
-          $(".sp_show").slideToggle("fast");
-          $(this).toggleClass("active"); return false;
-       });
-
-    });
-    $(function(){
-        $("#slides").slides({
-          prev: 'baners-nav-left',
-          next: 'baners-nav-right',
-          pagination: true,
-          paginationClass: 'baners-nav',
-          currentClass: 'current',
-          effect: 'fade'
-        });
-    });
-</script>
 
 </head>
 <body>

@@ -1,5 +1,15 @@
+
+  .scrolled-to-bottom .cart {
+    position: static;
+  }
+
 .cart {
+  position: fixed;
   background: #fff;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 200;
     .panel {
       overflow: hidden;
       background: $color;
