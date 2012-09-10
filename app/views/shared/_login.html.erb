@@ -1,0 +1,32 @@
+<!-- .forms -->
+  <section class="forms auth">
+    <h3><%= t("login_as_existing") %></h3>
+    <%= form_for(:user, :url => user_session_path) do |f| %>
+      <!-- field -->
+      <fieldset>
+        <%= f.label(:email, t("email")) %>
+        <%= f.text_field('email') %>
+      </fieldset>
+      <!-- /field -->
+      <!-- field -->
+      <fieldset>
+        <%= f.label :password, t("password") %>
+        <%= f.password_field 'password' %>
+        <div class="remember">
+          <label>
+            <%= f.check_box :remember_me %>
+            <%= t('remember_me') %>
+          </label>
+          <%= link_to t("forgot_password"), new_user_password_path %>
+        </div>
+      </fieldset>
+      <!-- /field -->
+      <!-- .controls -->
+      <div class="controls">
+        <input class="blue" type="submit" value="Войти">
+        <%= link_to t("create_a_new_account"), signup_path %>
+      </div>
+      <!-- /.controls -->
+    <% end %>
+  </section>
+<!-- /.forms -->
