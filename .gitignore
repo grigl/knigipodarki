@@ -7,3 +7,5 @@ sync/*
 _markup/.sass-cache
 *.sublime-project
 *.sublime-workspace
+.vagrant
+Vagrantfile
