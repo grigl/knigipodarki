@@ -5,8 +5,8 @@
 <meta charset="UTF-8" />
 <meta name="author" content="whitescape.ru" />
 
-<meta name="keywords" content="" />
-<meta name="description" content="" />
+<meta name="keywords" content="<%= yield :meta_keywords %>" />
+<meta name="description" content="<%= yield :meta_description %>" />
 
 <!-- Render -->
 <link rel="stylesheet" type="text/css" media="all" href="stylesheets/style.css" />
@@ -23,7 +23,6 @@
 </head>
 <body>
 
-  <%= debug params %>
   <%= render 'layouts/site_header' %>
 
   <%= yield %>

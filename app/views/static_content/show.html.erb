@@ -1,0 +1,19 @@
+<%= content_for :meta_keywords do %>
+  <%= @page.meta_keywords %>
+<% end %>
+
+<%= content_for :meta_keywords do %>
+  <%= @page.meta_description %>
+<% end %>
+
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+        <%= @page.body.html_safe %>
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+<!-- /.content -->	
