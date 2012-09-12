@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<title>Книгиподарки</title>
+<meta charset="UTF-8" />
+<meta name="author" content="whitescape.ru" />
+
+<meta name="keywords" content="<%= yield :meta_keywords %>" />
+<meta name="description" content="<%= yield :meta_description %>" />
+
+<!-- Render -->
+<link rel="stylesheet" type="text/css" media="all" href="stylesheets/style.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<script src="javascripts/js/slides.jquery.js"></script>
+
+<%= yield :head %>
+
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } })(); </script> <![endif]-->
+</head>
+<body>
+
+  <%= render 'layouts/site_header' %>
+
+  <%= yield %>
+
+  <%= render 'layouts/site_footer' %>
+
+</body>
+</html>

@@ -5,3 +5,9 @@ sync/*
 !sync/.gitempty
 /.project
 _markup/.sass-cache
+*.sublime-project
+*.sublime-workspace
+.vagrant
+Vagrantfile
+
+public/assets
