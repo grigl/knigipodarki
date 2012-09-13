@@ -137,5 +137,5 @@ def populate_info_page
 
  </section>
  <!-- /.about -->'
-  Page.create(slug: 'information', title: 'information', body: info_page_body)
+  Page.create(slug: '/info', title: 'information', body: info_page_body)
 end
