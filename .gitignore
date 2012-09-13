@@ -9,3 +9,5 @@ _markup/.sass-cache
 *.sublime-workspace
 .vagrant
 Vagrantfile
+
+public/assets
