@@ -1,3 +1,4 @@
+# encoding: utf-8
 namespace :knigipodarki do
   task :install => :environment do
     populate_info_page
