@@ -1,2 +1,8 @@
 ru:
   create_a_new_account: 'Зарегистрироваться'
+
+  will_paginate:
+    page_gap: '...'
+
+  show_in_main_slide: 'Показывать в слайдере на главной'
+  show_in_recommended: 'Показывать в рекомендованных'

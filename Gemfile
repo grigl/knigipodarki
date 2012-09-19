@@ -35,3 +35,5 @@ gem 'synergy_default_theme', '1.0.2'
 # end
 gem "xml-simple", "~> 1.1.1"
 gem "mail"
+gem 'spree_related_products', :git => 'git://github.com/secoint/spree_related_products.git'
+gem 'spree_products_tags', :git => 'git://github.com/secoint/spree_products_tags.git'
