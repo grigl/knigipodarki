@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120919124108) do
+ActiveRecord::Schema.define(:version => 20120919134556) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -67,6 +67,14 @@ ActiveRecord::Schema.define(:version => 20120919124108) do
 
   add_index "assets", ["viewable_id"], :name => "index_assets_on_viewable_id"
   add_index "assets", ["viewable_type", "type"], :name => "index_assets_on_viewable_type_and_type"
+
+  create_table "banners", :force => true do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "calculators", :force => true do |t|
     t.string   "type"
