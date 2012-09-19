@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag 'formtastic', 'formtastic_changes' %>
+
+<%= f.inputs do %>
+  <%= f.input :title, label: 'Заголовок' %>
+  <%= f.input :subtitle, label: 'Подзаголовок' %>
+  <%= image_tag @banner.asset.url %>
+  <%= f.input :asset, label: 'Изображение' %>
+  <%= f.input :link, label: 'Ссылка' %>
+  <%= f.input :price, label: 'Цена' %>
+  <%= f.input :description, label: 'Описание' %>
+<% end %>

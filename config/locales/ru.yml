@@ -1,6 +1,11 @@
 ru:
   create_a_new_account: 'Зарегистрироваться'
 
+  banners:
+    new_banner: 'Новый баннер'
+    index_page_title: 'Баннеры'
+    editing_banner: 'Редактировать баннер'
+
   will_paginate:
     page_gap: '...'
 

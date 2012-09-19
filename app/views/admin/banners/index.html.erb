@@ -1,0 +1,33 @@
+<div class='toolbar'>
+  <ul class='actions'>
+    <li id="new_product_link">
+      <%= button_link_to t("banners.new_banner"), new_object_url, {:icon => 'add'} %>
+    </li>
+  </ul>
+  <br class='clear' />
+</div>
+
+<h1><%=t("banners.index_page_title") %></h1>
+
+<table class="index">
+	<tr>
+		<th>Заголовок</th>
+		<th>Описание</th>
+		<th><%= t("action") %></th>
+  </tr>
+	<tbody>
+    	<% @banners.each do |banner| %>
+		<tr class="<%= cycle('even', 'odd') %>" id="<%= dom_id banner %>">
+			<td>
+				<%= banner.title %>
+			</td>
+			<td>
+				<%= banner.description.truncate(100) %>
+			<td>
+        <%= link_to_edit banner %> &nbsp;
+        <%= link_to_delete banner %>
+	    </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
