@@ -3,6 +3,22 @@ namespace :knigipodarki do
   task :install => :environment do
     populate_info_page
   end
+
+  task :add_test_categories => :environment do
+    # таксономии и таксоны категорий
+    categories = [['Книги', '/books'],['Канцелярия','/chancellory'],['Аксессуары','/accessories'],['На паспорт','/passport'],['Интерьер','/interior'],['Игры','/games']]
+    taxonomy_for_categories = Taxonomy.create(name: 'Категории')
+    root_taxon = taxonomy_for_categories.root
+    root_taxon.update_attribute(:permalink, '/categories')
+
+    categories.each do |category|
+      Taxon.create(taxonomy_id: taxonomy_for_categories.id, parent_id: root_taxon.id, name: category[0], permalink: category[1])
+    end
+
+    # так-же таксономии издательств и дизайнеров
+    taxonomy_for_publishers = Taxonomy.create(name: 'Издатели')
+    taxonomy_for_designers = Taxonomy.create(name: 'Дизайнеры') 
+  end
 end
 
 def populate_info_page
