@@ -11,4 +11,3 @@ _markup/.sass-cache
 Vagrantfile
 
 public/assets
-db/schema.rb

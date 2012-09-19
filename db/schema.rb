@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120802072440) do
+ActiveRecord::Schema.define(:version => 20120918143909) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -315,6 +315,16 @@ ActiveRecord::Schema.define(:version => 20120802072440) do
   add_index "product_scopes", ["name"], :name => "index_product_scopes_on_name"
   add_index "product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
+  create_table "product_tags", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
+  end
+
   create_table "products", :force => true do |t|
     t.string   "name",                    :default => "",   :null => false
     t.text     "description"
@@ -330,6 +340,10 @@ ActiveRecord::Schema.define(:version => 20120802072440) do
     t.integer  "count_on_hand",           :default => 0,    :null => false
     t.boolean  "export_to_yandex_market", :default => true, :null => false
     t.string   "external_id"
+    t.boolean  "recommended"
+    t.boolean  "show_in_main_slide"
+    t.integer  "product_tag_id"
+    t.integer  "popularity"
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"
@@ -402,6 +416,25 @@ ActiveRecord::Schema.define(:version => 20120802072440) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "relation_types", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "applies_to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "relations", :force => true do |t|
+    t.integer  "relation_type_id"
+    t.integer  "relatable_id"
+    t.string   "relatable_type"
+    t.integer  "related_to_id"
+    t.string   "related_to_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "discount_amount",  :precision => 8, :scale => 2, :default => 0.0
   end
 
   create_table "return_authorizations", :force => true do |t|
