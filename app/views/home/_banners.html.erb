@@ -8,7 +8,9 @@
 
           <!-- .baner-item -->
             <div class="item">
-              <%= image_tag banner.asset.url(:main) %>
+              <a href="http://<%= banner.link if banner.link %>">
+                <%= image_tag banner.asset.url(:main) %>
+              </a>
                 <article>
                   <hgroup>
                     <h2><%= banner.title if banner.title %></h2>
