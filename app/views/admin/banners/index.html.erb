@@ -19,10 +19,10 @@
     	<% @banners.each do |banner| %>
 		<tr class="<%= cycle('even', 'odd') %>" id="<%= dom_id banner %>">
 			<td>
-				<%= banner.title %>
+				<%= banner.title if banner.title %>
 			</td>
 			<td>
-				<%= banner.description.truncate(100) %>
+				<%= banner.description.truncate(100) if banner.description %>
 			<td>
         <%= link_to_edit banner %> &nbsp;
         <%= link_to_delete banner %>

@@ -1,7 +1,7 @@
 <h1><%= t("banners.new_banner") %></h1>
 <%= render "shared/error_messages", :target => @banner %>
 
-<%= semantic_form_for([:admin, @banner], html: { multipart: true }) do |f| %>
+<%= semantic_form_for([:admin, Banner.new], html: { multipart: true }) do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
   <p class="form-buttons">
     <%= button t("actions.create"), nil, 'submit' %>

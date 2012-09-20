@@ -1,70 +1,9 @@
-<%= content_for :head do %>
-  <script>
-      $(function(){
-          $("#slides").slides({
-            prev: 'baners-nav-left',
-            next: 'baners-nav-right',
-            pagination: true,
-            paginationClass: 'baners-nav',
-            currentClass: 'current',
-            effect: 'fade'
-          });
-      });
-  </script>
-<% end %>
-
 <!-- .content -->
   <section class="site-content">
     <div class="white-wrap">
       <div class="wrap">
 
-        <!-- .promo -->
-        <section id="slides" class="promo">
-
-          <!-- .baners - here rotate baners -->
-          <div class="baners slides_container">
-            
-            <!-- .baner-item -->
-            <div class="item">
-              <img src="images/tmp/baner.png" alt="" />
-              <article>
-                <hgroup>
-                  <h2>Кубизм</h2>
-                  <h3>Настольная скульптура от Professors</h3>
-                </hgroup>
-                <p>
-                  «Cubism» — это игра с формой. Художники Люблинский и Зборовская разработали модульную систему, в которой создали ряд ярких и легко узнаваемых зооморфных персонажей: зайца, медведя, крокодила - всего 10 объектов. Название «кубизм» — это, безусловно, самоирония - вот таков современный кубизм. «Новый» кубизм - простой и удобный, доступный каждому, способ формообразования. 
-                </p>
-                <span class="price">1100 руб</span>
-              </article>
-            </div>
-            <!-- /.baner-item -->
-
-            <!-- .baner-item -->
-            <div class="item">
-              <img src="images/tmp/baner.png" alt="" />
-              <article>
-                <hgroup>
-                  <h2>Кубизм</h2>
-                  <h3>Настольная скульптура от Professors</h3>
-                </hgroup>
-                <p>
-                  «Cubism» — это игра с формой. Художники Люблинский и Зборовская разработали модульную систему, в которой создали ряд ярких и легко узнаваемых зооморфных персонажей: зайца, медведя, крокодила - всего 10 объектов. Название «кубизм» — это, безусловно, самоирония - вот таков современный кубизм. «Новый» кубизм - простой и удобный, доступный каждому, способ формообразования. 
-                </p>
-                <span class="price">1100 руб</span>
-              </article>
-            </div>
-            <!-- /.baner-item -->
-
-          </div>
-          <!-- /.baners -->
-
-          <!-- nav-left-right -->
-          <a class="baners-nav-ctl baners-nav-left" href="">e</a>
-          <a class="baners-nav-ctl baners-nav-right" href="">r</a>
-
-        </section>
-        <!-- /.promo -->
+        <%= render 'banners' %>
 
         <!-- catalogue -->
         <section class="catalogue">

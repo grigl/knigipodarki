@@ -1,0 +1,49 @@
+<!-- .promo -->
+  <section id="slides" class="promo">
+
+    <!-- .baners - here rotate baners -->
+    <div class="baners slides_container">
+      <% if @banners %>
+        <% @banners.each do |banner| %>
+
+          <!-- .baner-item -->
+            <div class="item">
+              <%= image_tag banner.asset.url(:main) %>
+                <article>
+                  <hgroup>
+                    <h2><%= banner.title if banner.title %></h2>
+                    <h3><%= banner.subtitle if banner.subtitle %></h3>
+                  </hgroup>
+                    <p>
+                      <%= banner.description if banner.description %>
+                    </p>
+                      <span class="price"><%= banner.price if banner.price %></span>
+                </article>
+            </div>
+          <!-- /.baner-item -->
+
+        <% end %>
+      <% end %>
+    </div>
+    <!-- /.baners -->
+
+    <a class="baners-nav-ctl baners-nav-left" href="">e</a>
+    <a class="baners-nav-ctl baners-nav-right" href="">r</a>
+
+  </section>
+<!-- /.promo -->
+
+<%= content_for :head do %>
+  <script>
+      $(function(){
+          $("#slides").slides({
+            prev: 'baners-nav-left',
+            next: 'baners-nav-right',
+            pagination: true,
+            paginationClass: 'baners-nav',
+            currentClass: 'current',
+            effect: 'fade'
+          });
+      });
+  </script>
+<% end %>

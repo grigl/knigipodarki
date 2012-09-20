@@ -33,7 +33,9 @@
     <section class="navigations wrap">
 
       <div class="wrap-row">
-        <a href="" class="logo"><img src="images/logo.png" alt=""></a>
+        <%= link_to root_url, class: 'logo' do %>
+          <img src="images/logo.png" alt="">
+        <% end %>
         
         <nav class="search">
           <form action=""><input type="text" placeholder="Искать"><input type="submit" value="3"></form>
