@@ -10,6 +10,7 @@ gem 'spree', '~> 0.60.6'
 gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :ref => 'a185d160047ce54f07bd47f7d417d9e2681fbb07'
 gem 'synergy', '~> 0.60.0'
 gem 'synergy_default_theme', '1.0.2'
+gem 'will_paginate'
 
 # Use unicorn as the web server
 # gem 'unicorn'

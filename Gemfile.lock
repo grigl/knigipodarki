@@ -222,4 +222,5 @@ DEPENDENCIES
   spree_related_products!
   synergy (~> 0.60.0)
   synergy_default_theme (= 1.0.2)
+  will_paginate
   xml-simple (~> 1.1.1)
