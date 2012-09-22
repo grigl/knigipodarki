@@ -8,5 +8,11 @@
       e.preventDefault();
     });
 
+    //add product to cart
+    $('.add-to-cart').live('click', function(e){
+      e.preventDefault();
+      $(this).parents('form').submit();
+    });
+
   });
 })(jQuery);

@@ -17,6 +17,8 @@ namespace :knigipodarki do
 
     # так-же таксономии издательств и дизайнеров
     taxonomy_for_publishers = Taxonomy.create(name: 'Издатели')
+    root_publishers_taxon = taxonomy_for_publishers.root
+    root_publishers_taxon.update_attribute(:permalink, '/publishers')
     taxonomy_for_designers = Taxonomy.create(name: 'Дизайнеры') 
   end
 end

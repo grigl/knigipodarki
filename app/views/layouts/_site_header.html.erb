@@ -1,6 +1,6 @@
 <!-- .site-header -->
   <header class="site-header">
-
+    <%= debug params %>
     <!-- .sh-panel -->
     <section class="panel">
       <div class="wrap">
@@ -45,7 +45,7 @@
       <!-- .direction-nav -->
       <nav class="direction-nav">
         <ul>
-          <li><a href="">все</a></li>
+          <li><%= link_to 'Все', products_url %></li>
           <li class="current"><a href="">Книги</a></li>
           <li><a href="">Канцелярия</a></li>
           <li><a href="">Аксессуары</a></li>
