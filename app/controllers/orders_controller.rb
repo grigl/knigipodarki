@@ -47,7 +47,8 @@ class OrdersController < Spree::BaseController
       @order.add_variant(Variant.find(variant_id), quantity) if quantity > 0
     end if params[:variants]
 
-    respond_with(@order) { |format| format.html { redirect_to :back } }
+    @order.update!
+    respond_with(@order) { |format| format.js { render :reload_cart } }
   end
 
   def plus_line_item

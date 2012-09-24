@@ -29,7 +29,7 @@ var SlickFoot = function() {
 }
 
 var Spoiler = function() {
-   $(".sp").click(function() {
+   $(".sp").live('click', function() {
       $(".sp_show").slideToggle("fast");
       $(this).toggleClass("active"); return false;
    });

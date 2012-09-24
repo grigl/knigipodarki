@@ -1,3 +1,3 @@
-<div class="items">Корзина(<%= current_order.line_items.count %>)</div>
+<div class="items">Корзина(<%= current_order.item_count %>)</div>
 <%= link_to "Оформить заказ #{current_order.total}", checkout_path, :class => 'cart-order' %>
 <a href="" class="control sp"><span class="open">w</span><span class="close">q</span></a>

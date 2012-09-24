@@ -34,7 +34,7 @@
                   <p><%= product.description %></p>
                 </article>
               <% end %>
-              <%= form_for :order, :url => populate_orders_url do |f| %>
+              <%= form_for :order, :url => populate_orders_url, remote: true do |f| %>
                 <%= hidden_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"), 1 %>             
                 <a href="" class="add-to-cart">t</a> 
               <% end %>
