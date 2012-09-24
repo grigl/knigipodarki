@@ -1,6 +1,9 @@
 <% unless @order.line_items.empty? %>
   $('.cart .panel').html('<%= escape_javascript(render "shared/cart_panel") %>');
   $('.cart .forsale').html('<%= escape_javascript(render "shared/cart_items") %>');
+  $('.cart').show();
 <% else %>
+  $(".sp").removeClass("active");
+  $(".sp_show").hide();
   $(".cart").hide();
 <% end %>

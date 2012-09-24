@@ -49,7 +49,6 @@ var Slides = function() {
 
 
 
-
 $(function(){
     SortLinks();
     ResetSorting();

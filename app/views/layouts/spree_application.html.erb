@@ -31,9 +31,7 @@
 
   <%= yield %>
 
-  <% unless current_order.line_items.empty? %>
-    <%= render 'shared/cart' %>
-  <% end %>
+  <%= render 'shared/cart' %>
 
   <%= render 'layouts/site_footer' %>
 
