@@ -1,6 +1,10 @@
 Knigipodarki::Application.routes.draw do
   root to: "home#index"
 
+  post 'cart/minus_line_item/:id' => 'orders#minus_line_item', as: 'minus_line_item'
+  post 'cart/plus_line_item/:id' => 'orders#plus_line_item', as: 'plus_line_item'
+  post 'cart/delete_line_item/:id' => 'orders#delete_line_item', as: 'delete_line_item'
+
   namespace :admin do
     resources :banners
   end

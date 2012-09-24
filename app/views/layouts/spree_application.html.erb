@@ -9,15 +9,17 @@
 <meta name="description" content="<%= yield :meta_description %>" />
 
 <!-- Render -->
-<link rel="stylesheet" type="text/css" media="all" href="stylesheets/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/style.css" />
 
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
-<script src="javascripts/js/slides.jquery.js"></script>
-<script src="javascripts/application.js"></script>
-<script src="javascripts/rails.js"></script>
+<script src="/javascripts/js/slides.jquery.js"></script>
+<script src="/javascripts/application.js"></script>
+<script src="/javascripts/rails.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/javascripts/js/func.js"></script>
 
 <%= yield :head %>
 
@@ -28,6 +30,10 @@
   <%= render 'layouts/site_header' %>
 
   <%= yield %>
+
+  <% unless current_order.line_items.empty? %>
+    <%= render 'shared/cart' %>
+  <% end %>
 
   <%= render 'layouts/site_footer' %>
 

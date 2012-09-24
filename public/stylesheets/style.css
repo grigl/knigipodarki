@@ -1617,7 +1617,7 @@ input[type="text"]:focus {
   color: #808080;
 }
 /* line 107, ../src/cart.scss */
-.cart .forsale .item .desc .controls .inputs input {
+.cart .forsale .item .desc .controls .inputs .quantity {
   display: block;
   float: left;
   width: 22px;

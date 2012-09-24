@@ -1,0 +1,21 @@
+<% current_order.line_items.each do |line_item| %>
+  <!-- .item -->
+    <div class="item">
+      <%= small_image(line_item.variant) %>
+      <div class="desc">
+        <span class="name"><%= line_item.variant.name %></span>
+        <span class="price"><%= line_item.variant.price %></span>
+        <!-- .contols -->
+        <div class="controls">
+          <div class="inputs">
+            <%= link_to '-', minus_line_item_path(line_item.id), remote: true, method: 'post', class: 'minus' %>
+            <span class="quantity"><%= line_item.quantity %></span>
+            <%= link_to '+', plus_line_item_path(line_item.id), remote: true, method: 'post', class: 'plus' %>
+          </div>
+          <%= link_to 'p', delete_line_item_path(line_item.id), remote: true, method: 'post', class: 'delete' %>
+        </div>
+        <!-- /.contols -->
+      </div>
+    </div>
+  <!-- /.item -->
+<% end %>

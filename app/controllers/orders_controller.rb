@@ -1,5 +1,5 @@
 class OrdersController < Spree::BaseController
-  respond_to :html
+  respond_to :html, :js
 
   helper :products
 
@@ -47,7 +47,55 @@ class OrdersController < Spree::BaseController
       @order.add_variant(Variant.find(variant_id), quantity) if quantity > 0
     end if params[:variants]
 
-    respond_with(@order) { |format| format.html { redirect_to cart_path } }
+    respond_with(@order) { |format| format.html { redirect_to :back } }
+  end
+
+  def plus_line_item
+    @order = current_order
+    line_item = @order.line_items.find(params[:id])
+
+    # to do on_hand validation
+    if line_item
+      line_item.quantity += 1
+      line_item.save
+      @order.update!
+      respond_with(@order) { |format| format.js { render :reload_cart } }
+    else
+      respond_with(@order) { |format| format.js { render 'shared/alert_errors' } }
+    end
+  end
+
+  def minus_line_item
+    @order = current_order
+    line_item = @order.line_items.find(params[:id])
+
+    if line_item
+      if line_item.quantity - 1 == 0
+        line_item.destroy
+        @order.update!
+        respond_with(@order) { |format| format.js { render :reload_cart } }
+      else
+        line_item.quantity -= 1
+        line_item.save
+        @order.update!
+        respond_with(@order) { |format| format.js { render :reload_cart } }
+      end
+    else
+      respond_with(@order) { |format| format.js { render 'shared/alert_errors' } }
+    end
+  end
+
+  def delete_line_item
+    @order = current_order
+    line_item = @order.line_items.find(params[:id])
+
+    if line_item
+      line_item.destroy
+      @order.update!
+      respond_with(@order) { |format| format.js { render :reload_cart } }
+    else
+      respond_with(@order) { |format| format.js { render 'shared/alert_errors' } }
+    end
   end
 
   def empty

@@ -1,0 +1,51 @@
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+      
+        <!-- .account -->
+        <section class="account">
+          <header>
+            <h1>Оформление заказа</h1>
+              <!-- .breadcrumps -->
+              <nav class="breadcrumps">
+                <ul>
+                  <li class="current">Авторизация&nbsp;></li>
+                  <li class="step">Адрес&nbsp;></li>
+                  <li class="step">Доставка&nbsp;></li>
+                  <li class="step">Оплата&nbsp;></li>
+                  <li class="step">Подтверждение</li>
+                </ul>
+              </nav>
+              <!-- /.breadcrumps -->
+          </header>
+        </section>
+        <!-- /.account -->
+
+        <%= render 'shared/login' %>
+
+        <!-- .forms -->
+        <section class="forms auth">
+          <h3>Войти как гость</h3>
+          <%= form_for @order, :url => update_checkout_registration_path, :html => { :method => :put, :id => "checkout_form_registration"} do |f| %>
+            <!-- field -->
+            <fieldset>
+              <%= f.label :email, 'Электронная почта' %><br />
+              <%= f.text_field :email, :class => 'title'  %>
+            </fieldset>
+            <!-- /field -->
+            <!-- .controls -->
+            <div class="controls">
+              <%= submit_tag 'Продолжить' %>
+            </div>
+            <!-- /.controls -->
+          <% end %>
+        </section>
+        <!-- /.forms -->
+
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+<!-- /.content -->
