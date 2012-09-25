@@ -1,5 +1,9 @@
  <!-- .cart -->
-  <section class="cart <%= 'hidden' if current_order.line_items.empty? %>">
+  <% if current_order %>
+    <section class="cart <%= 'hidden' if current_order.line_items.empty? %>">
+  <% else %>
+    <section class="cart hidden">
+  <% end %>
 
     <!-- .panel -->
     <div class="panel">

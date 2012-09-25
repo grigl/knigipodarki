@@ -1736,3 +1736,7 @@ input[type="text"]:focus {
   font-size: 20px;
   text-decoration: none;
 }
+
+.hidden {
+  display: none;
+}
