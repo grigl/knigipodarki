@@ -32,7 +32,7 @@
             <hgroup>
               <h4>Арт. <%= @product.sku %></h4>
               <h1><%= @product.title %></h1>
-              <h2>Джеф Раскин</h2>
+              <h2><%= @product.author %></h2>
               <span class="marker">новинка</span>
               <ul class="product-social">
                 <li class="icon-vk"><a href="">y</a></li>
@@ -42,16 +42,21 @@
             </hgroup> 
             <div class="cartline">
               <div class="cart">
-                <span>1680 р</span>
-                <a href="">t</a>
+                <span><%= @product.price %> р</span>
+                <%= form_for :order, :url => populate_orders_url, remote: true do |f| %>
+                  <%= hidden_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 1 %>             
+                  <a href="" class="add-to-cart">t</a> 
+                <% end %>
               </div>
-              <span class="stock">В наличии</span>
+              <% if @product.count_on_hand > 0 %>
+                <span class="stock">В наличии</span>
+              <% else %>
+                <span class="stock">Нет в наличии</span>
+              <% end %>
               <a href="" class="payment">Способы оплаты и доставки</a>
             </div>
             <p>
-              Cейчас много говорят об эффективности современных подходов к разработке
-интерфейсов. Раскин же демонстрирует, что многие из них ведут в тупик, и для создания компьютеров, с которыми было бы проще работать, требуются совершенно новые принципы разработки. Он объясняет, как осуществить эти необходимые сегодня изменения, и высказывает нестандартные идеи, демонстрируя дальновидность и способность к практическому взгляду на вещи.
-Эта книга, рассказывающая о научном подходе к разработке интерфейсов, может быть полезна как для создателей программного обеспечения, так и для руководителей проектов.
+              <%= @product.description %>
             </p>
           </article>
           <!-- /product content -->
@@ -69,11 +74,9 @@
               </p>
             </div>
             <div class="product-tags">
-              <a href="">Дизайн</a>,&nbsp;
-              <a href="">IT</a>,&nbsp;
-              <a href="">Гикам</a>,&nbsp;
-              <a href="">Компьютеры</a>,&nbsp;
-              <a href="">Apple</a>
+              <%= @product.tags.each do |tag| %>
+                <a href=""><%= tag.name %></a>,&nbsp;
+              <% end %>
             </div>
           </aside>
           <!-- /addional info -->

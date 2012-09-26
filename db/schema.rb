@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120926142358) do
+ActiveRecord::Schema.define(:version => 20120926225344) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -345,6 +345,11 @@ ActiveRecord::Schema.define(:version => 20120926142358) do
     t.boolean  "export_to_yandex_market", :default => true, :null => false
     t.string   "external_id"
     t.boolean  "recommended"
+    t.string   "product_type"
+    t.string   "author"
+    t.string   "publishing_year"
+    t.string   "isbn"
+    t.string   "annotation"
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"
