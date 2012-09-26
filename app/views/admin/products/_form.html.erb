@@ -86,7 +86,26 @@
       <p>
         <%= f.label :tax_category_id, t("tax_category")%><br />
         <%= f.collection_select(:tax_category_id, @tax_categories, :id, :name, {:include_blank => true}, {"style" => "width:200px"}) %>
-        <%= f.error_message_on :tax_category%>
+        <%= f.error_message_on :tax_category %>
+      </p>
+
+      <p>
+        <a id="add_tag_field"><img alt="Add" src="/images/admin/icons/add.png?1347284078" />Добавить тэг</a><br />
+        <div id="tags_fields">
+          <%= f.fields_for :tags do |tags_form| %>
+            <%= tags_form.text_field :name, class: 'tag_name_field' %>
+            <%= tags_form.check_box :_destroy %>
+            <%= tags_form.label :_destroy, "Удалить" %>
+          <% end %>
+        </div>
+        <script>
+          $('#add_tag_field').click(function(e){
+            e.preventDefault();
+            var tagNumber = $('.tag_name_field').size();
+            var partial = '<input class="tag_name_field" id="product_tags_attributes_' + tagNumber + '_name" name="product[tags_attributes][' + tagNumber + '][name]" size="30" type="text" value="" />'
+            $('#tags_fields').prepend(partial);
+          });
+        </script>
       </p>
     <% end %>
   </div>

@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/secoint/spree_products_tags.git
-  revision: b90636c337ffb95c19844912823db5ce985682c1
-  specs:
-    spree_products_tags (0.1)
-      spree_core (>= 0.60.1)
-
-GIT
   remote: git://github.com/secoint/spree_related_products.git
   revision: 18d58e39fccadc86e424a88873a59aa4b0f04769
   specs:
@@ -218,7 +211,6 @@ DEPENDENCIES
   rails (= 3.0.10)
   spree (~> 0.60.6)
   spree_i18n!
-  spree_products_tags!
   spree_related_products!
   synergy (~> 0.60.0)
   synergy_default_theme (= 1.0.2)

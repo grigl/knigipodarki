@@ -1,0 +1,91 @@
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+                
+        <!-- .breadcrumps -->
+        <nav class="breadcrumps">
+          <ul>
+            <li><a href="">Вернутся назад</a></li>
+          </ul>
+        </nav>
+        <!-- /.breadcrumps -->
+
+        <!-- .product -->
+        <section class="product">
+          
+          <!-- product image -->
+          <figure>
+            <%= large_image(@product) %>
+            <% unless @product.images.empty? %>
+              <ul>
+                <% @product.images.each do |image| %>
+                  <li><%= image.attachment.url(:small) %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </figure>
+          <!-- /product image -->
+
+          <!-- product content -->
+          <article>
+            <hgroup>
+              <h4>Арт. <%= @product.sku %></h4>
+              <h1><%= @product.title %></h1>
+              <h2>Джеф Раскин</h2>
+              <span class="marker">новинка</span>
+              <ul class="product-social">
+                <li class="icon-vk"><a href="">y</a></li>
+                <li class="icon-facebook"><a href="">u</a></li>
+                <li class="icon-twitter"><a href="">i</a></li>
+              </ul>
+            </hgroup> 
+            <div class="cartline">
+              <div class="cart">
+                <span>1680 р</span>
+                <a href="">t</a>
+              </div>
+              <span class="stock">В наличии</span>
+              <a href="" class="payment">Способы оплаты и доставки</a>
+            </div>
+            <p>
+              Cейчас много говорят об эффективности современных подходов к разработке
+интерфейсов. Раскин же демонстрирует, что многие из них ведут в тупик, и для создания компьютеров, с которыми было бы проще работать, требуются совершенно новые принципы разработки. Он объясняет, как осуществить эти необходимые сегодня изменения, и высказывает нестандартные идеи, демонстрируя дальновидность и способность к практическому взгляду на вещи.
+Эта книга, рассказывающая о научном подходе к разработке интерфейсов, может быть полезна как для создателей программного обеспечения, так и для руководителей проектов.
+            </p>
+          </article>
+          <!-- /product content -->
+          <!-- addional info -->
+          <aside>
+            <div class="specs">
+              <h3>Характеристики</h3>
+              <p>
+                Издательство: Символ-Плюс, 2005<br>
+                ISBN 5-93286-030-8<br>
+                Объем — 272 стр.<br>
+                Формат — 170×240 мм<br>
+                Вес: 400 г<br>
+                Мягкий переплет, Суперобложка
+              </p>
+            </div>
+            <div class="product-tags">
+              <a href="">Дизайн</a>,&nbsp;
+              <a href="">IT</a>,&nbsp;
+              <a href="">Гикам</a>,&nbsp;
+              <a href="">Компьютеры</a>,&nbsp;
+              <a href="">Apple</a>
+            </div>
+          </aside>
+          <!-- /addional info -->
+
+        </section>
+        <!-- /.product -->
+
+        <%= render 'shared/related_products' %>
+
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+<!-- /.content -->

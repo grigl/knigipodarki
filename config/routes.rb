@@ -6,7 +6,13 @@ Knigipodarki::Application.routes.draw do
   post 'cart/delete_line_item/:id' => 'orders#delete_line_item', as: 'delete_line_item'
 
   namespace :admin do
+    match '/products/:id/new_tag_id' => 'tags#new_product_tag_id', as: 'new_product_tag_id'
+
     resources :banners
+
+    resources :products do 
+      resources :tags
+    end
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
