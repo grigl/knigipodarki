@@ -1,0 +1,24 @@
+<header>
+  <h3>Способ доставки</h3>
+</header>
+
+<div class="formset">
+  <div class="inner">
+    <div id="methods">
+      <p class="field radios">
+        <% @order.rate_hash.each do |shipping_method| %>
+          <label>
+            <%= radio_button(:order, :shipping_method_id, shipping_method[:id]) %>
+            <%= shipping_method[:name] %><%= number_to_currency shipping_method[:cost] %>
+          </label><br /><br />
+        <% end %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- .controls -->
+<div class="controls controls-big top-decor">
+  <input type="submit" value="Продолжить">
+</div>
+<!-- /.controls -->

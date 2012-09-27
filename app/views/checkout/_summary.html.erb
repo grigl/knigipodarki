@@ -1,0 +1,26 @@
+<!-- summary of item -->
+<div class="summary pinup">
+  <h3>Сводка по заказу</h3><br>
+
+  <!-- .item -->
+  <div class="item">
+    <span class="name">Товары</span>
+    <spnan class="price"><%= number_to_currency order.item_total %></spnan>
+  </div>
+  <!-- /.item -->
+  <!-- .item -->
+  <% @order.adjustments.each do |adjustment| %>
+    <div class="item">
+      <span class="name"><%= adjustment.label %></span>
+      <spnan class="price"><%= number_to_currency adjustment.amount %></spnan>
+    </div>
+  <% end %>
+  <!-- /.item -->
+  <!-- .item -->
+  <div class="item all">
+    <span class="name">Итого</span>
+    <spnan class="price"><%= number_to_currency @order.total %></spnan>
+  </div>
+  <!-- /.item -->
+</div>
+<!-- /summary of item -->
