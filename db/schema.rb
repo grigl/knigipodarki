@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120927135257) do
+ActiveRecord::Schema.define(:version => 20120927175223) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -351,6 +351,7 @@ ActiveRecord::Schema.define(:version => 20120927135257) do
     t.string   "isbn"
     t.string   "annotation"
     t.boolean  "tagged_as_new"
+    t.integer  "pages"
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"

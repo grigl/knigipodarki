@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # PRODUCTS
 # Products represent an entity for sale in a store.
 # Products can have variations, called variants
@@ -149,6 +151,17 @@ class Product < ActiveRecord::Base
   def on_hand=(new_level)
     raise "cannot set on_hand of product with variants" if has_variants? && Spree::Config[:track_inventory_levels]
     master.on_hand = new_level
+  end
+
+  def publisher
+    publishers = Taxonomy.where(name: 'Издательства').first
+    publisher = self.taxons.where(taxonomy_id: publishers.id).first if publishers
+
+    publisher.name if publisher
+  end
+
+  def available_types
+    [['Книга','book'],['Подарок','gift']]
   end
 
   # Returns true if there are inventory units (any variant) with "on_hand" state for this product

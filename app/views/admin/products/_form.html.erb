@@ -57,6 +57,10 @@
         <%= f.label :sku, t("sku") %><br />
         <%= f.text_field :sku, :size => 16 %>
       </p>
+      <p>
+        <%= f.label :product_type, 'Тип товара' %><br />
+        <%= f.select :product_type, @product.available_types, :include_blank => true %>
+      </p>
       <% unless @product.has_variants? %>
         <% if Spree::Config[:track_inventory_levels] %>
           <p>
@@ -79,6 +83,10 @@
           </li>
           <li>
             <%= f.label :depth, t("depth")%>
+            <%= f.text_field :depth, :size => 4 %>
+          </li>
+          <li>
+            <%= f.label :pages, 'Количество страниц'%>
             <%= f.text_field :depth, :size => 4 %>
           </li>
         </ul>

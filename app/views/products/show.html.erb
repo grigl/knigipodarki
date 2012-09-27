@@ -27,7 +27,9 @@
               <h4>Арт. <%= @product.sku %></h4>
               <h1><%= @product.name %></h1>
               <h2><%= @product.author %></h2>
-              <span class="marker">новинка</span>
+              <% if @product.tagged_as_new %>
+                <span class="marker">новинка</span>
+              <% end %>
               <%= render 'product_social' %>
             </hgroup> 
             <div class="cartline">
@@ -54,14 +56,16 @@
           <aside>
             <div class="specs">
               <h3>Характеристики</h3>
-              <p>
-                Издательство: Символ-Плюс, 2005<br>
-                ISBN 5-93286-030-8<br>
-                Объем — 272 стр.<br>
-                Формат — 170×240 мм<br>
-                Вес: 400 г<br>
-                Мягкий переплет, Суперобложка
-              </p>
+              <% if @product.product_type == 'book' %>
+                <p>
+                  Издательство: <%= @product.publisher %>, <%= @product.publishing_year %><br>
+                  ISBN: <%= @product.isbn %><br>
+                  Объем — <%= @product.pages %> стр.<br>
+                  Формат — <%= @product.width %>x<%= @product.height %> мм<br>
+                  Вес: <%= @product.weight %> г.<br>
+                  <%= @product.annotation %>
+                </p>
+              <% end %>
             </div>
             <div class="product-tags">
               <% @product.tags.each do |tag| %>
@@ -74,7 +78,7 @@
         </section>
         <!-- /.product -->
 
-        <%= render 'shared/related_products' %>
+        <%= render 'shared/related_products', product: @product %>
 
       </div>
       <!-- /.wrap -->
