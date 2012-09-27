@@ -1,3 +1,4 @@
+<% products = products.first(quantity) unless quantity == 'all' %>
 <!-- .content -->
   <section class="site-content">
     <div class="white-wrap">
@@ -23,7 +24,7 @@
         <!-- catalogue -->
         <section class="catalogue">
 
-          <% @products.each do |product| %>
+          <% products.each do |product| %>
             <!-- shop-item -->
             <div structure="product-preview" class="item" href="">
               <%= link_to product do %>
@@ -47,41 +48,43 @@
         </section>
         <!-- /catalogue -->
 
-        <!-- pagination -->
-        <nav class="pagination">
-          <ul>
-            <% if @products.previous_page %>
-              <li class="arrow arrow-left"><%= link_to 'e', "/products?page=#{@products.previous_page}" %></li>
-              <li><%= link_to '1', "/products?page=1" %></li>
-            <% end %>
+        <% if paginate %>
+          <!-- pagination -->
+          <nav class="pagination">
+            <ul>
+              <% if products.previous_page %>
+                <li class="arrow arrow-left"><%= link_to 'e', "/products?page=#{products.previous_page}" %></li>
+                <li><%= link_to '1', "/products?page=1" %></li>
+              <% end %>
 
-            <% if @products.current_page < @products.total_pages + 1 && @products.current_page - 3 >= 1 %>
-              <li><span>...</span></li>
-            <% end %>
+              <% if products.current_page < products.total_pages + 1 && products.current_page - 3 >= 1 %>
+                <li><span>...</span></li>
+              <% end %>
 
-            <% if @products.current_page  > 2 %>
-              <li><%= link_to @products.current_page - 1, "/products?page=#{@products.current_page - 1}" %></li>
-            <% end %>
-            <li class="current"><%= link_to @products.current_page, "/products?page=#{@products.current_page}" %></li>
-            <% if @products.current_page < @products.total_pages - 1 %>
-              <li><%= link_to @products.current_page + 1, "/products?page=#{@products.current_page + 1}" %></li>
-            <% end %>
- 
-            <% if @products.current_page < @products.total_pages - 1 && (@products.total_pages - @products.current_page) > 2 %>
-              <li><span>...</span></li>
-            <% end %>
+              <% if products.current_page  > 2 %>
+                <li><%= link_to products.current_page - 1, "/products?page=#{products.current_page - 1}" %></li>
+              <% end %>
+              <li class="current"><%= link_to products.current_page, "/products?page=#{products.current_page}" %></li>
+              <% if products.current_page < products.total_pages - 1 %>
+                <li><%= link_to products.current_page + 1, "/products?page=#{products.current_page + 1}" %></li>
+              <% end %>
+   
+              <% if products.current_page < products.total_pages - 1 && (products.total_pages - products.current_page) > 2 %>
+                <li><span>...</span></li>
+              <% end %>
 
-            <% if @products.current_page < @products.total_pages %>
-              <li><%= link_to @products.total_pages, "/products?page=#{@products.total_pages}" %></li>
-              <li class="arrow arrow-right"><%= link_to 'r', "/products?page=#{@products.next_page}" %></li>
-            <% end %>
-          </ul>
-        </nav>
-        <!-- /.pagination -->
+              <% if products.current_page < products.total_pages %>
+                <li><%= link_to products.total_pages, "/products?page=#{products.total_pages}" %></li>
+                <li class="arrow arrow-right"><%= link_to 'r', "/products?page=#{products.next_page}" %></li>
+              <% end %>
+            </ul>
+          </nav>
+          <!-- /.pagination -->
+        <% end %>
 
       </div>
       <!-- /.wrap -->
     </div>
     <!-- /.white-wrap -->
   </section>
-<!-- /.content
+<!-- /.content -->

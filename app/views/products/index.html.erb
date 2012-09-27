@@ -2,9 +2,9 @@
   <% if @products.empty? %>
     <%= t(:no_products_found) %>
   <% else %>
-    <%= render "shared/products", :products => @products, :taxon => @taxon %>
+    <%= render "shared/products", :products => @products, paginate: true, quantity: 'all' %>
   <% end %>
 <% else %>
-  <%= render "shared/products", :products => @products, :taxon => @taxon %>
+  <%= render "shared/products", :products => @products, paginate: true, quantity: 'all' %>
 <% end %>
 

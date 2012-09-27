@@ -78,7 +78,9 @@
         </section>
         <!-- /.product -->
 
-        <%= render 'shared/related_products', product: @product %>
+        <% unless @product.related_products.empty? %>
+          <%= render 'shared/products', products: @product.related_products, paginate: false, quantity: 'all' %>
+        <% end %>
 
       </div>
       <!-- /.wrap -->

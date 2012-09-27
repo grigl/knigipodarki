@@ -2,6 +2,7 @@
 namespace :knigipodarki do
   task :install => :environment do
     populate_info_page
+    add_related_products_relation
   end
 
   task :add_taxons => :environment do
@@ -9,6 +10,14 @@ namespace :knigipodarki do
     add_publishers
     add_designers
   end
+
+  task :add_related_products_relation => :environment do
+    add_related_products_relation
+  end
+end
+
+def add_related_products_relation
+  RelationType.create(:name => "Related products", :applies_to => "Product")
 end
 
 def add_categories
