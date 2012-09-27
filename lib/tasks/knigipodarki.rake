@@ -4,22 +4,44 @@ namespace :knigipodarki do
     populate_info_page
   end
 
-  task :add_test_categories => :environment do
-    # таксономии и таксоны категорий
-    categories = [['Книги', '/books'],['Канцелярия','/chancellory'],['Аксессуары','/accessories'],['На паспорт','/passport'],['Интерьер','/interior'],['Игры','/games']]
-    taxonomy_for_categories = Taxonomy.create(name: 'Категории')
-    root_taxon = taxonomy_for_categories.root
-    root_taxon.update_attribute(:permalink, '/categories')
+  task :add_taxons => :environment do
+    add_categories
+    add_publishers
+    add_designers
+  end
+end
 
-    categories.each do |category|
-      Taxon.create(taxonomy_id: taxonomy_for_categories.id, parent_id: root_taxon.id, name: category[0], permalink: category[1])
-    end
+def add_categories
+  # таксономии и таксоны категорий
+  categories = [['Книги', '/books'],['Канцелярия','/chancellory'],['Аксессуары','/accessories'],['На паспорт','/passport'],['Интерьер','/interior'],['Игры','/games']]
+  taxonomy_for_categories = Taxonomy.create(name: 'Категории')
+  root_taxon = taxonomy_for_categories.root
+  root_taxon.update_attribute(:permalink, '/categories')
 
-    # так-же таксономии издательств и дизайнеров
-    taxonomy_for_publishers = Taxonomy.create(name: 'Издатели')
-    root_publishers_taxon = taxonomy_for_publishers.root
-    root_publishers_taxon.update_attribute(:permalink, '/publishers')
-    taxonomy_for_designers = Taxonomy.create(name: 'Дизайнеры') 
+  categories.each do |category|
+    Taxon.create(taxonomy_id: taxonomy_for_categories.id, parent_id: root_taxon.id, name: category[0], permalink: category[1])
+  end
+end
+
+def add_publishers
+  publishers = [['Символ-Плюс', '/simvol_plus'],['Лимбус-Пресс','/limbus_press'],['Росмэн','/rosmen']]
+  taxonomy_for_publishers = Taxonomy.create(name: 'Издательства')
+  root_taxon = taxonomy_for_publishers.root
+  root_taxon.update_attribute(:permalink, '/publishers')
+
+  publishers.each do |publisher|
+    Taxon.create(taxonomy_id: taxonomy_for_publishers.id, parent_id: root_taxon.id, name: publisher[0], permalink: publisher[1])
+  end
+end
+
+def add_designers
+  designers = [['Филипп Старк','/philippe starck'],['Генри ван де Велде', 'henry_van_de_velde'],['Инго Маурер', 'ingo_maurer']]
+  taxonomy_for_designers = Taxonomy.create(name: 'Дизайнеры')
+  root_taxon = taxonomy_for_designers.root 
+  root_taxon.update_attribute(:permalink, '/designers')
+
+  designers.each do |designer|
+    Taxon.create(taxonomy_id: taxonomy_for_designers.id, parent_id: root_taxon.id, name: designer[0], permalink: designer[1])
   end
 end
 

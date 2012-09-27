@@ -28,11 +28,7 @@
               <h1><%= @product.name %></h1>
               <h2><%= @product.author %></h2>
               <span class="marker">новинка</span>
-              <ul class="product-social">
-                <li class="icon-vk"><a href="">y</a></li>
-                <li class="icon-facebook"><a href="">u</a></li>
-                <li class="icon-twitter"><a href="">i</a></li>
-              </ul>
+              <%= render 'product_social' %>
             </hgroup> 
             <div class="cartline">
               <div class="cart">

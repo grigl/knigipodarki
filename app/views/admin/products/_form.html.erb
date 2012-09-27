@@ -25,6 +25,12 @@
         <%= f.check_box :recommended %>
         <%= f.error_message_on :recommended %>
       <% end %>
+
+      <%= f.field_container :tagged_as_new do %>
+        <%= f.label :tagged_as_new, 'Новинка' %>
+        <%= f.check_box :tagged_as_new %>
+        <%= f.error_message_on :tagged_as_new %>
+      <% end %>
     <% end %>
   </div>
   <div class="yui-u">
