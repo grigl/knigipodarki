@@ -3,13 +3,7 @@
     <div class="white-wrap">
       <div class="wrap">
                 
-        <!-- .breadcrumps -->
-        <nav class="breadcrumps">
-          <ul>
-            <li><a href="">Вернутся назад</a></li>
-          </ul>
-        </nav>
-        <!-- /.breadcrumps -->
+        <%= render 'shared/breadcrumbs' %>
 
         <!-- .product -->
         <section class="product">
@@ -31,7 +25,7 @@
           <article>
             <hgroup>
               <h4>Арт. <%= @product.sku %></h4>
-              <h1><%= @product.title %></h1>
+              <h1><%= @product.name %></h1>
               <h2><%= @product.author %></h2>
               <span class="marker">новинка</span>
               <ul class="product-social">
@@ -74,7 +68,7 @@
               </p>
             </div>
             <div class="product-tags">
-              <%= @product.tags.each do |tag| %>
+              <% @product.tags.each do |tag| %>
                 <a href=""><%= tag.name %></a>,&nbsp;
               <% end %>
             </div>
