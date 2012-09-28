@@ -1,0 +1,26 @@
+<!-- .sh-panel -->
+<section class="login-form hidden">
+  <div class="wrap">
+    <%= form_for(:user, :url => user_session_path) do |f| %>
+      <!-- left part -->
+      <div class="login-form-left">
+          <fieldset>
+            <label for="">Логин</label>
+            <%= f.text_field :email %>
+          </fieldset>
+          <fieldset class="fright">
+            <label for="">Пароль</label>
+            <%= f.password_field :password %>
+          </fieldset>
+      </div>
+      <!-- left part -->
+      <!-- left part -->
+      <div class="login-form-right">
+        <input type="submit" class="input-black" value="Войти"> <a href="">Забыли пароль?</a>
+      </div>
+      <!-- left part -->
+    <% end %>
+  </div>
+  <a href="" class="close">p</a>
+</section>
+<!-- .sh-panel -->

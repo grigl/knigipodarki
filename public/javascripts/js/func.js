@@ -46,8 +46,17 @@ var Slides = function() {
     });
 }
 
+var LoginForm = function() {
+  $('.l-login').live('click', function(e){
+    e.preventDefault();
+    $('.login-form').show();
+  });
 
-
+  $('.login-form .close').live('click', function(e){
+    e.preventDefault();
+    $('.login-form').hide();
+  });
+}
 
 $(function(){
     SortLinks();
@@ -55,4 +64,5 @@ $(function(){
     SlickFoot();
     Spoiler();
     Slides();
+    LoginForm();
 })
