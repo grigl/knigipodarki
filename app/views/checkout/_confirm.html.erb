@@ -1,0 +1,46 @@
+<!-- approve info -->
+  <div class="approve">
+    <header>
+      <h3>Адрес доставки</h3>
+    </header>
+    <article>
+      <%= @order.ship_address.to_s %> 
+      <a href="">Изменить</a>
+    </article>
+  </div>
+  <!-- /approve info -->
+  <!-- approve info -->
+  <div class="approve">
+    <header>
+      <h3>Способ доставки</h3>
+    </header>
+    <article>
+      <%= @order.shipment.shipping_method.name %> — <%= @order.shipment.cost %> руб. <a href="">Изменить</a>
+    </article>
+  </div>
+  <!-- /approve info -->
+  <!-- approve info -->
+  <div class="approve">
+    <header>
+      <h3>Способ оплаты</h3>
+    </header>
+    <article>
+      <%= @order.payment_method.name %> <a href="">Изменить</a>
+    </article>
+  </div>
+  <!-- /approve info -->
+  <!-- .adress-choise -->
+  <div class="adress-choise">
+    <div class="payment-comment">
+      <h3>Ваш комментарий</h3>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <!-- .controls -->
+    <div class="controls">
+      <input type="submit" value="Оплатить">
+    </div>
+    <!-- /.controls -->
+
+  </div>
+<!-- /.adress-choise -->

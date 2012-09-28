@@ -8,9 +8,7 @@
           <!-- .forms -->
             <section class="forms checkout">
 
-              <% if @order.state != 'confirm' %>
-                <%= render 'summary', :order => @order %>
-              <% end %>
+              <%= render 'summary', :order => @order %>
 
               <!-- form .formset -->
               <%= form_for @order, :url => update_checkout_path(@order.state), :html => { :id => "checkout_form_#{@order.state}" } do |form| %>
