@@ -242,6 +242,12 @@ class Product < ActiveRecord::Base
     self.where([where_str, values.map{|value| "%#{value}%"} * fields.size].flatten)
   end
 
+  def related_products
+    relations = self.relations.find_all_by_relation_type_id(1)
+
+    related_products = relations.map { |relation| Product.find(relation.related_to_id) } rescue nil
+  end
+
   private
   
   def sanitize_permalink
