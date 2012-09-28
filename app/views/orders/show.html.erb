@@ -1,0 +1,86 @@
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+      
+        <!-- .account -->
+        <section class="account">
+          <header>
+            <h1>Моя учетная запись</h1>
+            <a href="">Назад</a>
+          </header>
+        </section>
+        <!-- /.account -->
+
+        <% if params.has_key? :checkout_complete %>
+          <h3><%= t('thank_you_for_your_order') %></h3>
+        <% end %>
+
+        <!-- .order -->
+        <section class="order">
+          <header>
+            <h3>Заказ <%= @order.number %></h3>
+          </header>
+          <!-- table of orders -->
+          <table>
+            <tbody>
+              <tr>
+                <th>Описание товара</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Итого</th>
+                <th>&nbsp;</th>
+              </tr>
+
+              <% @order.line_items.each do |line_item| %>
+              <!-- order item -->
+              <tr>
+                <td><%= line_item.variant.name %></td>
+                <td><%= line_item.variant.price %> руб.</td>
+                <td><%= line_item.quantity %></td>
+                <td><%= line_item.amount %> р</td>
+                <td>&nbsp;</td>
+              </tr>
+              <!-- /order item -->
+              <% end %>
+
+              <tr>
+                <td>Стоимость товаров:</td>
+                <td></td>
+                <td></td>
+                <td><%= @order.item_total %> р</td>
+                <td>&nbsp;</td>
+              </tr>
+
+              <% @order.adjustments.each do |ad| %>
+              <!-- order item -->
+              <tr>
+                <td><%= ad.label %></td>
+                <td></td>
+                <td></td>
+                <td><%= ad.amount %> р</td>
+                <td>&nbsp;</td>
+              </tr>
+              <!-- /order item -->
+              <% end %>
+
+              <tr>
+                <td>Итого заказ:</td>
+                <td></td>
+                <td></td>
+                <td><%= number_to_currency @order.total %></td>
+                <td>&nbsp;</td>
+              </tr>
+
+            </tbody>
+          </table>
+          <!-- /table of orders -->
+        </section>
+        <!-- /.order -->
+
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+  <!-- /.content -->
