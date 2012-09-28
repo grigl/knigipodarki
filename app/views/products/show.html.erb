@@ -79,7 +79,16 @@
         <!-- /.product -->
 
         <% unless @product.related_products.empty? %>
-          <%= render 'shared/products', products: @product.related_products, paginate: false, quantity: 'all' %>
+          <!-- catalogue -->
+          <section class="catalogue">
+
+            <header>
+              <h2>Вам может это быть интересно</h2>
+            </header>
+
+            <%= render "shared/products", :products => @product.related_products %>
+          </section>
+          <!-- /catalogue -->
         <% end %>
 
       </div>

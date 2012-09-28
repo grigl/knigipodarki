@@ -1,10 +1,52 @@
 <% if params[:keywords] %>
   <% if @products.empty? %>
-    <%= t(:no_products_found) %>
+    <!-- .content -->
+    <section class="site-content">
+      <div class="white-wrap">
+        <div class="wrap">
+          <%= t(:no_products_found) %>
+        </div>
+        <!-- /.wrap -->
+      </div>
+      <!-- /.white-wrap -->
+    </section>
+    <!-- /.content -->
   <% else %>
-    <%= render "shared/products", :products => @products, paginate: true, quantity: 'all' %>
+    <!-- .content -->
+    <section class="site-content">
+      <div class="white-wrap">
+        <div class="wrap">
+          <!-- catalogue -->
+          <section class="catalogue">
+            <%= render "shared/products_sorting", :products => @products %>
+            <%= render "shared/products", :products => @products %>
+            <%= render "shared/products_pagination", :products => @products %>
+          </section>
+          <!-- /catalogue -->
+        </div>
+        <!-- /.wrap -->
+      </div>
+      <!-- /.white-wrap -->
+    </section>
+    <!-- /.content -->
   <% end %>
 <% else %>
-  <%= render "shared/products", :products => @products, paginate: true, quantity: 'all' %>
+  <!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+        <!-- catalogue -->
+        <section class="catalogue">
+          <%= render "shared/products_sorting", :products => @products %>
+          <%= render "shared/products", :products => @products %>
+          <%= render "shared/products_pagination", :products => @products %>
+        </section>
+        <!-- /catalogue -->
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+  <!-- /.content -->
 <% end %>
 
