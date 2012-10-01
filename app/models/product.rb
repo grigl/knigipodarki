@@ -160,6 +160,13 @@ class Product < ActiveRecord::Base
     publisher.name if publisher
   end
 
+  def publisher
+    designers = Taxonomy.where(name: 'Дизайнеры').first
+    designer = self.taxons.where(taxonomy_id: designers.id).first if designers
+
+    designer.name if designer
+  end
+
   def available_types
     [['Книга','book'],['Подарок','gift']]
   end

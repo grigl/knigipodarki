@@ -14,7 +14,7 @@
             <% unless @product.images.empty? %>
               <ul>
                 <% @product.images.each do |image| %>
-                  <li><%= image.attachment.url(:small) %></li>
+                  <li><%= image.attachment.url(:mini) %></li>
                 <% end %>
               </ul>
             <% end %>
@@ -62,6 +62,12 @@
                   ISBN: <%= @product.isbn %><br>
                   Объем — <%= @product.pages %> стр.<br>
                   Формат — <%= @product.width %>x<%= @product.height %> мм<br>
+                  Вес: <%= @product.weight %> г.<br>
+                  <%= @product.annotation %>
+                </p>
+              <% elsif @product.product_type == 'gift' %>
+                <p>
+                  Дизайнер: <%= @product.designer %><br>
                   Вес: <%= @product.weight %> г.<br>
                   <%= @product.annotation %>
                 </p>
