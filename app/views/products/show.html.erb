@@ -14,7 +14,7 @@
             <% unless @product.images.empty? %>
               <ul>
                 <% @product.images.each do |image| %>
-                  <li><%= image_tag image.attachment.url(:mini) %></li>
+                  <li><a href=""><%= image_tag image.attachment.url(:mini) %></a></li>
                 <% end %>
               </ul>
             <% end %>
