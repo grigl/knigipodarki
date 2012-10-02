@@ -10,11 +10,11 @@
           
           <!-- product image -->
           <figure>
-            <%= large_image(@product) %>
+            <%= image_tag @product.images.first.attachment.url(:large), id: 'product_image' %>
             <% unless @product.images.empty? %>
               <ul>
                 <% @product.images.each do |image| %>
-                  <li><a href=""><%= image_tag image.attachment.url(:mini) %></a></li>
+                  <li><a href="<%= image.attachment.url(:large) %>" class="product_image_thumb"><%= image_tag image.attachment.url(:mini) %></a></li>
                 <% end %>
               </ul>
             <% end %>

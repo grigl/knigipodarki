@@ -58,6 +58,14 @@ var LoginForm = function() {
   });
 }
 
+var ProductImages = function() {
+  $('.product_image_thumb').live('click', function(e){
+    e.preventDefault();
+    var imageSrc = $(this).attr('href');
+    $('#product_image').attr('src', imageSrc);
+  });
+}
+
 $(function(){
     SortLinks();
     ResetSorting();
@@ -65,4 +73,5 @@ $(function(){
     Spoiler();
     Slides();
     LoginForm();
+    ProductImages();
 })
