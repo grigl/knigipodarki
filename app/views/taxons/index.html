@@ -1,1 +1,30 @@
-asdasd
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+        <% if @taxon.children.empty? %>
+          Ничего не найдено.
+        <% else %>
+          <!-- .brands -->      
+          <section class="brands">
+            
+            <% @taxon.children.each do |brand| %>
+            <!-- item -->
+            <article>
+              <h2><%= link_to brand.name, brand.permalink %></h2>
+              <ul>
+              </ul>
+            </article>
+            <!-- /item -->
+            <% end %>
+
+          </section>
+          <!-- /.brands -->
+        <% end %>
+
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+  <!-- /.content -->

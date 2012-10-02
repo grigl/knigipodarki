@@ -1,17 +1,34 @@
 <section class="site-content">
   <div class="white-wrap">
     <div class="wrap">
-      <% unless @products.empty? %>
-        <!-- catalogue -->
-        <section class="catalogue">
-          <%= render "shared/products_sorting", :products => @products %>
-          <%= render "shared/products", :products => @products %>
-          <%= render "shared/products_pagination", :products => @products %>
+    <% unless params[:taxonomy] && params[:taxonomy] == 'categories' %>
+      <!-- .brand -->
+        <section class="brand">
+          <img src="tmp/brand.png" alt="">
+          <article>
+            <hgroup>
+              <h1><%= @taxon.name %></h1>
+              <h2>Книги, часы, для компьютера, обложки на паспорт, сумки.</h2>
+            </hgroup>
+            <p>
+              <%= @taxon.description %>
+            </p>
+          </article>
         </section>
-        <!-- /catalogue -->
-      <% else %>
-        <%= t(:no_products_found) %>
-      <% end %>
+      <!-- /.brand -->
+    <% end %>
+
+    <% unless @products.empty? %>
+      <!-- catalogue -->
+      <section class="catalogue">
+        <%= render "shared/products_sorting", :products => @products %>
+        <%= render "shared/products", :products => @products %>
+        <%= render "shared/products_pagination", :products => @products %>
+      </section>
+      <!-- /catalogue -->
+    <% else %>
+      <%= t(:no_products_found) %>
+    <% end %>
     </div>
     <!-- /.wrap -->
   </div>
