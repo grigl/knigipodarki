@@ -48,22 +48,7 @@
         </nav>
       </div>
 
-      <!-- .direction-nav -->
-      <nav class="direction-nav">
-        <ul>
-          <li><%= link_to 'Все', products_url %></li>
-          <li class="current"><a href="">Книги</a></li>
-          <li><a href="">Канцелярия</a></li>
-          <li><a href="">Аксессуары</a></li>
-          <li><a href="">на паспорт</a></li>
-          <li><a href="">Интерьер</a></li>
-          <li><a href="">Игры</a></li>
-          <li><a href="">Другое</a></li>
-          <li><a href="">Издательтсва</a></li>
-          <li><a href="">Дизайнеры</a></li>
-        </ul>
-      </nav>
-      <!-- /.direction-nav -->
+      <%= render 'shared/navigation' %>
 
     </section>
     <!-- /.navigation -->

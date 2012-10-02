@@ -1,0 +1,20 @@
+<section class="site-content">
+  <div class="white-wrap">
+    <div class="wrap">
+      <% unless @products.empty? %>
+        <!-- catalogue -->
+        <section class="catalogue">
+          <%= render "shared/products_sorting", :products => @products %>
+          <%= render "shared/products", :products => @products %>
+          <%= render "shared/products_pagination", :products => @products %>
+        </section>
+        <!-- /catalogue -->
+      <% else %>
+        <%= t(:no_products_found) %>
+      <% end %>
+    </div>
+    <!-- /.wrap -->
+  </div>
+  <!-- /.white-wrap -->
+</section>
+<!-- /.content -->

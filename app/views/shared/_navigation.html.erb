@@ -1,0 +1,39 @@
+<!-- .direction-nav -->
+  <nav class="direction-nav">
+    <ul>
+      <% if params[:controller] == 'products' && params[:action] == 'index' %>
+        <li class="current">
+      <% else %>
+        <li>
+      <% end %>
+        <%= link_to 'Все', products_url %>
+      </li>
+
+      <% all_categories.each do |taxon| %>
+        <% if params[:taxonomy] && params[:taxon] && '/' + params[:taxonomy] + '/' + params[:taxon] == taxon.permalink %>
+          <li class="current">
+        <% else %>
+          <li>
+        <% end %>
+          <%= link_to taxon.name, taxon.permalink %>
+        </li>
+      <% end %>
+
+      <% if params[:taxonomy] && '/' + params[:taxonomy] == '/publishers' %>
+        <li class="current">
+      <% else %>
+        <li>
+      <% end %>
+        <%= link_to 'Издательства', '/publishers' %>
+      </li>
+
+      <% if params[:taxonomy] && '/' + params[:taxonomy] == '/designers' %>
+        <li class="current">
+      <% else %>
+        <li>
+      <% end %>
+        <%= link_to 'Дизайнеры', '/designers' %>
+      </li>
+    </ul>
+  </nav>
+<!-- /.direction-nav -->
