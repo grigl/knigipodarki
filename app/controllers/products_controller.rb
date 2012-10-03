@@ -7,10 +7,15 @@ class ProductsController < Spree::BaseController
 
   def index
     if params[:sort] == 'price'
-      @products = Product.all.sort_by! { |product| product.master.price }.paginate(:page => params[:page], :per_page => 30)
-    else      
+      if params[:order] == 'DESC'
+        @products = Product.all.sort_by! { |product| product.master.price }.reverse.paginate(:page => params[:page], :per_page => 30)
+      else
+        @products = Product.all.sort_by! { |product| product.master.price }.paginate(:page => params[:page], :per_page => 30)
+      end
+    else
+      params[:order] ? (order = params[:order]) : (order = 'ASC')     
       params[:sort] ? (sort = params[:sort]) : (sort = 'created_at')
-      @products = Product.order("#{sort} DESC").paginate(:page => params[:page], :per_page => 30)
+      @products = Product.order("#{sort} #{order}").paginate(:page => params[:page], :per_page => 30)
     end
 
     respond_with(@products)

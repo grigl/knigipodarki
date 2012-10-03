@@ -1,5 +1,5 @@
 var SortLinks = function(){
-    $('.none, .up, .down').click(function() {                             
+    $('.none, .up, .down').click(function(e) {                             
         this.className = {
            down : 'none', none: 'up', up: 'down'
         }[this.className];
@@ -67,7 +67,7 @@ var ProductImages = function() {
 }
 
 $(function(){
-    SortLinks();
+    // SortLinks();
     ResetSorting();
     SlickFoot();
     Spoiler();

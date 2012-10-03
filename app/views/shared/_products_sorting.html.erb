@@ -2,8 +2,13 @@
 <nav class="sorting">
   <ul>
     <li>Сортировка:</li>
-    <li><a href="<%= request.path + '?sort=name' %>">по названию</a></li>
-    <li><a href="<%= request.path + '?sort=price' %>">по цене</a></li>
+    <li>
+      <a href="<%= request.path + '?sort=name' + '&order=' + (!params[:order] || params[:order] == 'DESC' ? 'ASC' : 'DESC') %>" 
+         class="<%= params[:order] && params[:sort] == 'name' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %>">по названию</a>
+    </li>
+    <li>
+      <a href="<%= request.path + '?sort=price' + '&order=' + (!params[:order] || params[:order] == 'DESC' ? 'ASC' : 'DESC')  %>" 
+         class="<%= params[:order] && params[:sort] == 'price' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %>">по цене</a></li>
     <li><a href="" class="none">по приветствию</a></li>
   </ul>
   <ul>
