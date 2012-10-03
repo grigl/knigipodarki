@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 module SpreeSite
   class Engine < Rails::Engine
     def self.activate

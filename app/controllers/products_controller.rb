@@ -6,7 +6,12 @@ class ProductsController < Spree::BaseController
   respond_to :html
 
   def index
-    @products = Product.order('created_at DESC').paginate(:page => params[:page], :per_page => 30)
+    if params[:sort] == 'price'
+      @products = Product.all.sort_by! { |product| product.master.price }.paginate(:page => params[:page], :per_page => 30)
+    else      
+      params[:sort] ? (sort = params[:sort]) : (sort = 'created_at')
+      @products = Product.order("#{sort} DESC").paginate(:page => params[:page], :per_page => 30)
+    end
 
     respond_with(@products)
   end
