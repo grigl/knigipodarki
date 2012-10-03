@@ -3,25 +3,25 @@
   <nav class="pagination">
     <ul>
       <% if products.previous_page %>
-        <li class="arrow arrow-left"><%= link_to 'e', "/products?page=#{products.previous_page}" %></li>
-        <li><%= link_to '1', "/products?page=1" %></li>
+        <li class="arrow arrow-left"><%= link_to 'e', request.path + "?page=#{products.previous_page}" %></li>
+        <li><%= link_to '1',  request.path + "?page=1" %></li>
       <% end %>
       <% if products.current_page < products.total_pages + 1 && products.current_page - 3 >= 1 %>
         <li><span>...</span></li>
       <% end %>
       <% if products.current_page  > 2 %>
-        <li><%= link_to products.current_page - 1, "/products?page=#{products.current_page - 1}" %></li>
+        <li><%= link_to products.current_page - 1,  request.path + "?page=#{products.current_page - 1}" %></li>
       <% end %>
-      <li class="current"><%= link_to products.current_page, "/products?page=#{products.current_page}" %></li>
+      <li class="current"><%= link_to products.current_page,  request.path + "?page=#{products.current_page}" %></li>
       <% if products.current_page < products.total_pages - 1 %>
-        <li><%= link_to products.current_page + 1, "/products?page=#{products.current_page + 1}" %></li>
+        <li><%= link_to products.current_page + 1,  request.path + "?page=#{products.current_page + 1}" %></li>
       <% end %>
       <% if products.current_page < products.total_pages - 1 && (products.total_pages - products.current_page) > 2 %>
         <li><span>...</span></li>
       <% end %>
       <% if products.current_page < products.total_pages %>
-        <li><%= link_to products.total_pages, "/products?page=#{products.total_pages}" %></li>
-        <li class="arrow arrow-right"><%= link_to 'r', "/products?page=#{products.next_page}" %></li>
+        <li><%= link_to products.total_pages,  request.path + "?page=#{products.total_pages}" %></li>
+        <li class="arrow arrow-right"><%= link_to 'r',  request.path + "?page=#{products.next_page}" %></li>
       <% end %>
     </ul>
   </nav>

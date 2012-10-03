@@ -27,7 +27,7 @@ class ProductsController < Spree::BaseController
       products = products.order("#{sort} #{order}")
     end
 
-    @products = products.paginate(:page => params[:page], :per_page => 30)
+    @products = products.paginate(:page => params[:page], :per_page => 8)
 
     respond_with(@products)
   end
