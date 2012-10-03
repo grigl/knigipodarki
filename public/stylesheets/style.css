@@ -572,6 +572,13 @@ input[type="text"]:focus {
   font-weight: 300;
   text-transform: uppercase;
 }
+
+.catalogue h2 {
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 /* line 81, ../src/shop.scss */
 .catalogue header a {
   float: right;
