@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120927175223) do
+ActiveRecord::Schema.define(:version => 20121003153936) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -330,7 +330,7 @@ ActiveRecord::Schema.define(:version => 20120927175223) do
   add_index "product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "products", :force => true do |t|
-    t.string   "name",                    :default => "",   :null => false
+    t.string   "name",                                                  :default => "",   :null => false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -341,8 +341,8 @@ ActiveRecord::Schema.define(:version => 20120927175223) do
     t.datetime "deleted_at"
     t.string   "meta_description"
     t.string   "meta_keywords"
-    t.integer  "count_on_hand",           :default => 0,    :null => false
-    t.boolean  "export_to_yandex_market", :default => true, :null => false
+    t.integer  "count_on_hand",                                         :default => 0,    :null => false
+    t.boolean  "export_to_yandex_market",                               :default => true, :null => false
     t.string   "external_id"
     t.boolean  "recommended"
     t.string   "product_type"
@@ -352,6 +352,8 @@ ActiveRecord::Schema.define(:version => 20120927175223) do
     t.string   "annotation"
     t.boolean  "tagged_as_new"
     t.integer  "pages"
+    t.integer  "popularity",                                            :default => 0
+    t.decimal  "sale_price",              :precision => 8, :scale => 2
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"
