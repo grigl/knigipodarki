@@ -1,16 +1,17 @@
 <% params[:page] ? (page = "&page=#{params[:page]}") : (page = '') %>
 <% order = "&order=#{!params[:order] || params[:order] == 'DESC' ? 'ASC' : 'DESC'}" %>
+<% params[:keywords] ? (keywords = "&keywords=#{params[:keywords]}") : (keywords = '') %>
 
 <!-- sorting -->
 <nav class="sorting">
   <ul>
     <li>Сортировка:</li>
     <li>
-      <%= link_to 'по названию', request.path + '?sort=name' + order + page, 
+      <%= link_to 'по названию', request.path + '?sort=name' + order + page + keywords, 
           class: params[:order] && params[:sort] == 'name' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %>
     </li>
     <li>
-      <%= link_to 'по цене', request.path + '?sort=price' + order + page, 
+      <%= link_to 'по цене', request.path + '?sort=price' + order + page + keywords, 
           class: params[:order] && params[:sort] == 'price' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %></li>
     <li><a href="" class="none">по приветствию</a></li>
   </ul>
