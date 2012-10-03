@@ -47,6 +47,12 @@
         <%= f.error_message_on :cost_price %>
       <% end %>
 
+      <%= f.field_container :sale_price do %>
+        <%= f.label :sale_price, 'Цена со скидкой' %><br />
+        <%= f.text_field :sale_price, :value => number_with_precision(@product.sale_price, :precision => 2) %>
+        <%= f.error_message_on :sale_price %>
+      <% end %>
+
       <p>
         <%= f.label :available_on, t("available_on") %><br />
         <%= f.error_message_on :available_on %>
