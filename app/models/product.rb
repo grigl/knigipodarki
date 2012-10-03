@@ -85,6 +85,12 @@ class Product < ActiveRecord::Base
 
   scope :on_hand,         where("products.count_on_hand > 0")
 
+  scope :recommended_products, where(recommended: true)
+
+  scope :popular_products, descend_by_popularity
+
+  scope :sale_products
+
   if (ActiveRecord::Base.connection.adapter_name == 'PostgreSQL')
     if ActiveRecord::Base.connection.tables.include?("products")
       scope :group_by_products_id, { :group => "products." + Product.column_names.join(", products.") }

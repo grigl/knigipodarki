@@ -6,17 +6,28 @@ class ProductsController < Spree::BaseController
   respond_to :html
 
   def index
+    products = Product.order('created_at')
+    # scopes
+    if params[:scope] 
+      products = eval "products.#{params[:scope]}_products"
+    else
+      products = products
+    end
+
+    # sorting and order
     if params[:sort] == 'price'
       if params[:order] == 'DESC'
-        @products = Product.all.sort_by! { |product| product.master.price }.reverse.paginate(:page => params[:page], :per_page => 30)
+        products = products.sort_by! { |product| product.master.price }.reverse
       else
-        @products = Product.all.sort_by! { |product| product.master.price }.paginate(:page => params[:page], :per_page => 30)
+        products = products.sort_by! { |product| product.master.price }
       end
     else
       params[:order] ? (order = params[:order]) : (order = 'ASC')     
       params[:sort] ? (sort = params[:sort]) : (sort = 'created_at')
-      @products = Product.order("#{sort} #{order}").paginate(:page => params[:page], :per_page => 30)
+      products = products.order("#{sort} #{order}")
     end
+
+    @products = products.paginate(:page => params[:page], :per_page => 30)
 
     respond_with(@products)
   end

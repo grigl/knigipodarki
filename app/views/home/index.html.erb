@@ -11,7 +11,7 @@
             
             <header>
               <h2>Рекомендуем</h2>
-              <a href="">Просмотреть все</a>
+              <%= link_to 'Посмотреть все', products_with_scope_path('recommended') %>
             </header>
               
             <%= render 'shared/products', products: @recommended_products.first(8) %>
@@ -135,120 +135,20 @@
         </section>
         <!-- /catalogue -->
 
-        <!-- catalogue -->
-        <section class="catalogue">
-          
-          <header>
-            <h2>Популярное</h2>
-            <a href="">Просмотреть все</a>
-          </header>
-          
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
+        <% unless @popular_products.empty? %>
+          <!-- catalogue -->
+          <section class="catalogue">
+            
+            <header>
+              <h2>Популярное</h2>
+              <%= link_to 'Посмотреть все', products_with_scope_path('popular') %>
+            </header>
 
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-        </section>
-        <!-- /catalogue -->
+            <%= render 'shared/products', products: @popular_products.first(8) %>
+            
+          </section>
+          <!-- /catalogue -->
+        <% end %>
 
         <% if @tags %>
           <aside class="tags">

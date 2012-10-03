@@ -3,7 +3,8 @@ class HomeController < Spree::BaseController
 
   def index
     @banners = Banner.order('created_at DESC')
-    @recommended_products = Product.where(recommended: true)
+    @recommended_products = Product.recommended_products
+    @popular_products = Product.popular_products
     @tags = Tag.all
   end
 end

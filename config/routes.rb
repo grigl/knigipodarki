@@ -5,9 +5,10 @@ Knigipodarki::Application.routes.draw do
   post 'cart/plus_line_item/:id' => 'orders#plus_line_item', as: 'plus_line_item'
   post 'cart/delete_line_item/:id' => 'orders#delete_line_item', as: 'delete_line_item'
 
-  get ':taxonomy' => 'taxons#index', constraints: { taxonomy: /publishers|designers|/ }
+  get ':taxonomy' => 'taxons#index', constraints: { taxonomy: /publishers|designers/ }
+  get ':taxonomy/:taxon' => 'taxons#show', constraints: { taxonomy: /categories|publishers|designers/ }
 
-  get ':taxonomy/:taxon' => 'taxons#show', constraints: { taxonomy: /categories|publishers|designers|/ }
+  match '/products/:scope' => 'products#index', constraints: { scope: /recommended|popular|sale/ }, as: 'products_with_scope'
 
   namespace :admin do
     match '/products/:id/new_tag_id' => 'tags#new_product_tag_id', as: 'new_product_tag_id'
