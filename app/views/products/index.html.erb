@@ -3,15 +3,16 @@
   <div class="white-wrap">
     <div class="wrap">
 
-      <% if params[:scope] %>
-      <h2><%= I18n.t("products_#{params[:scope]}") %></h2>
-      <% end %>
-
       <% if @products.empty? %>
         <%= t(:no_products_found) %>        
       <% else %>
         <!-- catalogue -->
         <section class="catalogue">
+
+          <% if params[:scope] %>
+            <h2><%= I18n.t("products_#{params[:scope]}") %></h2>
+          <% end %>
+
           <%= render "shared/products_sorting", :products => @products %>
           <%= render "shared/products", :products => @products %>
           <%= render "shared/products_pagination", :products => @products %>

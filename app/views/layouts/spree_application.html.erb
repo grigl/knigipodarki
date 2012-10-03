@@ -31,7 +31,7 @@
 
   <%= yield %>
 
-  <%= render 'shared/cart' %>
+  <%= render 'shared/cart' unless @show_cart_panel == false %>
 
   <%= render 'layouts/site_footer' %>
 
