@@ -5,120 +5,20 @@
 
         <%= render 'banners' %>
 
-        <!-- catalogue -->
-        <section class="catalogue">
-          
-          <header>
-            <h2>Рекомендуем</h2>
-            <a href="">Просмотреть все</a>
-          </header>
+        <% unless @recommended_products.empty? %>
+          <!-- catalogue -->
+          <section class="catalogue">
             
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
+            <header>
+              <h2>Рекомендуем</h2>
+              <a href="">Просмотреть все</a>
+            </header>
+              
+            <%= render 'shared/products', products: @recommended_products.first(8) %>
 
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-          <!-- shop-item -->
-          <div structure="product-preview" class="item" href="">
-            <a href=""><img src="images/tmp/p-prev.png" alt="">
-              <article>
-                <span class="price">1680 р</span>
-                <h2>Рыжая книжка</h2>
-                <p>комплект из 3 книг, убрав из которых одну  — останется две</p>
-              </article>
-            </a>
-            <a href="" class="add-to-cart">t</a>
-          </div>
-          <!-- /shop-item -->
-
-        </section>
-        <!-- /catalogue -->
+          </section>
+          <!-- /catalogue -->
+        <% end %>
 
         <!-- catalogue -->
         <section class="catalogue">
@@ -350,42 +250,15 @@
         </section>
         <!-- /catalogue -->
 
-        <aside class="tags">
-          <ul>
-            <li><a href="">item1</a></li>
-            <li><a href="">item2</a></li>
-            <li><a href="">item3</a></li>
-            <li><a href="">item4</a></li>
-            <li><a href="">item5</a></li>
-            <li><a href="">item6</a></li>
-            <li><a href="">item7</a></li>
-            <li><a href="">item8</a></li>
-            <li><a href="">item9</a></li>
-            <li><a href="">item10</a></li>
-            <li><a href="">item11</a></li>
-            <li><a href="">item12</a></li>
-            <li><a href="">item13</a></li>
-            <li><a href="">item14</a></li>
-            <li><a href="">item15</a></li>
-            <li><a href="">item16</a></li>
-            <li><a href="">item17</a></li>
-            <li><a href="">item18</a></li>
-            <li><a href="">item19</a></li>
-            <li><a href="">item20</a></li>
-            <li><a href="">item21</a></li>
-            <li><a href="">item22</a></li>
-            <li><a href="">item23</a></li>
-            <li><a href="">item24</a></li>
-            <li><a href="">item25</a></li>
-            <li><a href="">item26</a></li>
-            <li><a href="">item27</a></li>
-            <li><a href="">item28</a></li>
-            <li><a href="">item29</a></li>
-            <li><a href="">item30</a></li>
-            <li><a href="">item31</a></li>
-            <li><a href="">item32</a></li>
-          </ul>
-        </aside>
+        <% if @tags %>
+          <aside class="tags">
+            <ul>
+              <% @tags.each do |tag| %>
+                <li><a href=""><%= tag.name %></a></li>
+              <% end %>
+            </ul>
+          </aside>
+        <% end %>
 
       </div>
       <!-- /.wrap -->
