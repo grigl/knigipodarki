@@ -1,0 +1,26 @@
+<!-- .sh-panel -->
+<section class="registration-form hidden">
+  <div class="wrap">
+    <%= form_for(:user, :url => registration_path(User.new)) do |f| %>
+      <!-- left part -->
+      <div class="registration-form-left">
+          <fieldset>
+            <label for="">Логин</label>
+            <%= f.text_field :email %>
+          </fieldset>
+          <fieldset class="fright">
+            <label for="">Пароль</label>
+            <%= f.password_field :password %>
+          </fieldset>
+      </div>
+      <!-- left part -->
+      <!-- left part -->
+      <div class="registration-form-right">
+        <input type="submit" class="input-black" value="Зарегистрироваться">
+      </div>
+      <!-- left part -->
+    <% end %>
+  </div>
+  <a href="" class="close">p</a>
+</section>
+<!-- .sh-panel -->

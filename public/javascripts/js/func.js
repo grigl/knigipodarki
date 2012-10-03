@@ -58,6 +58,18 @@ var LoginForm = function() {
   });
 }
 
+var RegistrationForm = function() {
+  $('.l-registration').live('click', function(e){
+    e.preventDefault();
+    $('.registration-form').show();
+  });
+
+  $('.registration-form .close').live('click', function(e){
+    e.preventDefault();
+    $('.registration-form').hide();
+  });
+}
+
 var ProductImages = function() {
   $('.product_image_thumb').live('click', function(e){
     e.preventDefault();
@@ -73,5 +85,6 @@ $(function(){
     Spoiler();
     Slides();
     LoginForm();
+    RegistrationForm();
     ProductImages();
 })
