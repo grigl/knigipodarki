@@ -186,8 +186,6 @@ Order.class_eval do
     true
   end
 
-
-
   def allow_cancel?
     return false unless completed? and state != 'canceled'
     %w{ready backorder pending}.include? shipment_state

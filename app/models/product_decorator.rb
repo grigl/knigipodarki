@@ -37,7 +37,7 @@ Product.class_eval do
     :class_name => 'Variant',
     :conditions => ["variants.is_master = ? AND variants.deleted_at IS NULL", true]
 
-  delegate_belongs_to :master, :sku, :price, :sale_price, :weight, :height, :width, :depth, :is_master
+  delegate_belongs_to :master, :sku, :price, :weight, :height, :width, :depth, :is_master
   delegate_belongs_to :master, :cost_price if Variant.table_exists? && Variant.column_names.include?("cost_price")
 
   after_create :set_master_variant_defaults
@@ -89,7 +89,7 @@ Product.class_eval do
 
   scope :popular_products, where('popularity > 0').order('popularity DESC')
 
-  scope :sale_products
+  scope :sale_products, where('sale_price')
 
   if (ActiveRecord::Base.connection.adapter_name == 'PostgreSQL')
     if ActiveRecord::Base.connection.tables.include?("products")
