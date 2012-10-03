@@ -45,7 +45,10 @@
         <% end %>
         
         <nav class="search">
-          <form action=""><input type="text" placeholder="Искать"><input type="submit" value="3"></form>
+          <form action="/products" method="get">
+            <input type="text" name="keywords" placeholder="Искать">
+            <input type="submit" value="3">
+          </form>
         </nav>
       </div>
 

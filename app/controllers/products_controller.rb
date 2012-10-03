@@ -14,6 +14,12 @@ class ProductsController < Spree::BaseController
       products = products
     end
 
+    if params[:keywords] 
+      products = products.where('name LIKE ?', "%#{params[:keywords]}%")
+    else
+      products = products
+    end
+
     # sorting and order
     if params[:sort] == 'price'
       if params[:order] == 'DESC'
