@@ -77,7 +77,7 @@
             </div>
             <div class="product-tags">
               <% @product.tags.each do |tag| %>
-                <a href=""><%= tag.name %></a>,&nbsp;
+                <%= link_to tag.name, products_tags_path(tag.name) %>,&nbsp;
               <% end %>
             </div>
           </aside>

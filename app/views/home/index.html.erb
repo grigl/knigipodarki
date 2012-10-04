@@ -54,7 +54,7 @@
           <aside class="tags">
             <ul>
               <% @tags.each do |tag| %>
-                <li><a href=""><%= tag.name %></a></li>
+                <li><%= link_to tag.name, products_tags_path(tag.name) %></li>
               <% end %>
             </ul>
           </aside>

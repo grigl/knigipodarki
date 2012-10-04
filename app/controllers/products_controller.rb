@@ -1,3 +1,4 @@
+# encoding: utf-8
 class ProductsController < Spree::BaseController
   HTTP_REFERER_REGEXP = /^https?:\/\/[^\/]+\/t\/([a-z0-9\-\/]+)$/
   rescue_from ActiveRecord::RecordNotFound, :with => :render_404
@@ -10,14 +11,10 @@ class ProductsController < Spree::BaseController
     # scopes
     if params[:scope] 
       products = eval "products.#{params[:scope]}_products"
-    else
-      products = products
     end
 
     if params[:keywords] 
       products = products.where('name LIKE ?', "%#{params[:keywords]}%")
-    else
-      products = products
     end
 
     # sorting and order
@@ -53,6 +50,15 @@ class ProductsController < Spree::BaseController
     end
 
     respond_with(@product)
+  end
+
+  def tags
+    product = Tag.find_by_name!(params[:tag])
+    products = [product.product]
+
+    @products = products.paginate(:page => params[:page], :per_page => 8)
+
+    respond_with(@product) { |format| format.html { render :index } }
   end
 
   private
