@@ -18,16 +18,18 @@ class ProductsController < Spree::BaseController
     end
 
     # sorting and order
-    if params[:sort] == 'price'
+    if params[:sort] 
       if params[:order] == 'DESC'
-        products = products.sort_by! { |product| product.master.price }.reverse
+        products = products.sort_by! { |product| product.try(params[:sort]) }.reverse
       else
-        products = products.sort_by! { |product| product.master.price }
+        products = products.sort_by! { |product| product.try(params[:sort]) }
       end
     else
-      params[:order] ? (order = params[:order]) : (order = 'ASC')     
-      params[:sort] ? (sort = params[:sort]) : (sort = 'created_at')
-      products = products.order("#{sort} #{order}")
+      if params[:order] == 'DESC'
+        products = products.sort_by! { |product| product.created_at }.reverse
+      else
+        products = products.sort_by! { |product| product.created_at }
+      end
     end
 
     @products = products.paginate(:page => params[:page], :per_page => 8)

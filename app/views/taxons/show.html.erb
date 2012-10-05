@@ -1,14 +1,14 @@
 <section class="site-content">
   <div class="white-wrap">
     <div class="wrap">
-    <% unless params[:taxonomy] && params[:taxonomy] == 'categories' %>
+    <% unless params[:taxonomy] == 'categories' %>
       <!-- .brand -->
         <section class="brand">
           <%= image_tag @taxon.icon.url(:normal) %>
           <article>
             <hgroup>
               <h1><%= @taxon.name %></h1>
-              <h2>Книги, часы, для компьютера, обложки на паспорт, сумки.</h2>
+              <h2><%= @taxon.subtitle %></h2>
             </hgroup>
             <p>
               <%= @taxon.description %>
@@ -16,6 +16,33 @@
           </article>
         </section>
       <!-- /.brand -->
+    <% end %>
+
+    <%= content_for :subnav do %>
+      <nav class="sub-direction-nav">
+      <% if params[:taxonomy] == 'categories' && ( get_subcategory(params).children.present? || params[:subtaxon]) %>
+        <ul>
+          <% if get_subcategory(params).children.present? %>
+            <% unless params[:subtaxon] %>
+              <li class="current">
+            <% else %>
+              <li>
+            <% end %>
+              <%= link_to 'Все', get_subcategory(params).permalink %>
+          <% end %>
+
+          <% get_subcategory(params).children.each do |taxon| %>
+              <% if request.path == taxon.permalink %>
+                <li class="current">
+              <% else %>
+                <li>
+              <% end %>
+                <%= link_to taxon.name, taxon.permalink %>
+              </li>
+          <% end %>
+        </ul>
+      <% end %>
+      </nav>
     <% end %>
 
     <% unless @products.empty? %>
