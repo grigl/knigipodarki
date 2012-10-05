@@ -6,7 +6,10 @@ Knigipodarki::Application.routes.draw do
   post 'cart/delete_line_item/:id' => 'orders#delete_line_item', as: 'delete_line_item'
 
   get ':taxonomy' => 'taxons#index', constraints: { taxonomy: /publishers|designers/ }
-  get ':taxonomy/:taxon/(:subtaxon)' => 'taxons#show', constraints: { taxonomy: /categories|publishers|designers/ }
+  get ':taxonomy/:taxon/' => 'taxons#show', constraints: { taxonomy: /categories|publishers|designers/ }
+  get ':taxonomy/:taxon/:subtaxon' => 'taxons#show', constraints: { taxonomy: /categories/ }
+  get ':taxonomy/:brand/:category/(:subcategory)' => 'taxons#show_for_brands_and_categories',
+        constraints: { taxonomy: /publishers|designers/ }, as: 'crosstaxons'
 
   match '/products/:scope' => 'products#index', constraints: { scope: /recommended|popular|sale/ }, as: 'products_with_scope'
   match '/products/tags/:tag' => 'products#tags', as: 'products_tags'

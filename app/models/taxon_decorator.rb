@@ -44,6 +44,20 @@ Taxon.class_eval do
     scope
   end
 
+  def all_products
+    all_products = self.products
+    if self.children.present?
+      self.children.each do |taxon|
+        all_products += taxon.products
+      end
+    end
+    all_products
+  end
+
+  def permalink_end
+    self.permalink.split("/").last
+  end
+
   private
   # obsolete, kept for backwards compat
   def escape(str)

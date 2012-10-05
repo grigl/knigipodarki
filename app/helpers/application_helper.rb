@@ -8,4 +8,14 @@ module ApplicationHelper
     permalink = '/' + params[:taxonomy] + '/' + params[:taxon]
     Taxon.find_by_permalink(permalink)
   end
+
+  def brand_categories(brand, category = nil)
+    if category
+      categories = category.children
+    else
+      categories = all_categories
+    end
+
+    categories.select { |cat| (cat.all_products & brand.all_products) != [] }
+  end
 end
