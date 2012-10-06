@@ -45,27 +45,27 @@
         <!-- /.orders -->
         <% end %>
 
-        <% if @user.addresses.present? %>
         <!-- .adresses -->
         <section class="addresses">
           <header>
             <h3>Адреса</h3>
-            <a href="">Добавить</a>
+            <%= link_to 'Добавить', new_address_path %>
           </header>
-          <% @user.addresses.each do |address| %>
-            <div class="adress">
-              <div class="desc">
-                <%= address %>
+          <% if @user.addresses.present? %>
+            <% @user.addresses.each do |address| %>
+              <div class="adress">
+                <div class="desc">
+                  <%= address %>
+                </div>
+                <div class="controls">
+                  <%= link_to 'Редактировать', edit_address_path(address) %>
+                  <%= link_to 'Удалить', address_path(address), :method => :delete, :confirm => t(:are_you_sure) %>
+                </div>
               </div>
-              <div class="controls">
-                <%= link_to 'Редактировать', edit_address_path(address) %>
-                <%= link_to 'Удалить', address_path(address), :method => :delete, :confirm => t(:are_you_sure) %>
-              </div>
-            </div>
+            <% end %>
           <% end %>
         </section>
         <!-- /.adresses -->
-        <% end %>
 
         </div>
       <!-- /.wrap -->

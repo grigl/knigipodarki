@@ -1,0 +1,64 @@
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+      
+        <!-- .account -->
+        <section class="account">
+          <header>
+            <h1>Моя учетная запись</h1>
+            <span class="nickname"><%= @user.email %></span>
+            <%= link_to 'Изменить', edit_account_path %>
+          </header>
+        </section>
+        <!-- /.account -->
+
+        <!-- .adresses -->
+        <section class="forms addresses">
+          <header>
+            <h3>Адреса</h3>
+            <a href="">Добавить</a>
+          </header>
+          
+          <!-- form .formset -->
+          <%= form_for(@user, :html => { :method => :put }) do |f| %>
+            <div class="formset">
+
+              <!-- .fields -->
+              <div class="fields">
+                <fieldset>
+                  <%= f.label :email, t("email") %>
+                  <%= f.text_field :email %>
+                </fieldset>
+                <fieldset>
+                  <%= f.label :password, t("password") %>
+                  <%= f.password_field :password %>
+                </fieldset>
+                <fieldset>
+                  <%= f.label :password_confirmation, t(:confirm_password) %>
+                  <%= f.password_field :password_confirmation %>
+                </fieldset>
+              </div>
+              <!-- /.fields -->
+
+            </div>
+            <!-- .controls -->
+            <div class="controls controls-small">
+              <%= link_to 'Отмена', account_path %>
+              <input type="submit" value="Сохранить">
+            </div>
+            <!-- /.controls -->
+          <% end %>
+          <!-- form .formset -->
+
+        </section>
+        <!-- /.adresses -->
+
+        </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+<!-- /.content -->
+
+

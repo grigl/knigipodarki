@@ -1,0 +1,35 @@
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+      
+        <!-- .account -->
+        <section class="account">
+          <header>
+            <h1>Моя учетная запись</h1>
+            <span class="nickname"><%= current_user.email %></span>
+            <%= link_to 'Изменить', edit_account_path %>
+          </header>
+        </section>
+        <!-- /.account -->
+
+        <!-- .adresses -->
+        <section class="forms addresses">
+          <header>
+            <h3>Адреса</h3>
+            <a href="">Добавить</a>
+          </header>
+          
+          <%= render 'address_form' %>
+
+        </section>
+        <!-- /.adresses -->
+
+        </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+<!-- /.content -->
+
+

@@ -1,0 +1,1759 @@
+-- MySQL dump 10.13  Distrib 5.1.63, for debian-linux-gnu (i486)
+--
+-- Host: localhost    Database: knigipodarki
+-- ------------------------------------------------------
+-- Server version	5.1.63-0ubuntu0.10.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `addresses`
+--
+
+DROP TABLE IF EXISTS `addresses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `addresses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `address1` varchar(255) DEFAULT NULL,
+  `address2` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `state_id` int(11) DEFAULT NULL,
+  `zipcode` varchar(255) DEFAULT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `state_name` varchar(255) DEFAULT NULL,
+  `alternative_phone` varchar(255) DEFAULT NULL,
+  `secondname` varchar(255) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_addresses_on_firstname` (`firstname`),
+  KEY `index_addresses_on_lastname` (`lastname`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `addresses`
+--
+
+LOCK TABLES `addresses` WRITE;
+/*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
+INSERT INTO `addresses` VALUES (1,'апр','вапр','р',NULL,'ррр',13,'р',168,'123123','2012-09-28 22:51:15','2012-09-28 22:51:15',NULL,NULL,'рр',1,NULL),(2,'апр','вапр','р',NULL,'ррр',13,'р',168,'123123','2012-09-28 22:57:11','2012-09-28 22:57:11',NULL,NULL,'рр',1,NULL),(3,'апр','вапр','р',NULL,'ррр',13,'р',168,'123123','2012-10-02 01:44:46','2012-10-02 01:44:46',NULL,NULL,'рр',1,NULL);
+/*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `adjustments`
+--
+
+DROP TABLE IF EXISTS `adjustments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `adjustments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT NULL,
+  `amount` decimal(8,2) DEFAULT NULL,
+  `label` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `source_id` int(11) DEFAULT NULL,
+  `source_type` varchar(255) DEFAULT NULL,
+  `mandatory` tinyint(1) DEFAULT NULL,
+  `locked` tinyint(1) DEFAULT NULL,
+  `originator_id` int(11) DEFAULT NULL,
+  `originator_type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_adjustments_on_order_id` (`order_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `adjustments`
+--
+
+LOCK TABLES `adjustments` WRITE;
+/*!40000 ALTER TABLE `adjustments` DISABLE KEYS */;
+INSERT INTO `adjustments` VALUES (1,5,'10.00','Доставка','2012-09-28 22:51:18','2012-09-28 22:51:18',1,'Shipment',1,NULL,192811543,'ShippingMethod');
+/*!40000 ALTER TABLE `adjustments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `assets`
+--
+
+DROP TABLE IF EXISTS `assets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `assets` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `viewable_id` int(11) DEFAULT NULL,
+  `viewable_type` varchar(50) DEFAULT NULL,
+  `attachment_content_type` varchar(255) DEFAULT NULL,
+  `attachment_file_name` varchar(255) DEFAULT NULL,
+  `attachment_size` int(11) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `type` varchar(75) DEFAULT NULL,
+  `attachment_updated_at` datetime DEFAULT NULL,
+  `attachment_width` int(11) DEFAULT NULL,
+  `attachment_height` int(11) DEFAULT NULL,
+  `alt` text,
+  PRIMARY KEY (`id`),
+  KEY `index_assets_on_viewable_id` (`viewable_id`),
+  KEY `index_assets_on_viewable_type_and_type` (`viewable_type`,`type`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `assets`
+--
+
+LOCK TABLES `assets` WRITE;
+/*!40000 ALTER TABLE `assets` DISABLE KEYS */;
+INSERT INTO `assets` VALUES (8,154,'Product','image/jpeg','10a030055498ec9ceb16c6ab6c2f985151ebfe33_m.jpg',NULL,1,'Image','2012-10-03 03:09:33',NULL,NULL,''),(9,154,'Product','image/jpeg','675da64ef72615f2c646149cf501e2b3a8a40b4a_m.jpg',NULL,2,'Image','2012-10-03 03:09:42',NULL,NULL,'');
+/*!40000 ALTER TABLE `assets` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `banners`
+--
+
+DROP TABLE IF EXISTS `banners`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `banners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `subtitle` varchar(255) DEFAULT NULL,
+  `description` text,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `asset_file_name` varchar(255) DEFAULT NULL,
+  `asset_content_type` varchar(255) DEFAULT NULL,
+  `asset_file_size` int(11) DEFAULT NULL,
+  `asset_updated_at` datetime DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `banners`
+--
+
+LOCK TABLES `banners` WRITE;
+/*!40000 ALTER TABLE `banners` DISABLE KEYS */;
+INSERT INTO `banners` VALUES (1,'Первый баннер','Подзаголовок  баннера','Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер. Первый тестовый баннер.','2012-09-20 02:16:10','2012-09-20 02:20:18','675da64ef72615f2c646149cf501e2b3a8a40b4a_m.jpg','image/jpeg',44752,'2012-09-20 02:18:50','1234 рубля','google.com'),(2,'Второй баннер','И тут подзаголовок','Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер. Баннер-баннер.','2012-09-20 02:19:49','2012-09-20 02:20:26','10a030055498ec9ceb16c6ab6c2f985151ebfe33_m.jpg','image/jpeg',56100,'2012-09-20 02:19:48','6348','yandex.ru');
+/*!40000 ALTER TABLE `banners` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `calculators`
+--
+
+DROP TABLE IF EXISTS `calculators`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `calculators` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) DEFAULT NULL,
+  `calculable_id` int(11) NOT NULL,
+  `calculable_type` varchar(255) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=574015645 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `calculators`
+--
+
+LOCK TABLES `calculators` WRITE;
+/*!40000 ALTER TABLE `calculators` DISABLE KEYS */;
+INSERT INTO `calculators` VALUES (13537749,'Calculator::FlatRate',13537749,'ShippingMethod','2012-09-13 17:16:20','2012-09-13 17:16:20'),(192811543,'Calculator::FlatRate',192811543,'ShippingMethod','2012-09-13 17:16:20','2012-09-13 17:16:20'),(491052212,'Calculator::FlatRate',713097208,'Promotion','2012-09-13 17:16:20','2012-09-13 17:16:20'),(574015644,'Calculator::FlatRate',574015644,'ShippingMethod','2012-09-13 17:16:20','2012-09-13 17:16:20');
+/*!40000 ALTER TABLE `calculators` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `configurations`
+--
+
+DROP TABLE IF EXISTS `configurations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `configurations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_configurations_on_name_and_type` (`name`,`type`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `configurations`
+--
+
+LOCK TABLES `configurations` WRITE;
+/*!40000 ALTER TABLE `configurations` DISABLE KEYS */;
+INSERT INTO `configurations` VALUES (1,'Default configuration','2012-09-13 17:16:18','2012-09-13 17:16:18','AppConfiguration'),(2,'Editor configuration','2012-09-13 17:26:07','2012-09-13 17:26:07','EditorConfiguration'),(3,'Default spree_auth configuration','2012-09-24 20:29:32','2012-09-24 20:29:32','SpreeAuthConfiguration');
+/*!40000 ALTER TABLE `configurations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `countries`
+--
+
+DROP TABLE IF EXISTS `countries`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `countries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `iso_name` varchar(255) DEFAULT NULL,
+  `iso` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `iso3` varchar(255) DEFAULT NULL,
+  `numcode` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=227 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `countries`
+--
+
+LOCK TABLES `countries` WRITE;
+/*!40000 ALTER TABLE `countries` DISABLE KEYS */;
+INSERT INTO `countries` VALUES (1,'AFGHANISTAN','AF','Afghanistan','AFG',4),(2,'ALBANIA','AL','Albania','ALB',8),(3,'ALGERIA','DZ','Algeria','DZA',12),(4,'AMERICAN SAMOA','AS','American Samoa','ASM',16),(5,'ANDORRA','AD','Andorra','AND',20),(6,'ANGOLA','AO','Angola','AGO',24),(7,'ANGUILLA','AI','Anguilla','AIA',660),(8,'ANTIGUA AND BARBUDA','AG','Antigua and Barbuda','ATG',28),(9,'ARGENTINA','AR','Argentina','ARG',32),(10,'ARMENIA','AM','Armenia','ARM',51),(11,'ARUBA','AW','Aruba','ABW',533),(12,'AUSTRALIA','AU','Australia','AUS',36),(13,'AUSTRIA','AT','Austria','AUT',40),(14,'AZERBAIJAN','AZ','Azerbaijan','AZE',31),(15,'BAHAMAS','BS','Bahamas','BHS',44),(16,'BAHRAIN','BH','Bahrain','BHR',48),(17,'BANGLADESH','BD','Bangladesh','BGD',50),(18,'BARBADOS','BB','Barbados','BRB',52),(19,'BELARUS','BY','Belarus','BLR',112),(20,'BELGIUM','BE','Belgium','BEL',56),(21,'BELIZE','BZ','Belize','BLZ',84),(22,'BENIN','BJ','Benin','BEN',204),(23,'BERMUDA','BM','Bermuda','BMU',60),(24,'BHUTAN','BT','Bhutan','BTN',64),(25,'BOLIVIA','BO','Bolivia','BOL',68),(26,'BOSNIA AND HERZEGOVINA','BA','Bosnia and Herzegovina','BIH',70),(27,'BOTSWANA','BW','Botswana','BWA',72),(28,'BRAZIL','BR','Brazil','BRA',76),(29,'BRUNEI DARUSSALAM','BN','Brunei Darussalam','BRN',96),(30,'BULGARIA','BG','Bulgaria','BGR',100),(31,'BURKINA FASO','BF','Burkina Faso','BFA',854),(32,'BURUNDI','BI','Burundi','BDI',108),(33,'CAMBODIA','KH','Cambodia','KHM',116),(34,'CAMEROON','CM','Cameroon','CMR',120),(35,'CANADA','CA','Canada','CAN',124),(36,'CAPE VERDE','CV','Cape Verde','CPV',132),(37,'CAYMAN ISLANDS','KY','Cayman Islands','CYM',136),(38,'CENTRAL AFRICAN REPUBLIC','CF','Central African Republic','CAF',140),(39,'CHAD','TD','Chad','TCD',148),(40,'CHILE','CL','Chile','CHL',152),(41,'CHINA','CN','China','CHN',156),(42,'COLOMBIA','CO','Colombia','COL',170),(43,'COMOROS','KM','Comoros','COM',174),(44,'CONGO','CG','Congo','COG',178),(45,'CONGO, THE DEMOCRATIC REPUBLIC OF THE','CD','Congo, the Democratic Republic of the','COD',180),(46,'COOK ISLANDS','CK','Cook Islands','COK',184),(47,'COSTA RICA','CR','Costa Rica','CRI',188),(48,'COTE D\'IVOIRE','CI','Cote D\'Ivoire','CIV',384),(49,'CROATIA','HR','Croatia','HRV',191),(50,'CUBA','CU','Cuba','CUB',192),(51,'CYPRUS','CY','Cyprus','CYP',196),(52,'CZECH REPUBLIC','CZ','Czech Republic','CZE',203),(53,'DENMARK','DK','Denmark','DNK',208),(54,'DJIBOUTI','DJ','Djibouti','DJI',262),(55,'DOMINICA','DM','Dominica','DMA',212),(56,'DOMINICAN REPUBLIC','DO','Dominican Republic','DOM',214),(57,'ECUADOR','EC','Ecuador','ECU',218),(58,'EGYPT','EG','Egypt','EGY',818),(59,'EL SALVADOR','SV','El Salvador','SLV',222),(60,'EQUATORIAL GUINEA','GQ','Equatorial Guinea','GNQ',226),(61,'ERITREA','ER','Eritrea','ERI',232),(62,'ESTONIA','EE','Estonia','EST',233),(63,'ETHIOPIA','ET','Ethiopia','ETH',231),(64,'FALKLAND ISLANDS (MALVINAS)','FK','Falkland Islands (Malvinas)','FLK',238),(65,'FAROE ISLANDS','FO','Faroe Islands','FRO',234),(66,'FIJI','FJ','Fiji','FJI',242),(67,'FINLAND','FI','Finland','FIN',246),(68,'FRANCE','FR','France','FRA',250),(69,'FRENCH GUIANA','GF','French Guiana','GUF',254),(70,'FRENCH POLYNESIA','PF','French Polynesia','PYF',258),(71,'GABON','GA','Gabon','GAB',266),(72,'GAMBIA','GM','Gambia','GMB',270),(73,'GEORGIA','GE','Georgia','GEO',268),(74,'GERMANY','DE','Germany','DEU',276),(75,'GHANA','GH','Ghana','GHA',288),(76,'GIBRALTAR','GI','Gibraltar','GIB',292),(77,'GREECE','GR','Greece','GRC',300),(78,'GREENLAND','GL','Greenland','GRL',304),(79,'GRENADA','GD','Grenada','GRD',308),(80,'GUADELOUPE','GP','Guadeloupe','GLP',312),(81,'GUAM','GU','Guam','GUM',316),(82,'GUATEMALA','GT','Guatemala','GTM',320),(83,'GUINEA','GN','Guinea','GIN',324),(84,'GUINEA-BISSAU','GW','Guinea-Bissau','GNB',624),(85,'GUYANA','GY','Guyana','GUY',328),(86,'HAITI','HT','Haiti','HTI',332),(87,'HOLY SEE (VATICAN CITY STATE)','VA','Holy See (Vatican City State)','VAT',336),(88,'HONDURAS','HN','Honduras','HND',340),(89,'HONG KONG','HK','Hong Kong','HKG',344),(90,'HUNGARY','HU','Hungary','HUN',348),(91,'ICELAND','IS','Iceland','ISL',352),(92,'INDIA','IN','India','IND',356),(93,'INDONESIA','ID','Indonesia','IDN',360),(94,'IRAN, ISLAMIC REPUBLIC OF','IR','Iran, Islamic Republic of','IRN',364),(95,'IRAQ','IQ','Iraq','IRQ',368),(96,'IRELAND','IE','Ireland','IRL',372),(97,'ISRAEL','IL','Israel','ISR',376),(98,'ITALY','IT','Italy','ITA',380),(99,'JAMAICA','JM','Jamaica','JAM',388),(100,'JAPAN','JP','Japan','JPN',392),(101,'JORDAN','JO','Jordan','JOR',400),(102,'KAZAKHSTAN','KZ','Kazakhstan','KAZ',398),(103,'KENYA','KE','Kenya','KEN',404),(104,'KIRIBATI','KI','Kiribati','KIR',296),(105,'KOREA, DEMOCRATIC PEOPLE\'S REPUBLIC OF','KP','North Korea','PRK',408),(106,'KOREA, REPUBLIC OF','KR','South Korea','KOR',410),(107,'KUWAIT','KW','Kuwait','KWT',414),(108,'KYRGYZSTAN','KG','Kyrgyzstan','KGZ',417),(109,'LAO PEOPLE\'S DEMOCRATIC REPUBLIC','LA','Lao People\'s Democratic Republic','LAO',418),(110,'LATVIA','LV','Latvia','LVA',428),(111,'LEBANON','LB','Lebanon','LBN',422),(112,'LESOTHO','LS','Lesotho','LSO',426),(113,'LIBERIA','LR','Liberia','LBR',430),(114,'LIBYAN ARAB JAMAHIRIYA','LY','Libyan Arab Jamahiriya','LBY',434),(115,'LIECHTENSTEIN','LI','Liechtenstein','LIE',438),(116,'LITHUANIA','LT','Lithuania','LTU',440),(117,'LUXEMBOURG','LU','Luxembourg','LUX',442),(118,'MACAO','MO','Macao','MAC',446),(119,'MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF','MK','Macedonia','MKD',807),(120,'MADAGASCAR','MG','Madagascar','MDG',450),(121,'MALAWI','MW','Malawi','MWI',454),(122,'MALAYSIA','MY','Malaysia','MYS',458),(123,'MALDIVES','MV','Maldives','MDV',462),(124,'MALI','ML','Mali','MLI',466),(125,'MALTA','MT','Malta','MLT',470),(126,'MARSHALL ISLANDS','MH','Marshall Islands','MHL',584),(127,'MARTINIQUE','MQ','Martinique','MTQ',474),(128,'MAURITANIA','MR','Mauritania','MRT',478),(129,'MAURITIUS','MU','Mauritius','MUS',480),(130,'MEXICO','MX','Mexico','MEX',484),(131,'MICRONESIA, FEDERATED STATES OF','FM','Micronesia, Federated States of','FSM',583),(132,'MOLDOVA, REPUBLIC OF','MD','Moldova, Republic of','MDA',498),(133,'MONACO','MC','Monaco','MCO',492),(134,'MONGOLIA','MN','Mongolia','MNG',496),(135,'MONTSERRAT','MS','Montserrat','MSR',500),(136,'MOROCCO','MA','Morocco','MAR',504),(137,'MOZAMBIQUE','MZ','Mozambique','MOZ',508),(138,'MYANMAR','MM','Myanmar','MMR',104),(139,'NAMIBIA','NA','Namibia','NAM',516),(140,'NAURU','NR','Nauru','NRU',520),(141,'NEPAL','NP','Nepal','NPL',524),(142,'NETHERLANDS','NL','Netherlands','NLD',528),(143,'NETHERLANDS ANTILLES','AN','Netherlands Antilles','ANT',530),(144,'NEW CALEDONIA','NC','New Caledonia','NCL',540),(145,'NEW ZEALAND','NZ','New Zealand','NZL',554),(146,'NICARAGUA','NI','Nicaragua','NIC',558),(147,'NIGER','NE','Niger','NER',562),(148,'NIGERIA','NG','Nigeria','NGA',566),(149,'NIUE','NU','Niue','NIU',570),(150,'NORFOLK ISLAND','NF','Norfolk Island','NFK',574),(151,'NORTHERN MARIANA ISLANDS','MP','Northern Mariana Islands','MNP',580),(152,'NORWAY','NO','Norway','NOR',578),(153,'OMAN','OM','Oman','OMN',512),(154,'PAKISTAN','PK','Pakistan','PAK',586),(155,'PALAU','PW','Palau','PLW',585),(156,'PANAMA','PA','Panama','PAN',591),(157,'PAPUA NEW GUINEA','PG','Papua New Guinea','PNG',598),(158,'PARAGUAY','PY','Paraguay','PRY',600),(159,'PERU','PE','Peru','PER',604),(160,'PHILIPPINES','PH','Philippines','PHL',608),(161,'PITCAIRN','PN','Pitcairn','PCN',612),(162,'POLAND','PL','Poland','POL',616),(163,'PORTUGAL','PT','Portugal','PRT',620),(164,'PUERTO RICO','PR','Puerto Rico','PRI',630),(165,'QATAR','QA','Qatar','QAT',634),(166,'REUNION','RE','Reunion','REU',638),(167,'ROMANIA','RO','Romania','ROM',642),(168,'RUSSIAN FEDERATION','RU','Российская Федерация','RUS',643),(169,'RWANDA','RW','Rwanda','RWA',646),(170,'SAINT HELENA','SH','Saint Helena','SHN',654),(171,'SAINT KITTS AND NEVIS','KN','Saint Kitts and Nevis','KNA',659),(172,'SAINT LUCIA','LC','Saint Lucia','LCA',662),(173,'SAINT PIERRE AND MIQUELON','PM','Saint Pierre and Miquelon','SPM',666),(174,'SAINT VINCENT AND THE GRENADINES','VC','Saint Vincent and the Grenadines','VCT',670),(175,'SAMOA','WS','Samoa','WSM',882),(176,'SAN MARINO','SM','San Marino','SMR',674),(177,'SAO TOME AND PRINCIPE','ST','Sao Tome and Principe','STP',678),(178,'SAUDI ARABIA','SA','Saudi Arabia','SAU',682),(179,'SENEGAL','SN','Senegal','SEN',686),(180,'SEYCHELLES','SC','Seychelles','SYC',690),(181,'SIERRA LEONE','SL','Sierra Leone','SLE',694),(182,'SINGAPORE','SG','Singapore','SGP',702),(183,'SLOVAKIA','SK','Slovakia','SVK',703),(184,'SLOVENIA','SI','Slovenia','SVN',705),(185,'SOLOMON ISLANDS','SB','Solomon Islands','SLB',90),(186,'SOMALIA','SO','Somalia','SOM',706),(187,'SOUTH AFRICA','ZA','South Africa','ZAF',710),(188,'SPAIN','ES','Spain','ESP',724),(189,'SRI LANKA','LK','Sri Lanka','LKA',144),(190,'SUDAN','SD','Sudan','SDN',736),(191,'SURINAME','SR','Suriname','SUR',740),(192,'SVALBARD AND JAN MAYEN','SJ','Svalbard and Jan Mayen','SJM',744),(193,'SWAZILAND','SZ','Swaziland','SWZ',748),(194,'SWEDEN','SE','Sweden','SWE',752),(195,'SWITZERLAND','CH','Switzerland','CHE',756),(196,'SYRIAN ARAB REPUBLIC','SY','Syrian Arab Republic','SYR',760),(197,'TAIWAN, PROVINCE OF CHINA','TW','Taiwan','TWN',158),(198,'TAJIKISTAN','TJ','Tajikistan','TJK',762),(199,'TANZANIA, UNITED REPUBLIC OF','TZ','Tanzania, United Republic of','TZA',834),(200,'THAILAND','TH','Thailand','THA',764),(201,'TOGO','TG','Togo','TGO',768),(202,'TOKELAU','TK','Tokelau','TKL',772),(203,'TONGA','TO','Tonga','TON',776),(204,'TRINIDAD AND TOBAGO','TT','Trinidad and Tobago','TTO',780),(205,'TUNISIA','TN','Tunisia','TUN',788),(206,'TURKEY','TR','Turkey','TUR',792),(207,'TURKMENISTAN','TM','Turkmenistan','TKM',795),(208,'TURKS AND CAICOS ISLANDS','TC','Turks and Caicos Islands','TCA',796),(209,'TUVALU','TV','Tuvalu','TUV',798),(210,'UGANDA','UG','Uganda','UGA',800),(211,'UKRAINE','UA','Ukraine','UKR',804),(212,'UNITED ARAB EMIRATES','AE','United Arab Emirates','ARE',784),(213,'UNITED KINGDOM','GB','United Kingdom','GBR',826),(214,'UNITED STATES','US','United States','USA',840),(215,'URUGUAY','UY','Uruguay','URY',858),(216,'UZBEKISTAN','UZ','Uzbekistan','UZB',860),(217,'VANUATU','VU','Vanuatu','VUT',548),(218,'VENEZUELA','VE','Venezuela','VEN',862),(219,'VIET NAM','VN','Viet Nam','VNM',704),(220,'VIRGIN ISLANDS, BRITISH','VG','Virgin Islands, British','VGB',92),(221,'VIRGIN ISLANDS, U.S.','VI','Virgin Islands, U.S.','VIR',850),(222,'WALLIS AND FUTUNA','WF','Wallis and Futuna','WLF',876),(223,'WESTERN SAHARA','EH','Western Sahara','ESH',732),(224,'YEMEN','YE','Yemen','YEM',887),(225,'ZAMBIA','ZM','Zambia','ZMB',894),(226,'ZIMBABWE','ZW','Zimbabwe','ZWE',716);
+/*!40000 ALTER TABLE `countries` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `creditcards`
+--
+
+DROP TABLE IF EXISTS `creditcards`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `creditcards` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `month` varchar(255) DEFAULT NULL,
+  `year` varchar(255) DEFAULT NULL,
+  `cc_type` varchar(255) DEFAULT NULL,
+  `last_digits` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `start_month` varchar(255) DEFAULT NULL,
+  `start_year` varchar(255) DEFAULT NULL,
+  `issue_number` varchar(255) DEFAULT NULL,
+  `address_id` int(11) DEFAULT NULL,
+  `gateway_customer_profile_id` varchar(255) DEFAULT NULL,
+  `gateway_payment_profile_id` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `creditcards`
+--
+
+LOCK TABLES `creditcards` WRITE;
+/*!40000 ALTER TABLE `creditcards` DISABLE KEYS */;
+/*!40000 ALTER TABLE `creditcards` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gateways`
+--
+
+DROP TABLE IF EXISTS `gateways`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gateways` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `description` text,
+  `active` tinyint(1) DEFAULT '1',
+  `environment` varchar(255) DEFAULT 'development',
+  `server` varchar(255) DEFAULT 'test',
+  `test_mode` tinyint(1) DEFAULT '1',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gateways`
+--
+
+LOCK TABLES `gateways` WRITE;
+/*!40000 ALTER TABLE `gateways` DISABLE KEYS */;
+/*!40000 ALTER TABLE `gateways` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `inventory_units`
+--
+
+DROP TABLE IF EXISTS `inventory_units`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `inventory_units` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `variant_id` int(11) DEFAULT NULL,
+  `order_id` int(11) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `lock_version` int(11) DEFAULT '0',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `shipment_id` int(11) DEFAULT NULL,
+  `return_authorization_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_inventory_units_on_variant_id` (`variant_id`),
+  KEY `index_inventory_units_on_order_id` (`order_id`),
+  KEY `index_inventory_units_on_shipment_id` (`shipment_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `inventory_units`
+--
+
+LOCK TABLES `inventory_units` WRITE;
+/*!40000 ALTER TABLE `inventory_units` DISABLE KEYS */;
+INSERT INTO `inventory_units` VALUES (1,154,5,'sold',0,'2012-10-02 01:44:52','2012-10-02 01:44:52',1,NULL);
+/*!40000 ALTER TABLE `inventory_units` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `line_items`
+--
+
+DROP TABLE IF EXISTS `line_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `line_items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT NULL,
+  `variant_id` int(11) DEFAULT NULL,
+  `quantity` int(11) NOT NULL,
+  `price` decimal(8,2) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_line_items_on_order_id` (`order_id`),
+  KEY `index_line_items_on_variant_id` (`variant_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `line_items`
+--
+
+LOCK TABLES `line_items` WRITE;
+/*!40000 ALTER TABLE `line_items` DISABLE KEYS */;
+INSERT INTO `line_items` VALUES (4,6,26,1,'300.00','2012-09-23 14:21:33','2012-09-23 14:21:33'),(19,7,117,1,'360.00','2012-09-24 21:19:56','2012-09-24 21:19:56'),(21,14,114,1,'360.00','2012-09-30 14:52:49','2012-09-30 14:52:49'),(22,14,154,1,'1234.00','2012-09-30 14:54:30','2012-09-30 14:54:30'),(23,17,154,2,'1234.00','2012-10-01 21:38:45','2012-10-04 16:41:45'),(24,5,154,1,'1234.00','2012-10-02 01:44:39','2012-10-02 01:44:39'),(25,20,154,17,'1234.00','2012-10-03 12:52:03','2012-10-03 12:52:13'),(26,21,154,1,'1234.00','2012-10-04 01:07:24','2012-10-04 01:07:24'),(27,21,18,1,'90.00','2012-10-04 01:07:26','2012-10-04 01:07:26'),(28,21,2,1,'225.00','2012-10-04 01:07:31','2012-10-04 01:07:31'),(29,21,8,1,'225.00','2012-10-04 01:07:33','2012-10-04 01:07:33');
+/*!40000 ALTER TABLE `line_items` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `log_entries`
+--
+
+DROP TABLE IF EXISTS `log_entries`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `log_entries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `source_id` int(11) DEFAULT NULL,
+  `source_type` varchar(255) DEFAULT NULL,
+  `details` text,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `log_entries`
+--
+
+LOCK TABLES `log_entries` WRITE;
+/*!40000 ALTER TABLE `log_entries` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_entries` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mail_methods`
+--
+
+DROP TABLE IF EXISTS `mail_methods`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mail_methods` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `environment` varchar(255) DEFAULT NULL,
+  `active` tinyint(1) DEFAULT '1',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mail_methods`
+--
+
+LOCK TABLES `mail_methods` WRITE;
+/*!40000 ALTER TABLE `mail_methods` DISABLE KEYS */;
+INSERT INTO `mail_methods` VALUES (1,'production',1,'2012-09-28 22:56:35','2012-09-28 22:56:35');
+/*!40000 ALTER TABLE `mail_methods` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `option_types`
+--
+
+DROP TABLE IF EXISTS `option_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `option_types` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `presentation` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `position` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `option_types`
+--
+
+LOCK TABLES `option_types` WRITE;
+/*!40000 ALTER TABLE `option_types` DISABLE KEYS */;
+/*!40000 ALTER TABLE `option_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `option_types_prototypes`
+--
+
+DROP TABLE IF EXISTS `option_types_prototypes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `option_types_prototypes` (
+  `prototype_id` int(11) DEFAULT NULL,
+  `option_type_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `option_types_prototypes`
+--
+
+LOCK TABLES `option_types_prototypes` WRITE;
+/*!40000 ALTER TABLE `option_types_prototypes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `option_types_prototypes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `option_values`
+--
+
+DROP TABLE IF EXISTS `option_values`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `option_values` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `option_type_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `presentation` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `option_values`
+--
+
+LOCK TABLES `option_values` WRITE;
+/*!40000 ALTER TABLE `option_values` DISABLE KEYS */;
+/*!40000 ALTER TABLE `option_values` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `option_values_variants`
+--
+
+DROP TABLE IF EXISTS `option_values_variants`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `option_values_variants` (
+  `variant_id` int(11) DEFAULT NULL,
+  `option_value_id` int(11) DEFAULT NULL,
+  KEY `index_option_values_variants_on_variant_id` (`variant_id`),
+  KEY `index_option_values_variants_on_variant_id_and_option_value_id` (`variant_id`,`option_value_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `option_values_variants`
+--
+
+LOCK TABLES `option_values_variants` WRITE;
+/*!40000 ALTER TABLE `option_values_variants` DISABLE KEYS */;
+/*!40000 ALTER TABLE `option_values_variants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `number` varchar(15) DEFAULT NULL,
+  `item_total` decimal(8,2) NOT NULL DEFAULT '0.00',
+  `total` decimal(8,2) NOT NULL DEFAULT '0.00',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `adjustment_total` decimal(8,2) NOT NULL DEFAULT '0.00',
+  `credit_total` decimal(8,2) NOT NULL DEFAULT '0.00',
+  `completed_at` datetime DEFAULT NULL,
+  `bill_address_id` int(11) DEFAULT NULL,
+  `ship_address_id` int(11) DEFAULT NULL,
+  `payment_total` decimal(8,2) DEFAULT '0.00',
+  `shipping_method_id` int(11) DEFAULT NULL,
+  `shipment_state` varchar(255) DEFAULT NULL,
+  `payment_state` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `special_instructions` text,
+  PRIMARY KEY (`id`),
+  KEY `index_orders_on_number` (`number`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,2,'R760807723','0.00','0.00','2012-09-16 04:31:40','2012-09-16 04:31:40','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(2,3,'R211032583','0.00','0.00','2012-09-20 10:10:27','2012-09-20 10:10:27','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(3,4,'R364473611','0.00','0.00','2012-09-22 01:49:27','2012-09-22 01:49:27','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(4,5,'R312006008','0.00','0.00','2012-09-22 01:49:37','2012-09-22 01:49:37','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(5,1,'R251458156','1234.00','1244.00','2012-09-22 01:51:07','2012-10-02 01:44:52','complete','10.00','0.00','2012-10-02 01:44:52',3,3,'0.00',192811543,'ready','pending','spree@example.com',NULL),(6,6,'R343530473','300.00','300.00','2012-09-23 14:21:33','2012-09-23 14:21:33','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,'pending',NULL,NULL),(7,7,'R306202852','360.00','360.00','2012-09-24 20:25:43','2012-09-24 20:25:43','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,'pending',NULL,NULL),(8,8,'R273727807','0.00','0.00','2012-09-25 08:33:28','2012-09-25 08:33:28','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,'paid',NULL,NULL),(10,10,'R763120180','0.00','0.00','2012-09-26 08:16:00','2012-09-26 08:16:00','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(11,11,'R386475860','0.00','0.00','2012-09-27 07:13:01','2012-09-27 07:13:01','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(12,12,'R467286544','0.00','0.00','2012-09-29 00:22:55','2012-09-29 00:22:55','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(13,13,'R265852545','0.00','0.00','2012-09-29 02:00:24','2012-09-29 02:00:24','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(14,14,'R808265228','1594.00','1594.00','2012-09-30 14:52:49','2012-09-30 14:52:49','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,'pending',NULL,NULL),(15,15,'R814375438','0.00','0.00','2012-09-30 15:14:59','2012-09-30 15:14:59','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(16,16,'R520178144','0.00','0.00','2012-10-01 11:38:05','2012-10-01 11:38:05','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(17,17,'R556277813','2468.00','2468.00','2012-10-01 21:38:45','2012-10-04 16:42:13','address','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,'balance_due','rsedykh@whitescape.com',NULL),(18,19,'R613281673','0.00','0.00','2012-10-03 07:06:38','2012-10-03 07:06:38','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(19,20,'R810380016','0.00','0.00','2012-10-03 11:11:16','2012-10-03 11:11:16','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,NULL,NULL,NULL),(20,21,'R086656580','20978.00','20978.00','2012-10-03 12:52:03','2012-10-03 12:52:03','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,'pending',NULL,NULL),(21,1,'R730048832','1774.00','1774.00','2012-10-04 01:07:24','2012-10-04 01:07:24','cart','0.00','0.00',NULL,NULL,NULL,'0.00',NULL,NULL,'balance_due','spree@example.com',NULL);
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pages`
+--
+
+DROP TABLE IF EXISTS `pages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `body` mediumtext,
+  `slug` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `show_in_header` tinyint(1) NOT NULL DEFAULT '0',
+  `show_in_footer` tinyint(1) NOT NULL DEFAULT '0',
+  `foreign_link` varchar(255) DEFAULT NULL,
+  `position` int(11) NOT NULL DEFAULT '1',
+  `visible` tinyint(1) DEFAULT '1',
+  `meta_keywords` varchar(255) DEFAULT NULL,
+  `meta_description` varchar(255) DEFAULT NULL,
+  `layout` varchar(255) DEFAULT NULL,
+  `show_in_sidebar` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `index_pages_on_slug` (`slug`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pages`
+--
+
+LOCK TABLES `pages` WRITE;
+/*!40000 ALTER TABLE `pages` DISABLE KEYS */;
+INSERT INTO `pages` VALUES (3,'information','<!-- .about -->\r\n <section class=\"about\" id=\"about\">\r\n\r\n <h1>О нас</h1>\r\n\r\n <!-- item -->\r\n <article>\r\n <img  src=\"/images/about_shop.png\" alt=\"\">\r\n <h2>Магазин</h2>\r\n <p>\r\n КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.\r\n </p>\r\n </article>\r\n <!-- /item -->\r\n\r\n <!-- item -->\r\n <article>\r\n <img  src=\"/images/about_contacts.png\" alt=\"\">\r\n <h2>Контакты</h2>\r\n <p>\r\n Санкт-Петербург, Лиговский пр., 74 (войти во двор, 1-ый этаж, слева от входа в Этажи) посмотреть на карте.\r\n </p>\r\n <p>\r\n +7(812)715 33 07<br>\r\n +7(953)140 80 87<br><br>\r\n <a href=\"\">info@knigibodarki.ru</a>\r\n </p>\r\n </article>\r\n <!-- /item -->\r\n\r\n </section>\r\n <!-- /.about -->\r\n\r\n <!-- .about -->\r\n <section class=\"about\" id=\"payment\">\r\n\r\n <h1>Оплата</h1>\r\n\r\n <!-- item -->\r\n <article>\r\n <img  src=\"/images/about_robo.png\" alt=\"\">\r\n <h2>Робокасса</h2>\r\n <p>\r\n КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.\r\n </p>\r\n </article>\r\n <!-- /item -->\r\n\r\n <!-- item -->\r\n <article>\r\n <img  src=\"/images/about_cash.png\" alt=\"\">\r\n <h2>Наличными курьеру</h2>\r\n <p>КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.</p>\r\n </article>\r\n <!-- /item -->\r\n\r\n </section>\r\n <!-- /.about -->\r\n\r\n <!-- .about -->\r\n <section class=\"about\" id=\"delivery\">\r\n\r\n <h1>Доставка</h1>\r\n\r\n <!-- item -->\r\n <article>\r\n <img  src=\"/images/about_delivery.png\" alt=\"\">\r\n <h2>Курьерская</h2>\r\n <p>КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.</p>\r\n </article>\r\n <!-- /item -->\r\n\r\n <!-- item -->\r\n <article>\r\n <img  src=\"/images/about_mail.png\" alt=\"\">\r\n <h2>EMS Почта России</h2>\r\n <p>КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.</p>\r\n <img  src=\"/images/about_postamat.png\" alt=\"\">\r\n <h2>Постамат</h2>\r\n <p>\r\n КнигиПодарки - это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» - говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.\r\n </p>\r\n <img  src=\"/images/about_self.png\" alt=\"\">\r\n <h2>Самовывоз</h2>\r\n <p>КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.</p>\r\n </article>\r\n <!-- /item -->\r\n\r\n </section>\r\n <!-- /.about -->\r\n\r\n <!-- .about -->\r\n <section class=\"about\" id=\"contacts\">\r\n\r\n <h1>Сотрудничество</h1>\r\n\r\n <!-- item -->\r\n <article>\r\n <img  src=\"/images/about_distrib.png\" alt=\"\">\r\n <h2>Поставщикам</h2>\r\n <p>КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.</p>\r\n <img  src=\"/images/about_opt.png\" alt=\"\">\r\n <h2>Опт</h2>\r\n <p>КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.</p>\r\n </article>\r\n <!-- /item -->\r\n\r\n <!-- item -->\r\n <article>\r\n <img  src=\"/images/about_req.png\" alt=\"\">\r\n <h2>Реквизиты</h2>\r\n <p>КнигиПодарки — это симбиоз книжного магазина и магазина подарков. «Выбирать должно быть интересно» — говорим мы и предлагаем Вам продукцию различных дизайнерских студий. Каждая вещь в нашем магазине хорошо продумана и качественно сделана, владеть ею приятно, а дарить её жалко. Или тоже приятно, если себе или очень любимому человеку.</p>\r\n </article>\r\n <!-- /item -->\r\n\r\n </section>\r\n <!-- /.about -->','/info','2012-09-13 17:25:28','2012-09-18 16:15:34',0,0,'',0,1,'','','',0);
+/*!40000 ALTER TABLE `pages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payment_methods`
+--
+
+DROP TABLE IF EXISTS `payment_methods`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `payment_methods` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `description` text,
+  `active` tinyint(1) DEFAULT '1',
+  `environment` varchar(255) DEFAULT 'development',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL,
+  `display_on` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payment_methods`
+--
+
+LOCK TABLES `payment_methods` WRITE;
+/*!40000 ALTER TABLE `payment_methods` DISABLE KEYS */;
+INSERT INTO `payment_methods` VALUES (1,'PaymentMethod::Check','Курьеру','',1,'production','2012-09-28 22:51:49','2012-09-28 22:51:49',NULL,'');
+/*!40000 ALTER TABLE `payment_methods` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payments`
+--
+
+DROP TABLE IF EXISTS `payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `payments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `amount` decimal(8,2) NOT NULL DEFAULT '0.00',
+  `source_id` int(11) DEFAULT NULL,
+  `source_type` varchar(255) DEFAULT NULL,
+  `payment_method_id` int(11) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `response_code` varchar(255) DEFAULT NULL,
+  `avs_response` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payments`
+--
+
+LOCK TABLES `payments` WRITE;
+/*!40000 ALTER TABLE `payments` DISABLE KEYS */;
+INSERT INTO `payments` VALUES (3,5,'2012-10-02 01:44:49','2012-10-02 01:44:49','1244.00',NULL,NULL,1,'checkout',NULL,NULL);
+/*!40000 ALTER TABLE `payments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `preferences`
+--
+
+DROP TABLE IF EXISTS `preferences`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `preferences` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `owner_id` int(11) NOT NULL,
+  `owner_type` varchar(50) NOT NULL,
+  `group_id` int(11) DEFAULT NULL,
+  `group_type` varchar(50) DEFAULT NULL,
+  `value` text,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ix_prefs_on_owner_attr_pref` (`owner_id`,`owner_type`,`name`,`group_id`,`group_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=243735687 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `preferences`
+--
+
+LOCK TABLES `preferences` WRITE;
+/*!40000 ALTER TABLE `preferences` DISABLE KEYS */;
+INSERT INTO `preferences` VALUES (1,'default_locale',1,'Configuration',NULL,NULL,'ru','2012-09-13 17:16:18','2012-10-04 01:03:37'),(2,'default_country_id',1,'Configuration',NULL,NULL,'168','2012-09-13 17:16:18','2012-10-04 01:03:37'),(3,'allow_ssl_in_production',1,'Configuration',NULL,NULL,'0','2012-09-13 17:16:18','2012-10-04 01:03:37'),(4,'disable_bill_address',1,'Configuration',NULL,NULL,'1','2012-09-13 17:16:18','2012-10-04 01:03:37'),(5,'admin_interface_logo',1,'Configuration',NULL,NULL,'admin/logo.png','2012-09-13 17:16:18','2012-09-13 17:16:18'),(6,'store_email',1,'Configuration',NULL,NULL,'test@site.ru','2012-09-13 17:16:18','2012-09-13 17:16:18'),(7,'store_phone',1,'Configuration',NULL,NULL,'+7 (495) 1234567','2012-09-13 17:16:18','2012-09-13 17:16:18'),(8,'products_per_page',1,'Configuration',NULL,NULL,'9','2012-09-13 17:16:18','2012-10-04 01:03:37'),(59769363,'amount',491052212,'Calculator',NULL,NULL,'5','2012-09-13 17:16:21','2012-09-13 17:16:21'),(87531454,'amount',192811543,'Calculator',NULL,NULL,'10','2012-09-13 17:16:21','2012-09-13 17:16:21'),(174063089,'amount',574015644,'Calculator',NULL,NULL,'5','2012-09-13 17:16:21','2012-09-13 17:16:21'),(243735672,'amount',13537749,'Calculator',NULL,NULL,'15','2012-09-13 17:16:21','2012-09-13 17:16:21'),(243735673,'checkout_zone',1,'Configuration',NULL,NULL,'РФ','2012-09-13 17:19:42','2012-09-13 17:19:42'),(243735674,'last_check_for_spree_alerts',1,'Configuration',NULL,NULL,'03.10.2012 - 21:06','2012-09-13 17:26:07','2012-10-04 01:06:13'),(243735675,'dismissed_spree_alerts',1,'Configuration',NULL,NULL,'23,21','2012-09-13 17:26:12','2012-09-13 17:26:13'),(243735676,'enable_mail_delivery',1,'MailMethod',NULL,NULL,'1','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735677,'mails_from',1,'MailMethod',NULL,NULL,'noreply@knigipodarki.ru','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735678,'mail_bcc',1,'MailMethod',NULL,NULL,'','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735679,'intercept_email',1,'MailMethod',NULL,NULL,'','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735680,'mail_domain',1,'MailMethod',NULL,NULL,'localhost','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735681,'mail_host',1,'MailMethod',NULL,NULL,'localhost','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735682,'mail_port',1,'MailMethod',NULL,NULL,'25','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735683,'secure_connection_type',1,'MailMethod',NULL,NULL,'None','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735684,'mail_auth_type',1,'MailMethod',NULL,NULL,'none','2012-09-28 22:56:35','2012-09-28 22:56:35'),(243735685,'smtp_username',1,'MailMethod',NULL,NULL,'spree@example.com','2012-09-28 22:56:35','2012-09-28 22:58:46'),(243735686,'smtp_password',1,'MailMethod',NULL,NULL,'spree123','2012-09-28 22:56:35','2012-09-28 22:58:46');
+/*!40000 ALTER TABLE `preferences` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `product_groups`
+--
+
+DROP TABLE IF EXISTS `product_groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `product_groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `permalink` varchar(255) DEFAULT NULL,
+  `order` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_product_groups_on_name` (`name`),
+  KEY `index_product_groups_on_permalink` (`permalink`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `product_groups`
+--
+
+LOCK TABLES `product_groups` WRITE;
+/*!40000 ALTER TABLE `product_groups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `product_groups_products`
+--
+
+DROP TABLE IF EXISTS `product_groups_products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `product_groups_products` (
+  `product_id` int(11) DEFAULT NULL,
+  `product_group_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `product_groups_products`
+--
+
+LOCK TABLES `product_groups_products` WRITE;
+/*!40000 ALTER TABLE `product_groups_products` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_groups_products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `product_option_types`
+--
+
+DROP TABLE IF EXISTS `product_option_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `product_option_types` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int(11) DEFAULT NULL,
+  `option_type_id` int(11) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `product_option_types`
+--
+
+LOCK TABLES `product_option_types` WRITE;
+/*!40000 ALTER TABLE `product_option_types` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_option_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `product_properties`
+--
+
+DROP TABLE IF EXISTS `product_properties`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `product_properties` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int(11) DEFAULT NULL,
+  `property_id` int(11) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_product_properties_on_product_id` (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `product_properties`
+--
+
+LOCK TABLES `product_properties` WRITE;
+/*!40000 ALTER TABLE `product_properties` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_properties` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `product_scopes`
+--
+
+DROP TABLE IF EXISTS `product_scopes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `product_scopes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_group_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `arguments` text,
+  PRIMARY KEY (`id`),
+  KEY `index_product_scopes_on_name` (`name`),
+  KEY `index_product_scopes_on_product_group_id` (`product_group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `product_scopes`
+--
+
+LOCK TABLES `product_scopes` WRITE;
+/*!40000 ALTER TABLE `product_scopes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_scopes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `description` text,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `permalink` varchar(255) DEFAULT NULL,
+  `available_on` datetime DEFAULT NULL,
+  `tax_category_id` int(11) DEFAULT NULL,
+  `shipping_category_id` int(11) DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL,
+  `meta_description` varchar(255) DEFAULT NULL,
+  `meta_keywords` varchar(255) DEFAULT NULL,
+  `count_on_hand` int(11) NOT NULL DEFAULT '0',
+  `export_to_yandex_market` tinyint(1) NOT NULL DEFAULT '1',
+  `external_id` varchar(255) DEFAULT NULL,
+  `recommended` tinyint(1) DEFAULT NULL,
+  `product_type` varchar(255) DEFAULT NULL,
+  `author` varchar(255) DEFAULT NULL,
+  `publishing_year` varchar(255) DEFAULT NULL,
+  `isbn` varchar(255) DEFAULT NULL,
+  `annotation` varchar(255) DEFAULT NULL,
+  `tagged_as_new` tinyint(1) DEFAULT NULL,
+  `pages` int(11) DEFAULT NULL,
+  `popularity` int(11) DEFAULT '0',
+  `sale_price` decimal(8,2) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_products_on_available_on` (`available_on`),
+  KEY `index_products_on_deleted_at` (`deleted_at`),
+  KEY `index_products_on_name` (`name`),
+  KEY `index_products_on_permalink` (`permalink`)
+) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `products`
+--
+
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,'978-5-87991-080-3',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','978-5-87991-080-3',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100001m',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(2,'5-87991-020-2',NULL,'2012-09-13 18:36:21','2012-10-04 01:07:31','5-87991-020-2',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100001n',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,NULL),(3,'13',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','13',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100001o',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(4,'14',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','14',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100001p',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(5,'5-87991-017-2',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','5-87991-017-2',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100001s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(6,'978-5-87991-077-3',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','978-5-87991-077-3',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100001t',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(7,'978-5-87991-076-6',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','978-5-87991-076-6',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100001u',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(8,'5-87991-004-0',NULL,'2012-09-13 18:36:21','2012-10-04 01:07:33','5-87991-004-0',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100001v',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,NULL),(9,'54',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','54',NULL,NULL,NULL,NULL,NULL,NULL,16,1,'00000100002T',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(10,'59',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','59',NULL,NULL,NULL,NULL,NULL,NULL,8,1,'00000100002Y',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(11,'62',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','62',NULL,NULL,NULL,NULL,NULL,NULL,0,1,'00000100002Z',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(12,'65',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','65',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100002c',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(13,'80',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','80',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100002r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(14,'90',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','90',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100002}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(15,'92',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','92',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000031',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(16,'96',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','96',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000035',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(17,'99',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','99',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000038',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(18,'100',NULL,'2012-09-13 18:36:21','2012-10-04 01:07:26','100',NULL,NULL,NULL,NULL,'','',1,1,'000001000039',0,'',NULL,NULL,NULL,NULL,0,NULL,1,'1234.00'),(19,'103',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','103',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100003C',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(20,'107',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:22','107',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'00000100003G',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(21,'113',NULL,'2012-09-13 18:36:21','2012-10-04 01:06:44','113',NULL,NULL,NULL,NULL,'','',1,1,'00000100003M',0,'',NULL,NULL,NULL,NULL,0,NULL,0,'4356.00'),(22,'114',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','114',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100003N',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(23,'115',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','115',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100003O',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(24,'117',NULL,'2012-09-13 18:36:21','2012-10-04 01:06:48','117',NULL,NULL,NULL,NULL,'','',1,1,'00000100003Q',0,'',NULL,NULL,NULL,NULL,0,NULL,0,'765.00'),(25,'118',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','118',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100003R',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(26,'120',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:22','120',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100003T',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(27,'125',NULL,'2012-09-13 18:36:21','2012-09-13 18:36:21','125',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100003Y',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(28,'130',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','130',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100003d',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(29,'134',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','134',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100003h',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(30,'135',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','135',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100003i',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(31,'138',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','138',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100003l',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(32,'148',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','148',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100003v',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(33,'150',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','150',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100003x',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(34,'157',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','157',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000042',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(35,'163',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','163',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000048',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(36,'166',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','166',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004B',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(37,'170',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','170',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'00000100004F',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(38,'175',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','175',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100004K',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(39,'178',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','178',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004N',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(40,'181',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','181',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'00000100004Q',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(41,'186',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','186',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004V',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(42,'187',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','187',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100004W',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(43,'188',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','188',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004X',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(44,'198',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','198',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004h',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(45,'199',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','199',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004i',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(46,'208',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','208',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(47,'209',NULL,'2012-09-13 18:36:22','2012-09-13 18:36:22','209',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004t',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(48,'217',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','217',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100004}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(49,'218',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','218',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000050',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(50,'219',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','219',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000051',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(51,'220',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','220',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000052',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(52,'221',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','221',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000053',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(53,'222',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','222',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'000001000054',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(54,'223',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','223',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000055',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(55,'227',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','227',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000059',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(56,'233',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','233',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005F',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(57,'235',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','235',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005H',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(58,'236',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','236',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'00000100005I',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(59,'237',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','237',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005J',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(60,'240',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','240',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005M',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(61,'241',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','241',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005N',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(62,'243',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','243',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005P',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(63,'258',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','258',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005e',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(64,'271',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','271',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(65,'273',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','273',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005t',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(66,'274',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','274',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005u',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(67,'275',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','275',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100005v',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(68,'311',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','311',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100006T',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(69,'322',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','322',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100006f',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(70,'329',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','329',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100006m',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(71,'333',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','333',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100006q',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(72,'369',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','369',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100007S',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(73,'379',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','379',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100007c',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(74,'380',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','380',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100007d',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(75,'382',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','382',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100007f',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(76,'384',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','384',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100007h',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(77,'386',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','386',NULL,NULL,NULL,NULL,NULL,NULL,54,1,'00000100007j',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(78,'387',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','387',NULL,NULL,NULL,NULL,NULL,NULL,12,1,'00000100007l',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(79,'388',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','388',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'00000100007n',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(80,'389',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','389',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100007p',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(81,'390',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','390',NULL,NULL,NULL,NULL,NULL,NULL,6,1,'00000100007r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(82,'391',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','391',NULL,NULL,NULL,NULL,NULL,NULL,7,1,'00000100007t',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(83,'392',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','392',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100007v',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(84,'978-5-98187-236-5',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','978-5-98187-236-5',NULL,NULL,NULL,NULL,NULL,NULL,14,1,'00000100007x',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(85,'394',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','394',NULL,NULL,NULL,NULL,NULL,NULL,53,1,'00000100007z',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(86,'395',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','395',NULL,NULL,NULL,NULL,NULL,NULL,9,1,'00000100007}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(87,'396',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','396',NULL,NULL,NULL,NULL,NULL,NULL,71,1,'000001000081',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(88,'978-5988-7277-8',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','978-5988-7277-8',NULL,NULL,NULL,NULL,NULL,NULL,14,1,'000001000083',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(89,'398',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','398',NULL,NULL,NULL,NULL,NULL,NULL,53,1,'000001000085',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(90,'399',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','399',NULL,NULL,NULL,NULL,NULL,NULL,28,1,'000001000087',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(91,'400',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','400',NULL,NULL,NULL,NULL,NULL,NULL,4,1,'000001000089',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(92,'401',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','401',NULL,NULL,NULL,NULL,NULL,NULL,20,1,'00000100008B',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(93,'402',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','402',NULL,NULL,NULL,NULL,NULL,NULL,17,1,'00000100008D',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(94,'403',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','403',NULL,NULL,NULL,NULL,NULL,NULL,11,1,'00000100008F',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(95,'404',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','404',NULL,NULL,NULL,NULL,NULL,NULL,35,1,'00000100008H',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(96,'405',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','405',NULL,NULL,NULL,NULL,NULL,NULL,7,1,'00000100008K',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(97,'406',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','406',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'00000100008M',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(98,'407',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','407',NULL,NULL,NULL,NULL,NULL,NULL,4,1,'00000100008O',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(99,'408',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','408',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100008Q',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(100,'411',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','411',NULL,NULL,NULL,NULL,NULL,NULL,38,1,'00000100008W',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(101,'412',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','412',NULL,NULL,NULL,NULL,NULL,NULL,4,1,'00000100008Y',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(102,'413',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','413',NULL,NULL,NULL,NULL,NULL,NULL,45,1,'00000100008a',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(103,'414',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','414',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'00000100008c',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(104,'415',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','415',NULL,NULL,NULL,NULL,NULL,NULL,12,1,'00000100008e',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(105,'416',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','416',NULL,NULL,NULL,NULL,NULL,NULL,31,1,'00000100008g',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(106,'417',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','417',NULL,NULL,NULL,NULL,NULL,NULL,39,1,'00000100008i',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(107,'422',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','422',NULL,NULL,NULL,NULL,NULL,NULL,10,1,'00000100008s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(108,'423',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','423',NULL,NULL,NULL,NULL,NULL,NULL,24,1,'00000100008u',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(109,'426',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','426',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100008{',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(110,'427',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','427',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000090',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(111,'428',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','428',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000092',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(112,'430',NULL,'2012-09-13 18:36:23','2012-09-13 18:36:23','430',NULL,NULL,NULL,NULL,NULL,NULL,6,1,'000001000096',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(113,'431',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','431',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'000001000098',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(114,'435',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','435',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'00000100009G',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(115,'436',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','436',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100009I',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(116,'437',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','437',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100009K',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(117,'439',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','439',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'00000100009O',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(118,'440',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','440',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100009Q',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(119,'978-5-8465-0633-6',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','978-5-8465-0633-6',NULL,NULL,NULL,NULL,NULL,NULL,13,1,'00000100009U',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(120,'443',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','443',NULL,NULL,NULL,NULL,NULL,NULL,6,1,'00000100009W',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(121,'444',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','444',NULL,NULL,NULL,NULL,NULL,NULL,9,1,'00000100009Y',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(122,'445',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','445',NULL,NULL,NULL,NULL,NULL,NULL,7,1,'00000100009a',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(123,'446',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','446',NULL,NULL,NULL,NULL,NULL,NULL,20,1,'00000100009c',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(124,'447',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','447',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100009e',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(125,'459',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','459',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000A0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(126,'978-5-98187-375-1',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','978-5-98187-375-1',NULL,NULL,NULL,NULL,NULL,NULL,9,1,'0000010000A6',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(127,'463',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','463',NULL,NULL,NULL,NULL,NULL,NULL,11,1,'0000010000A8',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(128,'464',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','464',NULL,NULL,NULL,NULL,NULL,NULL,8,1,'0000010000AA',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(129,'468',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','468',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000AI',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(130,'469',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','469',NULL,NULL,NULL,NULL,NULL,NULL,20,1,'0000010000AK',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(131,'470',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','470',NULL,NULL,NULL,NULL,NULL,NULL,9,1,'0000010000AM',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(132,'471',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','471',NULL,NULL,NULL,NULL,NULL,NULL,4,1,'0000010000AO',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(133,'472',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','472',NULL,NULL,NULL,NULL,NULL,NULL,8,1,'0000010000AQ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(134,'473',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','473',NULL,NULL,NULL,NULL,NULL,NULL,15,1,'0000010000AS',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(135,'474',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','474',NULL,NULL,NULL,NULL,NULL,NULL,32,1,'0000010000AU',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(136,'494',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','494',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000B7',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(137,'497',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','497',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000BI',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(138,'498',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','498',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'0000010000BK',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(139,'499',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','499',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000BM',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(140,'500',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','500',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'0000010000BO',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(141,'501',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','501',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'0000010000BQ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(142,'502',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','502',NULL,NULL,NULL,NULL,NULL,NULL,3,1,'0000010000BS',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(143,'978-5-87991-075-9',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','978-5-87991-075-9',NULL,NULL,NULL,NULL,NULL,NULL,2,1,'0000010000Cw',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(144,'595',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','595',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000Cx',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(145,'596',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','596',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000Cy',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(146,'597',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','597',NULL,NULL,NULL,NULL,NULL,NULL,4,1,'0000010000Cz',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(147,'598',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','598',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000C{',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(148,'599',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','599',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000C}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(149,'600',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','600',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000D0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(150,'5-87991-019-9',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','5-87991-019-9',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000D2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(151,'5-87991-018-0',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','5-87991-018-0',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'0000010000D3',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(152,'978-5-87991-072-8',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','978-5-87991-072-8',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100010C',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(153,'978-5-901495-09-4',NULL,'2012-09-13 18:36:24','2012-09-13 18:36:24','978-5-901495-09-4',NULL,NULL,NULL,NULL,NULL,NULL,1,1,'00000100010D',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL),(154,'Тестовая книжка','Супер книга.&nbsp;Супер книга.&nbsp;Супер книга.&nbsp;Супер книга.&nbsp;Супер книга.','2012-09-28 22:47:30','2012-10-04 16:41:45','testovaya-knizhka',NULL,NULL,NULL,NULL,'','',23,1,NULL,1,'book',NULL,NULL,NULL,NULL,1,NULL,2,NULL);
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `products_promotion_rules`
+--
+
+DROP TABLE IF EXISTS `products_promotion_rules`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `products_promotion_rules` (
+  `product_id` int(11) DEFAULT NULL,
+  `promotion_rule_id` int(11) DEFAULT NULL,
+  KEY `index_products_promotion_rules_on_product_id` (`product_id`),
+  KEY `index_products_promotion_rules_on_promotion_rule_id` (`promotion_rule_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `products_promotion_rules`
+--
+
+LOCK TABLES `products_promotion_rules` WRITE;
+/*!40000 ALTER TABLE `products_promotion_rules` DISABLE KEYS */;
+/*!40000 ALTER TABLE `products_promotion_rules` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `products_taxons`
+--
+
+DROP TABLE IF EXISTS `products_taxons`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `products_taxons` (
+  `product_id` int(11) DEFAULT NULL,
+  `taxon_id` int(11) DEFAULT NULL,
+  KEY `index_products_taxons_on_product_id` (`product_id`),
+  KEY `index_products_taxons_on_taxon_id` (`taxon_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `products_taxons`
+--
+
+LOCK TABLES `products_taxons` WRITE;
+/*!40000 ALTER TABLE `products_taxons` DISABLE KEYS */;
+INSERT INTO `products_taxons` VALUES (154,10),(154,2);
+/*!40000 ALTER TABLE `products_taxons` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `promotion_rules`
+--
+
+DROP TABLE IF EXISTS `promotion_rules`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `promotion_rules` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `promotion_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `product_group_id` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_promotion_rules_on_product_group_id` (`product_group_id`),
+  KEY `index_promotion_rules_on_user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `promotion_rules`
+--
+
+LOCK TABLES `promotion_rules` WRITE;
+/*!40000 ALTER TABLE `promotion_rules` DISABLE KEYS */;
+INSERT INTO `promotion_rules` VALUES (2,1,NULL,NULL,'2012-09-20 19:21:15','2012-09-20 19:21:15','Promotion::Rules::Product');
+/*!40000 ALTER TABLE `promotion_rules` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `promotion_rules_users`
+--
+
+DROP TABLE IF EXISTS `promotion_rules_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `promotion_rules_users` (
+  `user_id` int(11) DEFAULT NULL,
+  `promotion_rule_id` int(11) DEFAULT NULL,
+  KEY `index_promotion_rules_users_on_user_id` (`user_id`),
+  KEY `index_promotion_rules_users_on_promotion_rule_id` (`promotion_rule_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `promotion_rules_users`
+--
+
+LOCK TABLES `promotion_rules_users` WRITE;
+/*!40000 ALTER TABLE `promotion_rules_users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `promotion_rules_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `promotions`
+--
+
+DROP TABLE IF EXISTS `promotions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `promotions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `usage_limit` int(11) DEFAULT NULL,
+  `combine` tinyint(1) DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `starts_at` datetime DEFAULT NULL,
+  `match_policy` varchar(255) DEFAULT 'all',
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `promotions`
+--
+
+LOCK TABLES `promotions` WRITE;
+/*!40000 ALTER TABLE `promotions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `promotions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `properties`
+--
+
+DROP TABLE IF EXISTS `properties`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `properties` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `presentation` varchar(255) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `properties`
+--
+
+LOCK TABLES `properties` WRITE;
+/*!40000 ALTER TABLE `properties` DISABLE KEYS */;
+/*!40000 ALTER TABLE `properties` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `properties_prototypes`
+--
+
+DROP TABLE IF EXISTS `properties_prototypes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `properties_prototypes` (
+  `prototype_id` int(11) DEFAULT NULL,
+  `property_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `properties_prototypes`
+--
+
+LOCK TABLES `properties_prototypes` WRITE;
+/*!40000 ALTER TABLE `properties_prototypes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `properties_prototypes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `prototypes`
+--
+
+DROP TABLE IF EXISTS `prototypes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `prototypes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `prototypes`
+--
+
+LOCK TABLES `prototypes` WRITE;
+/*!40000 ALTER TABLE `prototypes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `prototypes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `relation_types`
+--
+
+DROP TABLE IF EXISTS `relation_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `relation_types` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `description` text,
+  `applies_to` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `relation_types`
+--
+
+LOCK TABLES `relation_types` WRITE;
+/*!40000 ALTER TABLE `relation_types` DISABLE KEYS */;
+INSERT INTO `relation_types` VALUES (1,'Related products',NULL,'Product','2012-09-28 22:43:01','2012-09-28 22:43:01');
+/*!40000 ALTER TABLE `relation_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `relations`
+--
+
+DROP TABLE IF EXISTS `relations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `relations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `relation_type_id` int(11) DEFAULT NULL,
+  `relatable_id` int(11) DEFAULT NULL,
+  `relatable_type` varchar(255) DEFAULT NULL,
+  `related_to_id` int(11) DEFAULT NULL,
+  `related_to_type` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `discount_amount` decimal(8,2) DEFAULT '0.00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `relations`
+--
+
+LOCK TABLES `relations` WRITE;
+/*!40000 ALTER TABLE `relations` DISABLE KEYS */;
+INSERT INTO `relations` VALUES (1,1,154,'Product',1,'Product','2012-09-28 22:49:08','2012-09-28 22:49:08','0.00'),(2,1,154,'Product',5,'Product','2012-09-28 22:49:13','2012-09-28 22:49:13','0.00'),(3,1,154,'Product',2,'Product','2012-09-28 22:49:19','2012-09-28 22:49:19','0.00');
+/*!40000 ALTER TABLE `relations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `return_authorizations`
+--
+
+DROP TABLE IF EXISTS `return_authorizations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `return_authorizations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `number` varchar(255) DEFAULT NULL,
+  `amount` decimal(8,2) NOT NULL DEFAULT '0.00',
+  `order_id` int(11) DEFAULT NULL,
+  `reason` text,
+  `state` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `return_authorizations`
+--
+
+LOCK TABLES `return_authorizations` WRITE;
+/*!40000 ALTER TABLE `return_authorizations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `return_authorizations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `roles`
+--
+
+DROP TABLE IF EXISTS `roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `roles`
+--
+
+LOCK TABLES `roles` WRITE;
+/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+INSERT INTO `roles` VALUES (1,'admin'),(2,'user');
+/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `roles_users`
+--
+
+DROP TABLE IF EXISTS `roles_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `roles_users` (
+  `role_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  KEY `index_roles_users_on_role_id` (`role_id`),
+  KEY `index_roles_users_on_user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `roles_users`
+--
+
+LOCK TABLES `roles_users` WRITE;
+/*!40000 ALTER TABLE `roles_users` DISABLE KEYS */;
+INSERT INTO `roles_users` VALUES (1,1),(1,1);
+/*!40000 ALTER TABLE `roles_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schema_migrations`
+--
+
+DROP TABLE IF EXISTS `schema_migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `schema_migrations` (
+  `version` varchar(255) NOT NULL,
+  UNIQUE KEY `unique_schema_migrations` (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `schema_migrations`
+--
+
+LOCK TABLES `schema_migrations` WRITE;
+/*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
+INSERT INTO `schema_migrations` VALUES ('20081216193152'),('20090311090247'),('20090625125735'),('20090814113100'),('20090814142845'),('20090823005402'),('20090827180351'),('20090829000527'),('20090904192342'),('20090923100315'),('20091007134354'),('20091008091614'),('20091012120519'),('20091015110842'),('20091015153048'),('20091016174634'),('20091017175558'),('20091021133257'),('20091104151730'),('20091126190904'),('20091209153045'),('20091209202200'),('20091211203813'),('20091212161118'),('20091213222815'),('20091214183826'),('20091219021134'),('20100105090147'),('20100105132138'),('20100107141738'),('20100111205525'),('20100112151511'),('20100113090919'),('20100113203104'),('20100121160010'),('20100121183934'),('20100125145351'),('20100126103714'),('20100204105222'),('20100209025806'),('20100209144531'),('20100213103131'),('20100214212536'),('20100223170312'),('20100223183812'),('20100224153127'),('20100301163454'),('20100306153445'),('20100308090631'),('20100308092101'),('20100317120946'),('20100323085528'),('20100324123835'),('20100419190933'),('20100419194457'),('20100426100726'),('20100427121301'),('20100501084722'),('20100501095202'),('20100502163939'),('20100504142133'),('20100506180619'),('20100506185838'),('20100528155333'),('20100528185820'),('20100605152042'),('20100624110730'),('20100624123336'),('20100624175547'),('20100811163637'),('20100811205836'),('20100812162326'),('20100813023502'),('20100813185745'),('20100816212146'),('20100817152723'),('20100819170125'),('20100820135707'),('20100901171814'),('20100903203949'),('20100923095305'),('20100923162011'),('20100929151905'),('20101008190536'),('20101026184700'),('20101026184714'),('20101026184746'),('20101026184808'),('20101026184833'),('20101026184855'),('20101026184916'),('20101026184932'),('20101026184950'),('20101026184959'),('20101026185022'),('20101026192225'),('20101028151745'),('20101103212716'),('20101111133551'),('20101117031806'),('20101214150824'),('20101217012656'),('20101219201531'),('20101223215658'),('20110110094042'),('20110110130847'),('20110111122537'),('20110302102208'),('20110314192118'),('20110330125354'),('20110404120925'),('20110510080413'),('20110815110212'),('20110815110610'),('20110815134754'),('20120802072440'),('20120918133916'),('20120918134554'),('20120918143909'),('20120919124108'),('20120919134556'),('20120919190813'),('20120919191111'),('20120926133445'),('20120926142358'),('20120926225344'),('20120927135257'),('20120927175223'),('20121003152301'),('20121003153936');
+/*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shipments`
+--
+
+DROP TABLE IF EXISTS `shipments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shipments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT NULL,
+  `shipping_method_id` int(11) DEFAULT NULL,
+  `tracking` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `number` varchar(255) DEFAULT NULL,
+  `cost` decimal(8,2) DEFAULT NULL,
+  `shipped_at` datetime DEFAULT NULL,
+  `address_id` int(11) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_shipments_on_number` (`number`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shipments`
+--
+
+LOCK TABLES `shipments` WRITE;
+/*!40000 ALTER TABLE `shipments` DISABLE KEYS */;
+INSERT INTO `shipments` VALUES (1,5,192811543,NULL,'2012-09-28 22:51:18','2012-09-28 22:51:18','H65620122273',NULL,NULL,1,'ready');
+/*!40000 ALTER TABLE `shipments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shipping_categories`
+--
+
+DROP TABLE IF EXISTS `shipping_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shipping_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shipping_categories`
+--
+
+LOCK TABLES `shipping_categories` WRITE;
+/*!40000 ALTER TABLE `shipping_categories` DISABLE KEYS */;
+INSERT INTO `shipping_categories` VALUES (1,'По умолчанию','2012-09-13 17:16:21','2012-09-13 17:16:21');
+/*!40000 ALTER TABLE `shipping_categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shipping_methods`
+--
+
+DROP TABLE IF EXISTS `shipping_methods`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shipping_methods` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `zone_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `display_on` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=574015645 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shipping_methods`
+--
+
+LOCK TABLES `shipping_methods` WRITE;
+/*!40000 ALTER TABLE `shipping_methods` DISABLE KEYS */;
+INSERT INTO `shipping_methods` VALUES (13537749,1,'Курьером','2012-09-13 17:16:21','2012-09-13 17:16:21',NULL),(192811543,1,'Почта России (по предоплате)','2012-09-13 17:16:21','2012-09-13 17:16:21',NULL),(574015644,1,'Почта России (наложным платежём)','2012-09-13 17:16:21','2012-09-13 17:16:21',NULL);
+/*!40000 ALTER TABLE `shipping_methods` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `state_events`
+--
+
+DROP TABLE IF EXISTS `state_events`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `state_events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `stateful_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `previous_state` varchar(255) DEFAULT NULL,
+  `stateful_type` varchar(255) DEFAULT NULL,
+  `next_state` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `state_events`
+--
+
+LOCK TABLES `state_events` WRITE;
+/*!40000 ALTER TABLE `state_events` DISABLE KEYS */;
+INSERT INTO `state_events` VALUES (1,7,7,'payment','2012-09-24 20:29:07','2012-09-24 20:29:07','pending','Order','paid'),(2,7,7,'payment','2012-09-24 20:29:07','2012-09-24 20:29:07','pending','Order','paid'),(3,7,7,'payment','2012-09-24 20:29:09','2012-09-24 20:29:09','paid','Order','pending'),(4,7,7,'payment','2012-09-24 20:29:24','2012-09-24 20:29:24','pending','Order','paid'),(5,7,7,'payment','2012-09-24 20:29:24','2012-09-24 20:29:24','pending','Order','paid'),(6,7,7,'payment','2012-09-24 20:29:25','2012-09-24 20:29:25','paid','Order','pending'),(7,7,7,'payment','2012-09-24 20:29:28','2012-09-24 20:29:28','pending','Order','paid'),(8,7,7,'payment','2012-09-24 20:29:28','2012-09-24 20:29:28','pending','Order','paid'),(9,7,7,'payment','2012-09-24 20:29:31','2012-09-24 20:29:31','paid','Order','pending'),(10,7,7,'payment','2012-09-24 21:05:46','2012-09-24 21:05:46','pending','Order','paid'),(11,7,7,'payment','2012-09-24 21:05:46','2012-09-24 21:05:46','pending','Order','paid'),(12,7,7,'payment','2012-09-24 21:05:48','2012-09-24 21:05:48','paid','Order','pending'),(13,7,7,'payment','2012-09-24 21:05:48','2012-09-24 21:05:48','paid','Order','pending'),(14,7,7,'payment','2012-09-24 21:19:24','2012-09-24 21:19:24','pending','Order','paid'),(15,7,7,'payment','2012-09-24 21:19:24','2012-09-24 21:19:24','pending','Order','paid'),(16,7,7,'payment','2012-09-24 21:19:25','2012-09-24 21:19:25','paid','Order','pending'),(17,7,7,'payment','2012-09-24 21:19:25','2012-09-24 21:19:25','paid','Order','pending'),(18,7,7,'payment','2012-09-24 21:19:43','2012-09-24 21:19:43','pending','Order','paid'),(19,7,7,'payment','2012-09-24 21:19:43','2012-09-24 21:19:43','pending','Order','paid'),(20,7,7,'payment','2012-09-24 21:19:48','2012-09-24 21:19:48','paid','Order','pending'),(21,7,7,'payment','2012-09-24 21:19:48','2012-09-24 21:19:48','paid','Order','pending'),(22,7,7,'payment','2012-09-24 21:19:55','2012-09-24 21:19:55','pending','Order','paid'),(23,7,7,'payment','2012-09-24 21:19:55','2012-09-24 21:19:55','pending','Order','paid'),(24,7,7,'payment','2012-09-24 21:19:56','2012-09-24 21:19:56','paid','Order','pending'),(25,7,7,'payment','2012-09-24 21:19:56','2012-09-24 21:19:56','paid','Order','pending'),(26,8,8,'payment','2012-09-25 08:34:23','2012-09-25 08:34:23','pending','Order','paid'),(27,8,8,'payment','2012-09-25 08:34:23','2012-09-25 08:34:23','pending','Order','paid'),(28,9,9,'payment','2012-09-27 22:30:28','2012-09-27 22:30:28','pending','Order','paid'),(29,5,1,'payment','2012-09-28 22:46:51','2012-09-28 22:46:51','pending','Order','paid'),(30,5,1,'payment','2012-09-28 22:46:51','2012-09-28 22:46:51','pending','Order','paid'),(31,5,1,'payment','2012-09-28 22:51:03','2012-09-28 22:51:03','paid','Order','pending'),(32,5,1,'payment','2012-09-28 22:51:03','2012-09-28 22:51:03','paid','Order','pending'),(33,18,18,'payment','2012-10-02 01:23:31','2012-10-02 01:23:31','pending','Order','paid'),(34,18,18,'payment','2012-10-02 01:23:31','2012-10-02 01:23:31','pending','Order','paid'),(35,5,1,'order','2012-10-02 01:44:53','2012-10-02 01:44:53','cart','Order','complete'),(36,17,17,'payment','2012-10-04 16:41:45','2012-10-04 16:41:45','pending','Order','balance_due'),(37,17,17,'payment','2012-10-04 16:41:45','2012-10-04 16:41:45','pending','Order','balance_due');
+/*!40000 ALTER TABLE `state_events` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `states`
+--
+
+DROP TABLE IF EXISTS `states`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `states` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `abbr` varchar(255) DEFAULT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `states`
+--
+
+LOCK TABLES `states` WRITE;
+/*!40000 ALTER TABLE `states` DISABLE KEYS */;
+INSERT INTO `states` VALUES (1,'Республика Адыгея','RU-AD',168),(2,'Республика Башкортостан','RU-BA',168),(3,'Республика Бурятия','RU-BU',168),(4,'Республика Алтай','RU-AL',168),(5,'Республика Дагестан','RU-DA',168),(6,'Республика Ингушетия','RU-IN',168),(7,'Кабардино-Балкарская республика','RU-KB',168),(8,'Республика Калмыкия','RU-KL',168),(9,'Карачаево-Черкесская республика','RU-KC',168),(10,'Республика Карелия','RU-KR',168),(11,'Республика Коми','RU-KO',168),(12,'Республика Марий Эл','RU-ME',168),(13,'Республика Мордовия','RU-MO',168),(14,'Республика Саха (Якутия)','RU-SA',168),(15,'Республика Северная Осетия — Алания','RU-SE',168),(16,'Республика Татарстан','RU-TA',168),(17,'Республика Тыва','RU-TY',168),(18,'Удмуртская республика','RU-UD',168),(19,'Республика Хакасия','RU-KK',168),(20,'Чеченская республика','RU-CE',168),(21,'Чувашская республика','RU-CU',168),(22,'Алтайский край','RU-ALT',168),(23,'Краснодарский край','RU-KDA',168),(24,'Красноярский край','RU-KIA',168),(25,'Приморский край','RU-PRI',168),(26,'Ставропольский край','RU-STA',168),(27,'Хабаровский край','RU-KHA',168),(28,'Амурская область','RU-AMU',168),(29,'Архангельская область','RU-ARK',168),(30,'Астраханская область','RU-AST',168),(31,'Белгородская область','RU-BEL',168),(32,'Брянская область','RU-BRY',168),(33,'Владимирская область','RU-VLA',168),(34,'Волгоградская область','RU-VGG',168),(35,'Вологодская область','RU-VLG',168),(36,'Воронежская область','RU-VOR',168),(37,'Ивановская область','RU-IVA',168),(38,'Иркутская область','RU-IRK',168),(39,'Калининградская область','RU-KGD',168),(40,'Калужская область','RU-KLU',168),(41,'Камчатский край','RU-KAM',168),(42,'Кемеровская область','RU-KEM',168),(43,'Кировская область','RU-KIR',168),(44,'Костромская область','RU-KOS',168),(45,'Курганская область','RU-KGN',168),(46,'Курская область','RU-KRS',168),(47,'Ленинградская область','RU-LEN',168),(48,'Липецкая область','RU-LIP',168),(49,'Магаданская область','RU-MAG',168),(50,'Московская область','RU-MOS',168),(51,'Мурманская область','RU-MUR',168),(52,'Нижегородская область','RU-NIZ',168),(53,'Новгородская область','RU-NGR',168),(54,'Новосибирская область','RU-NVS',168),(55,'Омская область','RU-OMS',168),(56,'Оренбургская область','RU-ORE',168),(57,'Орловская область','RU-ORL',168),(58,'Пензенская область','RU-PNZ',168),(59,'Пермский край','RU-PER',168),(60,'Псковская область','RU-PSK',168),(61,'Ростовская область','RU-ROS',168),(62,'Рязанская область','RU-RYA',168),(63,'Самарская область','RU-SAM',168),(64,'Саратовская область','RU-SAR',168),(65,'Сахалинская область','RU-SAK',168),(66,'Свердловская область','RU-SVE',168),(67,'Смоленская область','RU-SMO',168),(68,'Тамбовская область','RU-TAM',168),(69,'Тверская область','RU-TVE',168),(70,'Томская область','RU-TOM',168),(71,'Тульская область','RU-TUL',168),(72,'Тюменская область','RU-TYU',168),(73,'Ульяновская область','RU-ULY',168),(74,'Челябинская область','RU-CHE',168),(75,'Забайкальский край','RU-ZAB',168),(76,'Ярославская область','RU-YAR',168),(77,'Москва','RU-MOW',168),(78,'Санкт-Петербург','RU-SPE',168),(79,'Еврейская автономная область','RU-YEV',168),(83,'Ненецкий автономный округ','RU-NEN',168),(86,'Ханты-Мансийский автономный округ - Югра','RU-KHM',168),(87,'Чукотский автономный округ','RU-CHU',168),(89,'Ямало-Ненецкий автономный округ','RU-YAN',168);
+/*!40000 ALTER TABLE `states` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tags`
+--
+
+DROP TABLE IF EXISTS `tags`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tags` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tags`
+--
+
+LOCK TABLES `tags` WRITE;
+/*!40000 ALTER TABLE `tags` DISABLE KEYS */;
+INSERT INTO `tags` VALUES (1,'nnnnn',154,'2012-09-28 22:48:01','2012-09-28 22:48:01');
+/*!40000 ALTER TABLE `tags` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tax_categories`
+--
+
+DROP TABLE IF EXISTS `tax_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tax_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `is_default` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tax_categories`
+--
+
+LOCK TABLES `tax_categories` WRITE;
+/*!40000 ALTER TABLE `tax_categories` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tax_categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tax_rates`
+--
+
+DROP TABLE IF EXISTS `tax_rates`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tax_rates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `zone_id` int(11) DEFAULT NULL,
+  `amount` decimal(8,4) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `tax_category_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tax_rates`
+--
+
+LOCK TABLES `tax_rates` WRITE;
+/*!40000 ALTER TABLE `tax_rates` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tax_rates` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `taxonomies`
+--
+
+DROP TABLE IF EXISTS `taxonomies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `taxonomies` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `show_on_homepage` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `taxonomies`
+--
+
+LOCK TABLES `taxonomies` WRITE;
+/*!40000 ALTER TABLE `taxonomies` DISABLE KEYS */;
+INSERT INTO `taxonomies` VALUES (1,'Категории','2012-09-28 22:42:08','2012-09-28 22:42:08',0),(2,'Издательства','2012-09-28 22:42:09','2012-09-28 22:42:09',0),(3,'Дизайнеры','2012-09-28 22:42:09','2012-09-28 22:42:09',0);
+/*!40000 ALTER TABLE `taxonomies` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `taxons`
+--
+
+DROP TABLE IF EXISTS `taxons`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `taxons` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `taxonomy_id` int(11) NOT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `position` int(11) DEFAULT '0',
+  `name` varchar(255) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `permalink` varchar(255) DEFAULT NULL,
+  `lft` int(11) DEFAULT NULL,
+  `rgt` int(11) DEFAULT NULL,
+  `icon_file_name` varchar(255) DEFAULT NULL,
+  `icon_content_type` varchar(255) DEFAULT NULL,
+  `icon_file_size` int(11) DEFAULT NULL,
+  `icon_updated_at` datetime DEFAULT NULL,
+  `description` text,
+  PRIMARY KEY (`id`),
+  KEY `index_taxons_on_permalink` (`permalink`),
+  KEY `index_taxons_on_parent_id` (`parent_id`),
+  KEY `index_taxons_on_taxonomy_id` (`taxonomy_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `taxons`
+--
+
+LOCK TABLES `taxons` WRITE;
+/*!40000 ALTER TABLE `taxons` DISABLE KEYS */;
+INSERT INTO `taxons` VALUES (1,1,NULL,0,'Категории','2012-09-28 22:42:09','2012-09-28 22:42:09','/categories',1,14,NULL,NULL,NULL,NULL,NULL),(2,1,1,0,'Книги','2012-09-28 22:42:09','2012-09-28 22:42:09','/categories/books',2,3,NULL,NULL,NULL,NULL,NULL),(3,1,1,0,'Канцелярия','2012-09-28 22:42:09','2012-09-28 22:42:09','/categories/chancellory',4,5,NULL,NULL,NULL,NULL,NULL),(4,1,1,0,'Аксессуары','2012-09-28 22:42:09','2012-09-28 22:42:09','/categories/accessories',6,7,NULL,NULL,NULL,NULL,NULL),(5,1,1,0,'На паспорт','2012-09-28 22:42:09','2012-09-28 22:42:09','/categories/passport',8,9,NULL,NULL,NULL,NULL,NULL),(6,1,1,0,'Интерьер','2012-09-28 22:42:09','2012-09-28 22:42:09','/categories/interior',10,11,NULL,NULL,NULL,NULL,NULL),(7,1,1,0,'Игры','2012-09-28 22:42:09','2012-09-28 22:42:09','/categories/games',12,13,NULL,NULL,NULL,NULL,NULL),(8,2,NULL,0,'Издательства','2012-09-28 22:42:09','2012-09-28 22:42:09','/publishers',15,22,NULL,NULL,NULL,NULL,NULL),(9,2,8,0,'Символ-Плюс','2012-09-28 22:42:09','2012-09-28 22:42:09','/publishers/simvol_plus',16,17,NULL,NULL,NULL,NULL,NULL),(10,2,8,0,'Лимбус-Пресс','2012-09-28 22:42:09','2012-09-28 22:42:09','/publishers/limbus_press',18,19,NULL,NULL,NULL,NULL,NULL),(11,2,8,0,'Росмэн','2012-09-28 22:42:09','2012-09-28 22:42:09','/publishers/rosmen',20,21,NULL,NULL,NULL,NULL,NULL),(12,3,NULL,0,'Дизайнеры','2012-09-28 22:42:09','2012-09-28 22:42:09','/designers',23,30,NULL,NULL,NULL,NULL,NULL),(13,3,12,0,'Филипп Старк','2012-09-28 22:42:09','2012-09-28 22:42:09','/designers/philippe starck',24,25,NULL,NULL,NULL,NULL,NULL),(14,3,12,0,'Генри ван де Велде','2012-09-28 22:42:09','2012-09-28 22:42:09','/designers/henry_van_de_velde',26,27,NULL,NULL,NULL,NULL,NULL),(15,3,12,0,'Инго Маурер','2012-09-28 22:42:09','2012-09-28 22:42:09','/designers/ingo_maurer',28,29,NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `taxons` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tokenized_permissions`
+--
+
+DROP TABLE IF EXISTS `tokenized_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tokenized_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `permissable_id` int(11) DEFAULT NULL,
+  `permissable_type` varchar(255) DEFAULT NULL,
+  `token` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_tokenized_name_and_type` (`permissable_id`,`permissable_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tokenized_permissions`
+--
+
+LOCK TABLES `tokenized_permissions` WRITE;
+/*!40000 ALTER TABLE `tokenized_permissions` DISABLE KEYS */;
+INSERT INTO `tokenized_permissions` VALUES (1,1,'Order','e768433e2d341111','2012-09-16 04:31:40','2012-09-16 04:31:40'),(2,2,'Order','d0987f2eff06e079','2012-09-20 10:10:27','2012-09-20 10:10:27'),(3,3,'Order','380b5947e9a30e42','2012-09-22 01:49:27','2012-09-22 01:49:27'),(4,4,'Order','6a02af1204898d1f','2012-09-22 01:49:37','2012-09-22 01:49:37'),(5,5,'Order','80d6e9fe2b5c2584','2012-09-22 01:51:07','2012-09-22 01:51:07'),(6,6,'Order','55d20ce37c8a2770','2012-09-23 14:21:33','2012-09-23 14:21:33'),(7,7,'Order','3f2e74096dba0c45','2012-09-24 20:25:43','2012-09-24 20:25:43'),(8,8,'Order','a3315008c91774af','2012-09-25 08:33:28','2012-09-25 08:33:28'),(9,9,'Order','f7e4393d857b3192','2012-09-25 08:39:03','2012-09-25 08:39:03'),(10,10,'Order','173e1bf333a223ea','2012-09-26 08:16:00','2012-09-26 08:16:00'),(11,11,'Order','0de61735ea2f42de','2012-09-27 07:13:01','2012-09-27 07:13:01'),(12,12,'Order','e7499b23c3fc4a1c','2012-09-29 00:22:55','2012-09-29 00:22:55'),(13,13,'Order','43aa6d05c4d1cab9','2012-09-29 02:00:24','2012-09-29 02:00:24'),(14,14,'Order','a81e5ca20b64831d','2012-09-30 14:52:49','2012-09-30 14:52:49'),(15,15,'Order','6f6ddf2fcec3fbc0','2012-09-30 15:14:59','2012-09-30 15:14:59'),(16,16,'Order','e5731fbd61db69d3','2012-10-01 11:38:05','2012-10-01 11:38:05'),(17,17,'Order','a74f3ef88499ac3f','2012-10-01 21:38:45','2012-10-01 21:38:45'),(18,NULL,'Order','30347bc7e34984f1','2012-10-02 01:23:26','2012-10-03 07:06:38'),(19,18,'Order','21dd08c116c660a3','2012-10-03 07:06:38','2012-10-03 07:06:38'),(20,19,'Order','c95655855de1efda','2012-10-03 11:11:16','2012-10-03 11:11:16'),(21,20,'Order','083a207ff3d8571b','2012-10-03 12:52:03','2012-10-03 12:52:03'),(22,21,'Order','3849edf28f52dae2','2012-10-04 01:07:24','2012-10-04 01:07:24');
+/*!40000 ALTER TABLE `tokenized_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `trackers`
+--
+
+DROP TABLE IF EXISTS `trackers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `trackers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `environment` varchar(255) DEFAULT NULL,
+  `analytics_id` varchar(255) DEFAULT NULL,
+  `active` tinyint(1) DEFAULT '1',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `trackers`
+--
+
+LOCK TABLES `trackers` WRITE;
+/*!40000 ALTER TABLE `trackers` DISABLE KEYS */;
+/*!40000 ALTER TABLE `trackers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `encrypted_password` varchar(255) DEFAULT NULL,
+  `password_salt` varchar(255) DEFAULT NULL,
+  `remember_token` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `persistence_token` varchar(255) DEFAULT NULL,
+  `reset_password_token` varchar(255) DEFAULT NULL,
+  `perishable_token` varchar(255) DEFAULT NULL,
+  `sign_in_count` int(11) NOT NULL DEFAULT '0',
+  `failed_attempts` int(11) NOT NULL DEFAULT '0',
+  `last_request_at` datetime DEFAULT NULL,
+  `current_sign_in_at` datetime DEFAULT NULL,
+  `last_sign_in_at` datetime DEFAULT NULL,
+  `current_sign_in_ip` varchar(255) DEFAULT NULL,
+  `last_sign_in_ip` varchar(255) DEFAULT NULL,
+  `login` varchar(255) DEFAULT NULL,
+  `ship_address_id` int(11) DEFAULT NULL,
+  `bill_address_id` int(11) DEFAULT NULL,
+  `authentication_token` varchar(255) DEFAULT NULL,
+  `unlock_token` varchar(255) DEFAULT NULL,
+  `locked_at` datetime DEFAULT NULL,
+  `remember_created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_users_on_persistence_token` (`persistence_token`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'spree@example.com','275e79365956e30d51174a72306b1ee84664ec06b214d5b0bed38feef147f070b6610d3b95f38b750208258559d9dfd7535031e083e63d97b4bed46e54d4888c','0LvspufqbHlA8TbhTxui',NULL,'2012-09-13 17:19:19','2012-10-04 01:06:19',NULL,NULL,NULL,15,0,NULL,'2012-10-04 01:06:19','2012-10-03 03:08:25','188.134.39.81','188.134.39.81','spree@example.com',NULL,NULL,NULL,NULL,NULL,NULL),(2,'cNj-7SD8aFBO0SBn1wsG@example.net','8d571759114a84dacc2df0dd48797029ffcf68232961941f33a96696b3852a1fa731763fdefe1a4205d6e37565d2de896742911972c8892909ef346aaf15886f','dvvuD68kJCgBN70DtISd',NULL,'2012-09-16 04:31:40','2012-09-16 04:31:40','cNj-7SD8aFBO0SBn1wsG',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'cNj-7SD8aFBO0SBn1wsG@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(3,'vbW8A83tHH3I_MIUyXnu@example.net','2314fb326ebca462e53ab43630238cd9e31d9426c4ab58c74f1966f8013b0d0b2346de3bce3fe09c23e1b590aec4eddd40d2877804cfab4928c88e06d0a5183e','gDya9gRre54Ot1957vb9',NULL,'2012-09-20 10:10:27','2012-09-20 10:10:27','vbW8A83tHH3I_MIUyXnu',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'vbW8A83tHH3I_MIUyXnu@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(4,'GMnUNh-p5NoRmjToULfG@example.net','e974063438d6363aa6c7751d28e754d7f3aaf005a6b0fa9bb88561bc4cc4c0827053e20a8adf5cceb3db4bd9d3b8d28b6aa76e9bcdc97de9deecad6067735a7d','Dza7Ug1Tber743ecJmND',NULL,'2012-09-22 01:49:27','2012-09-22 01:49:27','GMnUNh-p5NoRmjToULfG',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'GMnUNh-p5NoRmjToULfG@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(5,'p9sbnii3WDrHDpNO0nIN@example.net','cea3d9a58b4596c21b4b864c1abe5a329c6a9796d918820990c58dc05a90f7e4ebb134c374bd9f188e55a68009724de08d44223e283d8f9fc63de84f638081cd','qCcExzWLTl80uZNYnoG3',NULL,'2012-09-22 01:49:37','2012-09-22 01:49:37','p9sbnii3WDrHDpNO0nIN',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'p9sbnii3WDrHDpNO0nIN@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(6,'DsHul-ZIqAtqqHK1MCeR@example.net','be861174b684deb0f30fab9fab6badeac1f57a55d827a28875330c65370c6e359e4e59e7dec7ab11a1555fd48347b5ecfbc4fa8e803a33dcd762476cb11abde3','98IUis1ugSgGjmGfQUb8',NULL,'2012-09-23 14:21:33','2012-09-23 14:21:33','DsHul-ZIqAtqqHK1MCeR',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'DsHul-ZIqAtqqHK1MCeR@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(7,'9VibEfgUythkPvsr0BAK@example.net','d88b15a35125f6846d6b30299ffdd5434a5e85332e637aae488030cc0adc883311ff49c454cefcf904a84d07ddd21f792f4bc03eb7b5f4b6b1e835cab2ff8223','tOl0ow8yvdpgFuHoRiyG',NULL,'2012-09-24 20:25:43','2012-09-24 20:25:43','9VibEfgUythkPvsr0BAK',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'9VibEfgUythkPvsr0BAK@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(8,'qgmJAUd207Fe6OHeEUpV@example.net','7485515e833e97847b6813731577d74d1b9516738c712648be5df0b141c4eb727ef8046b32afd4fa0c28534cedcb1906024aacbddc84527df5289e42a7fcb397','GpFChwbfAlR3K1xXHbyk',NULL,'2012-09-25 08:33:28','2012-09-25 08:33:28','qgmJAUd207Fe6OHeEUpV',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'qgmJAUd207Fe6OHeEUpV@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(9,'xObNNySrp_Pu89vUHYaA@example.net','b826a7cc82e4fcddcac06396825e056e2f7aae9585ca4001e161d56853938a02bbf2c3aaa3ea2cac0d4fa50ab1d8a3d1d20003c244bc691dc40c77b79229f2f4','SyLRVVCwM2qHWvMGooPE',NULL,'2012-09-25 08:39:03','2012-09-25 08:39:03','xObNNySrp_Pu89vUHYaA',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'xObNNySrp_Pu89vUHYaA@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(10,'oiWEF6W1WRU8rHcw2jOK@example.net','81d476593bb20bf8da1bb68c8b45b443ac483e92bab05c09a2255fd3083e6a682afecff8b2df44c7c95e5e6a65b7881dfaf828e4ef218cad28e59b706ed3212f','QVVCf2Ci3vcGTjoNi0J0',NULL,'2012-09-26 08:16:00','2012-09-26 08:16:00','oiWEF6W1WRU8rHcw2jOK',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'oiWEF6W1WRU8rHcw2jOK@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(11,'6iOyhPJc0ghv96bD7a2i@example.net','251990526990043d0e0fad37db4f8242867e7acb9a5c4547a26ef97391e7845a99113a41eb1803dc748f898306632c667f6ac308f5360e847c463abfa1970587','7o9XDp1HrFUzgHV0ZlMu',NULL,'2012-09-27 07:13:01','2012-09-27 07:13:01','6iOyhPJc0ghv96bD7a2i',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'6iOyhPJc0ghv96bD7a2i@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(12,'zJ_L_GEi1gokg5TJCqwK@example.net','9f34e9aba149036b02378db730578186f0fecc0609f740285d87d92ce9e15cd69ed21c6ef49c86a88855ab12f77d4841e53ddc6b2b52363318904d068eed2afe','ZMkUK9fAc6E99TNpHVRA',NULL,'2012-09-29 00:22:55','2012-09-29 00:22:55','zJ_L_GEi1gokg5TJCqwK',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'zJ_L_GEi1gokg5TJCqwK@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(13,'j7KFKDeQVM0QMy5J0wit@example.net','ecff346f8e3e1cb5091b041817da7c8c3056614c309f4350ed451c5db66670fbb8bac21fffaeed03272dc76d8dd2f828536881ddab1f324b72036cee0c071136','X3zXaF9pr3QBUDxpiSYN',NULL,'2012-09-29 02:00:24','2012-09-29 02:00:24','j7KFKDeQVM0QMy5J0wit',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'j7KFKDeQVM0QMy5J0wit@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(14,'E7w2AGo5ZQlwjEibwGbt@example.net','49f5dcab793923e8c98ce8b7a9d8b28ecba02b32348c492a39a0ed03f103bee4bf09b2fc002946725e55483eedf6b19f0ff89831853a61bb9b62694272e1f953','rVKpkCp6XAtC02N2wTPy',NULL,'2012-09-30 14:52:49','2012-09-30 14:52:49','E7w2AGo5ZQlwjEibwGbt',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'E7w2AGo5ZQlwjEibwGbt@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(15,'HEWWkCNLCVbe8Tn1Z2_U@example.net','4f80ce686783e1d7ec57015d13ee0bd0369f0869358ccc6b98074cc24ed1dad25a0fdb5462919ec77c6debd0e5481c0d7a458e3f6c003506c9495e5bc68ffe3b','F8kbvZWQssypV1ET8P7Y',NULL,'2012-09-30 15:14:59','2012-09-30 15:14:59','HEWWkCNLCVbe8Tn1Z2_U',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'HEWWkCNLCVbe8Tn1Z2_U@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(16,'TavsLBu000N9K4_kOCzW@example.net','3007888254c0b51ac518b19bd5bb60146319254dfc882908a958652c7d1e51a239efb5b351727b0fe4d51dd648493bf5c16baed2585111bb7b652ee196f460b6','Ovx3J771WUfxrg3ndAT6',NULL,'2012-10-01 11:38:05','2012-10-01 11:38:05','TavsLBu000N9K4_kOCzW',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'TavsLBu000N9K4_kOCzW@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(17,'9P0XBW2KI8I___Zy_Xi0@example.net','7ab76404001240a1157859335cb111bc217ed37a1b13f57d31f4791d38342587be4ca54e3d0104c89a88800a4c4c555090087fadaaa9f6c393b1bbfbc8710d9d','Q1XTFsOFJsFwwEd82Kwa',NULL,'2012-10-01 21:38:45','2012-10-01 21:38:45','9P0XBW2KI8I___Zy_Xi0',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'9P0XBW2KI8I___Zy_Xi0@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(18,'djDDMEBdPdTqynIouIf2@example.net','3667f4f9b739b0c4d24d20c66815d4d756e176f8825d527d1d119e8285d0f3d3c5ec681ebcb3da3ac22d779ac0c21267197e51f3fbcd88163f75ad19ce3500eb','r5DozL6Y0y2BQaQGzgjV',NULL,'2012-10-02 01:23:26','2012-10-02 01:23:26','djDDMEBdPdTqynIouIf2',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'djDDMEBdPdTqynIouIf2@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(19,'-Pj1QLQ_c54nk0Km4rXI@example.net','efe284defb6a09ee772e0e5379dc8ae75ab237fe901f59ce1c1878911ca24e35ab08f76178b963d2478925272bd98bbbedd3b721d1d9df703daf072e9efddfd7','ADb8xzq2z8SdMhm6yLd8',NULL,'2012-10-03 07:06:38','2012-10-03 07:06:38','-Pj1QLQ_c54nk0Km4rXI',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'-Pj1QLQ_c54nk0Km4rXI@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(20,'OsJ2__RyHePDPVWQQ1wO@example.net','24196326606753ed3e3bedb3d3bab37a1d0f1985cdb74733f2d3ff1aa0e1620ed104ac81f120878133d9301efd9a444a0be09768ea01a127afaa31564bdda01f','vkch6ys6QcKKRQ03rTf9',NULL,'2012-10-03 11:11:16','2012-10-03 11:11:16','OsJ2__RyHePDPVWQQ1wO',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'OsJ2__RyHePDPVWQQ1wO@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(21,'YyC6f2v4m3KvH6ZyRrAv@example.net','858e2e72e32bf93e74bee0f76f379ce1fab667a34d9275f3f81b9b8fba7ff80508910bb59ad543303de2f6388c19d8805ab81e87cd7177942fb6228cd6546af8','wt1KxdG9ba8xVNwxU5P8',NULL,'2012-10-03 12:52:03','2012-10-03 12:52:03','YyC6f2v4m3KvH6ZyRrAv',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,'YyC6f2v4m3KvH6ZyRrAv@example.net',NULL,NULL,NULL,NULL,NULL,NULL),(22,'mmm@example.com','472b0263236937204e28cb2de46bb2876203246aa61aa03a78a0cbf7025352a7fc29a5b33bbdbb85b0bd8723d30c0dbb3123199c1109b302cf78fa2d0b3d8b11','89cxNS2yRl8eNJSxlrrj',NULL,'2012-10-04 01:05:48','2012-10-04 01:05:48',NULL,NULL,NULL,1,0,NULL,'2012-10-04 01:05:48','2012-10-04 01:05:48','188.134.39.81','188.134.39.81','mmm@example.com',NULL,NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `variants`
+--
+
+DROP TABLE IF EXISTS `variants`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `variants` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int(11) DEFAULT NULL,
+  `sku` varchar(255) NOT NULL DEFAULT '',
+  `price` decimal(8,2) NOT NULL,
+  `weight` decimal(8,2) DEFAULT NULL,
+  `height` decimal(8,2) DEFAULT NULL,
+  `width` decimal(8,2) DEFAULT NULL,
+  `depth` decimal(8,2) DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL,
+  `is_master` tinyint(1) DEFAULT '0',
+  `count_on_hand` int(11) NOT NULL DEFAULT '0',
+  `cost_price` decimal(8,2) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_variants_on_product_id` (`product_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `variants`
+--
+
+LOCK TABLES `variants` WRITE;
+/*!40000 ALTER TABLE `variants` DISABLE KEYS */;
+INSERT INTO `variants` VALUES (1,1,'978-5-87991-080-3','720.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(2,2,'5-87991-020-2','225.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(3,3,'13','862.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(4,4,'14','202.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(5,5,'5-87991-017-2','157.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(6,6,'978-5-87991-077-3','1200.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(7,7,'978-5-87991-076-6','1050.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(8,8,'5-87991-004-0','225.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(9,9,'54','375.00',NULL,NULL,NULL,NULL,NULL,1,16,NULL,NULL),(10,10,'59','675.00',NULL,NULL,NULL,NULL,NULL,1,8,NULL,NULL),(11,11,'62','2625.00',NULL,NULL,NULL,NULL,NULL,1,0,NULL,NULL),(12,12,'65','37.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(13,13,'80','420.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(14,14,'90','180.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(15,15,'92','120.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(16,16,'96','105.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(17,17,'99','120.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(18,18,'100','90.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(19,19,'103','90.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(20,20,'107','75.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(21,21,'113','135.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(22,22,'114','105.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(23,23,'115','330.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(24,24,'117','45.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(25,25,'118','45.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(26,26,'120','300.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(27,27,'125','30.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(28,28,'130','90.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(29,29,'134','165.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(30,30,'135','315.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(31,31,'138','127.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(32,32,'148','315.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(33,33,'150','165.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(34,34,'157','187.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(35,35,'163','240.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(36,36,'166','330.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(37,37,'170','150.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(38,38,'175','180.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(39,39,'178','300.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(40,40,'181','150.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(41,41,'186','195.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(42,42,'187','330.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(43,43,'188','225.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(44,44,'198','240.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(45,45,'199','67.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(46,46,'208','240.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(47,47,'209','360.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(48,48,'217','300.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(49,49,'218','225.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(50,50,'219','600.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(51,51,'220','225.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(52,52,'221','255.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(53,53,'222','330.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(54,54,'223','210.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(55,55,'227','150.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(56,56,'233','270.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(57,57,'235','270.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(58,58,'236','127.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(59,59,'237','420.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(60,60,'240','270.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(61,61,'241','97.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(62,62,'243','150.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(63,63,'258','300.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(64,64,'271','225.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(65,65,'273','165.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(66,66,'274','67.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(67,67,'275','360.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(68,68,'311','90.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(69,69,'322','150.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(70,70,'329','180.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(71,71,'333','90.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(72,72,'369','375.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(73,73,'379','750.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(74,74,'380','277.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(75,75,'382','300.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(76,76,'384','300.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(77,77,'386','375.00',NULL,NULL,NULL,NULL,NULL,1,54,NULL,NULL),(78,78,'387','330.00',NULL,NULL,NULL,NULL,NULL,1,12,NULL,NULL),(79,79,'388','360.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(80,80,'389','195.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(81,81,'390','225.00',NULL,NULL,NULL,NULL,NULL,1,6,NULL,NULL),(82,82,'391','210.00',NULL,NULL,NULL,NULL,NULL,1,7,NULL,NULL),(83,83,'392','240.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(84,84,'978-5-98187-236-5','1200.00',NULL,NULL,NULL,NULL,NULL,1,14,NULL,NULL),(85,85,'394','360.00',NULL,NULL,NULL,NULL,NULL,1,53,NULL,NULL),(86,86,'395','255.00',NULL,NULL,NULL,NULL,NULL,1,9,NULL,NULL),(87,87,'396','345.00',NULL,NULL,NULL,NULL,NULL,1,71,NULL,NULL),(88,88,'978-5988-7277-8','375.00',NULL,NULL,NULL,NULL,NULL,1,14,NULL,NULL),(89,89,'398','270.00',NULL,NULL,NULL,NULL,NULL,1,53,NULL,NULL),(90,90,'399','165.00',NULL,NULL,NULL,NULL,NULL,1,28,NULL,NULL),(91,91,'400','240.00',NULL,NULL,NULL,NULL,NULL,1,4,NULL,NULL),(92,92,'401','435.00',NULL,NULL,NULL,NULL,NULL,1,20,NULL,NULL),(93,93,'402','420.00',NULL,NULL,NULL,NULL,NULL,1,17,NULL,NULL),(94,94,'403','375.00',NULL,NULL,NULL,NULL,NULL,1,11,NULL,NULL),(95,95,'404','315.00',NULL,NULL,NULL,NULL,NULL,1,35,NULL,NULL),(96,96,'405','570.00',NULL,NULL,NULL,NULL,NULL,1,7,NULL,NULL),(97,97,'406','210.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(98,98,'407','240.00',NULL,NULL,NULL,NULL,NULL,1,4,NULL,NULL),(99,99,'408','450.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(100,100,'411','360.00',NULL,NULL,NULL,NULL,NULL,1,38,NULL,NULL),(101,101,'412','240.00',NULL,NULL,NULL,NULL,NULL,1,4,NULL,NULL),(102,102,'413','360.00',NULL,NULL,NULL,NULL,NULL,1,45,NULL,NULL),(103,103,'414','240.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(104,104,'415','345.00',NULL,NULL,NULL,NULL,NULL,1,12,NULL,NULL),(105,105,'416','150.00',NULL,NULL,NULL,NULL,NULL,1,31,NULL,NULL),(106,106,'417','75.00',NULL,NULL,NULL,NULL,NULL,1,39,NULL,NULL),(107,107,'422','195.00',NULL,NULL,NULL,NULL,NULL,1,10,NULL,NULL),(108,108,'423','225.00',NULL,NULL,NULL,NULL,NULL,1,24,NULL,NULL),(109,109,'426','217.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(110,110,'427','225.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(111,111,'428','345.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(112,112,'430','60.00',NULL,NULL,NULL,NULL,NULL,1,6,NULL,NULL),(113,113,'431','67.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(114,114,'435','360.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(115,115,'436','60.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(116,116,'437','105.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(117,117,'439','360.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(118,118,'440','225.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(119,119,'978-5-8465-0633-6','150.00',NULL,NULL,NULL,NULL,NULL,1,13,NULL,NULL),(120,120,'443','450.00',NULL,NULL,NULL,NULL,NULL,1,6,NULL,NULL),(121,121,'444','105.00',NULL,NULL,NULL,NULL,NULL,1,9,NULL,NULL),(122,122,'445','390.00',NULL,NULL,NULL,NULL,NULL,1,7,NULL,NULL),(123,123,'446','135.00',NULL,NULL,NULL,NULL,NULL,1,20,NULL,NULL),(124,124,'447','135.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(125,125,'459','90.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(126,126,'978-5-98187-375-1','675.00',NULL,NULL,NULL,NULL,NULL,1,9,NULL,NULL),(127,127,'463','255.00',NULL,NULL,NULL,NULL,NULL,1,11,NULL,NULL),(128,128,'464','210.00',NULL,NULL,NULL,NULL,NULL,1,8,NULL,NULL),(129,129,'468','420.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(130,130,'469','75.00',NULL,NULL,NULL,NULL,NULL,1,20,NULL,NULL),(131,131,'470','510.00',NULL,NULL,NULL,NULL,NULL,1,9,NULL,NULL),(132,132,'471','450.00',NULL,NULL,NULL,NULL,NULL,1,4,NULL,NULL),(133,133,'472','330.00',NULL,NULL,NULL,NULL,NULL,1,8,NULL,NULL),(134,134,'473','450.00',NULL,NULL,NULL,NULL,NULL,1,15,NULL,NULL),(135,135,'474','1500.00',NULL,NULL,NULL,NULL,NULL,1,32,NULL,NULL),(136,136,'494','255.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(137,137,'497','420.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(138,138,'498','1200.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(139,139,'499','300.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(140,140,'500','315.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(141,141,'501','450.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(142,142,'502','5500.00',NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL),(143,143,'978-5-87991-075-9','195.00',NULL,NULL,NULL,NULL,NULL,1,2,NULL,NULL),(144,144,'595','344.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(145,145,'596','0.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(146,146,'597','0.00',NULL,NULL,NULL,NULL,NULL,1,4,NULL,NULL),(147,147,'598','0.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(148,148,'599','0.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(149,149,'600','0.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(150,150,'5-87991-019-9','300.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(151,151,'5-87991-018-0','150.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(152,152,'978-5-87991-072-8','277.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(153,153,'978-5-901495-09-4','82.00',NULL,NULL,NULL,NULL,NULL,1,1,NULL,NULL),(154,154,'kb123h456','1234.00',NULL,'15.00','10.00','234.00',NULL,1,23,NULL,NULL);
+/*!40000 ALTER TABLE `variants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `zone_members`
+--
+
+DROP TABLE IF EXISTS `zone_members`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `zone_members` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `zone_id` int(11) DEFAULT NULL,
+  `zoneable_id` int(11) DEFAULT NULL,
+  `zoneable_type` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=764978543 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `zone_members`
+--
+
+LOCK TABLES `zone_members` WRITE;
+/*!40000 ALTER TABLE `zone_members` DISABLE KEYS */;
+INSERT INTO `zone_members` VALUES (764978542,1,168,'Country','2012-09-13 17:16:20','2012-09-13 17:16:20');
+/*!40000 ALTER TABLE `zone_members` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `zones`
+--
+
+DROP TABLE IF EXISTS `zones`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `zones` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `zones`
+--
+
+LOCK TABLES `zones` WRITE;
+/*!40000 ALTER TABLE `zones` DISABLE KEYS */;
+INSERT INTO `zones` VALUES (1,'РФ','Российская Федерация','2012-09-13 17:16:20','2012-09-13 17:16:20');
+/*!40000 ALTER TABLE `zones` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-10-06  5:36:27

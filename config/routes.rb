@@ -14,6 +14,8 @@ Knigipodarki::Application.routes.draw do
   match '/products/:scope' => 'products#index', constraints: { scope: /recommended|popular|sale/ }, as: 'products_with_scope'
   match '/products/tags/:tag' => 'products#tags', as: 'products_tags'
 
+  resources :addresses
+
   namespace :admin do
     match '/products/:id/new_tag_id' => 'tags#new_product_tag_id', as: 'new_product_tag_id'
 
