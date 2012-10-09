@@ -27,7 +27,7 @@
       <% end %>
     <% end %>
 
-    <div class="all-fields" <%= "style=display:none;" if @addresses.present? %>>
+    <div class="all-fields" <%= "style=display:none;" if @addresses.present? && @order.ship_address.errors.empty? %>>
     <!-- .fields -->
     <div class="fields">
       <fieldset>
