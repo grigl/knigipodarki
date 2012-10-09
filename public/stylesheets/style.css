@@ -1845,3 +1845,6 @@ input[type="text"]:focus {
   font-size: 20px;
   text-decoration: none;
 }
+
+span.field_with_errors input {
+  background-color:#E66F50;

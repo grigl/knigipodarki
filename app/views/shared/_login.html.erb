@@ -1,5 +1,11 @@
 <!-- .forms -->
   <section class="forms auth">
+    <% if flash.any? %>
+      <% flash.each do |type, msg| %>
+        <%= msg %>
+      <% end %>
+    <% end %>
+
     <h3><%= t("login_as_existing") %></h3>
     <%= form_for(:user, :url => user_session_path) do |f| %>
       <!-- field -->

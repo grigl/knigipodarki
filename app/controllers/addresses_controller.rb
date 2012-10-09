@@ -15,15 +15,19 @@ class AddressesController < Spree::BaseController
 
     if @address.save
       flash[:notice] = I18n.t(:successfully_updated, :resource => I18n.t(:address))
+      redirect_back_or_default(account_path)
+    else
+      render :new
     end
-
-    redirect_back_or_default(account_path)
   end
   
   def update
     if @address.editable?
       if @address.update_attributes(params[:address])
         flash[:notice] = I18n.t(:successfully_updated, :resource => I18n.t(:address))
+        redirect_back_or_default(account_path)
+      else
+        render :edit
       end
     else
       new_address = @address.clone
@@ -31,9 +35,11 @@ class AddressesController < Spree::BaseController
       @address.update_attribute(:deleted_at, Time.now)
       if new_address.save
         flash[:notice] = I18n.t(:successfully_updated, :resource => I18n.t(:address))
+        redirect_back_or_default(account_path)
+      else
+        render :edit
       end
     end
-    redirect_back_or_default(account_path)
   end
 
   def destroy

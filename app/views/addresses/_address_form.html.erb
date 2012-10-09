@@ -1,4 +1,9 @@
 <%= form_for @address do |form| %>
+<% if @address.errors %>
+  <% @address.errors.each do |field, msg| %>
+    Поле "<%= @address.class.human_attribute_name(field) %>" <%= msg %>.<br />
+  <% end %>
+<% end %>
 <div class="formset">
   <!-- .fields -->
     <div class="fields">

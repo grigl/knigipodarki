@@ -56,6 +56,11 @@ var LoginForm = function() {
     e.preventDefault();
     $('.login-form').hide();
   });
+
+  $('.forgot-mess .close-little').live('click', function(e){
+    e.preventDefault();
+    $('.login-form .forgot-mess').hide();
+  });
 }
 
 var RegistrationForm = function() {
@@ -67,6 +72,11 @@ var RegistrationForm = function() {
   $('.registration-form .close').live('click', function(e){
     e.preventDefault();
     $('.registration-form').hide();
+  });
+
+  $('.forgot-mess .close-little').live('click', function(e){
+    e.preventDefault();
+    $('.registration-form .forgot-mess').hide();
   });
 }
 

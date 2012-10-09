@@ -1,9 +1,14 @@
 <!-- .sh-panel -->
 <section class="registration-form hidden">
   <div class="wrap">
-    <%= form_for(:user, :url => registration_path(User.new)) do |f| %>
+    <%= form_for(:user, :url => registration_path(User.new), remote: true) do |f| %>
       <!-- left part -->
       <div class="registration-form-left">
+          <div class="forgot-mess hidden">
+            <span class="error"></span>
+            <a href="" class="close-little">p</a>
+          </div>
+
           <fieldset>
             <label for="">Логин</label>
             <%= f.text_field :email %>

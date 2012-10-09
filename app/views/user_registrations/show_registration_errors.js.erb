@@ -1,0 +1,3 @@
+$('.registration-form .forgot-mess .error').text('');
+$('.registration-form .forgot-mess .error').append('<%= @user.errors.full_messages.join('. ') %>');
+$('.registration-form .forgot-mess').show();

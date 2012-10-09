@@ -1,9 +1,16 @@
 <header>
-  <h3>Адреса</h3><a href="">Добавить</a>
+  <h3>Адреса</h3>
 </header>
 
 <div class="formset">
   <%= form.fields_for :ship_address do |ship_form| %>
+
+    <% if @order.ship_address.errors %>
+      <% @order.ship_address.errors.each do |field, msg| %>
+        Поле "<%= @order.ship_address.class.human_attribute_name(field) %>" <%= msg %>.<br />
+      <% end %>
+    <% end %>
+
     <!-- .fields -->
     <div class="fields">
       <fieldset>

@@ -22,6 +22,13 @@
           
           <!-- form .formset -->
           <%= form_for(@user, :html => { :method => :put }) do |f| %>
+
+            <% if @user.errors %>
+              <% @user.errors.each do |field, msg| %>
+                Поле "<%= @user.class.human_attribute_name(field) %>" <%= msg %>.<br />
+              <% end %>
+            <% end %>
+            
             <div class="formset">
 
               <!-- .fields -->
