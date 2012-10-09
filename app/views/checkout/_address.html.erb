@@ -1,8 +1,24 @@
+<% @addresses = current_user ? current_user.addresses : [] %>
+
 <header>
   <h3>Адреса</h3>
 </header>
 
 <div class="formset">
+
+  <div class="select_address">
+    <fieldset>
+      <% if @addresses.present? %>
+        <% @addresses.each_with_index do |address, idx| %>
+          <%= form.radio_button "ship_address_id", address.id, :checked => (idx == 0) %> 
+          <%= form.label ["ship_address_id", address.id], address.to_s %><br />
+        <% end %>
+        <%= form.radio_button "ship_address_id", 0, class: 'new_address_radio' %>
+        <%= form.label ["ship_address_id", 0], t('other_address') %>
+      <% end %>
+    </fieldset>
+  </div>
+
   <%= form.fields_for :ship_address do |ship_form| %>
 
     <% if @order.ship_address.errors %>
@@ -11,6 +27,7 @@
       <% end %>
     <% end %>
 
+    <div class="all-fields" <%= "style=display:none;" if @addresses.present? %>>
     <!-- .fields -->
     <div class="fields">
       <fieldset>
@@ -74,6 +91,7 @@
       </fieldset>
     </div>
     <!-- /.fields -->
+  </div>
   <% end %>
 </div>
 <!-- .controls -->

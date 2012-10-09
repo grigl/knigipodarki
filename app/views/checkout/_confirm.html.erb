@@ -5,7 +5,7 @@
     </header>
     <article>
       <%= @order.ship_address.to_s %> 
-      <a href="">Изменить</a>
+      <%= link_to 'Изменить', checkout_state_path('address') %>
     </article>
   </div>
   <!-- /approve info -->
@@ -15,7 +15,7 @@
       <h3>Способ доставки</h3>
     </header>
     <article>
-      <%= @order.shipment.shipping_method.name %> — <%= @order.shipment.cost %> руб. <a href="">Изменить</a>
+      <%= @order.shipment.shipping_method.name %> — <%= @order.shipment.cost %> руб. <%= link_to 'Изменить', checkout_state_path('delivery') %>
     </article>
   </div>
   <!-- /approve info -->
@@ -25,7 +25,7 @@
       <h3>Способ оплаты</h3>
     </header>
     <article>
-      <%= @order.payment_method.name %> <a href="">Изменить</a>
+      <%= @order.payment_method.name %> <%= link_to 'Изменить', checkout_state_path('payment') %>
     </article>
   </div>
   <!-- /approve info -->
