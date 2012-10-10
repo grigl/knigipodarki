@@ -15,3 +15,9 @@ ru:
   products_popular: 'Популярное'
   products_recommended: 'Рекомендуем'
   products_sale: 'Распродажа'
+
+  checkout:
+    address: 'Адрес'
+    delivery: 'Доставка'
+    payment:  'Оплата'
+    confirm:  'Подтверждение'

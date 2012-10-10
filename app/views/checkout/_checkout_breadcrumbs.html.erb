@@ -1,3 +1,4 @@
+<% states = %w(address delivery payment confirm) %>
 <!-- .account -->
   <section class="account">
     <header>
@@ -5,11 +6,15 @@
         <!-- .breadcrumps -->
         <nav class="breadcrumps">
           <ul>
-            <li><a href="">Авторизация</a>&nbsp;></li>
-            <li class="current">Адрес&nbsp;></li>
-            <li class="step">Доставка&nbsp;></li>
-            <li class="step">Оплата&nbsp;></li>
-            <li class="step">Подтверждение</li>
+            <% states.each_with_index do |state| %>
+              <% if states.index(state) < states.index(@order.state) %>
+                <li><%= link_to I18n.t('checkout.' + state), checkout_state_path(state) %>&nbsp;></li>
+              <% elsif states.index(state) == states.index(@order.state) %>
+                <li class="current"><%= I18n.t('checkout.' + state) %>&nbsp;></li>
+              <% elsif states.index(state) > states.index(@order.state) %>
+                <li class="step"><%= I18n.t('checkout.' + state) %>&nbsp;></li>
+              <% end %>
+            <% end %>
           </ul>
         </nav>
         <!-- /.breadcrumps -->
