@@ -1,0 +1,31 @@
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+        <section class="forms auth">
+
+          <%= render "shared/error_messages", :target => @user %>
+          <h3><%= t(:change_my_password) %></h3>
+
+          <%= form_for @user, :url => user_password_path, :html => {:method => :put} do |f| %>
+            <fieldset>
+              <%= f.label :password %><br />
+              <%= f.password_field :password %><br />
+            </fieldset>
+            <fieldset>
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation %><br />
+            </fieldset>
+            <%= f.hidden_field :reset_password_token %>
+            <div class="controls">
+              <input class="blue" type="submit" value="Cохранить">
+            </div>
+          <% end %>
+
+        </section>
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+<!-- /.content -->
