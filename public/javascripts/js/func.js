@@ -80,6 +80,23 @@ var RegistrationForm = function() {
   });
 }
 
+var RestorePasswordForm = function() {
+  $('.l-restore').live('click', function(e){
+    e.preventDefault();
+    $('.restore-password-form').show();
+  });
+
+  $('.restore-password-form .close').live('click', function(e){
+    e.preventDefault();
+    $('.restore-password-form').hide();
+  });
+
+  $('.forgot-mess .close-little').live('click', function(e){
+    e.preventDefault();
+    $('.restore-password-form .forgot-mess').hide();
+  });
+}
+
 var ProductImages = function() {
   $('.product_image_thumb').live('click', function(e){
     e.preventDefault();
@@ -103,6 +120,8 @@ $(function(){
     Slides();
     LoginForm();
     RegistrationForm();
+    RestorePasswordForm();
     ProductImages();
     NewAddressRadio();
+    dfbdsfbdfb
 })
