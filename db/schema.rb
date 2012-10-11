@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121010012136) do
+ActiveRecord::Schema.define(:version => 20121011132306) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -372,6 +372,11 @@ ActiveRecord::Schema.define(:version => 20121010012136) do
   add_index "products_promotion_rules", ["product_id"], :name => "index_products_promotion_rules_on_product_id"
   add_index "products_promotion_rules", ["promotion_rule_id"], :name => "index_products_promotion_rules_on_promotion_rule_id"
 
+  create_table "products_tags", :id => false, :force => true do |t|
+    t.integer "product_id"
+    t.integer "tag_id"
+  end
+
   create_table "products_taxons", :id => false, :force => true do |t|
     t.integer "product_id"
     t.integer "taxon_id"
@@ -520,7 +525,6 @@ ActiveRecord::Schema.define(:version => 20121010012136) do
 
   create_table "tags", :force => true do |t|
     t.string   "name"
-    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

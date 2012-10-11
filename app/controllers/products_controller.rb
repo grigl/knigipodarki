@@ -55,8 +55,8 @@ class ProductsController < Spree::BaseController
   end
 
   def tags
-    product = Tag.find_by_name!(params[:tag])
-    products = [product.product]
+    @tag = Tag.find_by_name!(params[:tag])
+    products = @tag.products
 
     @products = products.paginate(:page => params[:page], :per_page => 8)
 

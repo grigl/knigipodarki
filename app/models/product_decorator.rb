@@ -30,7 +30,7 @@ Product.class_eval do
   has_and_belongs_to_many :taxons
   belongs_to :shipping_category
 
-  has_many :tags
+  has_and_belongs_to_many :tags
   accepts_nested_attributes_for :tags, :allow_destroy => true, reject_if: :all_blank
 
   has_one :master,
@@ -47,6 +47,18 @@ Product.class_eval do
   #after_save :update_memberships if ProductGroup.table_exists? #странный коллбэк, связывает все товары со всеми категориями!
   after_save :set_master_on_hand_to_zero_when_product_has_variants
   after_save :save_master
+
+  after_save :do_not_create_tags_dublicates
+
+  def do_not_create_tags_dublicates
+    @tags = self.tags
+    @tags.each do |tag|
+      existed_tag = Tag.find_by_name(tag.name)
+      next unless existed_tag && existed_tag != tag
+      tag.destroy
+      self.tags << existed_tag
+    end
+  end
 
   has_many :variants,
     :conditions => ["variants.is_master = ? AND variants.deleted_at IS NULL", false],
