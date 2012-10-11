@@ -52,6 +52,8 @@ Product.class_eval do
 
   def do_not_create_tags_dublicates
     @tags = self.tags
+    return unless @tags
+    
     @tags.each do |tag|
       existed_tag = Tag.find_by_name(tag.name)
       next unless existed_tag && existed_tag != tag
