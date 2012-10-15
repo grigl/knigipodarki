@@ -305,42 +305,89 @@ input[type="text"]:focus {
   text-align: right;
   overflow: hidden;
   padding: 30px 0 30px 0;
+  font-size: .9em;
 }
-/* line 222, ../src/layout.scss */
+/* line 224, ../src/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 225, ../src/layout.scss */
+/* line 227, ../src/layout.scss */
 .site-footer .foot-right {
-  width: 560px;
-  float: right;
+  float: left;
 }
-/* line 228, ../src/layout.scss */
+/* line 230, ../src/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   display: inline-block;
+  vertical-align: top;
   margin-left: 10px;
   position: relative;
 }
-/* line 233, ../src/layout.scss */
+/* line 236, ../src/layout.scss */
 .site-footer .foot-right a.social img {
   position: absolute;
-  top: -20px;
+  top: -4px;
 }
-/* line 238, ../src/layout.scss */
+/* line 241, ../src/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   display: inline-block;
+  vertical-align: top;
 }
-/* line 242, ../src/layout.scss */
+/* line 246, ../src/layout.scss */
 .site-footer .foot-right .mail {
   margin-right: 10px;
 }
-/* line 247, ../src/layout.scss */
+/* line 250, ../src/layout.scss */
+.site-footer .devs {
+  float: right;
+  width: 280px;
+  margin-right: -60px;
+}
+/* line 256, ../src/layout.scss */
+.site-footer .devs .dev_in {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 260, ../src/layout.scss */
+.site-footer .devs a {
+  width: 80px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+/* line 265, ../src/layout.scss */
+.site-footer .devs a .name {
+  display: inline-block;
+  float: left;
+  width: 70px;
+  padding-left: 10px;
+}
+/* line 271, ../src/layout.scss */
+.site-footer .devs a .logo {
+  display: none;
+  width: 80px;
+  height: 77px;
+}
+/* line 277, ../src/layout.scss */
+.site-footer .devs a:hover .name {
+  display: none;
+}
+/* line 280, ../src/layout.scss */
+.site-footer .devs a:hover .logo {
+  display: block;
+}
+/* line 282, ../src/layout.scss */
+.site-footer .devs a:hover .logo img {
+  position: absolute;
+  top: -16px;
+  left: 10px;
+}
+/* line 292, ../src/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 249, ../src/layout.scss */
+/* line 294, ../src/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
