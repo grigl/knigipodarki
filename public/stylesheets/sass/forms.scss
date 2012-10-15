@@ -1,0 +1,65 @@
+@import 'mixins';
+
+.forms {
+  .formset {
+    .fields {
+      @include inline-block;
+      width: 282px;
+      margin-right: 38px;
+      fieldset {
+        height: 80px;
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        input {
+          width: 276px;
+          height: 28px;
+          padding: 0 10px;
+        }
+        select {
+          width: 298px; // до ужаса спорная строка! нужно обсудить с Вадиком
+          height: 28px;
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+  }
+  .controls {
+    text-align: right;
+    padding-top: 18px;
+    margin-bottom: 20px;
+    input {
+      border: none;
+      height: 30px;
+      padding: 0 10px;
+      background: #e66f50;
+      color: #fff;
+      margin-left: 20px;
+    }
+  }
+  .top-decor {
+    border-top: 1px solid #c0c0c0;
+  }
+  .controls-big {
+    width: 622px;
+  }
+  .controls-small {
+    width: 300px;
+  }
+  .forms-info {
+    article {
+      padding: 10px 20px;
+      border: 6px solid #e66f50;
+      border-left: 20px solid #e66f50;
+      background: #f8f8f8;
+      margin-top: 20px;
+    }
+  }
+  .info-big {
+    width: 622px;
+    margin-bottom: 20px;
+  }
+}
+

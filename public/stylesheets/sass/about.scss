@@ -1,0 +1,36 @@
+@import 'mixins';
+
+.about {
+  margin-bottom: 45px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  article {
+    width: 440px;
+    float: left;
+    &:last-child {
+      float: right;
+    }
+    img {
+      margin-bottom: 15px;
+      margin-top: 40px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    h2 {
+      font-size: 21px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+  }
+  h1 {
+    clear: both;
+    margin-bottom: 45px;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &:first-child {
+    margin-top: 48px;
+  } 
+}

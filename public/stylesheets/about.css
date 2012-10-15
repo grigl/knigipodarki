@@ -1,34 +1,34 @@
-/* line 1, ../src/about.scss */
+/* line 3, sass/about.scss */
 .about {
   margin-bottom: 45px;
   padding-bottom: 60px;
   overflow: hidden;
 }
-/* line 5, ../src/about.scss */
+/* line 7, sass/about.scss */
 .about article {
   width: 440px;
   float: left;
 }
-/* line 8, ../src/about.scss */
+/* line 10, sass/about.scss */
 .about article:last-child {
   float: right;
 }
-/* line 11, ../src/about.scss */
+/* line 13, sass/about.scss */
 .about article img {
   margin-bottom: 15px;
   margin-top: 40px;
 }
-/* line 14, ../src/about.scss */
+/* line 16, sass/about.scss */
 .about article img:first-child {
   margin-top: 0;
 }
-/* line 18, ../src/about.scss */
+/* line 20, sass/about.scss */
 .about article h2 {
   font-size: 21px;
   font-weight: bold;
   margin-bottom: 25px;
 }
-/* line 24, ../src/about.scss */
+/* line 26, sass/about.scss */
 .about h1 {
   clear: both;
   margin-bottom: 45px;
@@ -36,7 +36,7 @@
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 31, ../src/about.scss */
+/* line 33, sass/about.scss */
 .about:first-child {
   margin-top: 48px;
 }

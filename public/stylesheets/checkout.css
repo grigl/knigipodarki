@@ -1,84 +1,192 @@
-/*
-Syntax error: Undefined mixin 'inline-block'.
-        on line 6 of /home/macgera/whitescape/knigipodarki/_markup/src/checkout.scss, in `inline-block'
-        from line 6 of /home/macgera/whitescape/knigipodarki/_markup/src/checkout.scss
+/* line 3, sass/checkout.scss */
+.checkout {
+  position: relative;
+}
+/* line 5, sass/checkout.scss */
+.checkout header {
+  margin-bottom: 45px;
+}
+/* line 7, sass/checkout.scss */
+.checkout header h3 {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  font-size: 21px;
+}
+/* line 12, sass/checkout.scss */
+.checkout header a {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+/* line 18, sass/checkout.scss */
+.checkout .summary {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 230px;
+  padding: 20px;
+  background: #f8f8f8;
+}
+/* line 25, sass/checkout.scss */
+.checkout .summary h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #808080;
+}
+/* line 30, sass/checkout.scss */
+.checkout .summary .item {
+  overflow: hidden;
+  color: #202020;
+}
+/* line 33, sass/checkout.scss */
+.checkout .summary .item .name {
+  float: left;
+}
+/* line 36, sass/checkout.scss */
+.checkout .summary .item .price {
+  float: right;
+  font-weight: bold;
+}
+/* line 40, sass/checkout.scss */
+.checkout .summary .item.all {
+  font-size: 18px;
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #c0c0c0;
+}
 
-1: /home/macgera/whitescape/knigipodarki/_markup/src/checkout.scss
+/* line 50, sass/checkout.scss */
+.auth {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+  margin-right: 100px;
+}
+/* line 54, sass/checkout.scss */
+.auth h3 {
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+/* line 58, sass/checkout.scss */
+.auth fieldset {
+  margin-bottom: 20px;
+}
+/* line 60, sass/checkout.scss */
+.auth fieldset label {
+  display: block;
+  margin-bottom: 10px;
+}
+/* line 64, sass/checkout.scss */
+.auth fieldset input {
+  width: 260px;
+  padding: 0 10px;
+  height: 28px;
+}
+/* line 69, sass/checkout.scss */
+.auth fieldset .remember {
+  overflow: hidden;
+  margin-top: 10px;
+}
+/* line 72, sass/checkout.scss */
+.auth fieldset .remember label {
+  float: left;
+}
+/* line 74, sass/checkout.scss */
+.auth fieldset .remember label input {
+  width: auto;
+}
+/* line 78, sass/checkout.scss */
+.auth fieldset .remember a {
+  float: right;
+  display: block;
+}
+/* line 84, sass/checkout.scss */
+.auth .controls {
+  overflow: hidden;
+  margin-top: -20px;
+}
+/* line 87, sass/checkout.scss */
+.auth .controls input {
+  float: left;
+  margin-left: 0;
+  font-weight: bold;
+  padding: 0 20px;
+}
+/* line 92, sass/checkout.scss */
+.auth .controls input.blue {
+  background: #4c7f82;
+}
+/* line 96, sass/checkout.scss */
+.auth .controls a {
+  float: right;
+  border: none;
+  height: 26px;
+  padding: 4px 20px 0 20px;
+  background: #f7941e;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-Backtrace:
-/home/macgera/whitescape/knigipodarki/_markup/src/checkout.scss:6:in `inline-block'
-/home/macgera/whitescape/knigipodarki/_markup/src/checkout.scss:6
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:249:in `visit_mixin'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/root_node.rb:20:in `render'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:68:in `perform'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `call'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
-/home/macgera/.rbenv/versions/1.9.3-p194/bin/compass:23:in `load'
-/home/macgera/.rbenv/versions/1.9.3-p194/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'inline-block'.\A         on line 6 of /home/macgera/whitescape/knigipodarki/_markup/src/checkout.scss, in `inline-block'\A         from line 6 of /home/macgera/whitescape/knigipodarki/_markup/src/checkout.scss\A \A 1: /home/macgera/whitescape/knigipodarki/_markup/src/checkout.scss"; }
+/* line 110, sass/checkout.scss */
+.adress-choise fieldset {
+  width: 622px;
+  margin-bottom: 18px;
+}
+/* line 113, sass/checkout.scss */
+.adress-choise fieldset input {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 116, sass/checkout.scss */
+.adress-choise fieldset label {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: 594px;
+}
+/* line 121, sass/checkout.scss */
+.adress-choise .controls {
+  text-align: left;
+  margin: 0;
+}
+/* line 124, sass/checkout.scss */
+.adress-choise .controls input {
+  margin-left: 0;
+}
+/* line 129, sass/checkout.scss */
+.adress-choise .payment-comment h3 {
+  font-size: 21px;
+  margin-bottom: 25px;
+}
+/* line 133, sass/checkout.scss */
+.adress-choise .payment-comment textarea {
+  width: 594px;
+  height: 68px;
+  border: 1px solid #c0c0c0;
+}
+
+/* line 141, sass/checkout.scss */
+.approve {
+  width: 594px;
+  margin-bottom: 40px;
+}
+/* line 144, sass/checkout.scss */
+.approve header {
+  margin-bottom: 0;
+}
+/* line 146, sass/checkout.scss */
+.approve header h3 {
+  margin-bottom: 15px;
+}

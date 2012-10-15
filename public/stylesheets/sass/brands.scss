@@ -1,0 +1,50 @@
+@import 'mixins';
+
+.brand {
+  img {
+    @include inline-block;
+  }
+  article {
+    @include inline-block;
+    width: 590px;
+    margin-left: 46px;
+    hgroup {
+      margin-bottom: 25px;
+      h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      h2 {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+.brands {
+  article {
+    @include inline-block;
+    width: 270px;
+    margin: 0 40px 45px 0;
+    a {
+      color: $color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    ul {
+      li {
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

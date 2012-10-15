@@ -1,62 +1,329 @@
-/*
-Syntax error: Undefined variable: "$color".
-        on line 16 of /home/macgera/whitescape/knigipodarki/_markup/src/layout.scss
+@font-face {
+  font-family: 'kp_icons';
+  src: url("../fonts/kp_icons.eot");
+  src: url("../fonts/kp_icons.eot?#iefix") format("embedded-opentype"), url("../fonts/kp_icons.woff") format("woff"), url("../fonts/kp_icons.ttf") format("truetype"), url("../fonts/kp_icons.svg#kp_icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-Backtrace:
-/home/macgera/whitescape/knigipodarki/_markup/src/layout.scss:16
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/variable.rb:49:in `_perform'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:294:in `visit_prop'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/root_node.rb:20:in `render'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:68:in `perform'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `call'
-/home/macgera/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
-/home/macgera/.rbenv/versions/1.9.3-p194/bin/compass:23:in `load'
-/home/macgera/.rbenv/versions/1.9.3-p194/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$color\".\A         on line 16 of /home/macgera/whitescape/knigipodarki/_markup/src/layout.scss"; }
+/* line 11, sass/layout.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 15, sass/layout.scss */
+body {
+  font: 14px/20px Ubuntu;
+  background: url(../images/back.png);
+  color: #404040;
+}
+
+/* line 21, sass/layout.scss */
+a {
+  text-decoration: underline;
+  color: #4c7f82;
+}
+/* line 24, sass/layout.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 29, sass/layout.scss */
+p {
+  margin-bottom: 1em;
+}
+
+/* line 33, sass/layout.scss */
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* line 35, sass/layout.scss */
+.sp_show {
+  display: none;
+}
+
+/* line 39, sass/layout.scss */
+.wrap {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* line 44, sass/layout.scss */
+.wrap-row {
+  overflow: hidden;
+}
+
+/* line 48, sass/layout.scss */
+.white-wrap {
+  width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 0 60px 0;
+}
+
+/* line 57, sass/layout.scss */
+.site-header .panel {
+  background: #404040;
+  height: 30px;
+  overflow: hidden;
+  color: #fff;
+  text-align: right;
+}
+/* line 63, sass/layout.scss */
+.site-header .panel a {
+  color: #fff;
+}
+/* line 66, sass/layout.scss */
+.site-header .panel nav {
+  float: left;
+}
+/* line 69, sass/layout.scss */
+.site-header .panel nav ul li {
+  display: inline-block;
+  height: 24px;
+  padding-top: 6px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  vertical-align: text-bottom;
+  text-transform: uppercase;
+  margin-right: 26px;
+}
+/* line 78, sass/layout.scss */
+.site-header .panel nav ul li a {
+  text-decoration: none;
+}
+/* line 80, sass/layout.scss */
+.site-header .panel nav ul li a:hover {
+  color: #c0c0c0;
+}
+/* line 84, sass/layout.scss */
+.site-header .panel nav ul li a.current {
+  color: #c0c0c0;
+}
+/* line 90, sass/layout.scss */
+.site-header .panel .phone {
+  float: right;
+  width: right;
+  height: 25px;
+  padding: 5px 15px 0 15px;
+  font-size: 18px;
+  background: #535353;
+}
+/* line 98, sass/layout.scss */
+.site-header .panel .login {
+  width: auto;
+  float: right;
+  height: 30px;
+  background: gray;
+  font-weight: bold;
+}
+/* line 105, sass/layout.scss */
+.site-header .panel .login a {
+  display: inline-block;
+  height: 26px;
+  padding: 4px 15px 0 15px;
+  text-decoration: none;
+}
+/* line 111, sass/layout.scss */
+.site-header .panel .login .l-login {
+  background: #4c7f82;
+  margin-right: -3px;
+}
+/* line 114, sass/layout.scss */
+.site-header .panel .login .l-login:hover {
+  background: #81a5a7;
+}
+/* line 118, sass/layout.scss */
+.site-header .panel .login .l-registration {
+  background: #f7941e;
+}
+/* line 120, sass/layout.scss */
+.site-header .panel .login .l-registration:hover {
+  background: #f9b461;
+}
+/* line 126, sass/layout.scss */
+.site-header .navigations {
+  margin-top: 20px;
+  position: relative;
+}
+/* line 130, sass/layout.scss */
+.site-header .navigations .search input {
+  width: 280px;
+  padding: 0 10px;
+  height: 28px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+}
+/* line 137, sass/layout.scss */
+.site-header .navigations .search input:last-child {
+  width: auto;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-family: kp_icons;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: -3px;
+}
+/* line 149, sass/layout.scss */
+.site-header .navigations .logo {
+  float: left;
+}
+/* line 152, sass/layout.scss */
+.site-header .navigations .search {
+  float: right;
+}
+/* line 155, sass/layout.scss */
+.site-header .navigations .direction-nav {
+  border-bottom: 1px solid #404040;
+  padding-bottom: 6px;
+  margin: 30px 0 62px 0;
+}
+/* line 160, sass/layout.scss */
+.site-header .navigations .direction-nav ul li {
+  display: inline-block;
+  margin-right: 1px;
+}
+/* line 163, sass/layout.scss */
+.site-header .navigations .direction-nav ul li a {
+  display: inline-block;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #404040;
+}
+/* line 169, sass/layout.scss */
+.site-header .navigations .direction-nav ul li a:hover {
+  border: 3px solid #edf2f2;
+  padding: 7px 7px;
+}
+/* line 174, sass/layout.scss */
+.site-header .navigations .direction-nav ul li:last-child {
+  margin-right: 0;
+}
+/* line 179, sass/layout.scss */
+.site-header .navigations .direction-nav ul li.current a {
+  background: #4c7f82;
+  color: #fff;
+}
+/* line 186, sass/layout.scss */
+.site-header .navigations .sub-direction-nav {
+  position: absolute;
+  top: 130px;
+}
+/* line 194, sass/layout.scss */
+.site-header .navigations .sub-direction-nav ul li {
+  display: inline;
+  margin-right: 24px;
+}
+/* line 197, sass/layout.scss */
+.site-header .navigations .sub-direction-nav ul li a {
+  font-size: 14px;
+  font-style: italic;
+  text-decoration: none;
+}
+/* line 201, sass/layout.scss */
+.site-header .navigations .sub-direction-nav ul li a:hover {
+  text-decoration: underline;
+}
+/* line 207, sass/layout.scss */
+.site-header .navigations .sub-direction-nav ul .current a {
+  font-weight: bold;
+}
+
+/* line 218, sass/layout.scss */
+.site-footer {
+  background: #808080;
+  color: #fff;
+  text-align: right;
+  overflow: hidden;
+  padding: 30px 0 30px 0;
+  font-size: .9em;
+}
+/* line 226, sass/layout.scss */
+.site-footer a {
+  color: #fff;
+}
+/* line 229, sass/layout.scss */
+.site-footer .foot-right {
+  float: left;
+}
+/* line 232, sass/layout.scss */
+.site-footer .foot-right a.social {
+  width: 30px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  position: relative;
+}
+/* line 238, sass/layout.scss */
+.site-footer .foot-right a.social img {
+  position: absolute;
+  top: -4px;
+}
+/* line 243, sass/layout.scss */
+.site-footer .foot-right span {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 248, sass/layout.scss */
+.site-footer .foot-right .mail {
+  margin-right: 10px;
+}
+/* line 252, sass/layout.scss */
+.site-footer .devs {
+  float: right;
+  width: 280px;
+  margin-right: -60px;
+}
+/* line 258, sass/layout.scss */
+.site-footer .devs .dev_in {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 262, sass/layout.scss */
+.site-footer .devs a {
+  width: 80px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+/* line 267, sass/layout.scss */
+.site-footer .devs a .name {
+  display: inline-block;
+  float: left;
+  width: 70px;
+  padding-left: 10px;
+}
+/* line 273, sass/layout.scss */
+.site-footer .devs a .logo {
+  display: none;
+  width: 80px;
+  height: 77px;
+}
+/* line 279, sass/layout.scss */
+.site-footer .devs a:hover .name {
+  display: none;
+}
+/* line 282, sass/layout.scss */
+.site-footer .devs a:hover .logo {
+  display: block;
+}
+/* line 284, sass/layout.scss */
+.site-footer .devs a:hover .logo img {
+  position: absolute;
+  top: -16px;
+  left: 10px;
+}
+/* line 294, sass/layout.scss */
+.site-footer nav ul {
+  float: left;
+}
+/* line 296, sass/layout.scss */
+.site-footer nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
