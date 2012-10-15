@@ -1549,17 +1549,23 @@ input[type="text"]:focus {
 .cart .panel {
   overflow: hidden;
   background: #404040;
-  height: 30px;
+  height: 40px;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
 }
 /* line 20, ../src/cart.scss */
+.cart .panel .gray_decor {
+  height: 10px;
+  background: #808080;
+  margin-top: 20px;
+}
+/* line 25, ../src/cart.scss */
 .cart .panel a {
   color: #fff;
   text-decoration: none;
 }
-/* line 24, ../src/cart.scss */
+/* line 29, ../src/cart.scss */
 .cart .panel .items {
   display: block;
   height: 25px;
@@ -1567,7 +1573,7 @@ input[type="text"]:focus {
   float: left;
   background: #e66f50;
 }
-/* line 31, ../src/cart.scss */
+/* line 36, ../src/cart.scss */
 .cart .panel .cart-order {
   display: block;
   height: 25px;
@@ -1575,7 +1581,7 @@ input[type="text"]:focus {
   float: left;
   background: #f3a062;
 }
-/* line 38, ../src/cart.scss */
+/* line 43, ../src/cart.scss */
 .cart .panel .control {
   display: block;
   height: 25px;
@@ -1583,25 +1589,25 @@ input[type="text"]:focus {
   float: right;
   font-family: kp_icons;
 }
-/* line 44, ../src/cart.scss */
+/* line 49, ../src/cart.scss */
 .cart .panel .control .close {
   display: none;
 }
-/* line 48, ../src/cart.scss */
+/* line 53, ../src/cart.scss */
 .cart .panel .control.active .open {
   display: none;
 }
-/* line 51, ../src/cart.scss */
+/* line 56, ../src/cart.scss */
 .cart .panel .control.active .close {
   display: block;
 }
-/* line 57, ../src/cart.scss */
+/* line 62, ../src/cart.scss */
 .cart .forsale {
   width: 1100px;
   margin: 0 auto;
   padding-top: 30px;
 }
-/* line 61, ../src/cart.scss */
+/* line 66, ../src/cart.scss */
 .cart .forsale .item {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1611,7 +1617,7 @@ input[type="text"]:focus {
   padding: 0 52px 0 0;
   margin-bottom: 30px;
 }
-/* line 66, ../src/cart.scss */
+/* line 71, ../src/cart.scss */
 .cart .forsale .item img {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1619,7 +1625,7 @@ input[type="text"]:focus {
   vertical-align: top;
   width: 60px;
 }
-/* line 70, ../src/cart.scss */
+/* line 75, ../src/cart.scss */
 .cart .forsale .item .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1629,24 +1635,24 @@ input[type="text"]:focus {
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 75, ../src/cart.scss */
+/* line 80, ../src/cart.scss */
 .cart .forsale .item .desc span {
   display: block;
 }
-/* line 78, ../src/cart.scss */
+/* line 83, ../src/cart.scss */
 .cart .forsale .item .desc .name {
   color: #202020;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 83, ../src/cart.scss */
+/* line 88, ../src/cart.scss */
 .cart .forsale .item .desc .price {
   font-size: 14px;
   font-weight: bold;
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 90, ../src/cart.scss */
+/* line 95, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1658,7 +1664,7 @@ input[type="text"]:focus {
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 98, ../src/cart.scss */
+/* line 103, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -1669,7 +1675,7 @@ input[type="text"]:focus {
   text-align: center;
   color: #808080;
 }
-/* line 108, ../src/cart.scss */
+/* line 113, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs input {
   display: block;
   float: left;
@@ -1680,7 +1686,7 @@ input[type="text"]:focus {
   border: none;
   text-align: center;
 }
-/* line 119, ../src/cart.scss */
+/* line 124, ../src/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;
