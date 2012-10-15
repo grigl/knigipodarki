@@ -46,6 +46,12 @@
     li {
       @include inline-block;
       margin-left: 10px;
+      &.current {
+        a {
+          color: #f7941e;
+          background: #f7941e;
+        }
+      }
       &:first-child {
         margin-left: 0;
       }
@@ -61,10 +67,6 @@
         &:hover {
           background: #f7941e;
           color: #f7941e;
-        }
-        &.active {
-          color: #f7941e;
-          background: #f7941e;
         }
       }
     }
