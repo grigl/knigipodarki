@@ -14,7 +14,6 @@ var ResetSorting = function() {
     });
 }
 
-
 var SlickFoot = function() {
     var windowHeight;
 
@@ -23,8 +22,14 @@ var SlickFoot = function() {
     }).resize()
 
     $(window).scroll(function(){
-      var scrolledToBottom = $(document).scrollTop() + windowHeight == $(document).height()
-      $('html').toggleClass('scrolled-to-bottom', scrolledToBottom) // класс переключается у <html>
+      var docHeight = $(document).height(),
+        cartHeight = $('.cart').innerHeight(),
+        cartFixed = $('html').hasClass('scrolled-to-bottom');
+
+      if (cartFixed): docHeight -= cartHeight;
+
+      var scrolledToBottom = $(document).scrollTop() + windowHeight - cartHeight >= docHeight - $('footer').innerHeight();
+      $('html').toggleClass('scrolled-to-bottom', scrolledToBottom); // класс переключается у <html>
     })
 }
 
