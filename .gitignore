@@ -11,3 +11,4 @@ _markup/.sass-cache
 Vagrantfile
 vagrant/*
 public/assets
+.sass-cache
