@@ -26,7 +26,7 @@ var SlickFoot = function() {
         cartHeight = $('.cart').innerHeight(),
         cartFixed = $('html').hasClass('scrolled-to-bottom');
 
-      if (cartFixed): docHeight -= cartHeight;
+      if (cartFixed) docHeight -= cartHeight;
 
       var scrolledToBottom = $(document).scrollTop() + windowHeight - cartHeight >= docHeight - $('footer').innerHeight();
       $('html').toggleClass('scrolled-to-bottom', scrolledToBottom); // класс переключается у <html>
