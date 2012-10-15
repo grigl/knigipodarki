@@ -36,7 +36,7 @@ namespace :sync do
         ftp.getbinaryfile(ftp_file, file, 1024)
         ftp.delete(ftp_file)
         ftp.close
-        #parse_file(file)
+        parse_file(file)
       else
         puts "No file to parse: " + ftp_file
         ftp.close  
