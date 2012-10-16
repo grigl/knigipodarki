@@ -1,6 +1,6 @@
 #some requires
 require 'net/ftp'
-require 'net/pop'
+#require 'net/pop'
 require 'xmlsimple'
 require 'mail'
 
