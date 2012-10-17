@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121017083444) do
+ActiveRecord::Schema.define(:version => 20121017221244) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -233,19 +233,30 @@ ActiveRecord::Schema.define(:version => 20121017083444) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
-    t.text     "body",             :limit => 16777215
+    t.text     "body",                   :limit => 16777215
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "show_in_header",                       :default => false, :null => false
-    t.boolean  "show_in_footer",                       :default => false, :null => false
+    t.boolean  "show_in_header",                             :default => false, :null => false
+    t.boolean  "show_in_footer",                             :default => false, :null => false
     t.string   "foreign_link"
-    t.integer  "position",                             :default => 1,     :null => false
-    t.boolean  "visible",                              :default => true
+    t.integer  "position",                                   :default => 1,     :null => false
+    t.boolean  "visible",                                    :default => true
     t.string   "meta_keywords"
     t.string   "meta_description"
     t.string   "layout"
-    t.boolean  "show_in_sidebar",                      :default => false, :null => false
+    t.boolean  "show_in_sidebar",                            :default => false, :null => false
+    t.text     "about_knigipodarki"
+    t.text     "about_contacts"
+    t.text     "payment_robokassa"
+    t.text     "payment_courier"
+    t.text     "delivery_courier"
+    t.text     "delivery_ems"
+    t.text     "delivery_postamat"
+    t.text     "delivery_pickup"
+    t.text     "business_for_suppliers"
+    t.text     "business_details"
+    t.text     "business_wholesale"
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug"

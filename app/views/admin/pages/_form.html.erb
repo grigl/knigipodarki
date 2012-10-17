@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag 'formtastic', 'formtastic_changes' %>
+
+<%= f.inputs do %>
+  <%= f.input :title %>
+  <%= f.input :about_knigipodarki, label: 'Магазин' %>
+  <%= f.input :about_contacts, label: 'Контакты' %>
+  <%= f.input :payment_robokassa, label: 'Робокасса' %>
+  <%= f.input :payment_courier, label: 'Наличными курьеру' %>
+  <%= f.input :delivery_courier, label: 'Курьерская' %>
+  <%= f.input :delivery_ems, label: 'EMS Почта России' %>
+  <%= f.input :delivery_postamat, label: 'Постамат' %>
+  <%= f.input :delivery_pickup, label: 'Самовывоз' %>
+  <%= f.input :business_for_suppliers, label: 'Поставщикам' %>
+  <%= f.input :business_details, label: 'Реквизиты' %>
+  <%= f.input :business_wholesale, label: 'Опт' %>
+<% end %>
