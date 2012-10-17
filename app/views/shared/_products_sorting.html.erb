@@ -1,25 +1,43 @@
 <% params[:page] ? (page = "&page=#{params[:page]}") : (page = '') %>
 <% order = "&order=#{!params[:order] || params[:order] == 'DESC' ? 'ASC' : 'DESC'}" %>
 <% params[:keywords] ? (keywords = "&keywords=#{params[:keywords]}") : (keywords = '') %>
+<% params[:material] ? (material = "&material=#{params[:material]}") : (material = '') %>
 
 <!-- sorting -->
 <nav class="sorting">
   <ul>
     <li>Сортировка:</li>
     <li>
-      <%= link_to 'по названию', request.path + '?sort=name' + order + page + keywords, 
+      <%= link_to 'по названию', request.path + '?sort=name' + order + page + keywords + material, 
           class: params[:order] && params[:sort] == 'name' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %>
     </li>
     <li>
-      <%= link_to 'по цене', request.path + '?sort=price' + order + page + keywords, 
-          class: params[:order] && params[:sort] == 'price' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %></li>
-    <li><a href="" class="none">по приветствию</a></li>
+      <%= link_to 'по цене', request.path + '?sort=price' + order + page + keywords + material, 
+          class: params[:order] && params[:sort] == 'price' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %>
+    </li>
+    <li>
+      <%= link_to 'по новизне', request.path + '?sort=created_at' + order + page + keywords + material, 
+          class: params[:order] && params[:sort] == 'created_at' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %>
+    </li>
   </ul>
-  <ul>
-    <li>Материал:</li>
-    <li><a href="" class="none">ПВХ</a></li>
-    <li><a href="" class="none">текстиль</a></li>
-    <li><a href="" class="none">кожа</a></li>
-  </ul>
+
+  <% if params[:taxonomy] && params[:taxon] && params[:taxon] == 'passport' %>
+    <% params[:sort] ? (sort = "&sort=#{params[:sort]}") : (sort = '') %>
+    <ul>
+      <li>Материал:</li>
+      <li>
+        <%= link_to 'Все', request.path + "?material=all" + sort + order + page + keywords %>
+      </li>
+      <li>
+        <%= link_to 'ПВХ', request.path + "?material=pvh" + sort + order + page + keywords %>
+      </li>
+      <li>
+        <%= link_to 'текстиль', request.path + "?material=textile" + sort + order + page + keywords %>
+      </li>
+      <li>
+        <%= link_to 'кожа', request.path + "?material=leather" + sort + order + page + keywords %>
+      </li>
+    </ul>
+  <% end %>
 </nav>
 <!-- /.sorting -->

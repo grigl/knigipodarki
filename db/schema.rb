@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121011132306) do
+ActiveRecord::Schema.define(:version => 20121017083444) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -357,6 +357,7 @@ ActiveRecord::Schema.define(:version => 20121011132306) do
     t.string   "supplier"
     t.string   "category_name"
     t.string   "subname"
+    t.string   "material"
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"

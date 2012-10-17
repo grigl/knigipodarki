@@ -18,7 +18,7 @@
         <%= f.label :supplier, 'Поставщик' %> <span class="required">*</span><br />
         <%= f.text_field :supplier, :class => 'fullwidth title', :readonly => true, :disabled => true  %>
         <%= f.error_message_on :supplier %>
-      <% end %>      
+      <% end %>    
       
       <%= f.field_container :category_name do %>
         <%= f.label :category_name, 'Категория' %> <span class="required">*</span><br />
@@ -84,6 +84,10 @@
       <p>
         <%= f.label :product_type, 'Тип товара' %><br />
         <%= f.select :product_type, @product.available_types, :include_blank => true %>
+      </p>
+      <p>
+        <%= f.label :material, 'Материал' %><br />
+        <%= f.select :material, [['ПВХ','pvh'],['текстиль', 'textile'],['кожа','leather']] , :include_blank => true %>
       </p>
       <% unless @product.has_variants? %>
         <% if Spree::Config[:track_inventory_levels] %>

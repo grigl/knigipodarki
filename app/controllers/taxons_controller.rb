@@ -39,6 +39,11 @@ class TaxonsController < Spree::BaseController
       end
     end
 
+    # material for passport goods
+    if params[:material] && params[:material] != 'all'
+      products = products.select { |product| product.material == params[:material] }
+    end
+
     @products = products.paginate(:page => params[:page], :per_page => 30)
     respond_with(@taxon)
   end
