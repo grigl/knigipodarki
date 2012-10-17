@@ -20,10 +20,12 @@ class UserRegistrationsController < Devise::RegistrationsController
       respond_to do |format|
         format.html { 
           set_flash_message(:notice, :signed_up)
+          UserRegistrationsMailer.registration_confirm(@user).deliver
           sign_in_and_redirect(:user, @user)
         }
         format.js {
           sign_in(@user, bypass: true)
+          UserRegistrationsMailer.registration_confirm(@user).deliver
           render js: "window.location = '#{products_url}';"
         }
       end
