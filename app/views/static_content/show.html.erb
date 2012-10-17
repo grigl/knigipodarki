@@ -1,16 +1,133 @@
-<%= content_for :meta_keywords do %>
-  <%= @page.meta_keywords %>
-<% end %>
-
-<%= content_for :meta_keywords do %>
-  <%= @page.meta_description %>
-<% end %>
-
 <!-- .content -->
   <section class="site-content">
     <div class="white-wrap">
       <div class="wrap">
-        <%= @page.body.html_safe %>
+        <!-- .about -->
+        <section class="about" id="about">
+
+          <h1>О нас</h1>
+
+          <!-- item -->
+          <article>
+            <img src="/images/about_shop.png" alt="">
+            <h2 class="">Магазин</h2>
+            <p>
+              <%= @page.about_knigipodarki.html_safe rescue '' %>
+            </p>
+          </article>
+          <!-- /item -->
+
+          <!-- item -->
+          <article>
+            <img src="/images/about_contacts.png" alt="">
+            <h2 class="">Контакты</h2>
+            <p>
+              <%= @page.about_contacts.html_safe rescue '' %>
+            </p>
+          </article>
+          <!-- /item -->
+
+        </section>
+        <!-- /.about -->
+
+        <!-- .about -->
+        <section class="about" id="payment">
+
+          <h1>Оплата</h1>
+
+          <!-- item -->
+          <article>
+            <img src="/images/about_robo.png" alt="">
+            <h2 class="">Робокасса</h2>
+            <p>
+              <%= @page.payment_robokassa.html_safe rescue '' %>
+            </p>
+          </article>
+          <!-- /item -->
+
+          <!-- item -->
+          <article>
+            <img src="/images/about_cash.png" alt="">
+            <h2 class="">Наличными курьеру</h2>
+            <p>
+              <%= @page.payment_courier.html_safe rescue '' %>
+            </p>
+          </article>
+          <!-- /item -->
+
+        </section>
+        <!-- /.about -->
+
+        <!-- .about -->
+        <section class="about" id="delivery">
+
+          <h1>Доставка</h1>
+
+          <!-- item -->
+          <article>
+            <img src="/images/about_delivery.png" alt="">
+            <h2 class="">Курьерская</h2>
+            <p>
+              <%= @page.delivery_courier.html_safe rescue '' %>
+            </p>
+          </article>
+          <!-- /item -->
+
+          <!-- item -->
+          <article>
+            <img src="/images/about_mail.png" alt="">
+            <h2 class="">EMS Почта России</h2>
+            <p>
+              <%= @page.delivery_ems.html_safe rescue '' %>
+            </p>
+            <img src="/images/about_postamat.png" alt="">
+            <h2 class="">Постамат</h2>
+            <p>
+              <%= @page.delivery_postamat.html_safe rescue '' %>
+            </p>
+            <img src="/images/about_self.png" alt="">
+            <h2 class="">Самовывоз</h2>
+            <p>
+              <%= @page.delivery_pickup.html_safe rescue '' %>
+            </p>
+          </article>
+          <!-- /item -->
+
+        </section>
+        <!-- /.about -->
+
+        <!-- .about -->
+        <section class="about" id="contacts">
+
+          <h1>Сотрудничество</h1>
+
+          <!-- item -->
+          <article>
+            <img src="/images/about_distrib.png" alt="">
+            <h2 class="">Поставщикам</h2>
+            <p>
+              <%= @page.business_for_suppliers.html_safe rescue '' %>
+            </p>
+            <img src="/images/about_opt.png" alt="">
+            <h2 class="">Опт</h2>
+            <p>
+             <%= @page.business_wholesale.html_safe rescue '' %>
+            </p>
+          </article>
+          <!-- /item -->
+
+          <!-- item -->
+          <article>
+            <img src="/images/about_req.png" alt="">
+            <h2 class="">Реквизиты</h2>
+            <p>
+              <%= @page.business_details.html_safe rescue '' %>
+            </p>
+          </article>
+          <!-- /item -->
+
+        </section>
+        <!-- /.about -->
       </div>
       <!-- /.wrap -->
     </div>
