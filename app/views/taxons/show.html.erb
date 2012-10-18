@@ -4,7 +4,7 @@
     <% unless params[:taxonomy] == 'categories' %>
       <!-- .brand -->
         <section class="brand">
-          <%= image_tag @taxon.icon.url(:normal) %>
+          <%= image_tag @taxon.icon.url(:normal) if @taxon.icon.exists? %>
           <article>
             <hgroup>
               <h1>
