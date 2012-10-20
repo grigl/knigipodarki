@@ -33,10 +33,11 @@
   clear: both;
   margin-bottom: 45px;
   font-size: 30px;
+  line-height: 1;
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 31, ../src/about.scss */
+/* line 32, ../src/about.scss */
 .about:first-child {
   margin-top: 48px;
 }

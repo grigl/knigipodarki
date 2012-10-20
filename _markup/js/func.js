@@ -14,7 +14,6 @@ var ResetSorting = function() {
     });
 }
 
-
 var SlickFoot = function() {
     var windowHeight;
 
@@ -45,10 +44,6 @@ var Slides = function() {
       effect: 'fade'
     });
 }
-
-
-
-
 
 $(function(){
     SortLinks();

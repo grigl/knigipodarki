@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../.rvm/gems/ruby-1.9.3-p286@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -538,29 +538,30 @@ input[type="text"]:focus {
   border: 1px solid #fff;
   position: relative;
   display: inline-block;
+  vertical-align: top;
   padding: 30px 0 15px 0;
 }
-/* line 9, ../src/shop.scss */
+/* line 10, ../src/shop.scss */
 .catalogue .item a {
   color: #404040;
   text-decoration: none;
 }
-/* line 13, ../src/shop.scss */
+/* line 14, ../src/shop.scss */
 .catalogue .item:hover {
   width: 230px;
   border: 1px solid #fbc98e;
 }
-/* line 17, ../src/shop.scss */
+/* line 18, ../src/shop.scss */
 .catalogue .item img {
   display: block;
   margin: 0 auto;
 }
-/* line 21, ../src/shop.scss */
+/* line 22, ../src/shop.scss */
 .catalogue .item article {
   margin-top: 15px;
   padding: 0 30px 0 30px;
 }
-/* line 24, ../src/shop.scss */
+/* line 25, ../src/shop.scss */
 .catalogue .item article .price {
   display: block;
   float: left;
@@ -569,7 +570,7 @@ input[type="text"]:focus {
   color: #e66f50;
   margin-bottom: 18px;
 }
-/* line 32, ../src/shop.scss */
+/* line 33, ../src/shop.scss */
 .catalogue .item article .marker {
   margin-left: 20px;
   color: #fff;
@@ -577,18 +578,18 @@ input[type="text"]:focus {
   text-transform: uppercase;
   padding: 1px 3px;
 }
-/* line 39, ../src/shop.scss */
+/* line 40, ../src/shop.scss */
 .catalogue .item article h2 {
   font-size: 16px;
   font-weight: bold;
   clear: both;
 }
-/* line 44, ../src/shop.scss */
+/* line 45, ../src/shop.scss */
 .catalogue .item article p {
   font-size: 14px;
   font-style: italic;
 }
-/* line 49, ../src/shop.scss */
+/* line 50, ../src/shop.scss */
 .catalogue .item .add-to-cart {
   display: none;
   position: absolute;
@@ -601,110 +602,110 @@ input[type="text"]:focus {
   font-size: 24px;
   color: #fff;
   background: url(../images/cart.png) right top no-repeat;
-  z-index: 9999;
+  z-index: 250;
 }
-/* line 62, ../src/shop.scss */
+/* line 63, ../src/shop.scss */
 .catalogue .item .add-to-cart:hover {
   color: #e66f50;
 }
-/* line 67, ../src/shop.scss */
+/* line 68, ../src/shop.scss */
 .catalogue .item:hover .add-to-cart {
   display: block;
 }
-/* line 71, ../src/shop.scss */
+/* line 72, ../src/shop.scss */
 .catalogue header {
   overflow: hidden;
   border-top: 1px solid #7f7f7f;
   padding: 18px 0 18px 0;
 }
-/* line 75, ../src/shop.scss */
+/* line 76, ../src/shop.scss */
 .catalogue header h2 {
   float: left;
   font-size: 30px;
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 81, ../src/shop.scss */
+/* line 82, ../src/shop.scss */
 .catalogue header a {
   float: right;
   font-weight: 300;
   color: #a0a0a0;
   text-decoration: none;
 }
-/* line 86, ../src/shop.scss */
+/* line 87, ../src/shop.scss */
 .catalogue header a:hover {
   text-decoration: underline;
 }
 
-/* line 93, ../src/shop.scss */
+/* line 94, ../src/shop.scss */
 .sorting {
   margin: 30px 0;
 }
-/* line 95, ../src/shop.scss */
+/* line 96, ../src/shop.scss */
 .sorting ul:first-child {
   border-left: none;
   margin-left: 0;
 }
-/* line 99, ../src/shop.scss */
+/* line 100, ../src/shop.scss */
 .sorting ul {
   display: inline-block;
   border-left: 1px solid #a0a0a0;
   padding-left: 24px;
 }
-/* line 103, ../src/shop.scss */
+/* line 104, ../src/shop.scss */
 .sorting ul li {
   display: inline;
   margin-right: 24px;
   color: #a0a0a0;
 }
-/* line 107, ../src/shop.scss */
+/* line 108, ../src/shop.scss */
 .sorting ul li a {
   color: red;
   text-decoration: none;
   border-bottom: 1px dashed #404040;
   color: #404040;
 }
-/* line 112, ../src/shop.scss */
+/* line 113, ../src/shop.scss */
 .sorting ul li a:hover {
   border-bottom: none;
 }
-/* line 115, ../src/shop.scss */
+/* line 116, ../src/shop.scss */
 .sorting ul li a:after {
   font-family: kp_icons;
   margin-left: 2px;
   font-weight: normal;
 }
-/* line 120, ../src/shop.scss */
+/* line 121, ../src/shop.scss */
 .sorting ul li a.up {
   font-weight: bold;
   border-bottom: none;
 }
-/* line 123, ../src/shop.scss */
+/* line 124, ../src/shop.scss */
 .sorting ul li a.up:after {
   content: '\32';
 }
-/* line 127, ../src/shop.scss */
+/* line 128, ../src/shop.scss */
 .sorting ul li a.down {
   font-weight: bold;
   border-bottom: none;
 }
-/* line 130, ../src/shop.scss */
+/* line 131, ../src/shop.scss */
 .sorting ul li a.down:after {
   content: '\31';
 }
 
-/* line 139, ../src/shop.scss */
+/* line 140, ../src/shop.scss */
 .pagination {
   margin-left: 30px;
 }
-/* line 142, ../src/shop.scss */
+/* line 143, ../src/shop.scss */
 .pagination ul li {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
   margin-right: 8px;
 }
-/* line 147, ../src/shop.scss */
+/* line 148, ../src/shop.scss */
 .pagination ul li a {
   display: block;
   height: 30px;
@@ -714,12 +715,12 @@ input[type="text"]:focus {
   color: #c0c0c0;
   background: #f8f8f8;
 }
-/* line 156, ../src/shop.scss */
+/* line 157, ../src/shop.scss */
 .pagination ul li a:hover {
   background: #f8f8f8;
   color: #f7941e;
 }
-/* line 161, ../src/shop.scss */
+/* line 162, ../src/shop.scss */
 .pagination ul li span {
   display: block;
   width: 42px;
@@ -727,11 +728,11 @@ input[type="text"]:focus {
   padding: 12px 14px 0 14px;
   font-size: 24px;
 }
-/* line 171, ../src/shop.scss */
+/* line 172, ../src/shop.scss */
 .pagination ul .current a {
   color: #000;
 }
-/* line 176, ../src/shop.scss */
+/* line 177, ../src/shop.scss */
 .pagination ul .arrow a {
   width: 50px;
   height: 36px;
@@ -739,38 +740,38 @@ input[type="text"]:focus {
   background: #f0f0f0;
   font-family: kp_icons;
 }
-/* line 182, ../src/shop.scss */
+/* line 183, ../src/shop.scss */
 .pagination ul .arrow a:hover {
   background: #f0f0f0;
 }
 
-/* line 190, ../src/shop.scss */
+/* line 191, ../src/shop.scss */
 .tags {
   width: 810px;
   margin: 0 auto;
   padding: 40px;
   border: 1px solid #99b6b7;
 }
-/* line 196, ../src/shop.scss */
+/* line 197, ../src/shop.scss */
 .tags ul li {
   display: inline;
   margin-left: 10px;
   line-height: 24px;
 }
-/* line 200, ../src/shop.scss */
+/* line 201, ../src/shop.scss */
 .tags ul li a {
   text-decoration: none;
 }
-/* line 202, ../src/shop.scss */
+/* line 203, ../src/shop.scss */
 .tags ul li a:hover {
   text-decoration: underline;
 }
 
-/* line 210, ../src/shop.scss */
+/* line 211, ../src/shop.scss */
 .product {
   margin-bottom: 45px;
 }
-/* line 212, ../src/shop.scss */
+/* line 213, ../src/shop.scss */
 .product figure {
   letter-spacing: normal;
   word-spacing: normal;
@@ -778,11 +779,11 @@ input[type="text"]:focus {
   vertical-align: top;
   width: 300px;
 }
-/* line 216, ../src/shop.scss */
+/* line 217, ../src/shop.scss */
 .product figure ul {
   margin-left: -17px;
 }
-/* line 218, ../src/shop.scss */
+/* line 219, ../src/shop.scss */
 .product figure ul li {
   letter-spacing: normal;
   word-spacing: normal;
@@ -790,12 +791,12 @@ input[type="text"]:focus {
   vertical-align: top;
   margin-left: 17px;
 }
-/* line 223, ../src/shop.scss */
+/* line 224, ../src/shop.scss */
 .product figure img {
   border: 1px solid #e8e8e8;
   margin-bottom: 20px;
 }
-/* line 228, ../src/shop.scss */
+/* line 229, ../src/shop.scss */
 .product article {
   letter-spacing: normal;
   word-spacing: normal;
@@ -804,22 +805,22 @@ input[type="text"]:focus {
   width: 590px;
   margin-left: 46px;
 }
-/* line 232, ../src/shop.scss */
+/* line 233, ../src/shop.scss */
 .product article hgroup {
   margin-bottom: 34px;
 }
-/* line 234, ../src/shop.scss */
+/* line 235, ../src/shop.scss */
 .product article hgroup h4 {
   color: #c0c0c0;
   font-size: 12px;
 }
-/* line 238, ../src/shop.scss */
+/* line 239, ../src/shop.scss */
 .product article hgroup h1 {
   font-size: 30px;
   margin-bottom: 20px;
   line-height: 40px;
 }
-/* line 243, ../src/shop.scss */
+/* line 244, ../src/shop.scss */
 .product article hgroup h2 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -829,7 +830,7 @@ input[type="text"]:focus {
   font-size: 21px;
   float: left;
 }
-/* line 249, ../src/shop.scss */
+/* line 250, ../src/shop.scss */
 .product article hgroup .marker {
   letter-spacing: normal;
   word-spacing: normal;
@@ -842,7 +843,7 @@ input[type="text"]:focus {
   text-transform: uppercase;
   padding: 1px 3px;
 }
-/* line 258, ../src/shop.scss */
+/* line 259, ../src/shop.scss */
 .product article hgroup .product-social {
   letter-spacing: normal;
   word-spacing: normal;
@@ -851,34 +852,34 @@ input[type="text"]:focus {
   vertical-align: middle;
   margin-left: 20px;
 }
-/* line 262, ../src/shop.scss */
+/* line 263, ../src/shop.scss */
 .product article hgroup .product-social li {
   display: inline;
   font-family: kp_icons;
   font-size: 15px;
   margin-right: 4px;
 }
-/* line 267, ../src/shop.scss */
+/* line 268, ../src/shop.scss */
 .product article hgroup .product-social li a {
   text-decoration: none;
 }
-/* line 272, ../src/shop.scss */
+/* line 273, ../src/shop.scss */
 .product article hgroup .product-social .icon-vk a {
   color: #285278;
 }
-/* line 277, ../src/shop.scss */
+/* line 278, ../src/shop.scss */
 .product article hgroup .product-social .icon-facebook a {
   color: #3c5e96;
 }
-/* line 282, ../src/shop.scss */
+/* line 283, ../src/shop.scss */
 .product article hgroup .product-social .icon-twitter a {
   color: #52afde;
 }
-/* line 288, ../src/shop.scss */
+/* line 289, ../src/shop.scss */
 .product article .cartline {
   margin-bottom: 36px;
 }
-/* line 290, ../src/shop.scss */
+/* line 291, ../src/shop.scss */
 .product article .cartline .cart {
   letter-spacing: normal;
   word-spacing: normal;
@@ -889,7 +890,7 @@ input[type="text"]:focus {
   background: #e66f50;
   padding: 10px 18px 10px 12px;
 }
-/* line 296, ../src/shop.scss */
+/* line 297, ../src/shop.scss */
 .product article .cartline .cart span {
   color: #fff;
   border-right: 2px solid #eb8c73;
@@ -897,7 +898,7 @@ input[type="text"]:focus {
   font-weight: bold;
   font-size: 18px;
 }
-/* line 304, ../src/shop.scss */
+/* line 305, ../src/shop.scss */
 .product article .cartline .cart a {
   margin-left: 12px;
   font-family: kp_icons;
@@ -905,7 +906,7 @@ input[type="text"]:focus {
   color: #fff;
   font-size: 22px;
 }
-/* line 312, ../src/shop.scss */
+/* line 313, ../src/shop.scss */
 .product article .cartline .stock {
   letter-spacing: normal;
   word-spacing: normal;
@@ -917,7 +918,7 @@ input[type="text"]:focus {
   font-size: 12px;
   color: #e66f50;
 }
-/* line 320, ../src/shop.scss */
+/* line 321, ../src/shop.scss */
 .product article .cartline .payment {
   letter-spacing: normal;
   word-spacing: normal;
@@ -929,12 +930,12 @@ input[type="text"]:focus {
   font-size: 12px;
   color: #c0c0c0;
 }
-/* line 330, ../src/shop.scss */
+/* line 331, ../src/shop.scss */
 .product aside {
   width: 590px;
   margin-left: 350px;
 }
-/* line 334, ../src/shop.scss */
+/* line 335, ../src/shop.scss */
 .product aside .specs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -944,14 +945,14 @@ input[type="text"]:focus {
   padding: 20px;
   background: #f8f8f8;
 }
-/* line 339, ../src/shop.scss */
+/* line 340, ../src/shop.scss */
 .product aside .specs h3 {
   font-size: 16px;
   font-weight: bold;
   color: #808080;
   margin-bottom: 20px;
 }
-/* line 346, ../src/shop.scss */
+/* line 347, ../src/shop.scss */
 .product aside .product-tags {
   letter-spacing: normal;
   word-spacing: normal;
@@ -961,12 +962,12 @@ input[type="text"]:focus {
   padding: 20px;
 }
 
-/* line 354, ../src/shop.scss */
+/* line 355, ../src/shop.scss */
 .search-result {
   margin-top: 40px;
   padding-left: 20px;
 }
-/* line 357, ../src/shop.scss */
+/* line 358, ../src/shop.scss */
 .search-result h1 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -975,11 +976,11 @@ input[type="text"]:focus {
   vertical-align: middle;
   font-size: 21px;
 }
-/* line 361, ../src/shop.scss */
+/* line 362, ../src/shop.scss */
 .search-result h1 span {
   font-weight: 700;
 }
-/* line 365, ../src/shop.scss */
+/* line 366, ../src/shop.scss */
 .search-result a {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1024,10 +1025,11 @@ input[type="text"]:focus {
   clear: both;
   margin-bottom: 45px;
   font-size: 30px;
+  line-height: 1;
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 31, ../src/about.scss */
+/* line 32, ../src/about.scss */
 .about:first-child {
   margin-top: 48px;
 }
@@ -1543,81 +1545,95 @@ input[type="text"]:focus {
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 200;
+  z-index: 280;
 }
 /* line 13, ../src/cart.scss */
 .cart .panel {
-  overflow: hidden;
+  position: relative;
   background: #404040;
-  height: 40px;
+  height: 50px;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
 }
 /* line 20, ../src/cart.scss */
+.cart .panel .sp {
+  overflow: hidden;
+  width: 100%;
+}
+/* line 24, ../src/cart.scss */
 .cart .panel .gray_decor {
   height: 10px;
   background: #808080;
-  margin-top: 20px;
+  margin-top: 0;
 }
-/* line 25, ../src/cart.scss */
+/* line 29, ../src/cart.scss */
 .cart .panel a {
   color: #fff;
   text-decoration: none;
 }
-/* line 29, ../src/cart.scss */
+/* line 33, ../src/cart.scss */
 .cart .panel .items {
   display: block;
-  height: 25px;
-  padding: 5px 10px 0 10px;
+  width: 120px;
+  height: 35px;
+  padding-top: 15px;
+  text-align: center;
   float: left;
   background: #e66f50;
 }
-/* line 36, ../src/cart.scss */
+/* line 42, ../src/cart.scss */
 .cart .panel .cart-order {
+  position: absolute;
+  top: 0;
+  left: 120px;
   display: block;
-  height: 25px;
-  padding: 5px 10px 0 10px;
+  height: 35px;
+  padding: 15px 20px 0 20px;
   float: left;
   background: #f3a062;
+  z-index: 300;
 }
-/* line 43, ../src/cart.scss */
+/* line 52, ../src/cart.scss */
+.cart .panel .cart-order:active {
+  color: red;
+}
+/* line 56, ../src/cart.scss */
 .cart .panel .control {
   display: block;
-  height: 25px;
-  padding: 5px 10px 0 10px;
+  height: 35px;
+  padding: 15px 10px 0 10px;
   float: right;
   font-family: kp_icons;
 }
-/* line 49, ../src/cart.scss */
+/* line 62, ../src/cart.scss */
 .cart .panel .control .close {
   display: none;
 }
-/* line 53, ../src/cart.scss */
+/* line 66, ../src/cart.scss */
 .cart .panel .control.active .open {
   display: none;
 }
-/* line 56, ../src/cart.scss */
+/* line 69, ../src/cart.scss */
 .cart .panel .control.active .close {
   display: block;
 }
-/* line 62, ../src/cart.scss */
+/* line 75, ../src/cart.scss */
 .cart .forsale {
   width: 1100px;
   margin: 0 auto;
   padding-top: 30px;
+  height: 278px;
+  overflow: scroll;
 }
-/* line 66, ../src/cart.scss */
+/* line 81, ../src/cart.scss */
 .cart .forsale .item {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
-  width: 220px;
+  width: 222px;
+  float: left;
   padding: 0 52px 0 0;
   margin-bottom: 30px;
 }
-/* line 71, ../src/cart.scss */
+/* line 87, ../src/cart.scss */
 .cart .forsale .item img {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1625,7 +1641,7 @@ input[type="text"]:focus {
   vertical-align: top;
   width: 60px;
 }
-/* line 75, ../src/cart.scss */
+/* line 91, ../src/cart.scss */
 .cart .forsale .item .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1635,24 +1651,24 @@ input[type="text"]:focus {
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 80, ../src/cart.scss */
+/* line 96, ../src/cart.scss */
 .cart .forsale .item .desc span {
   display: block;
 }
-/* line 83, ../src/cart.scss */
+/* line 99, ../src/cart.scss */
 .cart .forsale .item .desc .name {
   color: #202020;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 88, ../src/cart.scss */
+/* line 104, ../src/cart.scss */
 .cart .forsale .item .desc .price {
   font-size: 14px;
   font-weight: bold;
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 95, ../src/cart.scss */
+/* line 111, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1664,7 +1680,7 @@ input[type="text"]:focus {
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 103, ../src/cart.scss */
+/* line 119, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -1675,7 +1691,7 @@ input[type="text"]:focus {
   text-align: center;
   color: #808080;
 }
-/* line 113, ../src/cart.scss */
+/* line 129, ../src/cart.scss */
 .cart .forsale .item .desc .controls .inputs input {
   display: block;
   float: left;
@@ -1686,7 +1702,7 @@ input[type="text"]:focus {
   border: none;
   text-align: center;
 }
-/* line 124, ../src/cart.scss */
+/* line 140, ../src/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;
