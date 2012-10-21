@@ -11,7 +11,7 @@ gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :ref => 'a185
 gem 'synergy', '~> 0.60.0'
 gem 'synergy_default_theme', '1.0.2'
 gem 'will_paginate'
-
+# gem 'activerecord-mysql2-adapter'
 # Use unicorn as the web server
 # gem 'unicorn'
 
