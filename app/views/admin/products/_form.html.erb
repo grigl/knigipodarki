@@ -9,19 +9,19 @@
       <% end %>
       
       <%= f.field_container :subname do %>
-        <%= f.label :subname, 'Название' %> <span class="required">*</span><br />
+        <%= f.label :subname, 'Название' %><br />
         <%= f.text_field :subname, :class => 'fullwidth title', :readonly => true, :disabled => true  %>
         <%= f.error_message_on :subname %>
       <% end %>      
       
       <%= f.field_container :supplier do %>
-        <%= f.label :supplier, 'Поставщик' %> <span class="required">*</span><br />
+        <%= f.label :supplier, 'Поставщик' %><br />
         <%= f.text_field :supplier, :class => 'fullwidth title', :readonly => true, :disabled => true  %>
         <%= f.error_message_on :supplier %>
       <% end %>    
       
       <%= f.field_container :category_name do %>
-        <%= f.label :category_name, 'Категория' %> <span class="required">*</span><br />
+        <%= f.label :category_name, 'Категория' %><br />
         <%= f.text_field :category_name, :class => 'fullwidth title', :readonly => true, :disabled => true  %>
         <%= f.error_message_on :category_name %>
       <% end %>         
