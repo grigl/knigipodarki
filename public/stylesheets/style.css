@@ -1871,7 +1871,7 @@ input[type="text"]:focus {
 /* line 43, sass/temp.scss */
 .registration-form .registration-form-left .forgot-mess {
   overflow: hidden;
-  width: 540px;
+  width: 600px;
   height: 25px;
   padding-top: 5px;
   background: #e66f4f;
