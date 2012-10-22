@@ -207,12 +207,39 @@ input[type="text"]:focus {
 .site-header .panel .login .l-registration:hover {
   background: #f9b461;
 }
-/* line 124, ../src/layout.scss */
+/* line 123, ../src/layout.scss */
+.site-header .panel .user {
+  max-width: 260px;
+  float: right;
+  padding-top: 5px;
+  margin: 0 10px 0 10px;
+  position: relative;
+}
+/* line 129, ../src/layout.scss */
+.site-header .panel .user:before {
+  content: "";
+  position: absolute;
+  right: -14px;
+  top: 14px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #fff;
+}
+/* line 140, ../src/layout.scss */
+.site-header .panel .user .user_name {
+  display: block;
+  max-width: 260px;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+/* line 148, ../src/layout.scss */
 .site-header .navigations {
   margin-top: 20px;
   position: relative;
 }
-/* line 128, ../src/layout.scss */
+/* line 152, ../src/layout.scss */
 .site-header .navigations .search input {
   width: 280px;
   padding: 0 10px;
@@ -220,7 +247,7 @@ input[type="text"]:focus {
   border: 1px solid #e0e0e0;
   position: relative;
 }
-/* line 135, ../src/layout.scss */
+/* line 159, ../src/layout.scss */
 .site-header .navigations .search input:last-child {
   width: auto;
   background: none;
@@ -232,26 +259,26 @@ input[type="text"]:focus {
   top: 0;
   right: -3px;
 }
-/* line 147, ../src/layout.scss */
+/* line 171, ../src/layout.scss */
 .site-header .navigations .logo {
   float: left;
 }
-/* line 150, ../src/layout.scss */
+/* line 174, ../src/layout.scss */
 .site-header .navigations .search {
   float: right;
 }
-/* line 153, ../src/layout.scss */
+/* line 177, ../src/layout.scss */
 .site-header .navigations .direction-nav {
   border-bottom: 1px solid #404040;
   padding-bottom: 6px;
   margin: 30px 0 62px 0;
 }
-/* line 158, ../src/layout.scss */
+/* line 182, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li {
   display: inline-block;
   margin-right: 1px;
 }
-/* line 161, ../src/layout.scss */
+/* line 185, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li a {
   display: inline-block;
   padding: 10px 10px;
@@ -259,46 +286,46 @@ input[type="text"]:focus {
   text-decoration: none;
   color: #404040;
 }
-/* line 167, ../src/layout.scss */
+/* line 191, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li a:hover {
   border: 3px solid #edf2f2;
   padding: 7px 7px;
 }
-/* line 172, ../src/layout.scss */
+/* line 196, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li:last-child {
   margin-right: 0;
 }
-/* line 177, ../src/layout.scss */
+/* line 201, ../src/layout.scss */
 .site-header .navigations .direction-nav ul li.current a {
   background: #4c7f82;
   color: #fff;
 }
-/* line 184, ../src/layout.scss */
+/* line 208, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav {
   position: absolute;
   top: 130px;
 }
-/* line 192, ../src/layout.scss */
+/* line 216, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav ul li {
   display: inline;
   margin-right: 24px;
 }
-/* line 195, ../src/layout.scss */
+/* line 219, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a {
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
 }
-/* line 199, ../src/layout.scss */
+/* line 223, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 205, ../src/layout.scss */
+/* line 229, ../src/layout.scss */
 .site-header .navigations .sub-direction-nav ul .current a {
   font-weight: bold;
 }
 
-/* line 216, ../src/layout.scss */
+/* line 240, ../src/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -307,15 +334,15 @@ input[type="text"]:focus {
   padding: 30px 0 30px 0;
   font-size: .9em;
 }
-/* line 224, ../src/layout.scss */
+/* line 248, ../src/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 227, ../src/layout.scss */
+/* line 251, ../src/layout.scss */
 .site-footer .foot-right {
   float: left;
 }
-/* line 230, ../src/layout.scss */
+/* line 254, ../src/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   display: inline-block;
@@ -323,71 +350,71 @@ input[type="text"]:focus {
   margin-left: 10px;
   position: relative;
 }
-/* line 236, ../src/layout.scss */
+/* line 260, ../src/layout.scss */
 .site-footer .foot-right a.social img {
   position: absolute;
   top: -4px;
 }
-/* line 241, ../src/layout.scss */
+/* line 265, ../src/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   display: inline-block;
   vertical-align: top;
 }
-/* line 246, ../src/layout.scss */
+/* line 270, ../src/layout.scss */
 .site-footer .foot-right .mail {
   margin-right: 10px;
 }
-/* line 250, ../src/layout.scss */
+/* line 274, ../src/layout.scss */
 .site-footer .devs {
   float: right;
   width: 280px;
   margin-right: -60px;
 }
-/* line 256, ../src/layout.scss */
+/* line 280, ../src/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 260, ../src/layout.scss */
+/* line 284, ../src/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 265, ../src/layout.scss */
+/* line 289, ../src/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   padding-left: 10px;
 }
-/* line 271, ../src/layout.scss */
+/* line 295, ../src/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 77px;
 }
-/* line 277, ../src/layout.scss */
+/* line 301, ../src/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 280, ../src/layout.scss */
+/* line 304, ../src/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 282, ../src/layout.scss */
+/* line 306, ../src/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 292, ../src/layout.scss */
+/* line 316, ../src/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 294, ../src/layout.scss */
+/* line 318, ../src/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
