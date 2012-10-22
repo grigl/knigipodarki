@@ -28,15 +28,22 @@
   font-weight: bold;
   margin-bottom: 25px;
 }
-/* line 26, sass/about.scss */
+/* line 25, sass/about.scss */
+.about article h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+/* line 31, sass/about.scss */
 .about h1 {
   clear: both;
   margin-bottom: 45px;
   font-size: 30px;
   font-weight: 300;
   text-transform: uppercase;
+  line-height: 1;
 }
-/* line 33, sass/about.scss */
+/* line 39, sass/about.scss */
 .about:first-child {
   margin-top: 48px;
 }

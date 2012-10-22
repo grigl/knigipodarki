@@ -1020,7 +1020,12 @@ input[type="text"]:focus {
   font-weight: bold;
   margin-bottom: 25px;
 }
-/* line 24, ../src/about.scss */
+/* line 23, ../src/about.scss */
+.about article h3 {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+/* line 28, ../src/about.scss */
 .about h1 {
   clear: both;
   margin-bottom: 45px;
@@ -1029,7 +1034,7 @@ input[type="text"]:focus {
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 32, ../src/about.scss */
+/* line 36, ../src/about.scss */
 .about:first-child {
   margin-top: 48px;
 }
