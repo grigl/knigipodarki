@@ -15,6 +15,7 @@
 }
 /* line 10, ../src/login.scss */
 .registration-form .registration-form-left {
+  position: relative;
   float: left;
   width: 540px;
   margin-left: 80px;
@@ -42,6 +43,7 @@
 /* line 30, ../src/login.scss */
 .registration-form .registration-form-left .forgot-mess {
   overflow: hidden;
+  position: absolute;
   width: 600px;
   height: 25px;
   padding-top: 5px;

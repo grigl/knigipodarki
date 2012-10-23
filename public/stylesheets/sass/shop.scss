@@ -291,7 +291,7 @@
     }
     .cartline {
       margin-bottom: 36px;
-      .cart {
+      .single_cart {
         @include inline-block;
         vertical-align: middle;
         width: auto;
@@ -305,6 +305,9 @@
           padding-right: 12px;
           font-weight: bold;
           font-size: 18px;
+        }
+        form {
+          display: inline-block;
         }
         a {
           margin-left: 12px;

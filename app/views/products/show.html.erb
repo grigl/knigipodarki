@@ -35,7 +35,7 @@
               <%= render 'product_social' %>
             </hgroup> 
             <div class="cartline">
-              <div class="cart">
+              <div class="single_cart">
                 <span><%= @product.price %> р</span>
                 <%= form_for :order, :url => populate_orders_url, remote: true do |f| %>
                   <%= hidden_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 1 %>             
