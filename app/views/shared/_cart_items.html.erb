@@ -12,7 +12,7 @@
           <div class="controls">
             <div class="inputs">
               <%= link_to '-', minus_line_item_path(line_item.id), remote: true, method: 'post', class: 'minus' %>
-              <span class="quantity"><%= line_item.quantity %></span>
+              <span class="count quantity"><%= line_item.quantity %></span>
               <%= link_to '+', plus_line_item_path(line_item.id), remote: true, method: 'post', class: 'plus' %>
             </div>
             <%= link_to 'p', delete_line_item_path(line_item.id), remote: true, method: 'post', class: 'delete' %>

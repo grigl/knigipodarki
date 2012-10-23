@@ -120,6 +120,30 @@ input[type="text"]:focus {outline: none;}
         }
       }
     }
+    .user {
+      max-width: 260px;
+      float: right;
+      padding-top: 5px;
+      margin: 0 10px 0 10px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        right: -14px;
+        top: 14px;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 5px solid #fff;
+      }
+      .user_name {
+        display: block;
+        max-width: 260px;
+        overflow-x: hidden;
+        text-decoration: none;
+      }
+    }
   }
   .navigations {
     margin-top: 20px;

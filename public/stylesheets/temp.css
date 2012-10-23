@@ -19,6 +19,7 @@
 /* line 10, ../src/login.scss */
 /* line 17, sass/temp.scss */
 .registration-form .registration-form-left {
+  position: relative;
   float: left;
   width: 540px;
   margin-left: 80px;
@@ -26,37 +27,38 @@
 }
 
 /* line 15, ../src/login.scss */
-/* line 24, sass/temp.scss */
+/* line 25, sass/temp.scss */
 .registration-form .registration-form-left fieldset {
   padding-top: 3px;
   float: left;
 }
 
 /* line 18, ../src/login.scss */
-/* line 29, sass/temp.scss */
+/* line 30, sass/temp.scss */
 .registration-form .registration-form-left fieldset.fright {
   float: right;
 }
 
 /* line 21, ../src/login.scss */
-/* line 33, sass/temp.scss */
+/* line 34, sass/temp.scss */
 .registration-form .registration-form-left fieldset label {
   font-weight: bold;
 }
 
 /* line 24, ../src/login.scss */
-/* line 37, sass/temp.scss */
+/* line 38, sass/temp.scss */
 .registration-form .registration-form-left fieldset input {
   width: 156px;
   padding: 0 10px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 /* line 30, ../src/login.scss */
-/* line 43, sass/temp.scss */
+/* line 44, sass/temp.scss */
 .registration-form .registration-form-left .forgot-mess {
   overflow: hidden;
-  width: 540px;
+  position: absolute;
+  width: 600px;
   height: 25px;
   padding-top: 5px;
   background: #e66f4f;
@@ -65,7 +67,7 @@
 }
 
 /* line 38, ../src/login.scss */
-/* line 53, sass/temp.scss */
+/* line 55, sass/temp.scss */
 .registration-form .registration-form-left .forgot-mess .close-little {
   float: right;
   font-family: kp_icons;
@@ -76,7 +78,7 @@
 }
 
 /* line 48, ../src/login.scss */
-/* line 62, sass/temp.scss */
+/* line 64, sass/temp.scss */
 .registration-form .registration-form-right {
   float: right;
   width: 280px;
@@ -85,7 +87,7 @@
 }
 
 /* line 53, ../src/login.scss */
-/* line 69, sass/temp.scss */
+/* line 71, sass/temp.scss */
 .registration-form .registration-form-right a {
   color: #fff;
   font-weight: bold;
@@ -93,20 +95,20 @@
 }
 
 /* line 57, ../src/login.scss */
-/* line 75, sass/temp.scss */
+/* line 77, sass/temp.scss */
 .registration-form .registration-form-right a.forgot {
   display: block;
   margin-top: 5px;
 }
 
 /* line 62, ../src/login.scss */
-/* line 80, sass/temp.scss */
+/* line 82, sass/temp.scss */
 .registration-form .registration-form-right .mleft {
   margin-left: 60px;
 }
 
 /* line 65, ../src/login.scss */
-/* line 84, sass/temp.scss */
+/* line 86, sass/temp.scss */
 .registration-form .registration-form-right .input-black {
   background: #000;
   color: #fff;
@@ -116,7 +118,7 @@
 }
 
 /* line 73, ../src/login.scss */
-/* line 92, sass/temp.scss */
+/* line 94, sass/temp.scss */
 .registration-form .close {
   position: absolute;
   z-index: 9000;
@@ -128,13 +130,13 @@
   text-decoration: none;
 }
 
-/* line 103, sass/temp.scss */
+/* line 105, sass/temp.scss */
 span.field_with_errors input {
   background-color: #E66F50;
 }
 
 /* line 1, ../src/login.scss */
-/* line 108, sass/temp.scss */
+/* line 110, sass/temp.scss */
 .restore-password-form {
   background: #4c7f82;
   width: 100%;
@@ -147,7 +149,7 @@ span.field_with_errors input {
 }
 
 /* line 10, ../src/login.scss */
-/* line 119, sass/temp.scss */
+/* line 121, sass/temp.scss */
 .restore-password-form .restore-password-form-left {
   float: left;
   width: 540px;
@@ -156,26 +158,26 @@ span.field_with_errors input {
 }
 
 /* line 15, ../src/login.scss */
-/* line 126, sass/temp.scss */
+/* line 128, sass/temp.scss */
 .restore-password-form .restore-password-form-left fieldset {
   padding-top: 3px;
   float: left;
 }
 
 /* line 18, ../src/login.scss */
-/* line 131, sass/temp.scss */
+/* line 133, sass/temp.scss */
 .restore-password-form .restore-password-form-left fieldset.fright {
   float: right;
 }
 
 /* line 21, ../src/login.scss */
-/* line 135, sass/temp.scss */
+/* line 137, sass/temp.scss */
 .restore-password-form .restore-password-form-left fieldset label {
   font-weight: bold;
 }
 
 /* line 24, ../src/login.scss */
-/* line 139, sass/temp.scss */
+/* line 141, sass/temp.scss */
 .restore-password-form .restore-password-form-left fieldset input {
   width: 156px;
   padding: 0 10px;
@@ -183,7 +185,7 @@ span.field_with_errors input {
 }
 
 /* line 30, ../src/login.scss */
-/* line 145, sass/temp.scss */
+/* line 147, sass/temp.scss */
 .restore-password-form .restore-password-form-left .forgot-mess {
   overflow: hidden;
   width: 540px;
@@ -195,7 +197,7 @@ span.field_with_errors input {
 }
 
 /* line 38, ../src/login.scss */
-/* line 155, sass/temp.scss */
+/* line 157, sass/temp.scss */
 .restore-password-form .restore-password-form-left .forgot-mess .close-little {
   float: right;
   font-family: kp_icons;
@@ -206,7 +208,7 @@ span.field_with_errors input {
 }
 
 /* line 48, ../src/login.scss */
-/* line 164, sass/temp.scss */
+/* line 166, sass/temp.scss */
 .restore-password-form .restore-password-form-right {
   float: right;
   width: 280px;
@@ -215,7 +217,7 @@ span.field_with_errors input {
 }
 
 /* line 53, ../src/login.scss */
-/* line 171, sass/temp.scss */
+/* line 173, sass/temp.scss */
 .restore-password-form .restore-password-form-right a {
   color: #fff;
   font-weight: bold;
@@ -223,20 +225,20 @@ span.field_with_errors input {
 }
 
 /* line 57, ../src/login.scss */
-/* line 177, sass/temp.scss */
+/* line 179, sass/temp.scss */
 .restore-password-form .restore-password-form-right a.forgot {
   display: block;
   margin-top: 5px;
 }
 
 /* line 62, ../src/login.scss */
-/* line 182, sass/temp.scss */
+/* line 184, sass/temp.scss */
 .restore-password-form .restore-password-form-right .mleft {
   margin-left: 60px;
 }
 
 /* line 65, ../src/login.scss */
-/* line 186, sass/temp.scss */
+/* line 188, sass/temp.scss */
 .restore-password-form .restore-password-form-right .input-black {
   background: #000;
   color: #fff;
@@ -246,7 +248,7 @@ span.field_with_errors input {
 }
 
 /* line 73, ../src/login.scss */
-/* line 194, sass/temp.scss */
+/* line 196, sass/temp.scss */
 .restore-password-form .close {
   position: absolute;
   z-index: 9000;

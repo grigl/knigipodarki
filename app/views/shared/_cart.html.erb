@@ -6,8 +6,9 @@
   <% end %>
 
     <!-- .panel -->
-    <div class="panel sp">
-      <%= render 'shared/cart_panel' %>
+    <div class="panel">
+      <%= link_to "Оформить заказ #{current_order.total rescue nil}", checkout_path, :class => 'cart-order' %>
+      <div class="panel_in sp"><%= render 'shared/cart_panel' %></div>
     </div>
     <!-- /.panel -->
 
