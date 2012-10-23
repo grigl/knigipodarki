@@ -39,6 +39,8 @@ class AppConfiguration < Configuration
   preference :dismissed_spree_alerts, :string, :default => ''
   preference :last_check_for_spree_alerts, :string, :default => nil
 
+  preference :main_phone, :string, :default => nil
+
   validates :name, :presence => true, :uniqueness => true
 
 end
