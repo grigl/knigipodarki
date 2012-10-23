@@ -2,7 +2,12 @@
   <!-- shop-item -->
   <div structure="product-preview" class="item" href="">
     <%= link_to product do %>
-      <%= product_image(product) %>
+      <% unless product.images.empty? %>
+        <%= image_tag product.images.first.attachment.url(:large), id: 'product_image' %>
+      <% else %>
+        <%= image_tag '/images/noimage/one_noimage.png' %>
+      <% end %>
+
       <article>
         <span class="price"><%= product.price %></span>
         <h2><%= product.name %></h2>
