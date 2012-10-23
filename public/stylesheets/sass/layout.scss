@@ -32,6 +32,11 @@ p {
 
 input[type="text"]:focus {outline: none;}
 
+.cl {
+  clear: both;
+  font-size: 0px;
+}
+
 .sp_show {
   display: none;
 }
@@ -57,7 +62,6 @@ input[type="text"]:focus {outline: none;}
   .panel {
     background: $color;
     height: 30px;
-    overflow: hidden;
     color: #fff;
     text-align: right;
     a {
@@ -128,6 +132,28 @@ input[type="text"]:focus {outline: none;}
       padding-top: 5px;
       margin: 0 10px 0 10px;
       position: relative;
+      .user_wrap {
+        position: relative;
+        height: 30px;
+        .logo_out {
+          display: none;
+        }
+        &:hover {
+          .logo_out {
+            display: block;
+            position: absolute;
+            top: 22px;
+            right: -6px;
+            padding: .1em .4em;
+            background: $color;
+            color: #909090;
+            text-decoration: none;
+            &:hover {
+              color: #808080;
+            }
+          }
+        }
+      }
       &:before {
         content: "";
         position: absolute;

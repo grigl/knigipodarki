@@ -16,8 +16,10 @@
         <% if current_user %>
         <!-- .sh-login -->
         <div class="user">
-          <%= link_to current_user.email, account_path , :class => "user_name" %>
-          
+          <div class="user_wrap">
+            <%= link_to current_user.email, account_path , :class => "user_name" %>
+            <%= link_to t('logout'), destroy_user_session_path, :class => "logo_out" %>
+          </div>
         </div>
         <!-- /.sh-login -->
         <% else %>
@@ -35,6 +37,8 @@
         <%= render 'shared/restore_password_form' %>
 
         <div class="phone">+7 947 614-25-18</div><!-- .sh-phone -->
+
+        <!-- clearfix --><div class="cl"></div>
 
       </div>
     </section>
@@ -58,8 +62,10 @@
 
       <%= render 'shared/navigation' %>
 
+      <!-- clearfix --><div class="cl"></div>
+
     </section>
     <!-- /.navigation -->
 
   </header>
-<!-- /.site-header -->
+<!-- /.site-header

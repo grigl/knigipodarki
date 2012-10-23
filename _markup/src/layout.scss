@@ -126,6 +126,11 @@ input[type="text"]:focus {outline: none;}
       padding-top: 5px;
       margin: 0 10px 0 10px;
       position: relative;
+      .user_wrap {
+        .logo_out {
+          display: none;
+        }
+      }
       &:before {
         content: "";
         position: absolute;
