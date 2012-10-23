@@ -10,9 +10,12 @@
           
           <!-- product image -->
           <figure>
-            <% if @product.images.first %>
+            <% unless @product.images.empty? %>
               <%= image_tag @product.images.first.attachment.url(:large), id: 'product_image' %>
+            <% else %>
+              <%= image_tag '/images/noimage/one_noimage.png' %>
             <% end %>
+
             <% unless @product.images.empty? %>
               <ul>
                 <% @product.images.each do |image| %>
