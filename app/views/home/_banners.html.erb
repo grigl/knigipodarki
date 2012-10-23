@@ -8,14 +8,12 @@
 
           <!-- .baner-item -->
             <div class="item">
-              <a href="http://<%= banner.link if banner.link %>">
+              <%= link_to url_with_protocol(banner.link) do %>
                 <%= image_tag banner.asset.url(:main) %>
-              </a>
+              <% end %>
                 <article>
                   <hgroup>
-                    <h2><a href="http://<%= banner.link if banner.link %>">
-                      <%= banner.title if banner.title %></a>
-                    </h2>
+                    <h2><%= link_to banner.title, url_with_protocol(banner.link) %></h2>
                     <h3><%= banner.subtitle if banner.subtitle %></h3>
                   </hgroup>
                     <p>

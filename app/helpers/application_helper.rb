@@ -1,5 +1,9 @@
 # encoding: utf-8
 module ApplicationHelper
+  def url_with_protocol(url)
+    /^http/.match(url) ? url : "http://#{url}"
+  end
+  
   def all_categories
     Taxonomy.find_by_name('Категории').root.children rescue nil
   end
