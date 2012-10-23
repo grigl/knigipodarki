@@ -207,12 +207,39 @@ input[type="text"]:focus {
 .site-header .panel .login .l-registration:hover {
   background: #f9b461;
 }
-/* line 126, sass/layout.scss */
+/* line 125, sass/layout.scss */
+.site-header .panel .user {
+  max-width: 260px;
+  float: right;
+  padding-top: 5px;
+  margin: 0 10px 0 10px;
+  position: relative;
+}
+/* line 131, sass/layout.scss */
+.site-header .panel .user:before {
+  content: "";
+  position: absolute;
+  right: -14px;
+  top: 14px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #fff;
+}
+/* line 142, sass/layout.scss */
+.site-header .panel .user .user_name {
+  display: block;
+  max-width: 260px;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+/* line 150, sass/layout.scss */
 .site-header .navigations {
   margin-top: 20px;
   position: relative;
 }
-/* line 130, sass/layout.scss */
+/* line 154, sass/layout.scss */
 .site-header .navigations .search input {
   width: 280px;
   padding: 0 10px;
@@ -220,7 +247,7 @@ input[type="text"]:focus {
   border: 1px solid #e0e0e0;
   position: relative;
 }
-/* line 137, sass/layout.scss */
+/* line 161, sass/layout.scss */
 .site-header .navigations .search input:last-child {
   width: auto;
   background: none;
@@ -232,26 +259,26 @@ input[type="text"]:focus {
   top: 0;
   right: -3px;
 }
-/* line 149, sass/layout.scss */
+/* line 173, sass/layout.scss */
 .site-header .navigations .logo {
   float: left;
 }
-/* line 152, sass/layout.scss */
+/* line 176, sass/layout.scss */
 .site-header .navigations .search {
   float: right;
 }
-/* line 155, sass/layout.scss */
+/* line 179, sass/layout.scss */
 .site-header .navigations .direction-nav {
   border-bottom: 1px solid #404040;
   padding-bottom: 6px;
   margin: 30px 0 62px 0;
 }
-/* line 160, sass/layout.scss */
+/* line 184, sass/layout.scss */
 .site-header .navigations .direction-nav ul li {
   display: inline-block;
   margin-right: 1px;
 }
-/* line 163, sass/layout.scss */
+/* line 187, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a {
   display: inline-block;
   padding: 10px 10px;
@@ -259,46 +286,46 @@ input[type="text"]:focus {
   text-decoration: none;
   color: #404040;
 }
-/* line 169, sass/layout.scss */
+/* line 193, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a:hover {
   border: 3px solid #edf2f2;
   padding: 7px 7px;
 }
-/* line 174, sass/layout.scss */
+/* line 198, sass/layout.scss */
 .site-header .navigations .direction-nav ul li:last-child {
   margin-right: 0;
 }
-/* line 179, sass/layout.scss */
+/* line 203, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.current a {
   background: #4c7f82;
   color: #fff;
 }
-/* line 186, sass/layout.scss */
+/* line 210, sass/layout.scss */
 .site-header .navigations .sub-direction-nav {
   position: absolute;
   top: 130px;
 }
-/* line 194, sass/layout.scss */
+/* line 218, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li {
   display: inline;
   margin-right: 24px;
 }
-/* line 197, sass/layout.scss */
+/* line 221, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a {
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
 }
-/* line 201, sass/layout.scss */
+/* line 225, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 207, sass/layout.scss */
+/* line 231, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul .current a {
   font-weight: bold;
 }
 
-/* line 218, sass/layout.scss */
+/* line 242, sass/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -307,15 +334,15 @@ input[type="text"]:focus {
   padding: 30px 0 30px 0;
   font-size: .9em;
 }
-/* line 226, sass/layout.scss */
+/* line 250, sass/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 229, sass/layout.scss */
+/* line 253, sass/layout.scss */
 .site-footer .foot-right {
   float: left;
 }
-/* line 232, sass/layout.scss */
+/* line 256, sass/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   display: inline-block;
@@ -323,71 +350,71 @@ input[type="text"]:focus {
   margin-left: 10px;
   position: relative;
 }
-/* line 238, sass/layout.scss */
+/* line 262, sass/layout.scss */
 .site-footer .foot-right a.social img {
   position: absolute;
   top: -4px;
 }
-/* line 243, sass/layout.scss */
+/* line 267, sass/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   display: inline-block;
   vertical-align: top;
 }
-/* line 248, sass/layout.scss */
+/* line 272, sass/layout.scss */
 .site-footer .foot-right .mail {
   margin-right: 10px;
 }
-/* line 252, sass/layout.scss */
+/* line 276, sass/layout.scss */
 .site-footer .devs {
   float: right;
   width: 280px;
   margin-right: -60px;
 }
-/* line 258, sass/layout.scss */
+/* line 282, sass/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 262, sass/layout.scss */
+/* line 286, sass/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 267, sass/layout.scss */
+/* line 291, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   padding-left: 10px;
 }
-/* line 273, sass/layout.scss */
+/* line 297, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 77px;
 }
-/* line 279, sass/layout.scss */
+/* line 303, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 282, sass/layout.scss */
+/* line 306, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 284, sass/layout.scss */
+/* line 308, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 294, sass/layout.scss */
+/* line 318, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 296, sass/layout.scss */
+/* line 320, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;

@@ -13,19 +13,22 @@
           </ul>
         </nav>
 
+        <% if current_user %>
+        <!-- .sh-login -->
+        <div class="user">
+          <%= link_to current_user.email, account_path , :class => "user_name" %>
+          
+        </div>
+        <!-- /.sh-login -->
+        <% else %>
         <!-- .sh-login -->
         <div class="login">
-          <% if current_user %>
-            <%= link_to current_user.email, account_path %>
-            <%= link_to t('logout'), destroy_user_session_path %>
-          <% else %>
-            <!-- <a href="" class="l-login">Войти</a> -->
             <%= link_to 'Войти', login_path, class: 'l-login' %>
-            <a href="" class="l-registration">Зарегистрироваться</a>
-          <% end %>          
+            <a href="" class="l-registration">Зарегистрироваться</a> 
           </div>
         </div>
         <!-- /.sh-login -->
+        <% end %> 
 
         <%= render 'shared/login_form' %>
         <%= render 'shared/registration_form' %>
