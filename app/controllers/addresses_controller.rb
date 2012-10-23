@@ -1,6 +1,5 @@
 class AddressesController < Spree::BaseController
   rescue_from ActiveRecord::RecordNotFound, :with => :render_404
-  load_and_authorize_resource
 
   def new
     @address = Address.default
@@ -8,6 +7,7 @@ class AddressesController < Spree::BaseController
   
   def edit
     session["user_return_to"] = request.env['HTTP_REFERER']
+    @address = Address.find(params[:id])
   end
 
   def create
@@ -22,6 +22,7 @@ class AddressesController < Spree::BaseController
   end
   
   def update
+    @address = Address.find(params[:id])
     if @address.editable?
       if @address.update_attributes(params[:address])
         flash[:notice] = I18n.t(:successfully_updated, :resource => I18n.t(:address))
@@ -43,6 +44,7 @@ class AddressesController < Spree::BaseController
   end
 
   def destroy
+    @address = Address.find(params[:id])
     if @address.can_be_deleted?
       @address.destroy
     else
