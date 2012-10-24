@@ -470,43 +470,36 @@ input[type="text"]:focus {
 /* line 14, sass/index.scss */
 .promo .baners .item a {
   text-decoration: none;
-}
-/* line 17, sass/index.scss */
-.promo .baners .item image {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
+  display: table-cell;
+  width: auto;
   vertical-align: top;
 }
 /* line 20, sass/index.scss */
 .promo .baners .item article {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
+  display: table-cell;
+  width: auto;
   vertical-align: top;
-  width: 480px;
-  margin-left: 36px;
-  padding: 26px 0 0 0;
+  padding: 26px 0 0 36px;
 }
-/* line 25, sass/index.scss */
+/* line 26, sass/index.scss */
 .promo .baners .item article hgroup {
   margin: 0 0 16px 0;
 }
-/* line 27, sass/index.scss */
+/* line 28, sass/index.scss */
 .promo .baners .item article hgroup h2 {
   font-size: 48px;
   margin: 0 0 20px 0;
 }
-/* line 30, sass/index.scss */
+/* line 31, sass/index.scss */
 .promo .baners .item article hgroup h2 a {
   color: #404040;
   text-decoration: none;
 }
-/* line 35, sass/index.scss */
+/* line 36, sass/index.scss */
 .promo .baners .item article hgroup h3 {
   font-size: 21px;
 }
-/* line 39, sass/index.scss */
+/* line 40, sass/index.scss */
 .promo .baners .item article .price {
   display: block;
   color: #4c7f82;
@@ -514,7 +507,7 @@ input[type="text"]:focus {
   font-size: 21px;
   margin-top: 22px;
 }
-/* line 49, sass/index.scss */
+/* line 50, sass/index.scss */
 .promo .baners-nav {
   width: 540px;
   position: absolute;
@@ -522,7 +515,7 @@ input[type="text"]:focus {
   right: 0;
   z-index: 100;
 }
-/* line 55, sass/index.scss */
+/* line 56, sass/index.scss */
 .promo .baners-nav li {
   letter-spacing: normal;
   word-spacing: normal;
@@ -530,16 +523,16 @@ input[type="text"]:focus {
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 59, sass/index.scss */
+/* line 60, sass/index.scss */
 .promo .baners-nav li.current a {
   color: #f7941e;
   background: #f7941e;
 }
-/* line 64, sass/index.scss */
+/* line 65, sass/index.scss */
 .promo .baners-nav li:first-child {
   margin-left: 0;
 }
-/* line 67, sass/index.scss */
+/* line 68, sass/index.scss */
 .promo .baners-nav li a {
   display: block;
   width: 19px;
@@ -550,12 +543,12 @@ input[type="text"]:focus {
   text-decoration: none;
   color: #fff;
 }
-/* line 76, sass/index.scss */
+/* line 77, sass/index.scss */
 .promo .baners-nav li a:hover {
   background: #f7941e;
   color: #f7941e;
 }
-/* line 83, sass/index.scss */
+/* line 84, sass/index.scss */
 .promo .baners-nav-ctl {
   height: 50px;
   padding-top: 30px;
@@ -564,26 +557,26 @@ input[type="text"]:focus {
   text-decoration: none;
   color: #f7941e;
 }
-/* line 91, sass/index.scss */
+/* line 92, sass/index.scss */
 .promo .baners-nav-left {
   position: absolute;
   top: 138px;
   padding-left: 12px;
   left: 0;
 }
-/* line 96, sass/index.scss */
+/* line 97, sass/index.scss */
 .promo .baners-nav-left:hover {
   padding-left: 7px;
   border-left: 5px solid #f7941e;
 }
-/* line 101, sass/index.scss */
+/* line 102, sass/index.scss */
 .promo .baners-nav-right {
   position: absolute;
   top: 138px;
   padding-right: 12px;
   right: 0;
 }
-/* line 106, sass/index.scss */
+/* line 107, sass/index.scss */
 .promo .baners-nav-right:hover {
   padding-right: 7px;
   border-right: 5px solid #f7941e;

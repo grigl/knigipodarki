@@ -13,15 +13,16 @@
       z-index: 1000;
       a {
         text-decoration: none;
-      }
-      image {
-        @include inline-block;
+        display: table-cell;
+        width: auto;
+        vertical-align: top;
       }
       article {
-        @include inline-block;
-        width: 480px;
-        margin-left: 36px;
-        padding: 26px 0 0 0;
+        display: table-cell;
+        width: auto;
+        vertical-align: top;
+        // margin-left: 36px;
+        padding: 26px 0 0 36px;
         hgroup {
           margin: 0 0 16px 0;
           h2 {
