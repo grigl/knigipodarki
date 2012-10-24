@@ -32,6 +32,7 @@
 .about article h3 {
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 14px;
 }
 /* line 31, sass/about.scss */
 .about h1 {
