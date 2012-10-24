@@ -36,7 +36,7 @@
         <%= render 'shared/registration_form' %>
         <%= render 'shared/restore_password_form' %>
 
-        <div class="phone">+7 947 614-25-18</div><!-- .sh-phone -->
+        <div class="phone"><%= Spree::Config[:main_phone] %></div><!-- .sh-phone -->
 
         <!-- clearfix --><div class="cl"></div>
 
