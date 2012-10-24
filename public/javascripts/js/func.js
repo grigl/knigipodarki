@@ -35,7 +35,7 @@ var SlickFoot = function() {
 
 var Spoiler = function() {
    $(".sp").live('click', function() {
-      $(".sp_show").slideToggle("fast");
+      $(".sp_show").slideToggle("fast", function(){ $('body').scroll() });
       $(".control.sp").toggleClass("active"); return false;
    });
   // $('.sp').live('click', function() {
