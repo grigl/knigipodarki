@@ -11,17 +11,20 @@
       width: 820px;
       margin: 0 auto;
       z-index: 1000;
-      a {
+      .cart_img {
         text-decoration: none;
-      }
-      image {
         @include inline-block;
+        width: 278px;
+        text-align: center;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
       }
       article {
         @include inline-block;
-        width: 480px;
-        margin-left: 36px;
-        padding: 26px 0 0 0;
+        width: 502px;
+        padding: 26px 0 0 36px;
         hgroup {
           margin: 0 0 16px 0;
           h2 {

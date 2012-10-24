@@ -79,9 +79,9 @@
   margin: 0 auto;
   padding-top: 30px;
   height: 240px;
-  overflow: scroll;
+  overflow-y: auto;
 }
-/* line 79, sass/cart.scss */
+/* line 81, sass/cart.scss */
 .cart .forsale .item {
   letter-spacing: normal;
   word-spacing: normal;
@@ -91,7 +91,7 @@
   padding: 0 52px 0 0;
   margin-bottom: 30px;
 }
-/* line 84, sass/cart.scss */
+/* line 86, sass/cart.scss */
 .cart .forsale .item img {
   letter-spacing: normal;
   word-spacing: normal;
@@ -100,7 +100,7 @@
   width: 60px;
   height: auto;
 }
-/* line 89, sass/cart.scss */
+/* line 91, sass/cart.scss */
 .cart .forsale .item .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -110,24 +110,24 @@
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 94, sass/cart.scss */
+/* line 96, sass/cart.scss */
 .cart .forsale .item .desc span {
   display: block;
 }
-/* line 97, sass/cart.scss */
+/* line 99, sass/cart.scss */
 .cart .forsale .item .desc .name {
   color: #202020;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 102, sass/cart.scss */
+/* line 104, sass/cart.scss */
 .cart .forsale .item .desc .price {
   font-size: 14px;
   font-weight: bold;
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 109, sass/cart.scss */
+/* line 111, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -139,7 +139,7 @@
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 117, sass/cart.scss */
+/* line 119, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -150,7 +150,7 @@
   text-align: center;
   color: #808080;
 }
-/* line 127, sass/cart.scss */
+/* line 129, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs .count {
   display: block;
   float: left;
@@ -161,7 +161,7 @@
   border: none;
   text-align: center;
 }
-/* line 138, sass/cart.scss */
+/* line 140, sass/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;

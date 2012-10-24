@@ -360,18 +360,19 @@ input[type="text"]:focus {
   color: #fff;
   text-align: right;
   overflow: hidden;
+  height: 50px;
   padding: 30px 0 30px 0;
   font-size: .9em;
 }
-/* line 276, sass/layout.scss */
+/* line 277, sass/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 279, sass/layout.scss */
+/* line 280, sass/layout.scss */
 .site-footer .foot-right {
   float: left;
 }
-/* line 282, sass/layout.scss */
+/* line 283, sass/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   display: inline-block;
@@ -379,71 +380,71 @@ input[type="text"]:focus {
   margin-left: 10px;
   position: relative;
 }
-/* line 288, sass/layout.scss */
+/* line 289, sass/layout.scss */
 .site-footer .foot-right a.social img {
   position: absolute;
   top: -4px;
 }
-/* line 293, sass/layout.scss */
+/* line 294, sass/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   display: inline-block;
   vertical-align: top;
 }
-/* line 298, sass/layout.scss */
+/* line 299, sass/layout.scss */
 .site-footer .foot-right .mail {
   margin-right: 10px;
 }
-/* line 302, sass/layout.scss */
+/* line 303, sass/layout.scss */
 .site-footer .devs {
   float: right;
   width: 280px;
   margin-right: -60px;
 }
-/* line 308, sass/layout.scss */
+/* line 309, sass/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 312, sass/layout.scss */
+/* line 313, sass/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 317, sass/layout.scss */
+/* line 318, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   padding-left: 10px;
 }
-/* line 323, sass/layout.scss */
+/* line 324, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
-  height: 77px;
+  height: 50px;
 }
-/* line 329, sass/layout.scss */
+/* line 330, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 332, sass/layout.scss */
+/* line 333, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 334, sass/layout.scss */
+/* line 335, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 344, sass/layout.scss */
+/* line 345, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 346, sass/layout.scss */
+/* line 347, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
@@ -467,45 +468,48 @@ input[type="text"]:focus {
   z-index: 1000;
 }
 /* line 14, sass/index.scss */
-.promo .baners .item a {
+.promo .baners .item .cart_img {
   text-decoration: none;
-}
-/* line 17, sass/index.scss */
-.promo .baners .item image {
   letter-spacing: normal;
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
+  width: 278px;
+  text-align: center;
 }
-/* line 20, sass/index.scss */
+/* line 19, sass/index.scss */
+.promo .baners .item .cart_img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* line 24, sass/index.scss */
 .promo .baners .item article {
   letter-spacing: normal;
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
-  width: 480px;
-  margin-left: 36px;
-  padding: 26px 0 0 0;
+  width: 502px;
+  padding: 26px 0 0 36px;
 }
-/* line 25, sass/index.scss */
+/* line 28, sass/index.scss */
 .promo .baners .item article hgroup {
   margin: 0 0 16px 0;
 }
-/* line 27, sass/index.scss */
+/* line 30, sass/index.scss */
 .promo .baners .item article hgroup h2 {
   font-size: 48px;
   margin: 0 0 20px 0;
 }
-/* line 30, sass/index.scss */
+/* line 33, sass/index.scss */
 .promo .baners .item article hgroup h2 a {
   color: #404040;
   text-decoration: none;
 }
-/* line 35, sass/index.scss */
+/* line 38, sass/index.scss */
 .promo .baners .item article hgroup h3 {
   font-size: 21px;
 }
-/* line 39, sass/index.scss */
+/* line 42, sass/index.scss */
 .promo .baners .item article .price {
   display: block;
   color: #4c7f82;
@@ -513,7 +517,7 @@ input[type="text"]:focus {
   font-size: 21px;
   margin-top: 22px;
 }
-/* line 49, sass/index.scss */
+/* line 52, sass/index.scss */
 .promo .baners-nav {
   width: 540px;
   position: absolute;
@@ -521,7 +525,7 @@ input[type="text"]:focus {
   right: 0;
   z-index: 100;
 }
-/* line 55, sass/index.scss */
+/* line 58, sass/index.scss */
 .promo .baners-nav li {
   letter-spacing: normal;
   word-spacing: normal;
@@ -529,16 +533,16 @@ input[type="text"]:focus {
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 59, sass/index.scss */
+/* line 62, sass/index.scss */
 .promo .baners-nav li.current a {
   color: #f7941e;
   background: #f7941e;
 }
-/* line 64, sass/index.scss */
+/* line 67, sass/index.scss */
 .promo .baners-nav li:first-child {
   margin-left: 0;
 }
-/* line 67, sass/index.scss */
+/* line 70, sass/index.scss */
 .promo .baners-nav li a {
   display: block;
   width: 19px;
@@ -549,12 +553,12 @@ input[type="text"]:focus {
   text-decoration: none;
   color: #fff;
 }
-/* line 76, sass/index.scss */
+/* line 79, sass/index.scss */
 .promo .baners-nav li a:hover {
   background: #f7941e;
   color: #f7941e;
 }
-/* line 83, sass/index.scss */
+/* line 86, sass/index.scss */
 .promo .baners-nav-ctl {
   height: 50px;
   padding-top: 30px;
@@ -563,26 +567,26 @@ input[type="text"]:focus {
   text-decoration: none;
   color: #f7941e;
 }
-/* line 91, sass/index.scss */
+/* line 94, sass/index.scss */
 .promo .baners-nav-left {
   position: absolute;
   top: 138px;
   padding-left: 12px;
   left: 0;
 }
-/* line 96, sass/index.scss */
+/* line 99, sass/index.scss */
 .promo .baners-nav-left:hover {
   padding-left: 7px;
   border-left: 5px solid #f7941e;
 }
-/* line 101, sass/index.scss */
+/* line 104, sass/index.scss */
 .promo .baners-nav-right {
   position: absolute;
   top: 138px;
   padding-right: 12px;
   right: 0;
 }
-/* line 106, sass/index.scss */
+/* line 109, sass/index.scss */
 .promo .baners-nav-right:hover {
   padding-right: 7px;
   border-right: 5px solid #f7941e;
@@ -1096,6 +1100,7 @@ input[type="text"]:focus {
 .about article h3 {
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 14px;
 }
 /* line 31, sass/about.scss */
 .about h1 {
@@ -1691,9 +1696,9 @@ input[type="text"]:focus {
   margin: 0 auto;
   padding-top: 30px;
   height: 240px;
-  overflow: scroll;
+  overflow-y: auto;
 }
-/* line 79, sass/cart.scss */
+/* line 81, sass/cart.scss */
 .cart .forsale .item {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1703,7 +1708,7 @@ input[type="text"]:focus {
   padding: 0 52px 0 0;
   margin-bottom: 30px;
 }
-/* line 84, sass/cart.scss */
+/* line 86, sass/cart.scss */
 .cart .forsale .item img {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1712,7 +1717,7 @@ input[type="text"]:focus {
   width: 60px;
   height: auto;
 }
-/* line 89, sass/cart.scss */
+/* line 91, sass/cart.scss */
 .cart .forsale .item .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1722,24 +1727,24 @@ input[type="text"]:focus {
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 94, sass/cart.scss */
+/* line 96, sass/cart.scss */
 .cart .forsale .item .desc span {
   display: block;
 }
-/* line 97, sass/cart.scss */
+/* line 99, sass/cart.scss */
 .cart .forsale .item .desc .name {
   color: #202020;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 102, sass/cart.scss */
+/* line 104, sass/cart.scss */
 .cart .forsale .item .desc .price {
   font-size: 14px;
   font-weight: bold;
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 109, sass/cart.scss */
+/* line 111, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1751,7 +1756,7 @@ input[type="text"]:focus {
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 117, sass/cart.scss */
+/* line 119, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -1762,7 +1767,7 @@ input[type="text"]:focus {
   text-align: center;
   color: #808080;
 }
-/* line 127, sass/cart.scss */
+/* line 129, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs .count {
   display: block;
   float: left;
@@ -1773,7 +1778,7 @@ input[type="text"]:focus {
   border: none;
   text-align: center;
 }
-/* line 138, sass/cart.scss */
+/* line 140, sass/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1933,12 +1938,11 @@ input[type="text"]:focus {
 /* line 38, sass/temp.scss */
 .registration-form .registration-form-left fieldset input {
   width: 156px;
-  padding: 0 10px;
   margin-left: 20px;
 }
 
 /* line 30, ../src/login.scss */
-/* line 44, sass/temp.scss */
+/* line 43, sass/temp.scss */
 .registration-form .registration-form-left .forgot-mess {
   overflow: hidden;
   position: absolute;
@@ -1951,7 +1955,7 @@ input[type="text"]:focus {
 }
 
 /* line 38, ../src/login.scss */
-/* line 55, sass/temp.scss */
+/* line 54, sass/temp.scss */
 .registration-form .registration-form-left .forgot-mess .close-little {
   float: right;
   font-family: kp_icons;
@@ -1962,7 +1966,7 @@ input[type="text"]:focus {
 }
 
 /* line 48, ../src/login.scss */
-/* line 64, sass/temp.scss */
+/* line 63, sass/temp.scss */
 .registration-form .registration-form-right {
   float: right;
   width: 280px;
@@ -1971,7 +1975,7 @@ input[type="text"]:focus {
 }
 
 /* line 53, ../src/login.scss */
-/* line 71, sass/temp.scss */
+/* line 70, sass/temp.scss */
 .registration-form .registration-form-right a {
   color: #fff;
   font-weight: bold;
@@ -1979,20 +1983,20 @@ input[type="text"]:focus {
 }
 
 /* line 57, ../src/login.scss */
-/* line 77, sass/temp.scss */
+/* line 76, sass/temp.scss */
 .registration-form .registration-form-right a.forgot {
   display: block;
   margin-top: 5px;
 }
 
 /* line 62, ../src/login.scss */
-/* line 82, sass/temp.scss */
+/* line 81, sass/temp.scss */
 .registration-form .registration-form-right .mleft {
   margin-left: 60px;
 }
 
 /* line 65, ../src/login.scss */
-/* line 86, sass/temp.scss */
+/* line 85, sass/temp.scss */
 .registration-form .registration-form-right .input-black {
   background: #000;
   color: #fff;
@@ -2002,7 +2006,7 @@ input[type="text"]:focus {
 }
 
 /* line 73, ../src/login.scss */
-/* line 94, sass/temp.scss */
+/* line 93, sass/temp.scss */
 .registration-form .close {
   position: absolute;
   z-index: 9000;
@@ -2014,13 +2018,13 @@ input[type="text"]:focus {
   text-decoration: none;
 }
 
-/* line 105, sass/temp.scss */
+/* line 104, sass/temp.scss */
 span.field_with_errors input {
   background-color: #E66F50;
 }
 
 /* line 1, ../src/login.scss */
-/* line 110, sass/temp.scss */
+/* line 109, sass/temp.scss */
 .restore-password-form {
   background: #4c7f82;
   width: 100%;
@@ -2033,7 +2037,7 @@ span.field_with_errors input {
 }
 
 /* line 10, ../src/login.scss */
-/* line 121, sass/temp.scss */
+/* line 120, sass/temp.scss */
 .restore-password-form .restore-password-form-left {
   float: left;
   width: 540px;
@@ -2042,34 +2046,33 @@ span.field_with_errors input {
 }
 
 /* line 15, ../src/login.scss */
-/* line 128, sass/temp.scss */
+/* line 127, sass/temp.scss */
 .restore-password-form .restore-password-form-left fieldset {
   padding-top: 3px;
   float: left;
 }
 
 /* line 18, ../src/login.scss */
-/* line 133, sass/temp.scss */
+/* line 132, sass/temp.scss */
 .restore-password-form .restore-password-form-left fieldset.fright {
   float: right;
 }
 
 /* line 21, ../src/login.scss */
-/* line 137, sass/temp.scss */
+/* line 136, sass/temp.scss */
 .restore-password-form .restore-password-form-left fieldset label {
   font-weight: bold;
 }
 
 /* line 24, ../src/login.scss */
-/* line 141, sass/temp.scss */
+/* line 140, sass/temp.scss */
 .restore-password-form .restore-password-form-left fieldset input {
   width: 156px;
-  padding: 0 10px;
   margin-left: 30px;
 }
 
 /* line 30, ../src/login.scss */
-/* line 147, sass/temp.scss */
+/* line 145, sass/temp.scss */
 .restore-password-form .restore-password-form-left .forgot-mess {
   overflow: hidden;
   width: 540px;
@@ -2081,7 +2084,7 @@ span.field_with_errors input {
 }
 
 /* line 38, ../src/login.scss */
-/* line 157, sass/temp.scss */
+/* line 155, sass/temp.scss */
 .restore-password-form .restore-password-form-left .forgot-mess .close-little {
   float: right;
   font-family: kp_icons;
@@ -2092,7 +2095,7 @@ span.field_with_errors input {
 }
 
 /* line 48, ../src/login.scss */
-/* line 166, sass/temp.scss */
+/* line 164, sass/temp.scss */
 .restore-password-form .restore-password-form-right {
   float: right;
   width: 280px;
@@ -2101,7 +2104,7 @@ span.field_with_errors input {
 }
 
 /* line 53, ../src/login.scss */
-/* line 173, sass/temp.scss */
+/* line 171, sass/temp.scss */
 .restore-password-form .restore-password-form-right a {
   color: #fff;
   font-weight: bold;
@@ -2109,20 +2112,20 @@ span.field_with_errors input {
 }
 
 /* line 57, ../src/login.scss */
-/* line 179, sass/temp.scss */
+/* line 177, sass/temp.scss */
 .restore-password-form .restore-password-form-right a.forgot {
   display: block;
   margin-top: 5px;
 }
 
 /* line 62, ../src/login.scss */
-/* line 184, sass/temp.scss */
+/* line 182, sass/temp.scss */
 .restore-password-form .restore-password-form-right .mleft {
   margin-left: 60px;
 }
 
 /* line 65, ../src/login.scss */
-/* line 188, sass/temp.scss */
+/* line 186, sass/temp.scss */
 .restore-password-form .restore-password-form-right .input-black {
   background: #000;
   color: #fff;
@@ -2132,7 +2135,7 @@ span.field_with_errors input {
 }
 
 /* line 73, ../src/login.scss */
-/* line 196, sass/temp.scss */
+/* line 194, sass/temp.scss */
 .restore-password-form .close {
   position: absolute;
   z-index: 9000;
