@@ -8,7 +8,7 @@
 
           <!-- .baner-item -->
             <div class="item">
-              <%= link_to url_with_protocol(banner.link) do %>
+              <%= link_to url_with_protocol(banner.link), :class => "cart_img" do %>
                 <%= image_tag banner.asset.url(:main) %>
               <% end %>
                 <article>
