@@ -297,14 +297,14 @@ input[type="text"]:focus {outline: none;}
       vertical-align: top;
     }
     .mail {
-      margin-right: 10px;
+      margin: 0 10px;
     }
   }
   .devs {
     // position: absolute;
     // right: 0;
     float: right;
-    width: 280px;
+    width: 270px;
     margin-right: -60px;
     .dev_in {
       display: inline-block;

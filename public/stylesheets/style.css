@@ -393,12 +393,12 @@ input[type="text"]:focus {
 }
 /* line 299, sass/layout.scss */
 .site-footer .foot-right .mail {
-  margin-right: 10px;
+  margin: 0 10px;
 }
 /* line 303, sass/layout.scss */
 .site-footer .devs {
   float: right;
-  width: 280px;
+  width: 270px;
   margin-right: -60px;
 }
 /* line 309, sass/layout.scss */
