@@ -99,7 +99,8 @@
           .name {
             color: #202020;
             font-weight: bold;
-            margin-bottom: 20px;
+            overflow-y: hidden;
+            height: 40px;
           }
           .price {
             font-size: 14px;
