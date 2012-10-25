@@ -314,12 +314,12 @@ input[type="text"]:focus {outline: none;}
       display: inline-block;
       vertical-align: top;
       position: relative;
-      text-decoration: underline;
       .name {
         display: inline-block;
         float: left;
         width: 70px;
         padding-left: 10px;
+        text-decoration: underline;
       }
       .logo {
         display: none;

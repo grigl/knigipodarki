@@ -356,14 +356,14 @@ input[type="text"]:focus {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  text-decoration: underline;
 }
-/* line 318, sass/layout.scss */
+/* line 317, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   padding-left: 10px;
+  text-decoration: underline;
 }
 /* line 324, sass/layout.scss */
 .site-footer .devs a .logo {
