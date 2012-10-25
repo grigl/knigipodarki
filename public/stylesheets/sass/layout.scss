@@ -278,34 +278,30 @@ input[type="text"]:focus {outline: none;}
     color: #fff;
   }
   .foot-right {
-    // width: 560px;
+    width: 378px;
     float: left;
     a.social {
       width: 30px;
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 10px;
+      @include inline-block;
       position: relative;
-      img {
-        position: absolute;
-        top: -4px;
+      top: -4px;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
       }
     }
     span {
       width: auto;
-      display: inline-block;
-      vertical-align: top;
+      @include inline-block;
     }
     .mail {
       margin: 0 10px;
     }
   }
   .devs {
-    // position: absolute;
-    // right: 0;
     float: right;
-    width: 270px;
-    margin-right: -60px;
+    width: 250px;
+    margin-right: -40px;
     .dev_in {
       display: inline-block;
       vertical-align: top;
@@ -315,6 +311,7 @@ input[type="text"]:focus {outline: none;}
       display: inline-block;
       vertical-align: top;
       position: relative;
+      text-decoration: underline;
       .name {
         display: inline-block;
         float: left;
@@ -342,6 +339,7 @@ input[type="text"]:focus {outline: none;}
     }
   }
   nav {
+    width: 348px;
     ul {
       float: left;
       li {

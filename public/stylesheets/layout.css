@@ -305,81 +305,91 @@ input[type="text"]:focus {
 }
 /* line 280, sass/layout.scss */
 .site-footer .foot-right {
+  width: 378px;
   float: left;
 }
 /* line 283, sass/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
+  letter-spacing: normal;
+  word-spacing: normal;
   display: inline-block;
   vertical-align: top;
-  margin-left: 10px;
   position: relative;
+  top: -4px;
+  margin-left: 10px;
 }
 /* line 289, sass/layout.scss */
-.site-footer .foot-right a.social img {
-  position: absolute;
-  top: -4px;
+.site-footer .foot-right a.social:first-child {
+  margin-left: 0;
 }
-/* line 294, sass/layout.scss */
+/* line 293, sass/layout.scss */
 .site-footer .foot-right span {
   width: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
   display: inline-block;
   vertical-align: top;
 }
-/* line 299, sass/layout.scss */
+/* line 297, sass/layout.scss */
 .site-footer .foot-right .mail {
   margin: 0 10px;
 }
-/* line 303, sass/layout.scss */
+/* line 301, sass/layout.scss */
 .site-footer .devs {
   float: right;
-  width: 270px;
-  margin-right: -60px;
+  width: 250px;
+  margin-right: -40px;
 }
-/* line 309, sass/layout.scss */
+/* line 305, sass/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 313, sass/layout.scss */
+/* line 309, sass/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
+  text-decoration: underline;
 }
-/* line 318, sass/layout.scss */
+/* line 315, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   padding-left: 10px;
 }
-/* line 324, sass/layout.scss */
+/* line 321, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 50px;
 }
-/* line 330, sass/layout.scss */
+/* line 327, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 333, sass/layout.scss */
+/* line 330, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 335, sass/layout.scss */
+/* line 332, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 345, sass/layout.scss */
+/* line 341, sass/layout.scss */
+.site-footer nav {
+  width: 348px;
+}
+/* line 343, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 347, sass/layout.scss */
+/* line 345, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
