@@ -135,6 +135,25 @@ input[type="text"]:focus {outline: none;}
       .user_wrap {
         position: relative;
         height: 30px;
+      }
+      .user_name {
+        display: block;
+        max-width: 260px;
+        overflow-x: hidden;
+        text-decoration: none;
+      }
+      .user_controls {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -16px;
+        .arrow {
+          width: 20px;
+          height: 40px;
+          float: right;
+          background: url(../images/uc.png) no-repeat 8px 8px;
+          cursor: pointer;
+        }
         .logo_out {
           display: none;
         }
@@ -143,33 +162,17 @@ input[type="text"]:focus {outline: none;}
             display: block;
             position: absolute;
             top: 22px;
-            right: -6px;
-            padding: .1em .4em;
+            left: -30px;
+            padding: .1em .3em;
             background: $color;
             color: #909090;
             text-decoration: none;
+            text-align: center;
             &:hover {
               color: #808080;
             }
           }
         }
-      }
-      &:before {
-        content: "";
-        position: absolute;
-        right: -14px;
-        top: 14px;
-        width: 0;
-        height: 0;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        border-top: 5px solid #fff;
-      }
-      .user_name {
-        display: block;
-        max-width: 260px;
-        overflow-x: hidden;
-        text-decoration: none;
       }
     }
   }

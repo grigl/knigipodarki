@@ -18,7 +18,11 @@
         <div class="user">
           <div class="user_wrap">
             <%= link_to current_user.email, account_path , :class => "user_name" %>
-            <%= link_to t('logout'), destroy_user_session_path, :class => "logo_out" %>
+            <span class="user_controls">
+              <span class="arrow"></span>
+              <%= link_to t('logout'), destroy_user_session_path, :class => "logo_out" %>
+            </span>
+
           </div>
         </div>
         <!-- /.sh-login -->
