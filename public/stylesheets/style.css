@@ -1847,15 +1847,16 @@ input[type="text"]:focus {
 }
 /* line 32, sass/login.scss */
 .login-form .login-form-left .forgot-mess {
+  position: relative;
   overflow: hidden;
-  width: 540px;
+  width: 800px;
   height: 25px;
   padding-top: 5px;
   background: #e66f4f;
   font-weight: bold;
   text-align: center;
 }
-/* line 40, sass/login.scss */
+/* line 41, sass/login.scss */
 .login-form .login-form-left .forgot-mess .close-little {
   float: right;
   font-family: kp_icons;
@@ -1864,29 +1865,29 @@ input[type="text"]:focus {
   text-decoration: none;
   margin-right: 10px;
 }
-/* line 50, sass/login.scss */
+/* line 51, sass/login.scss */
 .login-form .login-form-right {
   float: right;
   width: 280px;
   padding-left: 40px;
   height: 30px;
 }
-/* line 55, sass/login.scss */
+/* line 56, sass/login.scss */
 .login-form .login-form-right a {
   color: #fff;
   font-weight: bold;
   margin-left: 40px;
 }
-/* line 59, sass/login.scss */
+/* line 60, sass/login.scss */
 .login-form .login-form-right a.forgot {
   display: block;
   margin-top: 5px;
 }
-/* line 64, sass/login.scss */
+/* line 65, sass/login.scss */
 .login-form .login-form-right .mleft {
   margin-left: 60px;
 }
-/* line 67, sass/login.scss */
+/* line 68, sass/login.scss */
 .login-form .login-form-right .input-black {
   background: #000;
   color: #fff;
@@ -1894,7 +1895,7 @@ input[type="text"]:focus {
   border: none;
   padding: 0 20px;
 }
-/* line 75, sass/login.scss */
+/* line 76, sass/login.scss */
 .login-form .close {
   position: absolute;
   z-index: 9000;
