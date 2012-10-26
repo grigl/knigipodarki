@@ -6,7 +6,7 @@
       <div class="item">
         <%= small_image(line_item.variant) %>
         <div class="desc">
-          <span class="name"><%= line_item.variant.name %></span>
+          <span class="name"><%= line_item.variant.name.truncate(35) %></span>
           <span class="price"><%= line_item.variant.price %></span>
           <!-- .contols -->
           <div class="controls">
