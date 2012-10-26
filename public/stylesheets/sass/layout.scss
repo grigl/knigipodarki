@@ -148,10 +148,11 @@ input[type="text"]:focus {outline: none;}
         top: 0;
         right: -16px;
         .arrow {
-          width: 20px;
-          height: 40px;
+          width: 23px;
+          height: 22px;
           float: right;
-          background: url(../images/uc.png) no-repeat 8px 8px;
+          margin-right: -10px;
+          background: url(../images/uc.png) no-repeat 3px 8px;
           cursor: pointer;
         }
         .logo_out {
@@ -161,10 +162,13 @@ input[type="text"]:focus {outline: none;}
           .logo_out {
             display: block;
             position: absolute;
-            top: 22px;
-            left: -30px;
-            padding: .1em .3em;
-            background: $color;
+            top: -5px;
+            right: -76px;
+            width: 44px;
+            height: 25px;
+            padding: 5px 15px 0 15px;
+            font-size: 16px;
+            background: #535353;
             color: #909090;
             text-decoration: none;
             text-align: center;
