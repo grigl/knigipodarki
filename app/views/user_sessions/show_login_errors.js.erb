@@ -1,3 +1,6 @@
 $('.login-form .forgot-mess .error').text('');
 $('.login-form .forgot-mess .error').append('<%= @errors %>');
+<% if @errors.length >= 66 %>
+  $('.restore-password-form .forgot-mess').addClass('large')
+<% end %>
 $('.login-form .forgot-mess').show();
