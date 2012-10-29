@@ -18,7 +18,7 @@ class UserPasswordsController < Devise::PasswordsController
     else
       @errors = resource.errors
       respond_to do |format|
-        format.html { render_with_scope :new }
+        format.html { render :new }
         format.js { render :show_restore_password_errors }
       end
     end
