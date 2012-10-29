@@ -11,7 +11,13 @@
       </div>
 
       <article>
-        <span class="price"><%= product.price %></span>
+        <% if product.sale_price %>
+          <span class="price" style="text-decoration:line-through"><%= product.price %> р</span>
+          <span class="price"><%= product.sale_price %> р</span>
+        <% else %>
+          <span class="price"><%= product.price %> р</span>
+        <% end %>
+
         <h2><%= product.name %></h2>
         <p><%= product.description %></p>
       </article>
