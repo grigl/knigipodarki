@@ -122,7 +122,7 @@ var ProductImages = function() {
 }
 
 var NewAddressRadio = function() {
-  $('.select_address input[type=radio]').live('change', function(){
+  $('.adress-choise input[type=radio]').live('change', function(){
     var Checked = $('.new_address_radio').prop('checked');
     (Checked == true) ? $('.all-fields').show() : $('.all-fields').hide(); 
   });
@@ -139,5 +139,4 @@ $(function(){
     RestorePasswordForm();
     ProductImages();
     NewAddressRadio();
-    //dfbdsfbdfb
 })
