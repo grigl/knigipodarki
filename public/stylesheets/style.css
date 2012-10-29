@@ -1875,30 +1875,32 @@ input[type="text"]:focus {
   color: #fff;
   text-decoration: none;
   margin-right: 10px;
+  position: relative;
+  z-index: 1000;
 }
-/* line 55, sass/login.scss */
+/* line 57, sass/login.scss */
 .login-form .login-form-right {
   float: right;
   width: 280px;
   padding-left: 40px;
   height: 30px;
 }
-/* line 60, sass/login.scss */
+/* line 62, sass/login.scss */
 .login-form .login-form-right a {
   color: #fff;
   font-weight: bold;
   margin-left: 40px;
 }
-/* line 64, sass/login.scss */
+/* line 66, sass/login.scss */
 .login-form .login-form-right a.forgot {
   display: block;
   margin-top: 5px;
 }
-/* line 69, sass/login.scss */
+/* line 71, sass/login.scss */
 .login-form .login-form-right .mleft {
   margin-left: 60px;
 }
-/* line 72, sass/login.scss */
+/* line 74, sass/login.scss */
 .login-form .login-form-right .input-black {
   background: #000;
   color: #fff;
@@ -1906,7 +1908,7 @@ input[type="text"]:focus {
   border: none;
   padding: 0 20px;
 }
-/* line 80, sass/login.scss */
+/* line 82, sass/login.scss */
 .login-form .close {
   position: absolute;
   z-index: 9000;

@@ -6,17 +6,19 @@
 
 <div class="formset">
 
-  <div class="select_address">
-    <fieldset>
+  <div class="adress-choise">
       <% if @addresses.present? %>
         <% @addresses.each_with_index do |address, idx| %>
+        <fieldset>
           <%= form.radio_button "ship_address_id", address.id, :checked => (idx == 0) %> 
-          <%= form.label ["ship_address_id", address.id], address.to_s %><br />
+          <%= form.label ["ship_address_id", address.id], address.to_s %>
+          </fieldset>
         <% end %>
-        <%= form.radio_button "ship_address_id", 0, class: 'new_address_radio' %>
-        <%= form.label ["ship_address_id", 0], t('other_address') %>
+        <fieldset>
+          <%= form.radio_button "ship_address_id", 0, class: 'new_address_radio' %>
+          <%= form.label ["ship_address_id", 0], t('other_address') %>
+        </fieldset>
       <% end %>
-    </fieldset>
   </div>
 
   <%= form.fields_for :ship_address do |ship_form| %>
