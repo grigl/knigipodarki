@@ -22,9 +22,11 @@
         <p><%= product.description %></p>
       </article>
     <% end %>
-    <%= form_for :order, :url => populate_orders_url, remote: true do |f| %>
-      <%= hidden_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"), 1 %>             
-      <a href="" class="add-to-cart">t</a> 
+    <% if product.count_on_hand > 0 %>
+      <%= form_for :order, :url => populate_orders_url, remote: true do |f| %>
+        <%= hidden_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"), 1 %>             
+        <a href="" class="add-to-cart">t</a> 
+      <% end %>
     <% end %>
   </div>
   <!-- /shop-item -->
