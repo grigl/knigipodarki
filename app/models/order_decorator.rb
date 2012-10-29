@@ -205,7 +205,11 @@ Order.class_eval do
     else
       current_item = LineItem.new(:quantity => quantity)
       current_item.variant = variant
-      current_item.price   = variant.price
+      if variant.product.sale_price
+        current_item.price = variant.product.sale_price
+      else
+        current_item.price = variant.price
+      end
       self.line_items << current_item
     end
 
