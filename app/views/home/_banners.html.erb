@@ -17,7 +17,7 @@
                     <h3><%= banner.subtitle if banner.subtitle %></h3>
                   </hgroup>
                     <p>
-                      <%= banner.description if banner.description %>
+                      <%= banner.description.html_safe if banner.description %>
                     </p>
                       <span class="price"><%= banner.price if banner.price %></span>
                 </article>
