@@ -38,6 +38,10 @@
       background: #e66f4f;
       font-weight: bold;
       text-align: center;
+      &.large {
+        width: 750px;
+        margin-left: -80px;
+      }
       .close-little {
         float: right;
         font-family: kp_icons;
