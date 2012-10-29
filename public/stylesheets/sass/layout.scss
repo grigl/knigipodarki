@@ -215,17 +215,17 @@ input[type="text"]:focus {outline: none;}
       margin: 30px 0 62px 0;
       ul {
         li {
-          display: inline-block;
-          margin-right: 1px;
+          @include inline-block;
           a {
-            display: inline-block;
+            @include inline-block;
             padding: 10px 10px;
+            margin-right: 1px;
             text-transform: uppercase;
             text-decoration: none;
             color: $color;
             &:hover {
               border: 3px solid #edf2f2;
-            padding: 7px 7px;
+              padding: 7px 7px;
             }
           }
           &:last-child {
