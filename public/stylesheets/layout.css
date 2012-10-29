@@ -247,13 +247,19 @@ input[type="text"]:focus {
 }
 /* line 217, sass/layout.scss */
 .site-header .navigations .direction-nav ul li {
+  letter-spacing: normal;
+  word-spacing: normal;
   display: inline-block;
-  margin-right: 1px;
+  vertical-align: top;
 }
-/* line 220, sass/layout.scss */
+/* line 219, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a {
+  letter-spacing: normal;
+  word-spacing: normal;
   display: inline-block;
+  vertical-align: top;
   padding: 10px 10px;
+  margin-right: 1px;
   text-transform: uppercase;
   text-decoration: none;
   color: #404040;
