@@ -160,6 +160,10 @@ span.field_with_errors input {
   font-weight: bold;
   text-align: center;
 }
+.restore-password-form .restore-password-form-left .forgot-mess.large {
+  width: 750px;
+  margin-left: -80px;
+}
 /* line 38, ../src/login.scss */
 .restore-password-form .restore-password-form-left .forgot-mess .close-little {
   float: right;
@@ -168,6 +172,8 @@ span.field_with_errors input {
   color: #fff;
   text-decoration: none;
   margin-right: 10px;
+  position: relative;
+  z-index: 1000;
 }
 /* line 48, ../src/login.scss */
 .restore-password-form .restore-password-form-right {

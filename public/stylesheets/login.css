@@ -46,6 +46,11 @@
   text-align: center;
 }
 /* line 41, sass/login.scss */
+.login-form .login-form-left .forgot-mess.large {
+  width: 750px;
+  margin-left: -80px;
+}
+/* line 45, sass/login.scss */
 .login-form .login-form-left .forgot-mess .close-little {
   float: right;
   font-family: kp_icons;
@@ -54,29 +59,29 @@
   text-decoration: none;
   margin-right: 10px;
 }
-/* line 51, sass/login.scss */
+/* line 55, sass/login.scss */
 .login-form .login-form-right {
   float: right;
   width: 280px;
   padding-left: 40px;
   height: 30px;
 }
-/* line 56, sass/login.scss */
+/* line 60, sass/login.scss */
 .login-form .login-form-right a {
   color: #fff;
   font-weight: bold;
   margin-left: 40px;
 }
-/* line 60, sass/login.scss */
+/* line 64, sass/login.scss */
 .login-form .login-form-right a.forgot {
   display: block;
   margin-top: 5px;
 }
-/* line 65, sass/login.scss */
+/* line 69, sass/login.scss */
 .login-form .login-form-right .mleft {
   margin-left: 60px;
 }
-/* line 68, sass/login.scss */
+/* line 72, sass/login.scss */
 .login-form .login-form-right .input-black {
   background: #000;
   color: #fff;
@@ -84,7 +89,7 @@
   border: none;
   padding: 0 20px;
 }
-/* line 76, sass/login.scss */
+/* line 80, sass/login.scss */
 .login-form .close {
   position: absolute;
   z-index: 9000;
