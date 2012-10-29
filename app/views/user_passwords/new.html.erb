@@ -1,0 +1,33 @@
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+        <section class="forms auth">
+
+          <h3><%= t(:forgot_password) %></h3>
+
+          <p>Заполните форму ниже и инструкции для восстановления будут отправлен вам по указанному email.</p>
+
+          <% if @user.errors %>
+            <% @user.errors.full_messages.each do |msg| %>
+              <%= msg %><br />
+            <% end %>
+          <% end %>
+
+          <%= form_for User.new, :as => :user, :url => user_password_path do |f| %>
+            <fieldset>
+              <%= f.label :email %>
+              <%= f.text_field :email %><br />
+            </fieldset>
+            <div class="controls">
+              <input class="blue" type="submit" value="Готово">
+            </div>
+          <% end %>
+
+        </section>
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+<!-- /.content -->
