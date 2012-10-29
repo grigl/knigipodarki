@@ -21,7 +21,7 @@
           </header>
           
           <!-- form .formset -->
-          <%= form_for(@user, :html => { :method => :put }) do |f| %>
+          <%= form_for(@user, :html => { :method => :put, autocomplete: :off }) do |f| %>
 
             <% if @user.errors %>
               <% @user.errors.each do |field, msg| %>
