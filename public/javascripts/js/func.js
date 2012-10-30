@@ -121,6 +121,12 @@ var PlaceHolders = function() {
   $('input[placeholder], textarea[placeholder]').placeholder();
 }
 
+var Checkout = function() {
+  $('.cart .panel .cart-order').click(function (){
+    window.location = '/checkout';
+  });
+}
+
 $(function(){
     // SortLinks();
     ResetSorting();
@@ -132,4 +138,5 @@ $(function(){
     RestorePasswordForm();
     ProductImages();
     NewAddressRadio();
+    Checkout();
 })

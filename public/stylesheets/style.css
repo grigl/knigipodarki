@@ -1677,7 +1677,7 @@ input[type="text"]:focus {
 .cart .panel {
   position: relative;
   background: #404040;
-  height: 50px;
+  height: 30px;
   color: #fff;
   font-weight: bold;
   z-index: 250;
@@ -1696,8 +1696,8 @@ input[type="text"]:focus {
 .cart .panel .items {
   display: block;
   width: 130px;
-  height: 35px;
-  padding: 15px 0 0 0;
+  height: 25px;
+  padding: 5px 0 0 0;
   text-align: center;
   float: left;
   background: #e66f50;
@@ -1708,33 +1708,34 @@ input[type="text"]:focus {
   top: 0;
   left: 130px;
   display: block;
-  height: 35px;
-  padding: 15px 20px 0 20px;
+  height: 25px;
+  padding: 5px 20px 0 20px;
   float: left;
   background: #f3a062;
   z-index: 300;
+  cursor: pointer;
 }
-/* line 54, sass/cart.scss */
+/* line 55, sass/cart.scss */
 .cart .panel .control {
   display: block;
-  height: 35px;
-  padding: 15px 20px 0 20px;
+  height: 25px;
+  padding: 5px 20px 0 20px;
   float: right;
   font-family: kp_icons;
 }
-/* line 60, sass/cart.scss */
+/* line 61, sass/cart.scss */
 .cart .panel .control .close {
   display: none;
 }
-/* line 64, sass/cart.scss */
+/* line 65, sass/cart.scss */
 .cart .panel .control.active .open {
   display: none;
 }
-/* line 67, sass/cart.scss */
+/* line 68, sass/cart.scss */
 .cart .panel .control.active .close {
   display: block;
 }
-/* line 73, sass/cart.scss */
+/* line 74, sass/cart.scss */
 .cart .forsale {
   width: 1100px;
   margin: 0 auto;
@@ -1742,7 +1743,7 @@ input[type="text"]:focus {
   height: 240px;
   overflow-y: auto;
 }
-/* line 81, sass/cart.scss */
+/* line 82, sass/cart.scss */
 .cart .forsale .item {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1752,7 +1753,7 @@ input[type="text"]:focus {
   padding: 0 52px 0 0;
   margin-bottom: 30px;
 }
-/* line 86, sass/cart.scss */
+/* line 87, sass/cart.scss */
 .cart .forsale .item img {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1761,7 +1762,7 @@ input[type="text"]:focus {
   width: 60px;
   height: auto;
 }
-/* line 91, sass/cart.scss */
+/* line 92, sass/cart.scss */
 .cart .forsale .item .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1771,25 +1772,25 @@ input[type="text"]:focus {
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 96, sass/cart.scss */
+/* line 97, sass/cart.scss */
 .cart .forsale .item .desc span {
   display: block;
 }
-/* line 99, sass/cart.scss */
+/* line 100, sass/cart.scss */
 .cart .forsale .item .desc .name {
   color: #202020;
   font-weight: bold;
   overflow-y: hidden;
   height: 40px;
 }
-/* line 105, sass/cart.scss */
+/* line 106, sass/cart.scss */
 .cart .forsale .item .desc .price {
   font-size: 14px;
   font-weight: bold;
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 112, sass/cart.scss */
+/* line 113, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1801,7 +1802,7 @@ input[type="text"]:focus {
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 120, sass/cart.scss */
+/* line 121, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -1812,7 +1813,7 @@ input[type="text"]:focus {
   text-align: center;
   color: #808080;
 }
-/* line 130, sass/cart.scss */
+/* line 131, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs .count {
   display: block;
   float: left;
@@ -1823,7 +1824,7 @@ input[type="text"]:focus {
   border: none;
   text-align: center;
 }
-/* line 141, sass/cart.scss */
+/* line 142, sass/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;
