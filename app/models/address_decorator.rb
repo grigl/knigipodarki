@@ -5,6 +5,6 @@ Address.class_eval do
   validates :phone, format: { with: /^[-+()\/\s\d]+$/, message: 'имеет неверный формат' }
 
   def to_s
-    "#{firstname} #{lastname} #{secondname}: #{zipcode}, #{country}, #{state || state_name}, #{city}, #{address1}"
+    "#{lastname} #{firstname} #{secondname}: #{zipcode}, #{country}, #{state || state_name}, #{city}, #{address1}"
   end
 end
