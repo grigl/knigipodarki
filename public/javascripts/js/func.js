@@ -38,17 +38,6 @@ var Spoiler = function() {
       $(".sp_show").slideToggle("fast", function(){ $('body').scroll() });
       $(".control.sp").toggleClass("active"); return false;
    });
-  // $('.sp').live('click', function() {
-  //   var sp_show = $('.sp_show');
-  //   if (sp_show.is_visible) {
-  //     $(".sp_show").slideToggle("fast");
-  //   } else
-  //   {
-  //     $(".sp_show").slideToggle("fast");
-  //     $("body").animate({"scrollBottom":'240px'},"slow");
-  //   }
-  //    return false;
-  // });
 }
 
 var Slides = function() {
@@ -126,6 +115,10 @@ var NewAddressRadio = function() {
     var Checked = $('.new_address_radio').prop('checked');
     (Checked == true) ? $('.all-fields').show() : $('.all-fields').hide(); 
   });
+}
+
+var PlaceHolders = function() {
+  $('input[placeholder], textarea[placeholder]').placeholder();
 }
 
 $(function(){
