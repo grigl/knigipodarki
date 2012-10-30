@@ -40,7 +40,7 @@
             <div class="cartline">
               <div class="single_cart">
                 <% if @product.sale_price %>
-                  <span style="text-decoration:line-through"><%= @product.price %> р</span>
+                  <span class="ops"><%= @product.price %> р</span>
                   <span class="no_bord"><%= @product.sale_price %> р</span>
                 <% else %>
                   <span><%= @product.price %> р</span>

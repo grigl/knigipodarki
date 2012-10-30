@@ -12,8 +12,8 @@
 
       <article>
         <% if product.sale_price %>
-          <span class="price" style="text-decoration:line-through"><%= product.price %> р</span>
-          <span class="price"><%= product.sale_price %> р</span>
+          <span class="price ops"><%= product.price %> р</span>
+          <span class="price sale"><%= product.sale_price %> р</span>
         <% else %>
           <span class="price"><%= product.price %> р</span>
         <% end %>

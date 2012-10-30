@@ -37,6 +37,13 @@
         font-weight: bold;
         color: #e66f50;
         margin-bottom: 18px;
+        &.ops {
+          opacity: .7;
+          text-decoration:line-through
+        }
+        &.sale {
+          margin-left: 10px;
+        }
       }
       .marker {
         margin-left: 20px;
@@ -310,6 +317,10 @@
           padding-right: 12px;
           font-weight: bold;
           font-size: 18px;
+          &.ops {
+            opacity: .7;
+            text-decoration:line-through
+          }
           &.no_bord {
             border-right: none;
             padding-right: 0;
