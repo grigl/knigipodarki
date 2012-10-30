@@ -122,8 +122,9 @@ var PlaceHolders = function() {
 }
 
 var Checkout = function() {
-  $('.cart .panel .cart-order').click(function (){
-    window.location = '/checkout';
+  $('.cart .panel .cart-order').live('click', function (){
+    var url = $('.cart .panel .cart-order').attr('data-url');
+    window.location = url;
   });
 }
 
