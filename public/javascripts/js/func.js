@@ -118,7 +118,7 @@ var NewAddressRadio = function() {
 }
 
 var PlaceHolders = function() {
-  $('input[placeholder], textarea[placeholder]').placeholder();
+  $("input[placeholder], textarea[placeholder]").textPlaceholder();
 }
 
 var Checkout = function() {
@@ -143,6 +143,7 @@ $(function(){
     RestorePasswordForm();
     ProductImages();
     NewAddressRadio();
+    PlaceHolders();
     Checkout();
     MaskInp();
 })
