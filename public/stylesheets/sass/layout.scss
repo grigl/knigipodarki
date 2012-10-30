@@ -201,7 +201,7 @@ input[type="text"]:focus {outline: none;}
         position: absolute;
         top: 0;
         right: -3px;
-      } 
+      }
     }
     .logo {
       float: left;
@@ -214,10 +214,13 @@ input[type="text"]:focus {outline: none;}
       padding-bottom: 6px;
       margin: 30px 0 62px 0;
       ul {
+        overflow: hidden;
         li {
-          @include inline-block;
+          display: block;
+          float: left;
           a {
-            @include inline-block;
+            display: block;
+            float: left;
             padding: 10px 10px;
             margin-right: 1px;
             text-transform: uppercase;

@@ -310,65 +310,65 @@ input[type="text"]:focus {
   padding-bottom: 6px;
   margin: 30px 0 62px 0;
 }
-/* line 217, sass/layout.scss */
-.site-header .navigations .direction-nav ul li {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
+/* line 216, sass/layout.scss */
+.site-header .navigations .direction-nav ul {
+  overflow: hidden;
 }
-/* line 219, sass/layout.scss */
+/* line 218, sass/layout.scss */
+.site-header .navigations .direction-nav ul li {
+  display: block;
+  float: left;
+}
+/* line 221, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  float: left;
   padding: 10px 10px;
   margin-right: 1px;
   text-transform: uppercase;
   text-decoration: none;
   color: #404040;
 }
-/* line 226, sass/layout.scss */
+/* line 229, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a:hover {
   border: 3px solid #edf2f2;
   padding: 7px 7px;
 }
-/* line 231, sass/layout.scss */
+/* line 234, sass/layout.scss */
 .site-header .navigations .direction-nav ul li:last-child {
   margin-right: 0;
 }
-/* line 236, sass/layout.scss */
+/* line 239, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.current a {
   background: #4c7f82;
   color: #fff;
 }
-/* line 243, sass/layout.scss */
+/* line 246, sass/layout.scss */
 .site-header .navigations .sub-direction-nav {
   position: absolute;
   top: 130px;
 }
-/* line 251, sass/layout.scss */
+/* line 254, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li {
   display: inline;
   margin-right: 24px;
 }
-/* line 254, sass/layout.scss */
+/* line 257, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a {
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
 }
-/* line 258, sass/layout.scss */
+/* line 261, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 264, sass/layout.scss */
+/* line 267, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul .current a {
   font-weight: bold;
 }
 
-/* line 275, sass/layout.scss */
+/* line 278, sass/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -378,16 +378,16 @@ input[type="text"]:focus {
   padding: 30px 0 30px 0;
   font-size: .9em;
 }
-/* line 284, sass/layout.scss */
+/* line 287, sass/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 287, sass/layout.scss */
+/* line 290, sass/layout.scss */
 .site-footer .foot-right {
   width: 378px;
   float: left;
 }
-/* line 290, sass/layout.scss */
+/* line 293, sass/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   letter-spacing: normal;
@@ -398,11 +398,11 @@ input[type="text"]:focus {
   top: -4px;
   margin-left: 10px;
 }
-/* line 296, sass/layout.scss */
+/* line 299, sass/layout.scss */
 .site-footer .foot-right a.social:first-child {
   margin-left: 0;
 }
-/* line 300, sass/layout.scss */
+/* line 303, sass/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   letter-spacing: normal;
@@ -410,29 +410,29 @@ input[type="text"]:focus {
   display: inline-block;
   vertical-align: top;
 }
-/* line 304, sass/layout.scss */
+/* line 307, sass/layout.scss */
 .site-footer .foot-right .mail {
   margin: 0 10px;
 }
-/* line 308, sass/layout.scss */
+/* line 311, sass/layout.scss */
 .site-footer .devs {
   float: right;
   width: 250px;
   margin-right: -40px;
 }
-/* line 312, sass/layout.scss */
+/* line 315, sass/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 316, sass/layout.scss */
+/* line 319, sass/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 321, sass/layout.scss */
+/* line 324, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
@@ -440,35 +440,35 @@ input[type="text"]:focus {
   padding-left: 10px;
   text-decoration: underline;
 }
-/* line 328, sass/layout.scss */
+/* line 331, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 50px;
 }
-/* line 334, sass/layout.scss */
+/* line 337, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 337, sass/layout.scss */
+/* line 340, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 339, sass/layout.scss */
+/* line 342, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 348, sass/layout.scss */
+/* line 351, sass/layout.scss */
 .site-footer nav {
   width: 348px;
 }
-/* line 350, sass/layout.scss */
+/* line 353, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 352, sass/layout.scss */
+/* line 355, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
@@ -994,11 +994,17 @@ input[type="text"]:focus {
   font-weight: bold;
   font-size: 18px;
 }
-/* line 314, sass/shop.scss */
+/* line 313, sass/shop.scss */
+.product article .cartline .single_cart span.no_bord {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 12px;
+}
+/* line 319, sass/shop.scss */
 .product article .cartline .single_cart form {
   display: inline-block;
 }
-/* line 317, sass/shop.scss */
+/* line 322, sass/shop.scss */
 .product article .cartline .single_cart a {
   margin-left: 12px;
   font-family: kp_icons;
@@ -1006,7 +1012,7 @@ input[type="text"]:focus {
   color: #fff;
   font-size: 22px;
 }
-/* line 325, sass/shop.scss */
+/* line 330, sass/shop.scss */
 .product article .cartline .stock {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1018,7 +1024,7 @@ input[type="text"]:focus {
   font-size: 12px;
   color: #e66f50;
 }
-/* line 333, sass/shop.scss */
+/* line 338, sass/shop.scss */
 .product article .cartline .payment {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1030,12 +1036,12 @@ input[type="text"]:focus {
   font-size: 12px;
   color: #c0c0c0;
 }
-/* line 343, sass/shop.scss */
+/* line 348, sass/shop.scss */
 .product aside {
   width: 590px;
   margin-left: 350px;
 }
-/* line 347, sass/shop.scss */
+/* line 352, sass/shop.scss */
 .product aside .specs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1045,14 +1051,14 @@ input[type="text"]:focus {
   padding: 20px;
   background: #f8f8f8;
 }
-/* line 352, sass/shop.scss */
+/* line 357, sass/shop.scss */
 .product aside .specs h3 {
   font-size: 16px;
   font-weight: bold;
   color: #808080;
   margin-bottom: 20px;
 }
-/* line 359, sass/shop.scss */
+/* line 364, sass/shop.scss */
 .product aside .product-tags {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1062,12 +1068,12 @@ input[type="text"]:focus {
   padding: 20px;
 }
 
-/* line 367, sass/shop.scss */
+/* line 372, sass/shop.scss */
 .search-result {
   margin-top: 40px;
   padding-left: 20px;
 }
-/* line 370, sass/shop.scss */
+/* line 375, sass/shop.scss */
 .search-result h1 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1076,11 +1082,11 @@ input[type="text"]:focus {
   vertical-align: middle;
   font-size: 21px;
 }
-/* line 374, sass/shop.scss */
+/* line 379, sass/shop.scss */
 .search-result h1 span {
   font-weight: 700;
 }
-/* line 378, sass/shop.scss */
+/* line 383, sass/shop.scss */
 .search-result a {
   letter-spacing: normal;
   word-spacing: normal;

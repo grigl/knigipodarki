@@ -310,6 +310,11 @@
           padding-right: 12px;
           font-weight: bold;
           font-size: 18px;
+          &.no_bord {
+            border-right: none;
+            padding-right: 0;
+            padding-left: 12px;
+          }
         }
         form {
           display: inline-block;
