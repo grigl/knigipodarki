@@ -127,6 +127,11 @@ var Checkout = function() {
   });
 }
 
+var MaskInp = function() {
+  $('.phone_mask').mask('+7 (999) 999-9999');
+  $('.postal_mask').mask('999999');
+}
+
 $(function(){
     // SortLinks();
     ResetSorting();
@@ -139,4 +144,5 @@ $(function(){
     ProductImages();
     NewAddressRadio();
     Checkout();
+    MaskInp();
 })
