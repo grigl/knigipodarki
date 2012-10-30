@@ -396,7 +396,7 @@ input[type="text"]:focus {
   vertical-align: top;
   position: relative;
   top: -4px;
-  margin-left: 10px;
+  margin-left: 9px;
 }
 /* line 299, sass/layout.scss */
 .site-footer .foot-right a.social:first-child {
