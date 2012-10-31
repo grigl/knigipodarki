@@ -40,10 +40,10 @@
             <div class="cartline">
               <div class="single_cart">
                 <% if @product.sale_price %>
-                  <span class="ops"><%= @product.price %> р</span>
-                  <span class="no_bord"><%= @product.sale_price %> р</span>
+                  <span class="ops"><%= number_to_currency @product.price  %></span>
+                  <span class="no_bord"><%= number_to_currency @product.sale_price %></span>
                 <% else %>
-                  <span><%= @product.price %> р</span>
+                  <span><%= number_to_currency @product.price %> р</span>
                 <% end %>
 
                 <% if @product.count_on_hand > 0 %>

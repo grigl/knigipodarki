@@ -36,7 +36,7 @@
               <!-- order item -->
               <tr>
                 <td><%= line_item.variant.name %></td>
-                <td><%= line_item.price %> руб.</td>
+                <td><%= number_to_currency line_item.price %></td>
                 <td><%= line_item.quantity %></td>
                 <td><%= line_item.amount %> р</td>
                 <td>&nbsp;</td>
