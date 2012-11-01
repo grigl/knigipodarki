@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121017221244) do
+ActiveRecord::Schema.define(:version => 20121101105923) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -227,6 +227,7 @@ ActiveRecord::Schema.define(:version => 20121017221244) do
     t.string   "payment_state"
     t.string   "email"
     t.text     "special_instructions"
+    t.boolean  "is_sync"
   end
 
   add_index "orders", ["number"], :name => "index_orders_on_number"
