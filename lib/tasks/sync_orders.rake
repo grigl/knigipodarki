@@ -13,6 +13,7 @@ ftp_file = "order.xml"
 #pop_server = "pop.mail.ru"
 #pop_user = "9460116"
 #pop_password = "print112233"
+cash_id = "00000100001b"
 
 debug = false
 #delete_emails = false
@@ -20,7 +21,7 @@ debug = false
 namespace :sync do
   desc "Sync orders"
   task :orders => :environment do
-    datetime = DateTime.now.xmlschema
+    datetime = DateTime.now.strftime('%Y%m%d%H%M%S')
     xml_file = "syncorders/" + datetime + "_" + ftp_file
     
     last_order_time = File.read(".last_order")
@@ -37,7 +38,7 @@ namespace :sync do
     orders.each do|order|
       xml += '<order>'
       xml += '<typedoc>7</typedoc>'
-      xml += '<cashid>'+order.id.to_s+'</cashid>'
+      xml += '<cashid>'+cash_id+'</cashid>'
       xml += '<date>'+order.completed_at.strftime('%Y.%m.%d')+'</date>'
       xml += '<number>'+order.id.to_s+'</number>'
       xml += '<items>'
