@@ -1,6 +1,6 @@
 $('.registration-form .forgot-mess .error').text('');
 $('.registration-form .forgot-mess .error').append('<%= @user.errors.full_messages.join('. ') %>');
-<% if @errors.full_messages.join('. ').length >= 66 %>
+<% if @user.errors.full_messages.join('. ').length >= 66 %>
   $('.restore-password-form .forgot-mess').addClass('large')
 <% end %>
 $('.registration-form .forgot-mess').show();
