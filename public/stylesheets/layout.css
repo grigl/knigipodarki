@@ -372,38 +372,37 @@ input[type="text"]:focus {
   display: inline-block;
   float: left;
   width: 70px;
-  padding-left: 10px;
   text-decoration: underline;
 }
-/* line 331, sass/layout.scss */
+/* line 330, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 50px;
 }
-/* line 337, sass/layout.scss */
+/* line 336, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 340, sass/layout.scss */
+/* line 339, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 342, sass/layout.scss */
+/* line 341, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 351, sass/layout.scss */
+/* line 350, sass/layout.scss */
 .site-footer nav {
   width: 348px;
 }
-/* line 353, sass/layout.scss */
+/* line 352, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 355, sass/layout.scss */
+/* line 354, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
