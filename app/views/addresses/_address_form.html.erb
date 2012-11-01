@@ -59,7 +59,7 @@
       </fieldset>
       <fieldset>
         <%= form.label :zipcode, 'Индекс' %>
-        <%= form.text_field :zipcode, :class => 'required' %>
+        <%= form.text_field :zipcode, :class => 'required postal_mask' %>
       </fieldset>
       <fieldset>
         <%= form.label :address1, 'Адрес' %>
@@ -67,7 +67,7 @@
       </fieldset>
       <fieldset>
         <%= form.label :phone, 'Телефон' %>
-        <%= form.text_field :phone, :class => 'required' %>
+        <%= form.text_field :phone, :class => 'required phone_mask' %>
       </fieldset>
     </div>
     <!-- /.fields -->

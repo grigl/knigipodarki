@@ -13,6 +13,7 @@ ftp_file = "order.xml"
 #pop_server = "pop.mail.ru"
 #pop_user = "9460116"
 #pop_password = "print112233"
+cash_id = "00000100001b"
 
 debug = false
 #delete_emails = false
@@ -20,24 +21,26 @@ debug = false
 namespace :sync do
   desc "Sync orders"
   task :orders => :environment do
-    datetime = DateTime.now.xmlschema
+    datetime = DateTime.now.strftime('%Y%m%d%H%M%S')
     xml_file = "syncorders/" + datetime + "_" + ftp_file
     
-    last_order_time = File.read(".last_order")
-    orders = Order.where('completed_at >= ? AND completed_at IS NOT NULL', last_order_time)
+    #last_order_time = File.read(".last_order")
+    orders = Order.where('completed_at IS NOT NULL AND (is_sync = ? OR is_sync IS NULL)', false)
     if orders.count == 0 then
       return
     end 
     
     new_order_time = DateTime.now.strftime('%Y-%m-%d %H:%M:%S')
-    File.open('.last_order', 'w') {|f| f.write(new_order_time.to_s) }    
+    #File.open('.last_order', 'w') {|f| f.write(new_order_time.to_s) }    
         
     xml = '<?xml version="1.0" encoding="UTF-8"?>'
     xml += '<root>'                              
     orders.each do|order|
+      order.is_sync = true
+      order.save()
       xml += '<order>'
       xml += '<typedoc>7</typedoc>'
-      xml += '<cashid>'+order.id.to_s+'</cashid>'
+      xml += '<cashid>'+cash_id+'</cashid>'
       xml += '<date>'+order.completed_at.strftime('%Y.%m.%d')+'</date>'
       xml += '<number>'+order.id.to_s+'</number>'
       xml += '<items>'
