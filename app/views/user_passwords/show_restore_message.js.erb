@@ -3,4 +3,5 @@ $('.restore-password-form .forgot-mess .error').append('<%= flash.notice %>');
 <% if flash.notice.length >= 66 %>
   $('.restore-password-form .forgot-mess').addClass('large')
 <% end %>
+$('.restore-password-form input').attr('disabled', false);
 $('.restore-password-form .forgot-mess').show();
