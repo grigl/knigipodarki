@@ -1570,28 +1570,34 @@ input[type="text"]:focus {
 .auth fieldset .remember label input {
   width: auto;
 }
-/* line 78, sass/checkout.scss */
+/* line 75, sass/checkout.scss */
+.auth fieldset .remember label input.no-style {
+  width: auto;
+  height: auto;
+}
+/* line 82, sass/checkout.scss */
 .auth fieldset .remember a {
   float: right;
   display: block;
+  margin-top: 1px;
 }
-/* line 84, sass/checkout.scss */
+/* line 89, sass/checkout.scss */
 .auth .controls {
   overflow: hidden;
   margin-top: -20px;
 }
-/* line 87, sass/checkout.scss */
+/* line 92, sass/checkout.scss */
 .auth .controls input {
   float: left;
   margin-left: 0;
   font-weight: bold;
   padding: 0 20px;
 }
-/* line 92, sass/checkout.scss */
+/* line 97, sass/checkout.scss */
 .auth .controls input.blue {
   background: #4c7f82;
 }
-/* line 96, sass/checkout.scss */
+/* line 101, sass/checkout.scss */
 .auth .controls a {
   float: right;
   border: none;
@@ -1603,19 +1609,19 @@ input[type="text"]:focus {
   text-decoration: none;
 }
 
-/* line 110, sass/checkout.scss */
+/* line 115, sass/checkout.scss */
 .adress-choise fieldset {
   width: 622px;
   margin-bottom: 18px;
 }
-/* line 113, sass/checkout.scss */
+/* line 118, sass/checkout.scss */
 .adress-choise fieldset input {
   letter-spacing: normal;
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
 }
-/* line 116, sass/checkout.scss */
+/* line 121, sass/checkout.scss */
 .adress-choise fieldset label {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1623,37 +1629,37 @@ input[type="text"]:focus {
   vertical-align: top;
   width: 594px;
 }
-/* line 121, sass/checkout.scss */
+/* line 126, sass/checkout.scss */
 .adress-choise .controls {
   text-align: left;
   margin: 0;
 }
-/* line 124, sass/checkout.scss */
+/* line 129, sass/checkout.scss */
 .adress-choise .controls input {
   margin-left: 0;
 }
-/* line 129, sass/checkout.scss */
+/* line 134, sass/checkout.scss */
 .adress-choise .payment-comment h3 {
   font-size: 21px;
   margin-bottom: 25px;
 }
-/* line 133, sass/checkout.scss */
+/* line 138, sass/checkout.scss */
 .adress-choise .payment-comment textarea {
   width: 594px;
   height: 68px;
   border: 1px solid #c0c0c0;
 }
 
-/* line 141, sass/checkout.scss */
+/* line 146, sass/checkout.scss */
 .approve {
   width: 594px;
   margin-bottom: 40px;
 }
-/* line 144, sass/checkout.scss */
+/* line 149, sass/checkout.scss */
 .approve header {
   margin-bottom: 0;
 }
-/* line 146, sass/checkout.scss */
+/* line 151, sass/checkout.scss */
 .approve header h3 {
   margin-bottom: 15px;
 }

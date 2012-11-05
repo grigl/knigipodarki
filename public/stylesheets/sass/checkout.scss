@@ -72,12 +72,17 @@
       label {
         float: left;
         input {
+          &.remember_check {
+            width: auto;
+            height: auto;
+          }
           width: auto;
         }
       }
       a {
         float: right;
         display: block;
+        margin-top: 1px;
       }
     }
   }

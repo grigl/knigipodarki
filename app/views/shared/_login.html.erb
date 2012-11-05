@@ -20,7 +20,7 @@
         <%= f.password_field 'password' %>
         <div class="remember">
           <label>
-            <%= f.check_box :remember_me %>
+            <%= f.check_box :remember_me, :class => 'remember_check' %>
             <%= t('remember_me') %>
           </label>
           <%= link_to t("forgot_password"), new_user_password_path %>
