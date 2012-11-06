@@ -4,8 +4,24 @@
       <div class="wrap">
         <section class="forms auth">
 
-          <%= render "shared/error_messages", :target => @user %>
           <h3><%= t(:change_my_password) %></h3>
+
+          <% if @user && @user.errors %>
+            <% @user.errors.full_messages.each do |msg| %>
+              <% if msg == 'Reset password token имеет неверное значение' || msg == 'Reset password token не может быть пустым' %>
+                Что-то пошло не так и восстановить пароль не удалось. 
+                Скорее всего, ссылка восстановления пароля устарела 
+                или вы попытались восстановить пароль второй раз по одной и той же ссылке.
+                Запросите письмо с инструкциями еще раз и попробуйте снова.<br /><br />
+              <% else %>
+                <%= msg %><br />
+              <% end %>
+            <% end %>
+          <% end %>
+
+          <% if @error %>
+            <%= @error %></br>
+          <% end %>
 
           <%= form_for @user, :url => user_password_path, :html => {:method => :put, autocomplete: :off} do |f| %>
             <fieldset>

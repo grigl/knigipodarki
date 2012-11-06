@@ -100,6 +100,10 @@ var RestorePasswordForm = function() {
     e.preventDefault();
     $('.restore-password-form .forgot-mess').hide();
   });
+
+  $('.restore-password-form').live('submit', function() {
+    $('.restore-password-form input').attr('disabled', true);
+  });
 }
 
 var ProductImages = function() {
