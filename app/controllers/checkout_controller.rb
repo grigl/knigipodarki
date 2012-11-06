@@ -1,7 +1,7 @@
 # Handles checkout logic.  This is somewhat contrary to standard REST convention since there is not actually a
 # Checkout object.  There's enough distinct logic specific to checkout which has nothing to do with updating an
 # order that this approach is waranted.
-class CheckoutController < Spree::BaseController
+CheckoutController < Spree::BaseController
   ssl_required
 
   before_filter :load_order
@@ -29,6 +29,21 @@ class CheckoutController < Spree::BaseController
       end
     else
       respond_with(@order) { |format| format.html { render :edit } }
+    end
+  end
+
+  def registration
+    @user = User.new
+  end
+
+  def update_registration
+    # hack - temporarily change the state to something other than cart so we can validate the order email address
+    current_order.state = "address"
+    if current_order.update_attributes(params[:order])
+      redirect_to checkout_path
+    else
+      @user = User.new
+      render 'registration'
     end
   end
 
