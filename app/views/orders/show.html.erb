@@ -2,7 +2,8 @@
   <section class="site-content">
     <div class="white-wrap">
       <div class="wrap">
-      
+        
+        <% if current_user %>
         <!-- .account -->
         <section class="account">
           <header>
@@ -11,6 +12,7 @@
           </header>
         </section>
         <!-- /.account -->
+        <% end %>
 
         <% if params.has_key? :checkout_complete %>
           <h3><%= t('thank_you_for_your_order') %></h3>
