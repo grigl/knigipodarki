@@ -47,6 +47,7 @@ namespace :sync do
       order.line_items.each do|line_item|
         xml += '<item>'
         xml += '<id>'+line_item.product.external_id+'</id>'
+        xml += '<folderid>00000100001d</folderid>'
         xml += '<count>'+line_item.quantity.to_s+'</count>'
         xml += '<value>'+(line_item.price*line_item.quantity).to_s+'</value>'
         xml += '</item>'
