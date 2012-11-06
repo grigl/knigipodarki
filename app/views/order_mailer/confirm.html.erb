@@ -19,9 +19,9 @@
   <% @order.line_items.each do |line_item| %>
     <tr>
     <td width="400px"><a href=""><%= line_item.variant.product.name %></a></td>
-    <td style="text-align: center;"><%= line_item.price %> руб.</td>
-    <td width="60px" style="text-align: center;"><%= line_item.quantity %></td>
-    <td style="text-align: center;"><%= line_item.quantity*line_item.price %> руб.</td>
+    <td style="text-align: center;"><%= number_to_currency line_item.price %></td>
+    <td width="60px" style="text-align: center;"><%= number_to_currency line_item.quantity %></td>
+    <td style="text-align: center;"><%= number_to_currency line_item.quantity*line_item.price %></td>
     </tr>
   <% end %>
 </table>

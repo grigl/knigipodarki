@@ -40,7 +40,7 @@
                 <td><%= line_item.variant.name %></td>
                 <td><%= number_to_currency line_item.price %></td>
                 <td><%= line_item.quantity %></td>
-                <td><%= line_item.amount %> р</td>
+                <td><%= number_to_currency line_item.amount %></td>
                 <td>&nbsp;</td>
               </tr>
               <!-- /order item -->
@@ -50,7 +50,7 @@
                 <td>Стоимость товаров:</td>
                 <td></td>
                 <td></td>
-                <td><%= @order.item_total %> р</td>
+                <td><%= number_to_currency @order.item_total %></td>
                 <td>&nbsp;</td>
               </tr>
 
@@ -60,7 +60,7 @@
                 <td><%= ad.label %></td>
                 <td></td>
                 <td></td>
-                <td><%= ad.amount %> р</td>
+                <td><%= number_to_currency ad.amount %></td>
                 <td>&nbsp;</td>
               </tr>
               <!-- /order item -->
