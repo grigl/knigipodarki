@@ -20,6 +20,17 @@
           <h3>Войти как гость</h3>
           <%= form_for @order, :url => update_checkout_registration_path, :html => { :method => :put, :id => "checkout_form_registration"} do |f| %>
 
+            <!-- field -->
+            <fieldset>
+              <%= f.label :email, 'Электронная почта' %>
+              <%= f.text_field :email, :class => 'title'  %>
+            </fieldset>
+            <!-- /field -->
+            <!-- .controls -->
+            <div class="controls">
+              <%= submit_tag 'Продолжить' %>
+            </div>
+            <!-- /.controls -->
             <% if @order.errors %>
               <% if @order.errors[:email] && @order.errors[:email].include?('не может быть пустым') %>
                 Поле "Email" не может быть пустым.
@@ -29,18 +40,7 @@
                 <% end %>
               <% end %>
             <% end %>
-
-            <!-- field -->
-            <fieldset>
-              <%= f.label :email, 'Электронная почта' %><br />
-              <%= f.text_field :email, :class => 'title'  %>
-            </fieldset>
-            <!-- /field -->
-            <!-- .controls -->
-            <div class="controls">
-              <%= submit_tag 'Продолжить' %>
-            </div>
-            <!-- /.controls -->
+            
           <% end %>
         </section>
         <!-- /.forms -->
