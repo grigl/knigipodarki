@@ -21,8 +21,12 @@
           <%= form_for @order, :url => update_checkout_registration_path, :html => { :method => :put, :id => "checkout_form_registration"} do |f| %>
 
             <% if @order.errors %>
-              <% @order.errors.each do |field, msg| %>
-                Поле "<%= @order.class.human_attribute_name(field) %>" <%= msg %>.<br />
+              <% if @order.errors[:email] && @order.errors[:email].include?('не может быть пустым') %>
+                Поле "Email" не может быть пустым.
+              <% else %>
+                <% @order.errors.each do |field, msg| %>
+                  Поле "<%= @order.class.human_attribute_name(field) %>" <%= msg %>.<br />
+                <% end %>
               <% end %>
             <% end %>
 
