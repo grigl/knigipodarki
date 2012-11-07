@@ -37,14 +37,30 @@ class OrdersController < Spree::BaseController
     @order = current_order(true)
 
     params[:products].each do |product_id,variant_id|
+      variant = Variant.find(variant_id)
+      variant_qty_in_cart = @order.line_items.find_by_variant_id(variant_id).quantity rescue 0
+
       quantity = params[:quantity].to_i if !params[:quantity].is_a?(Hash)
       quantity = params[:quantity][variant_id].to_i if params[:quantity].is_a?(Hash)
-      @order.add_variant(Variant.find(variant_id), quantity) if quantity > 0
+
+      if variant_qty_in_cart + quantity > variant.count_on_hand
+        quantity = variant.count_on_hand - variant_qty_in_cart
+      end
+
+      @order.add_variant(variant, quantity) if quantity > 0
     end if params[:products]
 
     params[:variants].each do |variant_id, quantity|
-      quantity = quantity.to_i
-      @order.add_variant(Variant.find(variant_id), quantity) if quantity > 0
+      variant = Variant.find(variant_id)
+      variant_qty_in_cart = @order.line_items.find_by_variant_id(variant_id).quantity rescue 0
+
+      if variant_qty_in_cart + quantity.to_i > variant.count_on_hand
+        quantity = variant.count_on_hand - variant_qty_in_cart
+      else
+        quantity = quantity.to_i
+      end
+
+      @order.add_variant(variant, quantity) if quantity > 0
     end if params[:variants]
 
     @order.update!
@@ -55,10 +71,11 @@ class OrdersController < Spree::BaseController
     @order = current_order
     line_item = @order.line_items.find(params[:id])
 
-    # to do on_hand validation
     if line_item
-      line_item.quantity += 1
-      line_item.save
+      unless line_item.quantity + 1 > line_item.variant.count_on_hand
+        line_item.quantity += 1
+        line_item.save
+      end
       @order.update!
       respond_with(@order) { |format| format.js { render :reload_cart } }
     else
