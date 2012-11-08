@@ -76,61 +76,65 @@
   margin-bottom: 40px;
 }
 /* line 58, sass/checkout.scss */
+.auth .error {
+  margin-top: -10px;
+}
+/* line 61, sass/checkout.scss */
 .auth fieldset {
   margin-bottom: 20px;
 }
-/* line 60, sass/checkout.scss */
+/* line 63, sass/checkout.scss */
 .auth fieldset label {
   display: block;
   margin-bottom: 10px;
 }
-/* line 64, sass/checkout.scss */
+/* line 67, sass/checkout.scss */
 .auth fieldset input {
   width: 260px;
   padding: 0 10px;
   height: 28px;
 }
-/* line 69, sass/checkout.scss */
+/* line 72, sass/checkout.scss */
 .auth fieldset .remember {
   overflow: hidden;
   margin-top: 10px;
 }
-/* line 72, sass/checkout.scss */
+/* line 75, sass/checkout.scss */
 .auth fieldset .remember label {
   float: left;
 }
-/* line 74, sass/checkout.scss */
+/* line 77, sass/checkout.scss */
 .auth fieldset .remember label input {
   width: auto;
 }
-/* line 75, sass/checkout.scss */
+/* line 78, sass/checkout.scss */
 .auth fieldset .remember label input.remember_check {
   width: auto;
   height: auto;
 }
-/* line 82, sass/checkout.scss */
+/* line 85, sass/checkout.scss */
 .auth fieldset .remember a {
   float: right;
   display: block;
   margin-top: 1px;
 }
-/* line 89, sass/checkout.scss */
+/* line 92, sass/checkout.scss */
 .auth .controls {
   overflow: hidden;
   margin-top: -20px;
 }
-/* line 92, sass/checkout.scss */
+/* line 95, sass/checkout.scss */
 .auth .controls input {
   float: left;
   margin-left: 0;
   font-weight: bold;
   padding: 0 20px;
 }
-/* line 97, sass/checkout.scss */
+/* line 100, sass/checkout.scss */
 .auth .controls input.blue {
   background: #4c7f82;
 }
-/* line 101, sass/checkout.scss */
+/* line 104, sass/checkout.scss */
 .auth .controls a {
   float: right;
   border: none;
@@ -142,19 +146,19 @@
   text-decoration: none;
 }
 
-/* line 115, sass/checkout.scss */
+/* line 118, sass/checkout.scss */
 .adress-choise fieldset {
   width: 622px;
   margin-bottom: 18px;
 }
-/* line 118, sass/checkout.scss */
+/* line 121, sass/checkout.scss */
 .adress-choise fieldset input {
   letter-spacing: normal;
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
 }
-/* line 121, sass/checkout.scss */
+/* line 124, sass/checkout.scss */
 .adress-choise fieldset label {
   letter-spacing: normal;
   word-spacing: normal;
@@ -162,37 +166,37 @@
   vertical-align: top;
   width: 594px;
 }
-/* line 126, sass/checkout.scss */
+/* line 129, sass/checkout.scss */
 .adress-choise .controls {
   text-align: left;
   margin: 0;
 }
-/* line 129, sass/checkout.scss */
+/* line 132, sass/checkout.scss */
 .adress-choise .controls input {
   margin-left: 0;
 }
-/* line 134, sass/checkout.scss */
+/* line 137, sass/checkout.scss */
 .adress-choise .payment-comment h3 {
   font-size: 21px;
   margin-bottom: 25px;
 }
-/* line 138, sass/checkout.scss */
+/* line 141, sass/checkout.scss */
 .adress-choise .payment-comment textarea {
   width: 594px;
   height: 68px;
   border: 1px solid #c0c0c0;
 }
 
-/* line 146, sass/checkout.scss */
+/* line 149, sass/checkout.scss */
 .approve {
   width: 594px;
   margin-bottom: 40px;
 }
-/* line 149, sass/checkout.scss */
+/* line 152, sass/checkout.scss */
 .approve header {
   margin-bottom: 0;
 }
-/* line 151, sass/checkout.scss */
+/* line 154, sass/checkout.scss */
 .approve header h3 {
   margin-bottom: 15px;
 }
