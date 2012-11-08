@@ -5,7 +5,7 @@ class UserRegistrationsMailer < ActionMailer::Base
 
   def registration_confirm(user)
     @user = user
-    subject = "Вы успешно зарегистрировались в магазине Книгиподарки"
+    subject = "Книгиподарки. Вы успешно зарегистрировались в магазине Книгиподарки"
     mail(:to => user.email,
          :subject => subject,
          :template_name => 'confirm')
