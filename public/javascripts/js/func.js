@@ -141,7 +141,7 @@ var RefreshCart = function() {
   var NoActive = $('.refresh').removeClass('active');
   $('.add-to-cart').click(function() {
     $('.refresh').addClass('active');
-    setTimeout(NoActive, 10);
+    setTimeout(NoActive, 300);
   });
 }
 
