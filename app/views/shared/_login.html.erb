@@ -12,13 +12,25 @@
       <!-- field -->
       <fieldset>
         <%= f.label(:email, t("email")) %>
-        <%= f.text_field('email') %>
+        <% if flash.any? && flash[:error].include?('Неправильный адрес или пароль.') %>
+          <span class="field_with_errors">
+            <%= f.text_field('email') %>
+          </span>
+        <% else %>
+          <%= f.text_field('email') %>
+        <% end %>
       </fieldset>
       <!-- /field -->
       <!-- field -->
       <fieldset>
         <%= f.label :password, t("password") %>
-        <%= f.password_field 'password' %>
+        <% if flash.any? && flash[:error].include?('Неправильный адрес или пароль.') %>
+          <span class="field_with_errors">
+            <%= f.password_field 'password' %>
+          </span>
+        <% else %>
+          <%= f.password_field 'password' %>          
+        <% end %>
         <div class="remember">
           <label>
             <%= f.check_box :remember_me, :class => 'remember_check' %>

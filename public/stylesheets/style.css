@@ -2121,7 +2121,7 @@ input[type="text"]:focus {
 }
 
 /* line 113, sass/temp.scss */
-span.field_with_errors input {
+.field_with_errors input {
   background-color: #E66F50;
 }
 
