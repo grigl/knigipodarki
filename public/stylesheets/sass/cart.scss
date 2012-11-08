@@ -1,5 +1,14 @@
 @import 'mixins';
 
+@-webkit-keyframes Rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 .scrolled-to-bottom .cart {
   position: static;
 }
@@ -39,6 +48,19 @@
         text-align: center;
         float: left;
         background: #e66f50;
+      }
+      .refresh {
+        position: absolute;
+        right: 36px;
+        width: 30px;
+        height: 30px;
+        &.active {
+          background: url(../images/refresh.png) center center no-repeat;
+          -webkit-animation-name: Rotate;
+          -webkit-animation-duration: 1s;
+          animation-name: Rotate;
+          animation-duration: 1s;
+        }
       }
       .cart-order {
         position: absolute;

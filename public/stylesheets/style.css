@@ -1548,65 +1548,61 @@ input[type="text"]:focus {
   margin-bottom: 40px;
 }
 /* line 58, sass/checkout.scss */
-.auth .error {
-  margin-top: -10px;
-}
-/* line 61, sass/checkout.scss */
 .auth fieldset {
   margin-bottom: 20px;
 }
-/* line 63, sass/checkout.scss */
+/* line 60, sass/checkout.scss */
 .auth fieldset label {
   display: block;
   margin-bottom: 10px;
 }
-/* line 67, sass/checkout.scss */
+/* line 64, sass/checkout.scss */
 .auth fieldset input {
   width: 260px;
   padding: 0 10px;
   height: 28px;
 }
-/* line 72, sass/checkout.scss */
+/* line 69, sass/checkout.scss */
 .auth fieldset .remember {
   overflow: hidden;
   margin-top: 10px;
 }
-/* line 75, sass/checkout.scss */
+/* line 72, sass/checkout.scss */
 .auth fieldset .remember label {
   float: left;
 }
-/* line 77, sass/checkout.scss */
+/* line 74, sass/checkout.scss */
 .auth fieldset .remember label input {
   width: auto;
 }
-/* line 78, sass/checkout.scss */
+/* line 75, sass/checkout.scss */
 .auth fieldset .remember label input.remember_check {
   width: auto;
   height: auto;
 }
-/* line 85, sass/checkout.scss */
+/* line 82, sass/checkout.scss */
 .auth fieldset .remember a {
   float: right;
   display: block;
   margin-top: 1px;
 }
-/* line 92, sass/checkout.scss */
+/* line 89, sass/checkout.scss */
 .auth .controls {
   overflow: hidden;
   margin-top: -20px;
 }
-/* line 95, sass/checkout.scss */
+/* line 92, sass/checkout.scss */
 .auth .controls input {
   float: left;
   margin-left: 0;
   font-weight: bold;
   padding: 0 20px;
 }
-/* line 100, sass/checkout.scss */
+/* line 97, sass/checkout.scss */
 .auth .controls input.blue {
   background: #4c7f82;
 }
-/* line 104, sass/checkout.scss */
+/* line 101, sass/checkout.scss */
 .auth .controls a {
   float: right;
   border: none;
@@ -1618,19 +1614,19 @@ input[type="text"]:focus {
   text-decoration: none;
 }
 
-/* line 118, sass/checkout.scss */
+/* line 115, sass/checkout.scss */
 .adress-choise fieldset {
   width: 622px;
   margin-bottom: 18px;
 }
-/* line 121, sass/checkout.scss */
+/* line 118, sass/checkout.scss */
 .adress-choise fieldset input {
   letter-spacing: normal;
   word-spacing: normal;
   display: inline-block;
   vertical-align: top;
 }
-/* line 124, sass/checkout.scss */
+/* line 121, sass/checkout.scss */
 .adress-choise fieldset label {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1638,47 +1634,59 @@ input[type="text"]:focus {
   vertical-align: top;
   width: 594px;
 }
-/* line 129, sass/checkout.scss */
+/* line 126, sass/checkout.scss */
 .adress-choise .controls {
   text-align: left;
   margin: 0;
 }
-/* line 132, sass/checkout.scss */
+/* line 129, sass/checkout.scss */
 .adress-choise .controls input {
   margin-left: 0;
 }
-/* line 137, sass/checkout.scss */
+/* line 134, sass/checkout.scss */
 .adress-choise .payment-comment h3 {
   font-size: 21px;
   margin-bottom: 25px;
 }
-/* line 141, sass/checkout.scss */
+/* line 138, sass/checkout.scss */
 .adress-choise .payment-comment textarea {
   width: 594px;
   height: 68px;
   border: 1px solid #c0c0c0;
 }
 
-/* line 149, sass/checkout.scss */
+/* line 146, sass/checkout.scss */
 .approve {
   width: 594px;
   margin-bottom: 40px;
 }
-/* line 152, sass/checkout.scss */
+/* line 149, sass/checkout.scss */
 .approve header {
   margin-bottom: 0;
 }
-/* line 154, sass/checkout.scss */
+/* line 151, sass/checkout.scss */
 .approve header h3 {
   margin-bottom: 15px;
 }
 
-/* line 3, sass/cart.scss */
+@-webkit-keyframes Rotate {
+  /* line 4, sass/cart.scss */
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 7, sass/cart.scss */
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* line 12, sass/cart.scss */
 .scrolled-to-bottom .cart {
   position: static;
 }
 
-/* line 7, sass/cart.scss */
+/* line 16, sass/cart.scss */
 .cart {
   position: fixed;
   background: #fff;
@@ -1687,7 +1695,7 @@ input[type="text"]:focus {
   width: 100%;
   z-index: 200;
 }
-/* line 14, sass/cart.scss */
+/* line 23, sass/cart.scss */
 .cart .panel {
   position: relative;
   background: #404040;
@@ -1696,17 +1704,17 @@ input[type="text"]:focus {
   font-weight: bold;
   z-index: 250;
 }
-/* line 26, sass/cart.scss */
+/* line 35, sass/cart.scss */
 .cart .panel .panel_in {
   cursor: pointer;
   overflow: hidden;
 }
-/* line 30, sass/cart.scss */
+/* line 39, sass/cart.scss */
 .cart .panel a {
   color: #fff;
   text-decoration: none;
 }
-/* line 34, sass/cart.scss */
+/* line 43, sass/cart.scss */
 .cart .panel .items {
   display: block;
   width: 130px;
@@ -1716,7 +1724,22 @@ input[type="text"]:focus {
   float: left;
   background: #e66f50;
 }
-/* line 43, sass/cart.scss */
+/* line 52, sass/cart.scss */
+.cart .panel .refresh {
+  position: absolute;
+  right: 36px;
+  width: 30px;
+  height: 30px;
+}
+/* line 57, sass/cart.scss */
+.cart .panel .refresh.active {
+  background: url(../images/refresh.png) center center no-repeat;
+  -webkit-animation-name: Rotate;
+  -webkit-animation-duration: 1s;
+  animation-name: Rotate;
+  animation-duration: 1s;
+}
+/* line 65, sass/cart.scss */
 .cart .panel .cart-order {
   position: absolute;
   top: 0;
@@ -1729,7 +1752,7 @@ input[type="text"]:focus {
   z-index: 300;
   cursor: pointer;
 }
-/* line 55, sass/cart.scss */
+/* line 77, sass/cart.scss */
 .cart .panel .control {
   display: block;
   height: 25px;
@@ -1737,19 +1760,19 @@ input[type="text"]:focus {
   float: right;
   font-family: kp_icons;
 }
-/* line 61, sass/cart.scss */
+/* line 83, sass/cart.scss */
 .cart .panel .control .close {
   display: none;
 }
-/* line 65, sass/cart.scss */
+/* line 87, sass/cart.scss */
 .cart .panel .control.active .open {
   display: none;
 }
-/* line 68, sass/cart.scss */
+/* line 90, sass/cart.scss */
 .cart .panel .control.active .close {
   display: block;
 }
-/* line 74, sass/cart.scss */
+/* line 96, sass/cart.scss */
 .cart .forsale {
   width: 1100px;
   margin: 0 auto;
@@ -1757,7 +1780,7 @@ input[type="text"]:focus {
   height: 240px;
   overflow-y: auto;
 }
-/* line 82, sass/cart.scss */
+/* line 104, sass/cart.scss */
 .cart .forsale .item {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1767,7 +1790,7 @@ input[type="text"]:focus {
   padding: 0 52px 0 0;
   margin-bottom: 30px;
 }
-/* line 87, sass/cart.scss */
+/* line 109, sass/cart.scss */
 .cart .forsale .item img {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1776,7 +1799,7 @@ input[type="text"]:focus {
   width: 60px;
   height: auto;
 }
-/* line 92, sass/cart.scss */
+/* line 114, sass/cart.scss */
 .cart .forsale .item .desc {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1786,25 +1809,25 @@ input[type="text"]:focus {
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 97, sass/cart.scss */
+/* line 119, sass/cart.scss */
 .cart .forsale .item .desc span {
   display: block;
 }
-/* line 100, sass/cart.scss */
+/* line 122, sass/cart.scss */
 .cart .forsale .item .desc .name {
   color: #202020;
   font-weight: bold;
   overflow-y: hidden;
   height: 40px;
 }
-/* line 106, sass/cart.scss */
+/* line 128, sass/cart.scss */
 .cart .forsale .item .desc .price {
   font-size: 14px;
   font-weight: bold;
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 113, sass/cart.scss */
+/* line 135, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1816,7 +1839,7 @@ input[type="text"]:focus {
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 121, sass/cart.scss */
+/* line 143, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -1827,7 +1850,7 @@ input[type="text"]:focus {
   text-align: center;
   color: #808080;
 }
-/* line 131, sass/cart.scss */
+/* line 153, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs .count {
   display: block;
   float: left;
@@ -1838,7 +1861,7 @@ input[type="text"]:focus {
   border: none;
   text-align: center;
 }
-/* line 142, sass/cart.scss */
+/* line 164, sass/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;
