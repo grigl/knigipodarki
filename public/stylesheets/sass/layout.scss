@@ -235,11 +235,21 @@ input[type="text"]:focus {outline: none;}
           &:last-child {
             margin-right: 0;
           }
-        }
-        li.current {
-          a {
-            background: $link;
-            color: #fff;
+          &.current {
+            a {
+              background: $link;
+              color: #fff;
+            }
+          }
+          &.designers {
+            a {
+              color: #f7941e;
+            }
+          }
+          &.publishers {
+            a {
+              color: #4c7f82;
+            }
           }
         }
       }
