@@ -33,6 +33,10 @@ p {
 input[type="text"]:focus {outline: none;}
 .text-placeholder {color: #aba9ab !important}
 
+input[type="text"]:-webkit-autofill { 
+        background-color: none !important; background-image:none !important; 
+}
+
 .cl {
   clear: both;
   font-size: 0px;
