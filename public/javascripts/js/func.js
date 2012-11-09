@@ -138,11 +138,13 @@ var MaskInp = function() {
 }
 
 var RefreshCart = function() {
-  var NoActive = $('.refresh').removeClass('active');
+  var NoActive = function(){ $('.refresh').removeClass('active'); }
+
+  // При клике добавляем класс .active и через 0.3 c убираем 
   $('.add-to-cart').click(function() {
     $('.refresh').addClass('active');
+    setTimeout(NoActive, 300);
   });
-  setTimeout(NoActive, 300);
 }
 
 $(function(){
