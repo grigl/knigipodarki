@@ -289,40 +289,48 @@ input[type="text"]:-webkit-autofill {
   background: #4c7f82;
   color: #fff;
 }
-/* line 249, sass/layout.scss */
+/* line 250, sass/layout.scss */
+.site-header .navigations .direction-nav ul li.designers.current a {
+  color: #fff;
+}
+/* line 254, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers a {
   color: #f7941e;
 }
-/* line 254, sass/layout.scss */
+/* line 259, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers a {
   color: #4c7f82;
 }
-/* line 261, sass/layout.scss */
+/* line 263, sass/layout.scss */
+.site-header .navigations .direction-nav ul li.publishers.current a {
+  color: #fff;
+}
+/* line 271, sass/layout.scss */
 .site-header .navigations .sub-direction-nav {
   position: absolute;
   top: 130px;
 }
-/* line 269, sass/layout.scss */
+/* line 279, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li {
   display: inline;
   margin-right: 24px;
 }
-/* line 272, sass/layout.scss */
+/* line 282, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a {
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
 }
-/* line 276, sass/layout.scss */
+/* line 286, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 282, sass/layout.scss */
+/* line 292, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul .current a {
   font-weight: bold;
 }
 
-/* line 293, sass/layout.scss */
+/* line 303, sass/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -332,16 +340,16 @@ input[type="text"]:-webkit-autofill {
   padding: 30px 0 30px 0;
   font-size: .9em;
 }
-/* line 302, sass/layout.scss */
+/* line 312, sass/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 305, sass/layout.scss */
+/* line 315, sass/layout.scss */
 .site-footer .foot-right {
   width: 378px;
   float: left;
 }
-/* line 308, sass/layout.scss */
+/* line 318, sass/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   letter-spacing: normal;
@@ -352,11 +360,11 @@ input[type="text"]:-webkit-autofill {
   top: -4px;
   margin-left: 9px;
 }
-/* line 314, sass/layout.scss */
+/* line 324, sass/layout.scss */
 .site-footer .foot-right a.social:first-child {
   margin-left: 0;
 }
-/* line 318, sass/layout.scss */
+/* line 328, sass/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   letter-spacing: normal;
@@ -364,64 +372,64 @@ input[type="text"]:-webkit-autofill {
   display: inline-block;
   vertical-align: top;
 }
-/* line 322, sass/layout.scss */
+/* line 332, sass/layout.scss */
 .site-footer .foot-right .mail {
   margin: 0 10px;
 }
-/* line 326, sass/layout.scss */
+/* line 336, sass/layout.scss */
 .site-footer .devs {
   float: right;
   width: 250px;
   margin-right: -40px;
 }
-/* line 330, sass/layout.scss */
+/* line 340, sass/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 334, sass/layout.scss */
+/* line 344, sass/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 339, sass/layout.scss */
+/* line 349, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   text-decoration: underline;
 }
-/* line 345, sass/layout.scss */
+/* line 355, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 50px;
 }
-/* line 351, sass/layout.scss */
+/* line 361, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 354, sass/layout.scss */
+/* line 364, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 356, sass/layout.scss */
+/* line 366, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 365, sass/layout.scss */
+/* line 375, sass/layout.scss */
 .site-footer nav {
   width: 348px;
 }
-/* line 367, sass/layout.scss */
+/* line 377, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 369, sass/layout.scss */
+/* line 379, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;

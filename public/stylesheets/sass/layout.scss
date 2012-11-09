@@ -246,6 +246,11 @@ input[type="text"]:-webkit-autofill {
             }
           }
           &.designers {
+            &.current {
+              a {
+                color: #fff;
+              }
+            }
             a {
               color: #f7941e;
             }
@@ -253,6 +258,11 @@ input[type="text"]:-webkit-autofill {
           &.publishers {
             a {
               color: #4c7f82;
+            }
+            &.current {
+              a {
+                color: #fff;
+              }
             }
           }
         }
