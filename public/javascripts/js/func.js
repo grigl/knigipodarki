@@ -143,7 +143,7 @@ var RefreshCart = function() {
   // При клике добавляем класс .active и через 0.3 c убираем 
   $('.add-to-cart').click(function() {
     $('.refresh').addClass('active');
-    setTimeout(NoActive, 300);
+    setTimeout(NoActive, 600);
   });
 }
 
