@@ -6,6 +6,8 @@ class OrdersController < Spree::BaseController
 
   def show
     @order = Order.find_by_number(params[:id])
+    
+    render_404 unless @order
   end
 
   def update
