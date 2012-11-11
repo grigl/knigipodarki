@@ -43,7 +43,7 @@
                   <span class="ops"><%= number_to_currency @product.price  %></span>
                   <span class="no_bord"><%= number_to_currency @product.sale_price %></span>
                 <% else %>
-                  <span><%= number_to_currency @product.price %> р</span>
+                  <span><%= number_to_currency @product.price %></span>
                 <% end %>
 
                 <% if @product.count_on_hand > 0 %>
