@@ -20,17 +20,17 @@
       <% end %>
 
       <% if params[:taxonomy] && '/' + params[:taxonomy] == '/publishers' %>
-        <li class="current">
+        <li class="publishers current">
       <% else %>
-        <li>
+        <li class="publishers">
       <% end %>
         <%= link_to 'Издательства', '/publishers' %>
       </li>
 
       <% if params[:taxonomy] && '/' + params[:taxonomy] == '/designers' %>
-        <li class="current">
+        <li class="designers current">
       <% else %>
-        <li>
+        <li class="designers">
       <% end %>
         <%= link_to 'Дизайнеры', '/designers' %>
       </li>
