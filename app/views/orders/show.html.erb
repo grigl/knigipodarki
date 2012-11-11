@@ -27,6 +27,27 @@
           <table>
             <tbody>
               <tr>
+                <th>Дата</th>
+                <th>Статус</th>
+                <th>Статус платежа</th>
+                <th>Статус отправки</th>
+              </tr>
+                <tr>
+                  <td><%= @order.created_at.to_date %></td>
+                  <td><%= t(@order.state).titleize %></td>
+                  <td><%= t("payment_states.#{@order.payment_state}") if @order.payment_state %></td>
+                  <td><%= t("shipment_states.#{@order.shipment_state}") if @order.shipment_state %></td>
+                </tr>
+            </tbody>
+          </table>
+          <br />
+          <header>
+            <h3>Товары заказа</h3>
+          </header>
+          <!-- товары заказа -->
+          <table>
+            <tbody>
+              <tr>
                 <th>Описание товара</th>
                 <th>Цена</th>
                 <th>Количество</th>
@@ -85,4 +106,4 @@
     </div>
     <!-- /.white-wrap -->
   </section>
-  <!-- /.content -->
+  <!-- /.content
