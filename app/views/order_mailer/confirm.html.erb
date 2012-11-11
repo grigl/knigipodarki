@@ -18,7 +18,7 @@
 <table width="640px" style=" margin-bottom: 50px;" cellpadding="0" cellspacing="0" border="0">
   <% @order.line_items.each do |line_item| %>
     <tr>
-    <td width="400px"><a href=""><%= line_item.variant.product.name %></a></td>
+    <td width="400px"><%= link_to line_item.variant.product.name, product_url(line_item.variant.product) %></td>
     <td style="text-align: center;"><%= number_to_currency line_item.price %></td>
     <td width="60px" style="text-align: center;"><%= line_item.quantity %></td>
     <td style="text-align: center;"><%= number_to_currency line_item.quantity*line_item.price %></td>
