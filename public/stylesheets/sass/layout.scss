@@ -227,9 +227,11 @@ input[type="text"]:-webkit-autofill {
             display: block;
             float: left;
             padding: 10px 10px;
-            margin-right: 1px;
+            margin-right: 10px;
             text-transform: uppercase;
             text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
             color: $color;
             &:hover {
               border: 3px solid #edf2f2;
@@ -246,14 +248,15 @@ input[type="text"]:-webkit-autofill {
             }
           }
           &.designers {
-            &.current {
-              a {
-                color: #fff;
-                background: #f7941e;;
-              }
-            }
             a {
               color: #f7941e;
+            }
+            &.current {
+              a {
+                background: none;
+                border: 3px solid #f7941e;
+                padding: 7px 7px;
+              }
             }
           }
           &.publishers {
@@ -262,7 +265,9 @@ input[type="text"]:-webkit-autofill {
             }
             &.current {
               a {
-                color: #fff;
+                background: none;
+                border: 3px solid #4c7f82;
+                padding: 7px 7px;
               }
             }
           }
