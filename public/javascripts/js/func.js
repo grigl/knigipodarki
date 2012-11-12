@@ -161,5 +161,5 @@ $(function(){
     PlaceHolders();
     Checkout();
     MaskInp();
-    RefreshCart();
+    // RefreshCart();
 })
