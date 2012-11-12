@@ -12,7 +12,7 @@
 <div id="mailsub">
 <div style="background: white; padding: 58px 80px; color: #404040;">
 <h1 style="text-transform: uppercase; font-weight: normal; font-size: 30px; text-align: center;">Вы успешно зарегистрировались в магазине</h1>
-<div style="margin: 80px 0 0 0; text-align: center;"><img src="logo.png" alt="" width="575px" height="100px" /></div>
+<div style="margin: 80px 0 0 0; text-align: center;"><img src="http://<%= Spree::Config[:site_url] %>/images/logo.png" alt="" width="575px" height="100px"></div>
 <div style="border-bottom: 1px solid #404040; border-top: 1px solid #404040; margin: 50px 0 10px 0; padding: 34px 0;">
 <h2 style="font-weight: normal; margin-bottom: 25px; font-size: 21px;">Ваша регистрационная информация</h2>
 <p style="font-size: 14px;">Логин: <%= @user.email %><br />Пароль: <%= @user.password %>
