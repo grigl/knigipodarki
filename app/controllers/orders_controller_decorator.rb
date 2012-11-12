@@ -1,12 +1,11 @@
-class OrdersController < Spree::BaseController
+OrdersController.class_eval do
   respond_to :html, :js
 
   helper :products
 
-
   def show
     @order = Order.find_by_number(params[:id])
-    
+
     render_404 unless @order
   end
 
