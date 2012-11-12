@@ -141,7 +141,7 @@ var RefreshCart = function() {
   var NoActive = function(){ $('.refresh').removeClass('active'); }
 
   // При клике добавляем класс .active и через 0.3 c убираем 
-  $('.add-to-cart').click(function() {
+  $('.add-to-cart, .cart .item .minus, .cart .item .plus').live('click', function() {
     $('.refresh').addClass('active');
     setTimeout(NoActive, 1200);
   });
