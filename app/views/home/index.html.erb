@@ -50,7 +50,7 @@
           <!-- /catalogue -->
         <% end %>
 
-        <% if @tags %>
+        <% if @tags && !@tags.empty? %>
           <aside class="tags">
             <ul>
               <% @tags.each do |tag| %>
