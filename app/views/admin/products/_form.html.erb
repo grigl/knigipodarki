@@ -44,6 +44,12 @@
         <%= f.error_message_on :recommended %>
       <% end %>
 
+      <%= f.field_container :is_published do %>
+        <%= f.label :is_published, 'Опубликован' %>
+        <%= f.check_box :is_published %>
+        <%= f.error_message_on :is_published %>
+      <% end %>
+
       <%= f.field_container :tagged_as_new do %>
         <%= f.label :tagged_as_new, 'Новинка' %>
         <%= f.check_box :tagged_as_new %>

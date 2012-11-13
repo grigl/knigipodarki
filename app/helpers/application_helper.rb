@@ -20,6 +20,6 @@ module ApplicationHelper
       categories = all_categories
     end
 
-    categories.select { |cat| (cat.all_products & brand.all_products) != [] }
+    categories.select { |cat| (cat.all_products.not_deleted.published & brand.all_products.not_deleted.published) != [] }
   end
 end

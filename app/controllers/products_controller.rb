@@ -7,7 +7,7 @@ class ProductsController < Spree::BaseController
   respond_to :html
 
   def index
-    products = Product.order('created_at').not_deleted
+    products = Product.order('created_at').not_deleted.published
     # scopes
     if params[:scope] 
       products = eval "products.#{params[:scope]}_products"
@@ -40,7 +40,7 @@ class ProductsController < Spree::BaseController
   def show
     @product = Product.find_by_permalink!(params[:id])
     return unless @product
-    if @product.deleted_at
+    if @product.deleted_at || !@product.published
       render_404
     else
       @variants = Variant.active.includes([:option_values, :images]).where(:product_id => @product.id)
@@ -59,7 +59,7 @@ class ProductsController < Spree::BaseController
 
   def tags
     @tag = Tag.find_by_name!(params[:tag])
-    products = @tag.products.not_deleted
+    products = @tag.products.not_deleted.published
 
     @products = products.paginate(:page => params[:page], :per_page => 8)
 

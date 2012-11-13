@@ -92,6 +92,8 @@ Product.class_eval do
   # default product scope only lists available and non-deleted products
   scope :not_deleted,     where("products.deleted_at is NULL")
 
+  scope :published, where('products.is_published is TRUE')
+
   scope :available,       lambda { |*on| where("products.available_on <= ?", on.first || Time.zone.now ) }
 
   #RAILS 3 TODO - this scope doesn't match the original 2.3.x version, needs attention (but it works)
