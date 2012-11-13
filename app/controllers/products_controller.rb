@@ -40,7 +40,7 @@ class ProductsController < Spree::BaseController
   def show
     @product = Product.find_by_permalink!(params[:id])
     return unless @product
-    if @product.deleted_at || !@product.published
+    if @product.deleted_at || !@product.is_published
       render_404
     else
       @variants = Variant.active.includes([:option_values, :images]).where(:product_id => @product.id)
