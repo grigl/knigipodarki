@@ -125,6 +125,9 @@ OrdersController.class_eval do
     respond_with(@order) { |format| format.html { redirect_to cart_path } }
   end
 
+  def update_comment
+  end
+
   def accurate_title
     @order && @order.completed? ? "#{Order.human_name} #{@order.number}" : I18n.t(:shopping_cart)
   end

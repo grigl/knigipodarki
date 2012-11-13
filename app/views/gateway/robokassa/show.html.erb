@@ -1,0 +1,78 @@
+<% @show_cart_panel = false %>
+
+<!-- .content -->
+  <section class="site-content">
+    <div class="white-wrap">
+      <div class="wrap">
+      
+        <%= render 'checkout/checkout_breadcrumbs' %>
+
+          <!-- .forms -->
+            <section class="forms checkout">
+
+              <%= render 'checkout/summary', :order => @order %>
+
+            <!-- approve info -->
+              <div class="approve">
+                <header>
+                  <h3>Адрес доставки</h3>
+                </header>
+                <article>
+                  <%= @order.ship_address.to_s %> 
+                  <%= link_to 'Изменить', checkout_state_path('address') %>
+                </article>
+              </div>
+              <!-- /approve info -->
+              <!-- approve info -->
+              <div class="approve">
+                <header>
+                  <h3>Способ доставки</h3>
+                </header>
+                <article>
+                  <%= @order.shipment.shipping_method.name %> — <%= number_to_currency @order.shipment.cost %> <%= link_to 'Изменить', checkout_state_path('delivery') %>
+                </article>
+              </div>
+              <!-- /approve info -->
+              <!-- approve info -->
+              <div class="approve">
+                <header>
+                  <h3>Способ оплаты</h3>
+                </header>
+                <article>
+                  <%= @order.payment_method.name %> <%= link_to 'Изменить', checkout_state_path('payment') %>
+                </article>
+              </div>
+              <!-- /approve info -->
+              <!-- .adress-choise -->
+              <div class="adress-choise">
+                <div class="payment-comment">
+                  <h3>Ваш комментарий</h3>
+                  <%= form_for @order, update_comment_path(@order) do |form| %>
+                    <%= form.text_area :special_instructions, cols: 30, rows: 10, placeholder: 'Укажите здесь удобное для вас время, в которое мы можем с вами связаться, адрес постомата из котого  вы хотели бы забрать свой заказ, или любую другую информацию, которую вы считаете нужным донести до нас.' %>
+                  <% end %>
+                </div>
+
+                <%= form_tag @gateway.url, :method => "POST", :id => "robokassa_pay" do %>
+                  <%= hidden_field_tag(:"MrchLogin", @gateway.options[:mrch_login]) %>
+                  <%= hidden_field_tag(:"OutSum", @order.total) %>
+                  <%= hidden_field_tag(:"InvId", @order.id) %>
+                  <%= hidden_field_tag(:"Desc", I18n.t("robokassa.details_of_payment", :order_number => @order.number)) %>
+                  <%= hidden_field_tag(:"SignatureValue", @signature) %>    
+                  <!-- .controls -->
+                  <div class="controls">
+                    <input type="submit" value="Оплатить">
+                  </div>
+                  <!-- /.controls -->
+                <% end %>
+
+              </div>
+            <!-- /.adress-choise -->
+
+          </section>
+          <!-- /.forms -->
+        </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.white-wrap -->
+  </section>
+<!-- /.content -->
