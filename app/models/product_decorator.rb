@@ -99,11 +99,11 @@ Product.class_eval do
 
   scope :on_hand,         where("products.count_on_hand > 0")
 
-  scope :recommended_products, where(recommended: true)
+  scope :recommended_products, not_deleted.where(recommended: true)
 
-  scope :popular_products, where('popularity > 0').order('popularity DESC')
+  scope :popular_products, not_deleted.where('popularity > 0').order('popularity DESC')
 
-  scope :sale_products, where('sale_price')
+  scope :sale_products, not_deleted.where('sale_price')
 
   if (ActiveRecord::Base.connection.adapter_name == 'PostgreSQL')
     if ActiveRecord::Base.connection.tables.include?("products")

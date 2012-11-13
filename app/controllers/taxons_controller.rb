@@ -22,7 +22,7 @@ class TaxonsController < Spree::BaseController
     @taxon = Taxon.find_by_permalink!(permalink)
     return unless @taxon
 
-    products = @taxon.all_products
+    products = @taxon.all_products.select {|product| !product.deleted_at }
 
     # sorting and order
     if params[:sort] 
@@ -61,6 +61,7 @@ class TaxonsController < Spree::BaseController
     @category = Taxon.find_by_permalink!(category_permalink)
 
     products = @taxon.all_products & @category.all_products
+    products = products.select {|product| !product.deleted_at }
 
     # sorting and order
     if params[:sort] 
