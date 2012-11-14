@@ -1,0 +1,37 @@
+<div class="specs">
+  <h3>Характеристики</h3>
+  <% if @product.product_type == 'book' %>
+    <p>
+      <% if @product.publisher %>
+        Издательство: <%= @product.publisher %>, <%= @product.publishing_year %><br>
+      <% end %>
+      <% if @product.isbn %>
+        ISBN: <%= @product.isbn %><br>
+      <% end %>
+      <% if @product.pages %>
+        Объем — <%= @product.pages %> стр.<br>
+      <% end %>
+      <% if @product.width && @product.height %>
+        Формат — <%= @product.width %>x<%= @product.height %> мм<br>
+      <% end %>
+      <% if  @product.weight %>
+        Вес: <%= @product.weight %> г.<br>
+      <% end %>
+      <% if @product.annotation %>
+        <%= @product.annotation %>
+      <% end %>
+    </p>
+  <% elsif @product.product_type == 'not_book' %>
+    <p>
+      <% if @product.designer %>
+        Дизайнер: <%= @product.designer %><br>
+      <% end %>
+      <% if @product.weight %>
+        Вес: <%= @product.weight %> г.<br>
+      <% end %>
+      <% if @product.annotation %>
+        <%= @product.annotation %>
+      <% end %>
+    </p>
+  <% end %>
+</div>

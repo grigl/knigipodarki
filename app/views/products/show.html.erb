@@ -66,25 +66,7 @@
           <!-- /product content -->
           <!-- addional info -->
           <aside>
-            <div class="specs">
-              <h3>Характеристики</h3>
-              <% if @product.product_type == 'book' %>
-                <p>
-                  Издательство: <%= @product.publisher %>, <%= @product.publishing_year %><br>
-                  ISBN: <%= @product.isbn %><br>
-                  Объем — <%= @product.pages %> стр.<br>
-                  Формат — <%= @product.width %>x<%= @product.height %> мм<br>
-                  Вес: <%= @product.weight %> г.<br>
-                  <%= @product.annotation %>
-                </p>
-              <% elsif @product.product_type == 'not_book' %>
-                <p>
-                  Дизайнер: <%= @product.designer %><br>
-                  Вес: <%= @product.weight %> г.<br>
-                  <%= @product.annotation %>
-                </p>
-              <% end %>
-            </div>
+            <%= render 'product_features' %>
             <div class="product-tags">
               <% @product.tags.each do |tag| %>
                 <%= link_to tag.name, products_tags_path(tag.name) %>;&nbsp;
