@@ -124,6 +124,19 @@ namespace :sync do
       product.category_name = category_name      
       product.master.count_on_hand = count_on_hand
       product.save
+    end   
+    
+    config["store"][1]["items"][0]["item"].each do|item|
+      external_id = item["id"][0]
+      count_on_hand_add = item["count"][0].to_i
+      
+      product = Product.where("external_id = ?", external_id).limit(1)
+      if not product.empty?
+        product = product[0]
+        product.master.count_on_hand_add = count_on_hand_add
+        product.save
+      end
     end    
+     
   end
 end

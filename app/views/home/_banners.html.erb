@@ -1,36 +1,38 @@
-<!-- .promo -->
-  <section id="slides" class="promo">
+<% if @banners && @banners.present? %>
+  <!-- .promo -->
+    <section id="slides" class="promo">
 
-    <!-- .baners - here rotate baners -->
-    <div class="baners slides_container">
-      <% if @banners %>
-        <% @banners.each do |banner| %>
+      <!-- .baners - here rotate baners -->
+      <div class="baners slides_container">
 
-          <!-- .baner-item -->
-            <div class="item">
-              <%= link_to url_with_protocol(banner.link), :class => "cart_img" do %>
-                <%= image_tag banner.asset.url(:main) %>
-              <% end %>
-                <article>
-                  <hgroup>
-                    <h2><%= link_to banner.title, url_with_protocol(banner.link) %></h2>
-                    <h3><%= banner.subtitle if banner.subtitle %></h3>
-                  </hgroup>
-                    <p>
-                      <%= simple_format(banner.description) if banner.description %>
-                    </p>
-                      <span class="price"><%= number_to_currency banner.price if banner.price %></span>
-                </article>
-            </div>
-          <!-- /.baner-item -->
+          <% @banners.each do |banner| %>
 
-        <% end %>
-      <% end %>
-    </div>
-    <!-- /.baners -->
+            <!-- .baner-item -->
+              <div class="item">
+                <%= link_to url_with_protocol(banner.link), :class => "cart_img" do %>
+                  <%= image_tag banner.asset.url(:main) %>
+                <% end %>
+                  <article>
+                    <hgroup>
+                      <h2><%= link_to banner.title, url_with_protocol(banner.link) %></h2>
+                      <h3><%= banner.subtitle if banner.subtitle %></h3>
+                    </hgroup>
+                      <p>
+                        <%= simple_format(banner.description) if banner.description %>
+                      </p>
+                        <span class="price"><%= number_to_currency banner.price if banner.price %></span>
+                  </article>
+              </div>
+            <!-- /.baner-item -->
 
-    <a class="baners-nav-ctl baners-nav-left" href="">e</a>
-    <a class="baners-nav-ctl baners-nav-right" href="">r</a>
+          <% end %>
 
-  </section>
-<!-- /.promo -->
+      </div>
+      <!-- /.baners -->
+
+      <a class="baners-nav-ctl baners-nav-left" href="">e</a>
+      <a class="baners-nav-ctl baners-nav-right" href="">r</a>
+
+    </section>
+  <!-- /.promo -->
+<% end %>

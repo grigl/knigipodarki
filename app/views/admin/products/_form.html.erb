@@ -44,6 +44,12 @@
         <%= f.error_message_on :recommended %>
       <% end %>
 
+      <%= f.field_container :is_published do %>
+        <%= f.label :is_published, 'Опубликован' %>
+        <%= f.check_box :is_published %>
+        <%= f.error_message_on :is_published %>
+      <% end %>
+
       <%= f.field_container :tagged_as_new do %>
         <%= f.label :tagged_as_new, 'Новинка' %>
         <%= f.check_box :tagged_as_new %>
@@ -92,9 +98,13 @@
       <% unless @product.has_variants? %>
         <% if Spree::Config[:track_inventory_levels] %>
           <p>
-            <%= f.label :on_hand, t("on_hand")%><br />
+            <%= f.label :on_hand, 'Склад 1' %><br />
             <%= f.text_field :on_hand, :size => 4 %>
           </p>
+          <p>
+            <%= f.label :on_hand_add, 'Склад 2' %><br />
+            <%= f.text_field :on_hand_add, :size => 4 %>
+          </p>          
         <% end %>
         <ul id="shipping-specs">
           <li>

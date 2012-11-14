@@ -92,6 +92,8 @@ Product.class_eval do
   # default product scope only lists available and non-deleted products
   scope :not_deleted,     where("products.deleted_at is NULL")
 
+  scope :published, where('products.is_published is TRUE')
+
   scope :available,       lambda { |*on| where("products.available_on <= ?", on.first || Time.zone.now ) }
 
   #RAILS 3 TODO - this scope doesn't match the original 2.3.x version, needs attention (but it works)
@@ -99,11 +101,11 @@ Product.class_eval do
 
   scope :on_hand,         where("products.count_on_hand > 0")
 
-  scope :recommended_products, where(recommended: true)
+  scope :recommended_products, not_deleted.where(recommended: true)
 
-  scope :popular_products, where('popularity > 0').order('popularity DESC')
+  scope :popular_products, not_deleted.where('popularity > 0').order('popularity DESC')
 
-  scope :sale_products, where('sale_price')
+  scope :sale_products, not_deleted.where('sale_price')
 
   if (ActiveRecord::Base.connection.adapter_name == 'PostgreSQL')
     if ActiveRecord::Base.connection.tables.include?("products")
@@ -162,6 +164,11 @@ Product.class_eval do
   def on_hand
     has_variants? ? variants.inject(0){|sum, v| sum + v.on_hand} : master.on_hand
   end
+  
+  # returns the number of inventory units "on_hand" for this product
+  def on_hand_add
+    return master.count_on_hand_add
+  end  
 
   def on_sale?
     self.sale_price && self.sale_price != 0
@@ -172,6 +179,10 @@ Product.class_eval do
     raise "cannot set on_hand of product with variants" if has_variants? && Spree::Config[:track_inventory_levels]
     master.on_hand = new_level
   end
+  
+  def on_hand_add=(new_level)
+    master.count_on_hand_add = new_level
+  end  
 
   def publisher
     publishers = Taxonomy.where(name: 'Издательства').first

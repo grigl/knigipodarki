@@ -4,6 +4,7 @@ Knigipodarki::Application.routes.draw do
   post 'cart/minus_line_item/:id' => 'orders#minus_line_item', as: 'minus_line_item'
   post 'cart/plus_line_item/:id' => 'orders#plus_line_item', as: 'plus_line_item'
   post 'cart/delete_line_item/:id' => 'orders#delete_line_item', as: 'delete_line_item'
+  post 'order/:id/update_comment' => 'order#update_comment', as: 'update_comment'
 
   get ':taxonomy' => 'taxons#index', constraints: { taxonomy: /publishers|designers/ }
   get ':taxonomy/:taxon/' => 'taxons#show', constraints: { taxonomy: /categories|publishers|designers/ }
@@ -15,6 +16,13 @@ Knigipodarki::Application.routes.draw do
   match '/products/tags/:tag' => 'products#tags', as: 'products_tags'
 
   resources :addresses
+
+  scope :module => "gateway" do
+    match '/robokassa/:gateway_id/:order_id' => 'robokassa#show',    :as => :robokassa
+    match '/robokassa/result'                => 'robokassa#result',  :as => :robokassa_result
+    match '/robokassa/success'               => 'robokassa#success', :as => :robokassa_success
+    match '/robokassa/fail'                  => 'robokassa#fail',    :as => :robokassa_fail
+  end
 
   namespace :admin do
     match '/products/:id/new_tag_id' => 'tags#new_product_tag_id', as: 'new_product_tag_id'

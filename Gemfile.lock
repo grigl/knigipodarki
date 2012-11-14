@@ -208,6 +208,7 @@ GEM
     tzinfo (0.3.33)
     warden (1.0.6)
       rack (>= 1.0)
+    webbynode (0.1.2)
     will_paginate (3.0.2)
     xml-simple (1.1.1)
 
@@ -224,5 +225,6 @@ DEPENDENCIES
   spree_related_products!
   synergy (~> 0.60.0)
   synergy_default_theme (= 1.0.2)
+  webbynode
   will_paginate
   xml-simple (~> 1.1.1)

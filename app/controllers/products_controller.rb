@@ -7,7 +7,7 @@ class ProductsController < Spree::BaseController
   respond_to :html
 
   def index
-    products = Product.order('created_at')
+    products = Product.order('created_at').not_deleted.published
     # scopes
     if params[:scope] 
       products = eval "products.#{params[:scope]}_products"
@@ -40,23 +40,26 @@ class ProductsController < Spree::BaseController
   def show
     @product = Product.find_by_permalink!(params[:id])
     return unless @product
+    if @product.deleted_at || !@product.is_published
+      render_404
+    else
+      @variants = Variant.active.includes([:option_values, :images]).where(:product_id => @product.id)
+      @product_properties = ProductProperty.includes(:property).where(:product_id => @product.id)
+      @selected_variant = @variants.detect { |v| v.available? }
 
-    @variants = Variant.active.includes([:option_values, :images]).where(:product_id => @product.id)
-    @product_properties = ProductProperty.includes(:property).where(:product_id => @product.id)
-    @selected_variant = @variants.detect { |v| v.available? }
+      referer = request.env['HTTP_REFERER']
 
-    referer = request.env['HTTP_REFERER']
+      if referer && referer.match(HTTP_REFERER_REGEXP)
+        @taxon = Taxon.find_by_permalink($1)
+      end
 
-    if referer && referer.match(HTTP_REFERER_REGEXP)
-      @taxon = Taxon.find_by_permalink($1)
+      respond_with(@product)
     end
-
-    respond_with(@product)
   end
 
   def tags
     @tag = Tag.find_by_name!(params[:tag])
-    products = @tag.products
+    products = @tag.products.not_deleted.published
 
     @products = products.paginate(:page => params[:page], :per_page => 8)
 
