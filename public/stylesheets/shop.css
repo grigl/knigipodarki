@@ -88,7 +88,7 @@
   font-size: 24px;
   color: #fff;
   background: url(../images/cart.png) right top no-repeat;
-  z-index: 9999;
+  z-index: 100;
 }
 /* line 78, sass/shop.scss */
 .catalogue .item .add-to-cart:hover {
