@@ -164,6 +164,11 @@ Product.class_eval do
   def on_hand
     has_variants? ? variants.inject(0){|sum, v| sum + v.on_hand} : master.on_hand
   end
+  
+  # returns the number of inventory units "on_hand" for this product
+  def on_hand_add
+    return master.count_on_hand_add
+  end  
 
   def on_sale?
     self.sale_price && self.sale_price != 0
@@ -174,6 +179,10 @@ Product.class_eval do
     raise "cannot set on_hand of product with variants" if has_variants? && Spree::Config[:track_inventory_levels]
     master.on_hand = new_level
   end
+  
+  def on_hand_add=(new_level)
+    master.count_on_hand_add = new_level
+  end  
 
   def publisher
     publishers = Taxonomy.where(name: 'Издательства').first
