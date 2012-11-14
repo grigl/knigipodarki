@@ -191,7 +191,7 @@ Product.class_eval do
     publisher.name if publisher
   end
 
-  def publisher
+  def designer
     designers = Taxonomy.where(name: 'Дизайнеры').first
     designer = self.taxons.where(taxonomy_id: designers.id).first if designers
 
@@ -199,7 +199,7 @@ Product.class_eval do
   end
 
   def available_types
-    [['Книга','book'],['Подарок','gift']]
+    [['Книга','book'],['Не книга','not_book']]
   end
 
   # Returns true if there are inventory units (any variant) with "on_hand" state for this product
