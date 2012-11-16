@@ -261,6 +261,9 @@ input[type="text"]:-webkit-autofill {
             &.current {
               a {
                 color: #fff;
+                &:hover {
+                  color: #f7941e;
+                }
               }
             }
           }
@@ -278,6 +281,9 @@ input[type="text"]:-webkit-autofill {
             &.current {
               a {
                 color: #fff;
+                &:hover {
+                  color: #4c7f82;
+                }
               }
             }
           }
