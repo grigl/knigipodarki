@@ -78,7 +78,7 @@
               <a href="/info#payment" class="payment">Способы оплаты и доставки</a>
             </div>
             <p>
-              <%= @product.description %>
+              <%= @product.description.html_safe rescue '' %>
             </p>
           </article>
           <!-- /product content -->
