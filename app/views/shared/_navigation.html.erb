@@ -12,6 +12,8 @@
       <% all_categories.each do |taxon| %>
         <% if params[:taxonomy] && params[:taxon] && '/' + params[:taxonomy] + '/' + params[:taxon] == taxon.permalink %>
           <li class="current">
+        <% elsif @product && @product.category == taxon.name %>
+          <li class="current">  
         <% else %>
           <li>
         <% end %>

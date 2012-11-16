@@ -191,6 +191,31 @@ Product.class_eval do
     publisher.name if publisher
   end
 
+  def category
+    categories = Taxonomy.where(name: 'Категории').first
+    category = self.taxons.where(taxonomy_id: categories.id).first if categories
+
+    category.name if category
+  end
+
+  def category_object
+    categories = Taxonomy.where(name: 'Категории').first
+    category = self.taxons.where(taxonomy_id: categories.id).first if categories
+  end
+
+  def subcategory_object
+    subcategories = self.taxons.where(parent_id: self.category_object.id)
+
+    subcategory = subcategories.first if subcategories
+  end
+
+  def subcategory
+    subcategories = self.taxons.where(parent_id: self.category_object.id)
+
+    subcategory = subcategories.first if subcategories
+    subcategory.name if subcategory 
+  end
+
   def designer
     designers = Taxonomy.where(name: 'Дизайнеры').first
     designer = self.taxons.where(taxonomy_id: designers.id).first if designers

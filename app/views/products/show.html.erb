@@ -1,3 +1,21 @@
+<%= content_for :subnav do %>
+  <nav class="sub-direction-nav">
+  <% if @product.category_object && @product.category_object.children.present? %>
+    <ul>
+      <li><%= link_to 'Все', @product.subcategory_object.parent.permalink %></li>
+      <% @product.category_object.children.each do |taxon| %>
+          <% if @product.subcategory == taxon.name %>
+            <li class="current">
+          <% else %>
+            <li>
+          <% end %>
+            <%= link_to taxon.name, taxon.permalink %>
+          </li>
+      <% end %>
+    </ul>
+  <% end %>
+  </nav>
+<% end %>
 <!-- .content -->
   <section class="site-content">
     <div class="white-wrap">
