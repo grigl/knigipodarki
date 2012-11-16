@@ -272,8 +272,6 @@ input[type="text"]:-webkit-autofill {
   padding: 10px 10px;
   margin-right: 10px;
   text-transform: uppercase;
-  text-decoration: none;
-  font-size: 13px;
   font-weight: bold;
   color: #404040;
 }
