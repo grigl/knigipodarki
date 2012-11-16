@@ -36,7 +36,7 @@ namespace :sync do
           file = dir + "/" + ftp_file
           Dir::mkdir(dir)
           ftp.gettextfile(ftp_file, file)
-          #ftp.delete(ftp_file)
+          ftp.delete(ftp_file)
           parse_cancel_file(file)
         end
       ftp.close
