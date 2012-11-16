@@ -68,6 +68,7 @@ namespace :sync do
       if not orders.empty?
         order = orders[0]
         order.send('cancel')
+        order.after_cancel
       end 
     end     
   end
