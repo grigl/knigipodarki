@@ -227,7 +227,7 @@ input[type="text"]:-webkit-autofill {
             display: block;
             float: left;
             padding: 10px 10px;
-            margin-right: -1px;
+            margin-right: 4px;
             text-transform: uppercase;
             text-decoration: none;
             font-size: 13px;
@@ -277,7 +277,7 @@ input[type="text"]:-webkit-autofill {
             }
             &.current {
               a {
-                color: #fff;
+                color: #4c7f82;
               }
             }
           }
