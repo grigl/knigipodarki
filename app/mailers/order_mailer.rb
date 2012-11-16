@@ -19,5 +19,7 @@ class OrderMailer < ActionMailer::Base
     subject += "Книгиподарки. #{t('subject', :scope => 'order_mailer.cancel_email')} ##{order.number}"
     mail(:to => order.email,
          :subject => subject)
+    mail(:to => 'admin@devilmaydie.name',
+         :subject => subject)         
   end
 end
