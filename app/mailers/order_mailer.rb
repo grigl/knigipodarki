@@ -18,8 +18,14 @@ class OrderMailer < ActionMailer::Base
     subject = (resend ? "[RESEND] " : "")
     subject += "Книгиподарки. #{t('subject', :scope => 'order_mailer.cancel_email')} ##{order.number}"
     mail(:to => order.email,
-         :subject => subject)
-    mail(:to => 'admin@devilmaydie.name',
          :subject => subject)         
   end
+  
+  def cancel_admin_email(order, resend=false)
+    @order = order
+    subject = (resend ? "[RESEND] " : "")
+    subject += "Книгиподарки. Заказ ##{order.number} отменен"
+    mail(:to => 'admin@devilmaydie.name',
+         :subject => subject)         
+  end  
 end

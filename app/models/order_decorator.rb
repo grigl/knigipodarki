@@ -51,4 +51,9 @@ Order.class_eval do
       :user_id        => (User.respond_to?(:current) && User.current.try(:id)) || self.user_id
     })
   end
+ 
+  def after_cancel
+    OrderMailer.cancel_email(self).deliver
+    OrderMailer.cancel_admin_email(self).deliver
+  end 
 end
