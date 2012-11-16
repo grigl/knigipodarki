@@ -339,7 +339,6 @@ input[type="text"]:-webkit-autofill {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 13px;
-  font-weight: bold;
   color: #404040;
 }
 /* line 236, sass/layout.scss */
