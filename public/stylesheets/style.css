@@ -335,10 +335,11 @@ input[type="text"]:-webkit-autofill {
   display: block;
   float: left;
   padding: 10px 10px;
-  margin-right: 10px;
+  margin-right: 4px;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 13px;
+  font-weight: bold;
   color: #404040;
 }
 /* line 236, sass/layout.scss */
@@ -367,7 +368,7 @@ input[type="text"]:-webkit-autofill {
 }
 /* line 262, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers.current a {
-  color: #fff;
+  color: #f7941e;
 }
 /* line 268, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers a {
@@ -381,7 +382,7 @@ input[type="text"]:-webkit-autofill {
 }
 /* line 279, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers.current a {
-  color: #fff;
+  color: #4c7f82;
 }
 /* line 287, sass/layout.scss */
 .site-header .navigations .sub-direction-nav {
