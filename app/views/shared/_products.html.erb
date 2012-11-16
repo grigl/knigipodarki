@@ -19,7 +19,7 @@
         <% end %>
 
         <h2><%= product.name %></h2>
-        <p><%= product.description %></p>
+        <p><%= product.description.html_safe rescue '' %></p>
       </article>
     <% end %>
     <% if product.count_on_hand > 0 %>
