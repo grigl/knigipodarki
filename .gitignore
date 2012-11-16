@@ -17,3 +17,5 @@ syncorders/*
 !syncorders/.gitempty
 vargant
 vargant/
+synccancel/*
+!synccancel/.gitempty
