@@ -262,6 +262,13 @@ input[type="text"]:-webkit-autofill {
               a {
                 color: #fff;
                 background: #f7941e;
+                &:hover {
+                  background: none;
+                  border: 3px solid #f7941e;
+                  padding: 7px 7px;
+                  color: #fff;
+                  background: #f7941e;
+                }
               }
             }
           } //des
