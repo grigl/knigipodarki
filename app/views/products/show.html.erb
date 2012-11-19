@@ -87,7 +87,7 @@
             <%= render 'product_features' %>
             <div class="product-tags">
               <% @product.tags.each do |tag| %>
-                <%= link_to tag.name, products_tags_path(tag.name) %>;&nbsp;
+                <%= link_to tag.name, products_tags_path(tag.name) %>,&nbsp;
               <% end %>
             </div>
           </aside>
