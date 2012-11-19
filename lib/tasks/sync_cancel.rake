@@ -8,7 +8,7 @@ ftp_host = "knigipodarki.webbyapp.com"
 ftp_port = 21
 ftp_user = "git"
 ftp_pass = "Y3yRrVTh"
-ftp_dir = "xml/error"
+ftp_dir = "xml/order/error"
 ftp_file = "store.xml"
 #pop_server = "pop.mail.ru"
 #pop_user = "9460116"
@@ -36,7 +36,7 @@ namespace :sync do
           file = dir + "/" + ftp_file
           Dir::mkdir(dir)
           ftp.gettextfile(ftp_file, file)
-          #ftp.delete(ftp_file)
+          ftp.delete(ftp_file)
           parse_cancel_file(file)
         end
       ftp.close
@@ -68,7 +68,6 @@ namespace :sync do
       if not orders.empty?
         order = orders[0]
         order.send('cancel')
-        order.after_cancel
       end 
     end     
   end

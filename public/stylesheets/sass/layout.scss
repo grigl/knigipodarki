@@ -261,12 +261,16 @@ input[type="text"]:-webkit-autofill {
             &.current {
               a {
                 color: #fff;
+                background: #f7941e;
                 &:hover {
+                  background: none;
+                  border: 3px solid #f7941e;
+                  padding: 7px 7px;
                   color: #f7941e;
                 }
               }
             }
-          }
+          } //des
           &.publishers {
             a {
               color: #4c7f82;
@@ -281,9 +285,7 @@ input[type="text"]:-webkit-autofill {
             &.current {
               a {
                 color: #fff;
-                &:hover {
-                  color: #4c7f82;
-                }
+                background: #4c7f82;
               }
             }
           }

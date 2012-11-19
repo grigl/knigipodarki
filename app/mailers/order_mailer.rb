@@ -25,7 +25,7 @@ class OrderMailer < ActionMailer::Base
     @order = order
     subject = (resend ? "[RESEND] " : "")
     subject += "Книгиподарки. Заказ ##{order.number} отменен"
-    mail(:to => 'admin@devilmaydie.name',
+    mail(:to => 'help@knigipodarki.ru',
          :subject => subject)         
   end  
 end
