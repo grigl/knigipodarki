@@ -54,8 +54,6 @@ class CheckoutController < Spree::BaseController
     return unless params[:state] == "payment"
     payment_method = PaymentMethod.find(params[:order][:payments_attributes].first[:payment_method_id])
     if payment_method.kind_of? Gateway::Robokassa
-      current_method.payment_method =PaymentMethod.find(2)
-      current_method.save
       redirect_to gateway_robokassa_path(:gateway_id => payment_method.id, :order_id => @order.id)
     end
 
