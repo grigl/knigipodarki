@@ -38,23 +38,6 @@
         <%= f.error_message_on :description %>
       <% end %>
 
-      <%= f.field_container :recommended do %>
-        <%= f.label :recommended, t("show_in_recommended") %>
-        <%= f.check_box :recommended %>
-        <%= f.error_message_on :recommended %>
-      <% end %>
-
-      <%= f.field_container :is_published do %>
-        <%= f.label :is_published, 'Опубликован' %>
-        <%= f.check_box :is_published %>
-        <%= f.error_message_on :is_published %>
-      <% end %>
-
-      <%= f.field_container :tagged_as_new do %>
-        <%= f.label :tagged_as_new, 'Новинка' %>
-        <%= f.check_box :tagged_as_new %>
-        <%= f.error_message_on :tagged_as_new %>
-      <% end %>
     <% end %>
   </div>
   <div class="yui-u">
@@ -65,12 +48,6 @@
         <%= f.error_message_on :price %>
       <% end %>
 
-      <%= f.field_container :cost_price do %>
-        <%= f.label :cost_price, t("cost_price")%><br />
-        <%= f.text_field :cost_price, :value => number_with_precision(@product.cost_price, :precision => 2) %>
-        <%= f.error_message_on :cost_price %>
-      <% end %>
-
       <%= f.field_container :sale_price do %>
         <%= f.label :sale_price, 'Цена со скидкой' %><br />
         <%= f.text_field :sale_price, :value => number_with_precision(@product.sale_price, :precision => 2) %>
@@ -78,69 +55,69 @@
       <% end %>
 
       <p>
-        <%= f.label :available_on, t("available_on") %><br />
-        <%= f.error_message_on :available_on %>
-        <%= f.spree_date_picker :available_on %>
+        <%= f.label :on_hand, 'Склад 1' %>
+        <%= f.text_field :on_hand, :size => 4 %>
+        &ensp;
+        <%= f.label :on_hand_add, 'Склад 2' %>
+        <%= f.text_field :on_hand_add, :size => 4 %>
       </p>
 
+      <%= f.field_container :is_published do %>
+        <%= f.label :is_published, 'Опубликован' %>
+        <%= f.check_box :is_published %>
+        <%= f.error_message_on :is_published %>
+      <% end %>
+
       <p>
-        <%= f.label :sku, t("sku") %><br />
-        <%= f.text_field :sku, :size => 16 %>
-      </p>
+        <%= f.label :recommended, t("show_in_recommended") %>
+        <%= f.check_box :recommended %>
+        &ensp;
+        <%= f.label :tagged_as_new, 'Новинка' %>
+        <%= f.check_box :tagged_as_new %>
+      </p> 
       <p>
         <%= f.label :product_type, 'Тип товара' %><br />
         <%= f.select :product_type, @product.available_types, :include_blank => true %>
       </p>
       <p>
-        <%= f.label :material, 'Материал' %><br />
-        <%= f.select :material, [['ПВХ','pvh'],['текстиль', 'textile'],['кожа','leather']] , :include_blank => true %>
+        <%= f.label :weight, t("weight")%>
+        <%= f.text_field :weight, :size => 4 %>
+        &ensp;
+        <%= f.label :height, t("height")%>
+        <%= f.text_field :height, :size => 4 %>
+        &ensp;
+        <%= f.label :width, t("width")%>
+        <%= f.text_field :width, :size => 4 %>
       </p>
-      <% unless @product.has_variants? %>
-        <% if Spree::Config[:track_inventory_levels] %>
-          <p>
-            <%= f.label :on_hand, 'Склад 1' %><br />
-            <%= f.text_field :on_hand, :size => 4 %>
-          </p>
-          <p>
-            <%= f.label :on_hand_add, 'Склад 2' %><br />
-            <%= f.text_field :on_hand_add, :size => 4 %>
-          </p>          
-        <% end %>
-        <ul id="shipping-specs">
-          <li>
-            <%= f.label :weight, t("weight")%>
-            <%= f.text_field :weight, :size => 4 %>
-          </li>
-          <li>
-            <%= f.label :height, t("height")%>
-            <%= f.text_field :height, :size => 4 %>
-          </li>
-          <li>
-            <%= f.label :width, t("width")%>
-            <%= f.text_field :width, :size => 4 %>
-          </li>
-          <li>
-            <%= f.label :depth, t("depth")%>
-            <%= f.text_field :depth, :size => 4 %>
-          </li>
-          <li>
-            <%= f.label :pages, 'Количество страниц'%>
-            <%= f.text_field :depth, :size => 4 %>
-          </li>
-        </ul>
+      <p>
+        <%= f.label :annotation, 'Аннотация' %><br />
+        <%= f.text_area :annotation %>
+      </p> 
+      <% if @product.product_type == 'not_book' %>
+        <p>
+          <%= f.label :material, 'Материал' %><br />
+          <%= f.select :material, [['ПВХ','pvh'],['текстиль', 'textile'],['кожа','leather']] , :include_blank => true %>&ensp;*для товаров категории "на паспорт"
+        </p>
       <% end %>
-      <p>
-        <%= f.label :shipping_category_id, t("shipping_categories")%><br />
-        <%= f.collection_select(:shipping_category_id, @shipping_categories, :id, :name, {:include_blank => true}, {"style" => "width:200px"}) %>
-        <%= f.error_message_on :shipping_category %>
-      </p>
-
-      <p>
-        <%= f.label :tax_category_id, t("tax_category")%><br />
-        <%= f.collection_select(:tax_category_id, @tax_categories, :id, :name, {:include_blank => true}, {"style" => "width:200px"}) %>
-        <%= f.error_message_on :tax_category %>
-      </p>
-
+      <% if @product.product_type == 'book' %>
+        <p>
+          <%= f.label :author, 'Автор'%>
+          <%= f.text_field :author %>
+        </p>
+        <p>
+          <%= f.label :publishing_year, 'Год публикации'%>
+          <%= f.text_field :publishing_year %>
+        </p>
+        <p>
+          <%= f.label :isbn, 'ISBN'%>
+          <%= f.text_field :isbn %>
+        </p>     
+        <p>
+          <%= f.label :pages, 'Количество страниц'%>
+          <%= f.text_field :pages, :size => 4 %>
+        </p>      
+      <% end %>
+      <h4>Тэги:</h4>
       <p>
         <a id="add_tag_field"><img alt="Add" src="/images/admin/icons/add.png?1347284078" />Добавить тэг</a><br />
         <div id="tags_fields">
@@ -162,18 +139,6 @@
     <% end %>
   </div>
 </div>
-
-<h2><%= t("metadata") %></h2>
-<%= hook :admin_product_form_meta, locals do %>
-  <p>
-    <%= f.label :meta_keywords, t("meta_keywords")%><br />
-    <%= f.text_field :meta_keywords, :class => 'fullwidth' %>
-  </p>
-  <p>
-    <%= f.label :meta_description, t("meta_description")%><br />
-    <%= f.text_field :meta_description, :class => 'fullwidth' %>
-  </p>
-<% end %>
 
 
 <%= hook :admin_product_form_additional_fields, locals do %>
