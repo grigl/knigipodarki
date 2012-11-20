@@ -81,13 +81,13 @@
       </p>
       <p>
         <%= f.label :weight, t("weight")%>
-        <%= f.text_field :weight, :size => 4 %>
+        <%= f.text_field :weight, :size => 4, value: @product.weight.to_i %>
         &ensp;
         <%= f.label :height, t("height")%>
-        <%= f.text_field :height, :size => 4 %>
+        <%= f.text_field :height, :size => 4, value: @product.height.to_i %>
         &ensp;
         <%= f.label :width, t("width")%>
-        <%= f.text_field :width, :size => 4 %>
+        <%= f.text_field :width, :size => 4, value: @product.width.to_i %>
       </p>
       <p>
         <%= f.label :annotation, 'Аннотация' %><br />

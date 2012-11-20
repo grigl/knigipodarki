@@ -463,13 +463,17 @@
   width: 240px;
   padding: 20px;
 }
+/* line 379, sass/shop.scss */
+.product aside .product-tags a {
+  font-weight: bold;
+}
 
-/* line 383, sass/shop.scss */
+/* line 386, sass/shop.scss */
 .search-result {
   margin-top: 40px;
   padding-left: 20px;
 }
-/* line 386, sass/shop.scss */
+/* line 389, sass/shop.scss */
 .search-result h1 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -478,11 +482,11 @@
   vertical-align: middle;
   font-size: 21px;
 }
-/* line 390, sass/shop.scss */
+/* line 393, sass/shop.scss */
 .search-result h1 span {
   font-weight: 700;
 }
-/* line 394, sass/shop.scss */
+/* line 397, sass/shop.scss */
 .search-result a {
   letter-spacing: normal;
   word-spacing: normal;
