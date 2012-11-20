@@ -1,0 +1,34 @@
+<%= render :partial => 'admin/shared/product_sub_menu' %>
+
+<%= render :partial => 'admin/shared/product_tabs', :locals => {:current => "Taxons"} %>
+<div id="selected-taxons">
+  <%= render :partial => "taxon_table", :locals => {:taxons => @taxons} %>
+</div>
+<div id="available-taxons">
+  <h4><%= t('available_taxons') %></h4>
+  <table class="index">
+    <thead>
+      <tr>
+        <th><%= t("name") %></th>
+        <th><%= t("path") %></th>
+        <th><%= t("action") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @all_taxons.each do |taxon| %>
+        <tr id="<%= dom_id(taxon, :sel) %>">
+          <td><%= taxon.name %></td>
+          <td><%= taxon_path taxon %></td>
+          <td class="actions">
+            <%= link_to icon('add') + ' ' + t("select"),
+                              select_admin_product_taxon_path(@product, taxon),
+                             :remote => true, :class => 'iconlink' %>
+          </td>        
+        </tr>
+      <% end %>
+      <% if @all_taxons.empty? %>
+       <tr><td colspan="3"><%= t('no_match_found') %>.</td></tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
