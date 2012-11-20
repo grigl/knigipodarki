@@ -1,5 +1,6 @@
 Knigipodarki::Application.routes.draw do
   root to: "home#index"
+  match '/admin' => 'admin/products#index', :as => :admin
 
   post 'cart/minus_line_item/:id' => 'orders#minus_line_item', as: 'minus_line_item'
   post 'cart/plus_line_item/:id' => 'orders#plus_line_item', as: 'plus_line_item'
