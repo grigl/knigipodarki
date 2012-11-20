@@ -30,4 +30,10 @@
 
 <%= javascript_tag "jQuery.alerts.dialogClass = 'spree';" %>
 <%== unobtrusive_datepicker_includes %>
+<script>
+  $(document).ready(function(){
+    $("#admin-menu a:contains('Яндекс.Маркет')").remove();
+    $("#admin-menu a:contains('Промо-акции')").remove();
+  });
+</script>
 <%= yield :head %>
