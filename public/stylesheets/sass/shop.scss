@@ -376,6 +376,9 @@
       @include inline-block;
       width: 240px;
       padding: 20px;
+      a {
+        font-weight: bold;
+      }
     }
   }
 }
