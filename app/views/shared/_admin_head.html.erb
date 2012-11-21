@@ -34,6 +34,8 @@
   $(document).ready(function(){
     $("#admin-menu a:contains('Яндекс.Маркет')").remove();
     $("#admin-menu a:contains('Промо-акции')").remove();
+    $("a:contains('Онлайн-поддержка')").parents('tr').remove();
+    $("a:contains('Онлайн-поддержка')").parents('li').remove();
   });
 </script>
 <%= yield :head %>

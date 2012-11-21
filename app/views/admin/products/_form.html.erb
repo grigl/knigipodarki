@@ -90,8 +90,8 @@
         <%= f.text_field :width, :size => 4, value: @product.width.to_i %>
       </p>
       <p>
-        <%= f.label :annotation, 'Аннотация' %><br />
-        <%= f.text_area :annotation %>
+        <%= f.label :annotation, 'Примечание' %><br />
+        <%= f.text_field :annotation %>
       </p> 
       <% if @product.product_type == 'not_book' %>
         <p>
