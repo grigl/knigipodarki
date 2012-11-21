@@ -3,7 +3,7 @@
   <% if @product.product_type == 'book' %>
     <p>
       <% if @product.publisher %>
-        Издательство: <%= @product.publisher %>, <%= @product.publishing_year %><br>
+        Издательство: <%= link_to @product.publisher_object.name, @product.publisher_object.permalink %>, <%= @product.publishing_year %><br>
       <% end %>
       <% if @product.isbn %>
         ISBN: <%= @product.isbn %><br>
@@ -12,10 +12,10 @@
         Объем — <%= @product.pages %> стр.<br>
       <% end %>
       <% if @product.width && @product.height %>
-        Формат — <%= @product.width %>x<%= @product.height %> мм<br>
+        Формат — <%= @product.width.to_i %>x<%= @product.height.to_i %> мм<br>
       <% end %>
       <% if  @product.weight %>
-        Вес: <%= @product.weight %> г.<br>
+        Вес: <%= @product.weight.to_i %> г.<br>
       <% end %>
       <% if @product.annotation %>
         <%= @product.annotation %>
@@ -24,10 +24,10 @@
   <% elsif @product.product_type == 'not_book' %>
     <p>
       <% if @product.designer %>
-        Дизайнер: <%= @product.designer %><br>
+        Дизайнер: <%= link_to @product.designer_object.name, @product.designer_object.permalink %><br>
       <% end %>
       <% if @product.weight %>
-        Вес: <%= @product.weight %> г.<br>
+        Вес: <%= @product.weight.to_i %> г.<br>
       <% end %>
       <% if @product.annotation %>
         <%= @product.annotation %>
