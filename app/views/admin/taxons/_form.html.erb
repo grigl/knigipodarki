@@ -16,8 +16,13 @@
   <% end %>
 
   <%= f.field_container :icon do %>
+    <%= image_tag @taxon.icon.url(:mini) if @taxon.icon.exists? %><br />
     <%= f.label :icon, t('icon') %><br />
-    <%= f.file_field :icon %>
+    <%= f.file_field :icon %><br />
+    <% if @taxon.icon.exists? %>
+      <%= f.check_box :destroy_icon %>
+      <%= f.label :destroy_icon, "Удалить" %>
+    <% end %>
   <% end %>
 
   <%= f.field_container :description do %>

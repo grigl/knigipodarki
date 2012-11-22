@@ -4,6 +4,7 @@ Taxon.class_eval do
   belongs_to :taxonomy
   has_and_belongs_to_many :products
   before_create :set_permalink
+  before_save :destroy_icon_if_needed
 
   validates :name, :presence => true
   has_attached_file :icon,
@@ -13,6 +14,7 @@ Taxon.class_eval do
                 :path => ":rails_root/public/assets/taxons/:id/:style/:basename.:extension",
                 :default_url => "/images/default_taxon.png"
 
+  attr_accessor :destroy_icon
 
   include ::ProductFilters  # for detailed defs of filters
 
@@ -26,6 +28,11 @@ Taxon.class_eval do
     fs << ProductFilters.price_filter if ProductFilters.respond_to?(:price_filter)
     fs << ProductFilters.brand_filter if ProductFilters.respond_to?(:brand_filter)
     fs
+  end
+
+  def destroy_icon_if_needed
+    return unless self.destroy_icon == '1' && self.icon
+    self.icon.clear
   end
 
   # Creates permalink based on .to_url method provided by stringx gem
