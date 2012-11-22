@@ -40,6 +40,7 @@ Order.class_eval do
   # Called after transition to complete state when payments will have been processed
   def finalize!
     update_attribute(:completed_at, Time.now)
+    update_attribute(:payment_method_name, self.payment_method.name) unless self.payment_method_name
     self.out_of_stock_items = InventoryUnit.assign_opening_inventory(self)
     # lock any optional adjustments (coupon promotions, etc.)
     adjustments.optional.each { |adjustment| adjustment.update_attribute("locked", true) }

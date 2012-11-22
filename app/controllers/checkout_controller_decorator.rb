@@ -1,7 +1,7 @@
 # Handles checkout logic.  This is somewhat contrary to standard REST convention since there is not actually a
 # Checkout object.  There's enough distinct logic specific to checkout which has nothing to do with updating an
 # order that this approach is waranted.
-class CheckoutController < Spree::BaseController
+CheckoutController.class_eval do
   ssl_required
 
   before_filter :load_order
@@ -52,8 +52,10 @@ class CheckoutController < Spree::BaseController
 
   def redirect_to_robokassa_form_if_needed
     return unless params[:state] == "payment"
+    load_order
     payment_method = PaymentMethod.find(params[:order][:payments_attributes].first[:payment_method_id])
     if payment_method.kind_of? Gateway::Robokassa
+      @order.update_attribute(:payment_method_name, payment_method.name)
       redirect_to gateway_robokassa_path(:gateway_id => payment_method.id, :order_id => @order.id)
     end
 
