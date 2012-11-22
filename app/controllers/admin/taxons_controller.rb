@@ -138,6 +138,9 @@ class Admin::TaxonsController < Admin::BaseController
     @product = load_product
     @taxon = Taxon.find(params[:id])
     @product.taxons << @taxon
+    if @taxon.parent_id?
+      @product.taxons << Taxon.find(@taxon.parent_id)
+    end
     @product.save
     @taxons = @product.taxons
 
