@@ -55,7 +55,9 @@ Taxon.class_eval do
     all_products = self.products
     if self.children.present?
       self.children.each do |taxon|
-        all_products += taxon.products
+        taxon.products.each do |product|
+          all_products << product unless all_products.include?(product)
+        end
       end
     end
     all_products
