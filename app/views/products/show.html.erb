@@ -1,6 +1,6 @@
 <%= content_for :subnav do %>
   <nav class="sub-direction-nav">
-  <% if @product.category_object && @product.category_object.children.present? %>
+  <% if @product.category_object && @product.subcategory_object.present? %>
     <ul>
       <li><%= link_to 'Все', @product.subcategory_object.parent.permalink %></li>
       <% @product.category_object.children.each do |taxon| %>
