@@ -14,6 +14,7 @@ ftp_file = "order.xml"
 #pop_user = "9460116"
 #pop_password = "print112233"
 cash_id = "00000100001b"
+wh_id = "0ohh9g00001b"
 
 debug = false
 #delete_emails = false
@@ -47,7 +48,7 @@ namespace :sync do
       order.line_items.each do|line_item|
         xml += '<item>'
         xml += '<id>'+line_item.product.external_id+'</id>'
-        xml += '<folderid>00000100001d</folderid>'
+        xml += '<folderid>'+wh_id+'</folderid>'
         xml += '<count>'+line_item.quantity.to_s+'</count>'
         xml += '<value>'+(line_item.price*line_item.quantity).to_s+'</value>'
         xml += '</item>'
