@@ -39,7 +39,8 @@ OrdersController.class_eval do
 
     params[:products].each do |product_id,variant_id|
       variant = Variant.find(variant_id)
-      variant_qty_in_cart = @order.line_items.find_by_variant_id(variant_id).quantity rescue 0
+      # variant_qty_in_cart = @order.line_items.find_by_variant_id(variant_id).quantity rescue 0
+      variant_qty_in_cart = @order.line_items.select {|l_item| l_item.variant.id == variant.id}.map {|l_item| l_item.quantity}.sum rescue 0
 
       quantity = params[:quantity].to_i if !params[:quantity].is_a?(Hash)
       quantity = params[:quantity][variant_id].to_i if params[:quantity].is_a?(Hash)
@@ -53,7 +54,8 @@ OrdersController.class_eval do
 
     params[:variants].each do |variant_id, quantity|
       variant = Variant.find(variant_id)
-      variant_qty_in_cart = @order.line_items.find_by_variant_id(variant_id).quantity rescue 0
+      # variant_qty_in_cart = @order.line_items.find_by_variant_id(variant_id).quantity rescue 0
+      variant_qty_in_cart = @order.line_items.select {|l_item| l_item.variant.id == variant.id}.map {|l_item| l_item.quantity}.sum rescue 0
 
       if variant_qty_in_cart + quantity.to_i > variant.count_on_hand
         quantity = variant.count_on_hand - variant_qty_in_cart
@@ -70,17 +72,21 @@ OrdersController.class_eval do
 
   def plus_line_item
     @order = current_order
-    line_item = @order.line_items.find(params[:id])
+    variant = @order.line_items.find(params[:id]).variant
+    line_item = @order.line_items.detect{|line_item| line_item.variant_id == variant.id && (variant.product.sale_price ? variant.product.sale_price==line_item.price : variant.price==line_item.price)}
 
     if line_item
-      unless line_item.quantity + 1 > line_item.variant.count_on_hand
+      variant_qty_in_cart = @order.line_items.select {|l_item| l_item.variant.id == variant.id}.map {|l_item| l_item.quantity}.sum rescue 0
+      unless variant_qty_in_cart + 1 > line_item.variant.on_hand
         line_item.quantity += 1
         line_item.save
       end
       @order.update!
       respond_with(@order) { |format| format.js { render :reload_cart } }
     else
-      respond_with(@order) { |format| format.js { render 'shared/alert_errors' } }
+      @order.add_variant(variant, 1)
+      @order.update!
+      respond_with(@order) { |format| format.js { render :reload_cart } }
     end
   end
 

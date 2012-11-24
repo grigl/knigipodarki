@@ -1,6 +1,7 @@
 Order.class_eval do
   def add_variant(variant, quantity = 1)
     current_item = contains?(variant)
+
     if current_item
       current_item.quantity += quantity
       current_item.save
@@ -34,6 +35,10 @@ Order.class_eval do
     product.save
 
     current_item
+  end
+
+  def contains?(variant)
+    line_items.detect{|line_item| line_item.variant_id == variant.id && (variant.product.sale_price ? variant.product.sale_price==line_item.price : variant.price==line_item.price)}
   end
 
   # Finalizes an in progress order after checkout is complete.
