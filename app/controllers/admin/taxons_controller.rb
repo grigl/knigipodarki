@@ -139,7 +139,8 @@ class Admin::TaxonsController < Admin::BaseController
     @taxon = Taxon.find(params[:id])
     @product.taxons << @taxon
     if @taxon.parent_id? && @taxon.parent.parent_id?
-      @product.taxons << Taxon.find(@taxon.parent_id)
+      new_taxon = Taxon.find(@taxon.parent_id)
+      @product.taxons << new_taxon unless @product.taxons.include?(new_taxon)
     end
     @product.save
     @taxons = @product.taxons
