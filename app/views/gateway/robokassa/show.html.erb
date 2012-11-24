@@ -47,8 +47,9 @@
               <div class="adress-choise">
                 <div class="payment-comment">
                   <h3>Ваш комментарий</h3>
-                  <%= form_for @order, update_comment_path(@order) do |form| %>
-                    <%= form.text_area :special_instructions, cols: 30, rows: 10, placeholder: 'Укажите здесь удобное для вас время, в которое мы можем с вами связаться, адрес постомата из котого  вы хотели бы забрать свой заказ, или любую другую информацию, которую вы считаете нужным донести до нас.' %>
+                  <%= form_for @order, update_comment_path(@order), id: 'comment-save', remote: true do |form| %>
+                    <%= form.text_area :special_instructions, cols: 30, rows: 10, placeholder: 'Укажите здесь удобное для вас время, в которое мы можем с вами связаться, адрес постомата из котого вы хотели бы забрать свой заказ, или любую другую информацию, которую вы считаете нужным донести до нас.' %>
+                    <%= form.submit '', style: 'display:none;', class: 'comment-save-submit' %>
                   <% end %>
                 </div>
 
@@ -60,7 +61,7 @@
                   <%= hidden_field_tag(:"SignatureValue", @signature) %>    
                   <!-- .controls -->
                   <div class="controls">
-                    <input type="submit" value="Оплатить">
+                    <input type="submit" class="robokassa-submit" value="Оплатить">
                   </div>
                   <!-- /.controls -->
                 <% end %>
