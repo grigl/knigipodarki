@@ -15,7 +15,7 @@ OrdersController.class_eval do
       @order.line_items = @order.line_items.select {|li| li.quantity > 0 }
       respond_with(@order) { |format| format.html { redirect_to cart_path } }
     else
-      respond_with(@order) 
+      respond_with(@order)
     end
   end
 

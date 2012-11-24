@@ -147,6 +147,12 @@ var RefreshCart = function() {
   });
 }
 
+var CommentSave = function() {
+  $('.robokassa-submit').live('click', function(){
+    $('.comment-save-submit').click();
+  });
+}
+
 $(function(){
     // SortLinks();
     ResetSorting();
@@ -162,4 +168,5 @@ $(function(){
     Checkout();
     MaskInp();
     RefreshCart();
+    CommentSave();
 })
