@@ -1,5 +1,6 @@
 class TaxonsController < Spree::BaseController
-
+  rescue_from ActiveRecord::RecordNotFound, :with => :render_404
+  
   helper :products
 
   respond_to :html
@@ -20,7 +21,6 @@ class TaxonsController < Spree::BaseController
     end
 
     @taxon = Taxon.find_by_permalink!(permalink)
-    return unless @taxon
 
     products = @taxon.all_products.select {|product| !product.deleted_at && product.is_published }
 
