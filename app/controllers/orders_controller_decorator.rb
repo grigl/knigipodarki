@@ -131,7 +131,8 @@ OrdersController.class_eval do
     respond_with(@order) { |format| format.html { redirect_to cart_path } }
   end
 
-  def update_comment
+  def edit
+    render_404
   end
 
   def accurate_title

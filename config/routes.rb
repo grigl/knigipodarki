@@ -5,7 +5,6 @@ Knigipodarki::Application.routes.draw do
   post 'cart/minus_line_item/:id' => 'orders#minus_line_item', as: 'minus_line_item'
   post 'cart/plus_line_item/:id' => 'orders#plus_line_item', as: 'plus_line_item'
   post 'cart/delete_line_item/:id' => 'orders#delete_line_item', as: 'delete_line_item'
-  post 'order/:id/update_comment' => 'order#update_comment', as: 'update_comment'
 
   get ':taxonomy' => 'taxons#index', constraints: { taxonomy: /publishers|designers/ }
   get ':taxonomy/:taxon/' => 'taxons#show', constraints: { taxonomy: /categories|publishers|designers/ }
