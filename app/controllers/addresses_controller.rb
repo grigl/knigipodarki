@@ -8,6 +8,7 @@ class AddressesController < Spree::BaseController
   def edit
     session["user_return_to"] = request.env['HTTP_REFERER']
     @address = Address.find(params[:id])
+    render_404 unless current_user && current_user.addresses.include?(@address)
   end
 
   def create
