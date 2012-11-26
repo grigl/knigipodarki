@@ -50,6 +50,7 @@ namespace :sync do
   def parse_file(file)
     main_store_id = "0ohh9g00001b"
     second_store_id = "00000100001h"    
+    third_store_id = "0000010005A9"
     
     xml = ""
     count = 0
@@ -102,6 +103,7 @@ namespace :sync do
             product.external_id = external_id
             product.sku = sku
             product.permalink = sku
+            product.isbn = sku
           else
             product = product[0]
           end
@@ -125,6 +127,20 @@ namespace :sync do
             product.save
           end
         end           
+      end
+      
+      if store_id == third_store_id
+        store["items"][0]["item"].each do|item|
+          external_id = item["id"][0]
+          count_on_hand_add = item["count"][0].to_i
+          
+          product = Product.where("external_id = ?", external_id).limit(1)
+          if not product.empty?
+            product = product[0]
+            product.master.count_on_hand_add2 = count_on_hand_add
+            product.save
+          end
+        end            
       end
     end    
   end

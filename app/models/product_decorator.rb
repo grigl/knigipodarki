@@ -170,6 +170,11 @@ Product.class_eval do
     return master.count_on_hand_add
   end  
 
+  # returns the number of inventory units "on_hand" for this product
+  def on_hand_add2
+    return master.count_on_hand_add2
+  end  
+
   def on_sale?
     self.sale_price && self.sale_price != 0
   end
