@@ -313,8 +313,6 @@
         span {
           // display: block;
           color: #fff;
-          border-right: 2px solid #eb8c73;
-          padding-right: 12px;
           font-weight: bold;
           font-size: 18px;
           &.ops {
@@ -334,6 +332,8 @@
           margin-left: 12px;
           font-family: kp_icons;
           text-decoration: none;
+          border-left: 2px solid #eb8c73;
+          padding-left: 12px;
           color: #fff;
           font-size: 22px;
         }
