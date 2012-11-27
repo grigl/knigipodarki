@@ -13,7 +13,7 @@ ftp_file = "order.xml"
 #pop_server = "pop.mail.ru"
 #pop_user = "9460116"
 #pop_password = "print112233"
-cash_id = "00000100001b"
+cash_id = "0ohh9g00001d"
 wh_id = "0ohh9g00001b"
 
 debug = false
