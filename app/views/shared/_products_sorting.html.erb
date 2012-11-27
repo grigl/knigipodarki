@@ -1,5 +1,5 @@
 <% params[:page] ? (page = "&page=#{params[:page]}") : (page = '') %>
-<% order = "&order=#{!params[:order] || params[:order] == 'DESC' ? 'ASC' : 'DESC'}" %>
+<% order = "&order=#{!params[:order] ? 'DESC' : params[:order] == 'DESC' ? 'ASC' : 'DESC'}" %>
 <% params[:keywords] ? (keywords = "&keywords=#{params[:keywords]}") : (keywords = '') %>
 <% params[:material] ? (material = "&material=#{params[:material]}") : (material = '') %>
 

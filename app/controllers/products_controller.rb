@@ -7,7 +7,7 @@ class ProductsController < Spree::BaseController
   respond_to :html
 
   def index
-    products = Product.order('created_at').not_deleted.published
+    products = Product.order('created_at DESC').not_deleted.published
     # scopes
     if params[:scope] 
       products = eval "products.#{params[:scope]}_products"
