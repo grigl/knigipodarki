@@ -35,7 +35,7 @@
           <% state_elements = [
                 form.collection_select(:state_id, @address.country.states,
                                   :id, :name,
-                                  {:include_blank => true},
+                                  {:include_blank => 'Выберите область'},
                                   {:class => have_states ? "required" : "hidden",
                                   :disabled => !have_states}) +
                 form.text_field(:state_name,
