@@ -3,3 +3,86 @@
         width: 280px !important;
     }
 }
+
+
+.cart {
+    .forsale {
+      // position: relative;
+      width: 1100px;
+      margin: 0 auto;
+      padding-top: 30px;
+      height: 240px;
+      overflow-y: auto;
+      // margin-bottom: -240px;
+      .item {
+        @include inline-block;
+        width: 218px;
+        padding: 0 52px 0 0;
+        margin-bottom: 30px;
+        img {
+          @include inline-block;
+          width: 60px;
+          height: auto;
+        }
+        .desc {
+          @include inline-block;
+          width: 138px;
+          padding: 0 0 0 20px;
+          margin-left: -3px;
+          span {
+            display: block;
+          }
+          .name {
+            color: #202020;
+            font-weight: bold;
+            overflow-y: hidden;
+            height: 40px;
+          }
+          .price {
+            font-size: 14px;
+            font-weight: bold;
+            color: #e66f50;
+            margin-bottom: 10px;
+          }
+          .controls {
+            .inputs {
+              @include inline-block;
+              overflow: hidden;
+              width: 62px;
+              // height: 18px;
+              padding: 0;
+              margin-right: 22px;
+              border: 1px solid #e2e2e2;
+              a {
+                display: block;
+                float: left;
+                width: 20px;
+                height: 22px;
+                background: #e2e2e2;
+                text-decoration: none;
+                text-align: center;
+                color: #808080;
+              }
+              .count {
+                display: block;
+                float: left;
+                width: 22px;
+                height: 22px;
+                padding: 0;
+                margin: 0;
+                border: none;
+                text-align: center;
+              }
+            }
+            .delete {
+              @include inline-block;
+              width: auto;
+              font-family: kp_icons;
+              text-decoration: none;
+              color: #e2e2e2;
+            }
+          }
+        }
+      }
+    }
+}
