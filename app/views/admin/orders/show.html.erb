@@ -29,8 +29,6 @@
 <% if @order.special_instructions %>
   <div class='adr'>
     <h4>Комментарий к заказу</h4>
-    <% @order.special_instructions.each_line do |line| %>
-      <%= line %><br />
-    <% end %>
+    <%= simple_format(@order.special_instructions) %>
   </div>
 <% end %>
