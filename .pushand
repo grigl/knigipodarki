@@ -1,2 +1,2 @@
 #! /bin/bash
-phd $0 knigipodarki knigipodarki
+phd $0 knigipodarki knigipodarki.webbyapp.com
