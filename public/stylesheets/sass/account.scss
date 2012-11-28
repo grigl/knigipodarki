@@ -107,6 +107,13 @@
   }
   table {
     width: 100%;
+    &.fourcol {
+      tr {
+        th, td {
+          width: 25%;
+        }
+      }
+    }
     tr {
       th {
         background: #f8f8f8;

@@ -150,22 +150,27 @@
 .order table {
   width: 100%;
 }
-/* line 111, sass/account.scss */
+/* line 112, sass/account.scss */
+.order table.fourcol tr th, .order table.fourcol tr td {
+  width: 25%;
+}
+/* line 118, sass/account.scss */
 .order table tr th {
   background: #f8f8f8;
   width: 20%;
   padding: 5px 10px;
+  font-weight: bold;
 }
-/* line 115, sass/account.scss */
+/* line 123, sass/account.scss */
 .order table tr th:last-child {
   width: 20%;
 }
-/* line 119, sass/account.scss */
+/* line 127, sass/account.scss */
 .order table tr td {
   width: 20%;
   padding: 5px 10px;
 }
-/* line 122, sass/account.scss */
+/* line 130, sass/account.scss */
 .order table tr td:last-child {
   width: 20%;
 }

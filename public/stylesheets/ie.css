@@ -1,4 +1,105 @@
-/* line 2, sass/ie.scss */
+/* line 4, sass/ie.scss */
 .navigations .search {
   width: 280px !important;
+}
+
+/* line 11, sass/ie.scss */
+.cart .forsale {
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 30px;
+  height: 240px;
+  overflow-y: auto;
+}
+/* line 19, sass/ie.scss */
+.cart .forsale .item {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: 218px;
+  padding: 0 52px 0 0;
+  margin-bottom: 30px;
+}
+/* line 24, sass/ie.scss */
+.cart .forsale .item img {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  height: auto;
+}
+/* line 29, sass/ie.scss */
+.cart .forsale .item .desc {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: 138px;
+  padding: 0 0 0 20px;
+  margin-left: -3px;
+}
+/* line 34, sass/ie.scss */
+.cart .forsale .item .desc span {
+  display: block;
+}
+/* line 37, sass/ie.scss */
+.cart .forsale .item .desc .name {
+  color: #202020;
+  font-weight: bold;
+  overflow-y: hidden;
+  height: 40px;
+}
+/* line 43, sass/ie.scss */
+.cart .forsale .item .desc .price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e66f50;
+  margin-bottom: 10px;
+}
+/* line 50, sass/ie.scss */
+.cart .forsale .item .desc .controls .inputs {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  width: 62px;
+  padding: 0;
+  margin-right: 22px;
+  border: 1px solid #e2e2e2;
+}
+/* line 58, sass/ie.scss */
+.cart .forsale .item .desc .controls .inputs a {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 22px;
+  background: #e2e2e2;
+  text-decoration: none;
+  text-align: center;
+  color: #808080;
+}
+/* line 68, sass/ie.scss */
+.cart .forsale .item .desc .controls .inputs .count {
+  display: block;
+  float: left;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-align: center;
+}
+/* line 79, sass/ie.scss */
+.cart .forsale .item .desc .controls .delete {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  font-family: kp_icons;
+  text-decoration: none;
+  color: #e2e2e2;
 }

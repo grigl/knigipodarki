@@ -23,7 +23,7 @@
             <h3>Заказ <%= @order.number %></h3>
           </header>
           <!-- table of orders -->
-          <table>
+          <table class="fourcol">
             <tbody>
               <tr>
                 <th>Дата</th>
@@ -44,14 +44,13 @@
             <h3>Товары заказа</h3>
           </header>
           <!-- товары заказа -->
-          <table>
+          <table class="fourcol">
             <tbody>
               <tr>
                 <th>Описание товара</th>
                 <th>Цена</th>
                 <th>Количество</th>
                 <th>Итого</th>
-                <th>&nbsp;</th>
               </tr>
 
               <% @order.line_items.each do |line_item| %>
@@ -61,7 +60,6 @@
                 <td><%= number_to_currency line_item.price %></td>
                 <td><%= line_item.quantity %></td>
                 <td><%= number_to_currency line_item.amount %></td>
-                <td>&nbsp;</td>
               </tr>
               <!-- /order item -->
               <% end %>
@@ -71,7 +69,6 @@
                 <td></td>
                 <td></td>
                 <td><%= number_to_currency @order.item_total %></td>
-                <td>&nbsp;</td>
               </tr>
 
               <% @order.adjustments.each do |ad| %>
@@ -81,7 +78,6 @@
                 <td></td>
                 <td></td>
                 <td><%= number_to_currency ad.amount %></td>
-                <td>&nbsp;</td>
               </tr>
               <!-- /order item -->
               <% end %>
@@ -91,7 +87,6 @@
                 <td></td>
                 <td></td>
                 <td><%= number_to_currency @order.total %></td>
-                <td>&nbsp;</td>
               </tr>
 
             </tbody>
