@@ -64,14 +64,14 @@
                   <span><%= number_to_currency @product.price %></span>
                 <% end %>
 
-                <% if @product.count_on_hand > 0 %>
+                <% if @product.on_hand > 0 %>
                   <%= form_for :order, :url => populate_orders_url, remote: true do |f| %>
                     <%= hidden_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 1 %>             
                     <a href="" class="add-to-cart">t</a> 
                   <% end %>
                 <% end %>
               </div>
-              <% if @product.count_on_hand > 0 %>
+              <% if @product.on_hand > 0 %>
                 <span class="stock">В наличии</span>
               <% else %>
                 <span class="stock">Нет в наличии</span>
