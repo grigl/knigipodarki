@@ -67,81 +67,107 @@ namespace :sync do
     
     config = XmlSimple.xml_in(xml)
         
+    found_ids = []    
+        
+    main_store = []
+    second_store = []
+    third_store = []
+        
     config["store"].each do|store|
       store_id = store["id"][0]
       if store_id == main_store_id
-        store["items"][0]["item"].each do|item|
-          external_id = item["id"][0]
-          sku = item["code"][0]
-          name = item["modelg"][0]
-          supplier = item["firmag"][0]
-          groupg = ''
-          typeg = ''
-          if item["groupg"].count
-            groupg = item["groupg"][0]
-          end
-          if item["typeg"].count
-            typeg = item["typeg"][0]
-          end          
-          category_name = groupg.to_s + " " + typeg.to_s
-          count_on_hand = item["count"][0].to_i
-          
-          price = 0
-          item["prices"][0]["price"].each do|price_variant|
-            if price_variant["order"][0].to_i == 4 then
-              price = price_variant["value"][0]
-            end
-          end
-          
-          product = Product.where("external_id = ?", external_id).limit(1)
-          if product.empty?
-            product = Product.new
-            product.name = name
-            product.subname = name
-            product.supplier = supplier
-            product.category_name = category_name
-            product.external_id = external_id
-            product.sku = sku
-            product.permalink = sku
-            product.isbn = sku
-          else
-            product = product[0]
-          end
-          product.price = price
-          product.subname = name
-          product.supplier = supplier
-          product.category_name = category_name      
-          product.master.count_on_hand = count_on_hand
-          product.save
-        end           
+        main_store = store        
       end
       if store_id == second_store_id
-        store["items"][0]["item"].each do|item|
-          external_id = item["id"][0]
-          count_on_hand_add = item["count"][0].to_i
-          
-          product = Product.where("external_id = ?", external_id).limit(1)
-          if not product.empty?
-            product = product[0]
-            product.master.count_on_hand_add = count_on_hand_add
-            product.save
-          end
-        end           
+        second_store = store           
       end
       
       if store_id == third_store_id
-        store["items"][0]["item"].each do|item|
-          external_id = item["id"][0]
-          count_on_hand_add = item["count"][0].to_i
-          
-          product = Product.where("external_id = ?", external_id).limit(1)
-          if not product.empty?
-            product = product[0]
-            product.master.count_on_hand_add2 = count_on_hand_add
-            product.save
-          end
-        end            
+        third_store = store          
       end
-    end    
+    end  
+    
+    main_store["items"][0]["item"].each do|item|
+      external_id = item["id"][0]
+      sku = item["code"][0]
+      name = item["modelg"][0]
+      supplier = item["firmag"][0]
+      found_ids.push(external_id)
+      groupg = ''
+      typeg = ''
+      if item["groupg"].count
+        groupg = item["groupg"][0]
+      end
+      if item["typeg"].count
+        typeg = item["typeg"][0]
+      end          
+      category_name = groupg.to_s + " " + typeg.to_s
+      count_on_hand = item["count"][0].to_i
+          
+      price = 0
+      item["prices"][0]["price"].each do|price_variant|
+        if price_variant["order"][0].to_i == 4 then
+          price = price_variant["value"][0]
+        end
+      end
+          
+      product = Product.where("external_id = ?", external_id).limit(1)
+      if product.empty?
+        product = Product.new
+        product.name = name
+        product.subname = name
+        product.supplier = supplier
+        product.category_name = category_name
+        product.external_id = external_id
+        product.sku = sku
+        product.permalink = sku
+        product.isbn = sku
+      else
+        product = product[0]
+      end
+      product.price = price
+      product.subname = name
+      product.supplier = supplier
+      product.category_name = category_name      
+      product.master.count_on_hand = count_on_hand
+      product.save
+    end  
+    
+    second_store["items"][0]["item"].each do|item|
+      external_id = item["id"][0]
+      count_on_hand_add = item["count"][0].to_i
+          
+      product = Product.where("external_id = ?", external_id).limit(1)
+      if not product.empty?
+        product = product[0]
+        product.master.count_on_hand_add = count_on_hand_add
+        product.save
+      end
+    end      
+    
+    third_store["items"][0]["item"].each do|item|
+      external_id = item["id"][0]
+      count_on_hand_add = item["count"][0].to_i
+          
+      product = Product.where("external_id = ?", external_id).limit(1)
+      if not product.empty?
+        product = product[0]
+        product.master.count_on_hand_add2 = count_on_hand_add
+        product.save
+      end
+    end   
+    
+    products = Product.where("external_id NOT IN (?)", found_ids)
+    products.each do|product|
+      product.deleted_at = Time.now()
+      
+      product.variants.each do |v|
+        v.deleted_at = Time.now()
+        v.save
+      end
+  
+      product.save      
+    end
+      
   end
 end
