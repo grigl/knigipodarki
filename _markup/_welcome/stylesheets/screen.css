@@ -1,0 +1,23 @@
+/* line 1, ../sass/screen.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 5, ../sass/screen.scss */
+body {
+  font: 14px/20px Helvetica, arial;
+  color: #404040;
+  background: url(../images/back.png);
+}
+
+/* line 11, ../sass/screen.scss */
+.welcome {
+  width: 500px;
+  padding: 4em 1em;
+  margin: 0 auto;
+  margin-top: 10em;
+  text-align: center;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
