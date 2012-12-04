@@ -191,14 +191,14 @@ Product.class_eval do
 
   def publisher
     publishers = Taxonomy.where(name: 'Издательства').first
-    publisher = self.taxons.where(parent_id: publishers.id).first if publishers
+    publisher = self.taxons.where(taxonomy_id: publishers.id).first if publishers
 
     publisher.name if publisher
   end
 
   def publisher_object
     publishers = Taxonomy.where(name: 'Издательства').first
-    publisher = self.taxons.where(parent_id: publishers.id).first if publishers
+    publisher = self.taxons.where(taxonomy_id: publishers.id).first if publishers
   end
 
   def category
@@ -228,14 +228,14 @@ Product.class_eval do
 
   def designer
     designers = Taxonomy.where(name: 'Дизайнеры').first
-    designer = self.taxons.where(parent_id: designers.id).first if designers
+    designer = self.taxons.where(taxonomy_id: designers.id).first if designers
 
     designer.name if designer
   end
 
   def designer_object
     designers = Taxonomy.where(name: 'Дизайнеры').first
-    designer = self.taxons.where(parent_id: designers.id).first if designers
+    designer = self.taxons.where(taxonomy_id: designers.id).first if designers
   end
 
   def available_types
