@@ -15,7 +15,7 @@ Knigipodarki::Application.routes.draw do
   match '/products/:scope' => 'products#index', constraints: { scope: /recommended|popular|sale/ }, as: 'products_with_scope'
   match '/products/tags/:tag' => 'products#tags', as: 'products_tags'
 
-  resources :addresses
+  resources :addresses, only: [:new, :create, :edit, :update, :destroy]
 
   scope :module => "gateway" do
     match '/robokassa/:gateway_id/:order_id' => 'robokassa#show',    :as => :robokassa
