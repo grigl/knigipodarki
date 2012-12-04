@@ -46,11 +46,15 @@ class AddressesController < Spree::BaseController
 
   def destroy
     @address = Address.find(params[:id])
-    if @address.can_be_deleted?
-      @address.destroy
+    if current_user && current_user.addresses.include?(@address)
+      if @address.can_be_deleted?
+        @address.destroy
+      else
+        @address.update_attribute(:deleted_at, Time.now)
+      end
+      redirect_to(request.env['HTTP_REFERER'] || account_path) unless request.xhr?
     else
-      @address.update_attribute(:deleted_at, Time.now)
+      render_404
     end
-    redirect_to(request.env['HTTP_REFERER'] || account_path) unless request.xhr?
   end
 end
