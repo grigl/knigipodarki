@@ -3,6 +3,10 @@ OrdersController.class_eval do
 
   helper :products
 
+  def new
+    render_404
+  end
+
   def show
     @order = Order.find_by_number(params[:id])
 
