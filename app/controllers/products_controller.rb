@@ -41,6 +41,10 @@ class ProductsController < Spree::BaseController
     respond_with(@products)
   end
 
+  def edit
+    render_404
+  end
+
   def show
     @product = Product.find_by_permalink!(params[:id])
     return unless @product
