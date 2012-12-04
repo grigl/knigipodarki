@@ -6,6 +6,10 @@ class ProductsController < Spree::BaseController
 
   respond_to :html
 
+  def new
+    render_404
+  end
+
   def index
     products = Product.order('created_at DESC').not_deleted.published
     # scopes
