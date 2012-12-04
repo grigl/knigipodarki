@@ -8,7 +8,7 @@ class OrderMailer < ActionMailer::Base
     @user = user
     subject = (resend ? "[RESEND] " : "")
     subject += "Книгиподарки. #{t('subject', :scope =>'order_mailer.confirm_email')} ##{order.number}"
-    mail(:to => order.email,
+    mail(:to => [order.email, 'support@knigipodarki.ru'],
          :subject => subject,
          :template_name => 'confirm')
   end
