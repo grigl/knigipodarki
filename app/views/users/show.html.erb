@@ -59,7 +59,7 @@
                 </div>
                 <div class="controls">
                   <%= link_to 'Редактировать', edit_address_path(address) %>
-                  <%= link_to 'Удалить', address_path(address), :method => :delete, :confirm => t(:are_you_sure) %>
+                  <%= link_to 'Удалить', address_path(address), :method => :delete, :confirm => 'Вы уверены?' %>
                 </div>
               </div>
             <% end %>
