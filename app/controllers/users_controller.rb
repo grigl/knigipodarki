@@ -2,6 +2,10 @@ class UsersController < Spree::BaseController
   prepend_before_filter :load_object, :only => [:edit, :update]
   prepend_before_filter :authorize_actions, :only => :new
 
+  def new
+    render_404
+  end
+
   def show
     @user = User.find(current_user)
     @orders = @user.orders.complete
