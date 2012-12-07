@@ -57,9 +57,9 @@
               <!-- order item -->
               <tr>
                 <td><%= line_item.variant.name %></td>
-                <td><%= number_to_currency line_item.price %></td>
+                <td><%= line_item.price %> <span class="rouble">p</span></td>
                 <td><%= line_item.quantity %></td>
-                <td><%= number_to_currency line_item.amount %></td>
+                <td><%= line_item.amount %> <span class="rouble">p</span></td>
               </tr>
               <!-- /order item -->
               <% end %>
@@ -68,7 +68,7 @@
                 <td>Стоимость товаров:</td>
                 <td></td>
                 <td></td>
-                <td><%= number_to_currency @order.item_total %></td>
+                <td><%= @order.item_total %> <span class="rouble">p</span></td>
               </tr>
 
               <% @order.adjustments.each do |ad| %>
@@ -77,7 +77,7 @@
                 <td><%= ad.label %></td>
                 <td></td>
                 <td></td>
-                <td><%= number_to_currency ad.amount %></td>
+                <td><%= ad.amount %> <span class="rouble">p</span></td>
               </tr>
               <!-- /order item -->
               <% end %>
@@ -86,7 +86,7 @@
                 <td>Итого заказ:</td>
                 <td></td>
                 <td></td>
-                <td><%= number_to_currency @order.total %></td>
+                <td><%= @order.total %> <span class="rouble">p</span></td>
               </tr>
 
             </tbody>

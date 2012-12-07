@@ -20,7 +20,7 @@
                       <p>
                         <%= simple_format(banner.description) if banner.description %>
                       </p>
-                        <span class="price"><%= number_to_currency banner.price if banner.price %></span>
+                        <span class="price"><%= banner.price if banner.price %> <span class="rouble">p</span></span>
                   </article>
               </div>
             <!-- /.baner-item -->

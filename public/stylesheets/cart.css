@@ -139,24 +139,22 @@
   margin-left: -3px;
 }
 /* line 119, sass/cart.scss */
-.cart .forsale .item .desc span {
-  display: block;
-}
-/* line 122, sass/cart.scss */
 .cart .forsale .item .desc .name {
+  display: block;
   color: #202020;
   font-weight: bold;
   overflow-y: hidden;
   height: 40px;
 }
-/* line 128, sass/cart.scss */
+/* line 126, sass/cart.scss */
 .cart .forsale .item .desc .price {
+  display: block;
   font-size: 14px;
   font-weight: bold;
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 135, sass/cart.scss */
+/* line 134, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -168,7 +166,7 @@
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 143, sass/cart.scss */
+/* line 142, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -179,7 +177,7 @@
   text-align: center;
   color: #808080;
 }
-/* line 153, sass/cart.scss */
+/* line 152, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs .count {
   display: block;
   float: left;
@@ -190,7 +188,7 @@
   border: none;
   text-align: center;
 }
-/* line 164, sass/cart.scss */
+/* line 163, sass/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;

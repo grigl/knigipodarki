@@ -8,6 +8,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'rouble';
+  src: url("../fonts/rouble.ttf") format('truetype'), url("../fonts/rouble.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -44,6 +52,10 @@ input[type="text"]:-webkit-autofill {
 
 .sp_show {
   display: none;
+}
+
+.rouble {
+  font-family: rouble;
 }
 
 .wrap {

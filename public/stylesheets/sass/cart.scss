@@ -116,16 +116,15 @@
           width: 140px;
           padding: 0 0 0 20px;
           margin-left: -3px;
-          span {
-            display: block;
-          }
           .name {
+            display: block;
             color: #202020;
             font-weight: bold;
             overflow-y: hidden;
             height: 40px;
           }
           .price {
+            display: block;
             font-size: 14px;
             font-weight: bold;
             color: #e66f50;

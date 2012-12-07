@@ -5,21 +5,21 @@
   <!-- .item -->
   <div class="item">
     <span class="name">Товары</span>
-    <spnan class="price"><%= number_to_currency order.item_total %></spnan>
+    <spnan class="price"><%= order.item_total %> <span class="rouble">p</span></spnan>
   </div>
   <!-- /.item -->
   <!-- .item -->
   <% @order.adjustments.each do |adjustment| %>
     <div class="item">
       <span class="name"><%= adjustment.label %></span>
-      <spnan class="price"><%= number_to_currency adjustment.amount %></spnan>
+      <spnan class="price"><%= adjustment.amount %> <span class="rouble">p</span></spnan>
     </div>
   <% end %>
   <!-- /.item -->
   <!-- .item -->
   <div class="item all">
     <span class="name">Итого</span>
-    <spnan class="price"><%= number_to_currency @order.total %></spnan>
+    <spnan class="price"><%= @order.total %> <span class="rouble">p</span></spnan>
   </div>
   <!-- /.item -->
 </div>
