@@ -14,6 +14,15 @@ var ResetSorting = function() {
     });
 }
 
+var WhiteWrap = function() {
+  var windowHeight;
+  windowHeight = $(window).height();
+  he = (windowHeight - (140+171+80+62)) // просьба оставить пока так, до финального тестирования.
+
+  $('.site-content .white-wrap').css("min-height", he)
+
+}
+
 var SlickFoot = function() {
     var windowHeight;
 
@@ -169,4 +178,5 @@ $(function(){
     MaskInp();
     RefreshCart();
     CommentSave();
+    WhiteWrap();
 })

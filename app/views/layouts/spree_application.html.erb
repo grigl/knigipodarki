@@ -32,10 +32,11 @@
 <!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } })(); </script> <![endif]-->
 </head>
 <body>
+    
   <%= render 'layouts/site_header' %>
-
+  
   <%= yield %>
-
+  
   <%= render 'shared/cart' unless @show_cart_panel == false %>
 
   <%= render 'layouts/site_footer' %>
