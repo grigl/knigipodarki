@@ -3,6 +3,10 @@ OrdersController.class_eval do
 
   helper :products
 
+  def index
+    render_404
+  end
+
   def new
     render_404
   end
