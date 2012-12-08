@@ -1,18 +1,28 @@
-<h1><%= t(:page_not_found) %></h1>
+<!-- .content -->
+<section class="site-content">
+  <div class="white-wrap">
+    <div class="wrap">
 
-<p>Запрошенному вами URL не соответствует ни одна страница сайта.</p>
-<p>Возможные причины:</p>
-<ul>
-  <li>Вам могли прислать неверную ссылку.</li>
-  <li>Вы могли набрать адрес с ошибкой.</li>
-  <li>Страница могла быть удалена с изменением структуры сайта.</li>
-  <li>Товар более недоступен для продажи.</li>
-</ul>
+        <section class="errorpage">
+            <h1><%= t(:page_not_found) %> (404)</h1>
+            
+            <p>Запрошенному вами URL не соответствует ни одна страница сайта.</p>
+        </section>
 
-<p>Если вы уверены, что адрес правильный, попробуйте начать поиск информации с <%= link_to 'главной страницы сайта', '/' %></p>
+        <% if @tags && !@tags.empty? %>
+          <aside class="tags">
+            <ul>
+              <% @tags.each do |tag| %>
+                <li><%= link_to tag.name, products_tags_path(tag.name) %></li>
+              <% end %>
+            </ul>
+          </aside>
+        <% end %>
 
-<% content_for :sidebar do %>
-  <%= hook :taxon_sidebar_navigation do %>
-    <%= render :partial => "shared/taxonomies" %>
-  <% end %>
-<% end %>
+    </div>
+    <!-- /.wrap -->
+  </div>
+  <!-- /.white-wrap -->
+</section>
+<!-- /.content -->
+

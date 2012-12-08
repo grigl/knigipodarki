@@ -462,3 +462,14 @@ input[type="text"]:-webkit-autofill {
   display: inline;
   margin-right: 20px;
 }
+
+/* line 420, sass/layout.scss */
+.errorpage {
+  text-align: center;
+}
+/* line 422, sass/layout.scss */
+.errorpage h1 {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}

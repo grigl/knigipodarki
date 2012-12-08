@@ -416,3 +416,12 @@ input[type="text"]:-webkit-autofill {
     }
   }
 }
+
+.errorpage {
+  text-align: center;
+  h1 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+}
