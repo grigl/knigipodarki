@@ -27,11 +27,6 @@
       color: #fff;
       font-weight: bold;
       z-index: 250;
-      // .gray_decor {
-      //   height: 10px;
-      //   background: #808080;
-      //   margin-top: 20px;
-      // }
       .panel_in {
         cursor: pointer;
         overflow: hidden;
@@ -94,25 +89,26 @@
       }
     }
     .forsale {
-      // position: relative;
       width: 1100px;
       margin: 0 auto;
       padding-top: 30px;
       height: 240px;
       overflow-y: auto;
-      // margin-bottom: -240px;
       .item {
         @include inline-block;
         width: 220px;
         padding: 0 52px 0 0;
         margin-bottom: 30px;
+        overflow: hidden;
         img {
-          @include inline-block;
+          display: block;
+          float: left;
           width: 60px;
           height: auto;
         }
         .desc {
-          @include inline-block;
+          display: block;
+          float: left;
           width: 140px;
           padding: 0 0 0 20px;
           margin-left: -3px;
@@ -135,7 +131,6 @@
               @include inline-block;
               overflow: hidden;
               width: 62px;
-              // height: 18px;
               padding: 0;
               margin-right: 22px;
               border: 1px solid #e2e2e2;

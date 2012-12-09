@@ -1776,17 +1776,17 @@ input[type="text"]:-webkit-autofill {
   font-weight: bold;
   z-index: 250;
 }
-/* line 35, sass/cart.scss */
+/* line 30, sass/cart.scss */
 .cart .panel .panel_in {
   cursor: pointer;
   overflow: hidden;
 }
-/* line 39, sass/cart.scss */
+/* line 34, sass/cart.scss */
 .cart .panel a {
   color: #fff;
   text-decoration: none;
 }
-/* line 43, sass/cart.scss */
+/* line 38, sass/cart.scss */
 .cart .panel .items {
   display: block;
   width: 130px;
@@ -1796,14 +1796,14 @@ input[type="text"]:-webkit-autofill {
   float: left;
   background: #e66f50;
 }
-/* line 52, sass/cart.scss */
+/* line 47, sass/cart.scss */
 .cart .panel .refresh {
   position: absolute;
   right: 36px;
   width: 30px;
   height: 30px;
 }
-/* line 57, sass/cart.scss */
+/* line 52, sass/cart.scss */
 .cart .panel .refresh.active {
   background: url(../images/refresh.png) center center no-repeat;
   -webkit-animation-name: Rotate;
@@ -1811,7 +1811,7 @@ input[type="text"]:-webkit-autofill {
   animation-name: Rotate;
   animation-duration: 1s;
 }
-/* line 65, sass/cart.scss */
+/* line 60, sass/cart.scss */
 .cart .panel .cart-order {
   position: absolute;
   top: 0;
@@ -1824,7 +1824,7 @@ input[type="text"]:-webkit-autofill {
   z-index: 300;
   cursor: pointer;
 }
-/* line 77, sass/cart.scss */
+/* line 72, sass/cart.scss */
 .cart .panel .control {
   display: block;
   height: 25px;
@@ -1832,19 +1832,19 @@ input[type="text"]:-webkit-autofill {
   float: right;
   font-family: kp_icons;
 }
-/* line 83, sass/cart.scss */
+/* line 78, sass/cart.scss */
 .cart .panel .control .close {
   display: none;
 }
-/* line 87, sass/cart.scss */
+/* line 82, sass/cart.scss */
 .cart .panel .control.active .open {
   display: none;
 }
-/* line 90, sass/cart.scss */
+/* line 85, sass/cart.scss */
 .cart .panel .control.active .close {
   display: block;
 }
-/* line 96, sass/cart.scss */
+/* line 91, sass/cart.scss */
 .cart .forsale {
   width: 1100px;
   margin: 0 auto;
@@ -1852,7 +1852,7 @@ input[type="text"]:-webkit-autofill {
   height: 240px;
   overflow-y: auto;
 }
-/* line 104, sass/cart.scss */
+/* line 97, sass/cart.scss */
 .cart .forsale .item {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1861,27 +1861,24 @@ input[type="text"]:-webkit-autofill {
   width: 220px;
   padding: 0 52px 0 0;
   margin-bottom: 30px;
+  overflow: hidden;
 }
-/* line 109, sass/cart.scss */
+/* line 103, sass/cart.scss */
 .cart .forsale .item img {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  float: left;
   width: 60px;
   height: auto;
 }
-/* line 114, sass/cart.scss */
+/* line 109, sass/cart.scss */
 .cart .forsale .item .desc {
-  letter-spacing: normal;
-  word-spacing: normal;
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  float: left;
   width: 140px;
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 119, sass/cart.scss */
+/* line 115, sass/cart.scss */
 .cart .forsale .item .desc .name {
   display: block;
   color: #202020;
@@ -1889,7 +1886,7 @@ input[type="text"]:-webkit-autofill {
   overflow-y: hidden;
   height: 40px;
 }
-/* line 126, sass/cart.scss */
+/* line 122, sass/cart.scss */
 .cart .forsale .item .desc .price {
   display: block;
   font-size: 14px;
@@ -1897,7 +1894,7 @@ input[type="text"]:-webkit-autofill {
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 134, sass/cart.scss */
+/* line 130, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1909,7 +1906,7 @@ input[type="text"]:-webkit-autofill {
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 142, sass/cart.scss */
+/* line 137, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -1920,7 +1917,7 @@ input[type="text"]:-webkit-autofill {
   text-align: center;
   color: #808080;
 }
-/* line 152, sass/cart.scss */
+/* line 147, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs .count {
   display: block;
   float: left;
@@ -1931,7 +1928,7 @@ input[type="text"]:-webkit-autofill {
   border: none;
   text-align: center;
 }
-/* line 163, sass/cart.scss */
+/* line 158, sass/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;
