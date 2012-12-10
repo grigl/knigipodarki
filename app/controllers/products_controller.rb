@@ -18,7 +18,28 @@ class ProductsController < Spree::BaseController
     end
 
     if params[:keywords] 
-      products = products.where('name LIKE ?', "%#{params[:keywords]}%")
+      products_by_name = products.where('name LIKE ?', "%#{params[:keywords]}%")
+      products_by_description = products.where('description LIKE ?', "%#{params[:keywords]}%")
+
+      publishers_taxonomy = Taxonomy.where(name: 'Издательства').first
+      publishers = Taxon.where(taxonomy_id = publishers_taxonomy.id).where('name LIKE ?', "%#{params[:keywords]}%")
+      products_by_publishers = []
+      if publishers
+        publishers.each do |publisher|
+          publisher_products = publisher.all_products.not_deleted.published
+          publisher_products.each do |product|
+            products_by_publishers << product unless products_by_publishers.include?(product)
+          end if publisher_products
+        end
+      end
+
+      products = products_by_name
+      products_by_description.each do |product|
+        products << product unless products.include?(product)
+      end
+      products_by_publishers.each do |product|
+        products << product unless products.include?(product)
+      end
     end
 
     # sorting and order
