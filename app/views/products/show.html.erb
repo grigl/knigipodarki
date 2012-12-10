@@ -58,10 +58,10 @@
             <div class="cartline">
               <div class="single_cart">
                 <% if @product.sale_price %>
-                  <span class="ops"><%= number_to_currency @product.price  %></span>
-                  <span class="no_bord"><%= number_to_currency @product.sale_price %></span>
+                  <span class="ops"><%= @product.price.to_i rescue 0 %></span>
+                  <span class="no_bord"><%= @product.sale_price.to_i rescue 0 %></span>
                 <% else %>
-                  <span><%= number_to_currency @product.price %></span>
+                  <span><%= number_to_currency @product.price.to_i rescue 0 %></span>
                 <% end %>
 
                 <% if @product.on_hand > 0 %>

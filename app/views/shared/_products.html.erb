@@ -12,10 +12,10 @@
 
       <article>
         <% if product.sale_price %>
-          <span class="price ops"><%= product.price %> <span class="rouble">p</span></span>
-          <span class="price sale"><%= product.sale_price %> <span class="rouble">p</span></span>
+          <span class="price ops"><%= product.price.to_i rescue 0 %> <span class="rouble">p</span></span>
+          <span class="price sale"><%= product.sale_price.to_i rescue 0 %> <span class="rouble">p</span></span>
         <% else %>
-          <span class="price"><%= product.price %> <span class="rouble">p</span></span>
+          <span class="price"><%= product.price.to_i rescue 0 %> <span class="rouble">p</span></span>
         <% end %>
 
         <h2><%= product.name %></h2>
