@@ -32,12 +32,16 @@ class ProductsController < Spree::BaseController
           end if publisher_products
         end
       end
+      products_by_isbn = products.select {|product| product.isbn.gsub('-','').include?(params[:keywords].gsub('-','')) } 
 
       products = products_by_name
       products_by_description.each do |product|
         products << product unless products.include?(product)
       end
       products_by_publishers.each do |product|
+        products << product unless products.include?(product)
+      end
+      products_by_isbn.each do |product|
         products << product unless products.include?(product)
       end
     end
