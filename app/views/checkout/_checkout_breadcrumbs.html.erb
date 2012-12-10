@@ -9,11 +9,11 @@
             <% states.each_with_index do |state| %>
               <% unless state == 'cart' %>
               <% if states.index(state) < states.index(@order.state) %>
-                <li><%= link_to I18n.t('checkout.' + state), checkout_state_path(state) %>&nbsp;></li>
+                <li><%= link_to I18n.t('checkout.' + state), checkout_state_path(state) %>&nbsp;<% unless state == states.last %>><% end %></li>
               <% elsif states.index(state) == states.index(@order.state) %>
-                <li class="current"><%= I18n.t('checkout.' + state) %>&nbsp;></li>
+                <li class="current"><%= I18n.t('checkout.' + state) %>&nbsp;<% unless state == states.last %>><% end %></li>
               <% elsif states.index(state) > states.index(@order.state) %>
-                <li class="step"><%= I18n.t('checkout.' + state) %>&nbsp;></li>
+                <li class="step"><%= I18n.t('checkout.' + state) %>&nbsp;<% unless state == states.last %>><% end %></li>
               <% end %>
               <% end %>
             <% end %>

@@ -15,7 +15,7 @@
       <h3>Способ доставки</h3>
     </header>
     <article>
-      <%= @order.shipment.shipping_method.name %> — <%= @order.shipment.cost %> <span class="rouble">p</span> <%= link_to 'Изменить', checkout_state_path('delivery') %>
+      <%= @order.shipment.shipping_method.name %> — <%= @order.shipment.cost.to_i rescue 0 %> <span class="rouble">p</span> <%= link_to 'Изменить', checkout_state_path('delivery') %>
     </article>
   </div>
   <!-- /approve info -->
