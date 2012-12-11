@@ -29,7 +29,7 @@
       <td><%= product.name %></td>
       <td><%= product.price %></td>
     <% end %>
-    <td class="actions">
+    <td class="actions" style="min-width: 300px;">
       <%= hook :admin_products_index_row_actions, locals do %>
         <%= link_to_edit product, :class => 'edit' unless product.deleted?  %>
         &nbsp;
