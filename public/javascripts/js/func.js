@@ -17,8 +17,15 @@ var ResetSorting = function() {
 var WhiteWrap = function() {
   var windowHeight;
   windowHeight = $(window).height();
-  he = (windowHeight - (140+171+80+62)) // просьба оставить пока так, до финального тестирования.
-
+  CartPanel = $('.cart');
+  if (CartPanel.is(':hidden')) {
+      he = (windowHeight - (140+171+80+32))
+    } else
+    {
+      he = (windowHeight - (140+171+80+62));
+      $('body').scroll();
+    }
+  
   $('.site-content .white-wrap').css("min-height", he)
 
 }
