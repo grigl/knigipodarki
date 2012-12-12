@@ -10,14 +10,14 @@
 
 @font-face {
   font-family: 'rouble';
-  src: url('../fonts/rouble.eot');
+  src: url("../fonts/rouble.ttf") format('truetype'), url("../fonts/rouble.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'rouble';
-  src: url("../fonts/rouble.ttf") format('truetype'), url("../fonts/rouble.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+  src: url('../fonts/rouble.eot');
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
