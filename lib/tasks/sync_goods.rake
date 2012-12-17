@@ -111,7 +111,7 @@ namespace :sync do
         end
       end
           
-      product = Product.where("external_id = ?", external_id).limit(1)
+      product = Product.where("BINARY external_id = ?", external_id).limit(1)
       if product.empty?
         product = Product.new
         product.name = name
