@@ -10,8 +10,9 @@
               <h1>
               	<% if @taxon.permalink.include? 'publisher'%>
               	Издательство&nbsp;&laquo;<%= @taxon.name %>&raquo;
+              	<% else %>
+              	<%= @taxon.name %>
               	<% end %>
-                <%= @taxon.name %>
                 <%= ' / ' + @category.name if @category %>
               </h1>
               <h2><%= @taxon.subtitle %></h2>
