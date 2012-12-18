@@ -50,16 +50,6 @@
           <!-- /catalogue -->
         <% end %>
 
-        <% if @tags && !@tags.empty? %>
-          <aside class="tags">
-            <ul>
-              <% @tags.each do |tag| %>
-                <li><%= link_to tag.name, products_tags_path(tag.name) %></li>
-              <% end %>
-            </ul>
-          </aside>
-        <% end %>
-
       </div>
       <!-- /.wrap -->
     </div>

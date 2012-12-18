@@ -5,6 +5,16 @@
 
       <% if @products.empty? %>
         <%= t(:no_products_found) %>        
+        
+        <% if @tags && !@tags.empty? %>
+          <aside class="tags">
+            <ul>
+              <% @tags.each do |tag| %>
+                <li><%= link_to tag.name, products_tags_path(tag.name) %></li>
+              <% end %>
+            </ul>
+          </aside>
+        <% end %>        
       <% else %>
         <!-- catalogue -->
         <section class="catalogue">
