@@ -14,11 +14,10 @@
               <h2><%= link_to brand.name, brand.permalink %></h2>
               <ul>
                 <% brand_categories(brand).each do |category| %>
-                  <li><%= link_to category.name, crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end) %></li>
+                  <!-- <li><%= link_to category.name, crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end) %></li> -->
                   <% if category.children.present? %>
                     <ul>
                     <% brand_categories(brand, category).each do |subcategory| %>
-                      <%= subcategory.id %>
                       <% if subcategory.id != 2 %>
                       <li><%= link_to subcategory.name, 
                                       crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end, subcategory: subcategory.permalink_end) %>
