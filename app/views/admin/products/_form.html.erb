@@ -55,14 +55,20 @@
       <% end %>
 
       <p>
-        <%= f.label :on_hand, 'Лиговский пр., 74' %>
-        <%= f.text_field :on_hand, :size => 4 %>
-        <br />
-        <%= f.label :on_hand_add, 'Троицкий' %>
-        <%= f.text_field :on_hand_add, :size => 4 %>
-        <br />
-        <%= f.label :on_hand_add2, 'ТК Сенная' %>
-        <%= f.text_field :on_hand_add2, :size => 4, :value => @product.on_hand_add2 %>        
+      	<table>
+      		<tr>
+      			<td><%= f.label :on_hand, 'Лиговский пр., 74' %></td>
+      			<td><%= f.text_field :on_hand, :size => 4 %></td>
+      		</tr>
+      		<tr>
+      			<td><%= f.label :on_hand_add, 'Троицкий' %></td>
+      			<td><%= f.text_field :on_hand_add, :size => 4 %></td>
+      		</tr>
+      		<tr>
+      			<td><%= f.label :on_hand_add2, 'ТК Сенная' %></td>
+      			<td><%= f.text_field :on_hand_add2, :size => 4 %></td>
+      		</tr>      		      		
+      	</table>    
       </p>
 
       <%= f.field_container :is_published do %>
