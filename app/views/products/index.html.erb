@@ -4,7 +4,7 @@
     <div class="wrap">
 
       <% if @products.empty? %>
-        <h2><%= t(:no_products_found) %></h2>        
+        <div style="margin-bottom: 10px;"><%= t(:no_products_found) %></div>        
         
         <% if @tags && !@tags.empty? %>
           <aside class="tags">
