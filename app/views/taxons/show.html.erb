@@ -8,7 +8,7 @@
           <article>
             <hgroup>
               <h1>
-              	<% if @taxon.permalink == 'publisher'%>
+              	<% if @taxon.permalink.include? 'publisher'%>
               	Издательство&nbsp;
               	<% end %>
                 <%= @taxon.name %>
