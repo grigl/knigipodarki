@@ -32,6 +32,9 @@
       <% if @product.annotation %>
         <%= @product.annotation %>
       <% end %>
+      <% if @product.width && @product.height %>
+        Размер: <%= @product.width.to_i %>x<%= @product.height.to_i %> мм<br>
+      <% end %>      
     </p>
   <% end %>
 </div>
