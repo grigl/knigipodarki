@@ -11,14 +11,14 @@
               	<% if @taxon.permalink.include? 'publisher'%>
               	Издательство&nbsp;&laquo;<%= @taxon.name %>&raquo;
               	<% else %>
-              	<%= @taxon.name.html_safe rescue '' %>
+              	<%= @taxon.name %>
               	<% end %>
                 <%= ' / ' + @category.name if @category %>
               </h1>
               <h2><%= @taxon.subtitle %></h2>
             </hgroup>
             <p>
-              <%= @taxon.description %>
+              <%= @taxon.description.html_safe rescue '' %>
             </p>
           </article>
         </section>
