@@ -9,7 +9,7 @@
             <hgroup>
               <h1>
               	<% if @taxon.permalink.include? 'publisher'%>
-              	Издательство&nbsp;
+              	Издательство&nbsp;&laquo;<%= @taxon.name %>&raquo;
               	<% end %>
                 <%= @taxon.name %>
                 <%= ' / ' + @category.name if @category %>
