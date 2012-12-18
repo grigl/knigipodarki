@@ -8,6 +8,9 @@
           <article>
             <hgroup>
               <h1>
+              	<% if @taxon.permalink == 'publisher'%>
+              	Издательство&nbsp;
+              	<% end %>
                 <%= @taxon.name %>
                 <%= ' / ' + @category.name if @category %>
               </h1>
