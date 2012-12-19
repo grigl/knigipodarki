@@ -18,10 +18,7 @@
           <span class="price"><%= product.price.to_i rescue 0 %> <span class="rouble">p</span></span>
         <% end %>
 
-		<% if product.author %>
-		<br /><span><%= product.author%></span>
-		<% end %>
-        <h2><%= product.name %></h2>
+        <h2><% if product.author %><span style="font-size: 10px;"><%= product.author%></span><% end %><%= product.name %></h2>
       </article>
     <% end %>
     <% if product.on_hand > 0 %>
