@@ -15,7 +15,7 @@
         Формат — <%= @product.width.to_i %>x<%= @product.height.to_i %> мм<br>
       <% end %>
       <% if  @product.weight %>
-        Вес: <%= @product.weight.to_i %> г.<br>
+        Вес: <%= @product.weight.to_i %> г<br>
       <% end %>
       <% if @product.annotation %>
         <%= @product.annotation %>
@@ -24,13 +24,13 @@
   <% elsif @product.product_type == 'not_book' %>
     <p>
       <% if @product.designer %>
-        Дизайнер: <%= link_to @product.designer_object.name, @product.designer_object.permalink %><br>
+        Студия: <%= link_to @product.designer_object.name, @product.designer_object.permalink %><br>
       <% end %>
       <% if @product.width && @product.height %>
         Размер: <%= @product.width.to_i %>x<%= @product.height.to_i %> мм<br>
       <% end %>      
       <% if @product.weight %>
-        Вес: <%= @product.weight.to_i %> г.<br>
+        Вес: <%= @product.weight.to_i %> г<br>
       <% end %>
       <% if @product.annotation %>
         <%= @product.annotation %>
