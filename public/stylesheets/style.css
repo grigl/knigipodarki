@@ -1,4 +1,4 @@
-/* line 17, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../usr/local/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@knigipodarki/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -72,88 +72,111 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @font-face {
-  font-family: 'rouble';
-  src: url("../fonts/rouble.eot");
-}
-
-@font-face {
-  font-family: 'rouble';
+  font-family: "Rubl Sign";
   src: url("../fonts/rouble.ttf") format("truetype"), url("../fonts/rouble.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 23, sass/layout.scss */
+@font-face {
+  font-family: "Rubl Sign";
+  src: url("../fonts/ruble.eot");
+}
+
+/* line 20, sass/layout.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 27, sass/layout.scss */
+/* line 24, sass/layout.scss */
 body {
   font: 14px/20px Ubuntu;
   background: url(../images/back.png);
   color: #404040;
 }
 
-/* line 33, sass/layout.scss */
+/* line 30, sass/layout.scss */
 a {
   text-decoration: underline;
   color: #4c7f82;
 }
-/* line 36, sass/layout.scss */
+/* line 33, sass/layout.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 41, sass/layout.scss */
+/* line 38, sass/layout.scss */
 p {
   margin-bottom: 1em;
 }
 
-/* line 45, sass/layout.scss */
+/* line 42, sass/layout.scss */
 input[type="text"]:focus {
   outline: none;
 }
 
-/* line 46, sass/layout.scss */
+/* line 43, sass/layout.scss */
 .text-placeholder {
   color: #aba9ab !important;
 }
 
-/* line 48, sass/layout.scss */
+/* line 45, sass/layout.scss */
 input[type="text"]:-webkit-autofill {
   background-color: none !important;
   background-image: none !important;
 }
 
-/* line 52, sass/layout.scss */
+/* line 49, sass/layout.scss */
 .cl {
   clear: both;
   font-size: 0px;
 }
 
-/* line 57, sass/layout.scss */
+/* line 54, sass/layout.scss */
 .sp_show {
   display: none;
 }
 
-/* line 61, sass/layout.scss */
-.rouble {
-  font-family: rouble;
+/* line 58, sass/layout.scss */
+span.rouble {
+  font-family: "Rubl Sign" !important;
+  text-transform: uppercase;
+  \/\/text-transform: none;
 }
 
-/* line 65, sass/layout.scss */
+/* line 59, sass/layout.scss */
+span.rouble span {
+  position: absolute;
+  overflow: hidden;
+  width: .45em;
+  height: 1em;
+  margin: 0.17em 0 0 -0.65em;
+  \/\/display: none;
+}
+
+/* line 60, sass/layout.scss */
+span.rouble span:before {
+  content: '\2013';
+}
+
+/* line 62, sass/layout.scss */
+span.rouble span {
+  margin: 0.105em 0 0 -0.65em \0/IE89;
+  /* IE8 + 9 + IE10pp4  */
+}
+
+/* line 66, sass/layout.scss */
 .wrap {
   width: 940px;
   margin: 0 auto;
 }
 
-/* line 70, sass/layout.scss */
+/* line 71, sass/layout.scss */
 .wrap-row {
   overflow: hidden;
 }
 
-/* line 74, sass/layout.scss */
+/* line 75, sass/layout.scss */
 .white-wrap {
   width: 1100px;
   margin: 0 auto;
@@ -161,22 +184,22 @@ input[type="text"]:-webkit-autofill {
   padding: 20px 0 60px 0;
 }
 
-/* line 83, sass/layout.scss */
+/* line 84, sass/layout.scss */
 .site-header .panel {
   background: #404040;
   height: 30px;
   color: #fff;
   text-align: right;
 }
-/* line 88, sass/layout.scss */
+/* line 89, sass/layout.scss */
 .site-header .panel a {
   color: #fff;
 }
-/* line 91, sass/layout.scss */
+/* line 92, sass/layout.scss */
 .site-header .panel nav {
   float: left;
 }
-/* line 94, sass/layout.scss */
+/* line 95, sass/layout.scss */
 .site-header .panel nav ul li {
   display: inline-block;
   height: 24px;
@@ -187,19 +210,19 @@ input[type="text"]:-webkit-autofill {
   text-transform: uppercase;
   margin-right: 26px;
 }
-/* line 103, sass/layout.scss */
+/* line 104, sass/layout.scss */
 .site-header .panel nav ul li a {
   text-decoration: none;
 }
-/* line 105, sass/layout.scss */
+/* line 106, sass/layout.scss */
 .site-header .panel nav ul li a:hover {
   color: #c0c0c0;
 }
-/* line 109, sass/layout.scss */
+/* line 110, sass/layout.scss */
 .site-header .panel nav ul li a.current {
   color: #c0c0c0;
 }
-/* line 115, sass/layout.scss */
+/* line 116, sass/layout.scss */
 .site-header .panel .phone {
   float: right;
   width: right;
@@ -208,7 +231,7 @@ input[type="text"]:-webkit-autofill {
   font-size: 18px;
   background: #535353;
 }
-/* line 123, sass/layout.scss */
+/* line 124, sass/layout.scss */
 .site-header .panel .login {
   width: auto;
   float: right;
@@ -216,31 +239,31 @@ input[type="text"]:-webkit-autofill {
   background: gray;
   font-weight: bold;
 }
-/* line 130, sass/layout.scss */
+/* line 131, sass/layout.scss */
 .site-header .panel .login a {
   display: inline-block;
   height: 26px;
   padding: 4px 15px 0 15px;
   text-decoration: none;
 }
-/* line 136, sass/layout.scss */
+/* line 137, sass/layout.scss */
 .site-header .panel .login .l-login {
   background: #4c7f82;
   margin-right: -3px;
 }
-/* line 139, sass/layout.scss */
+/* line 140, sass/layout.scss */
 .site-header .panel .login .l-login:hover {
   background: #81a5a7;
 }
-/* line 143, sass/layout.scss */
+/* line 144, sass/layout.scss */
 .site-header .panel .login .l-registration {
   background: #f7941e;
 }
-/* line 145, sass/layout.scss */
+/* line 146, sass/layout.scss */
 .site-header .panel .login .l-registration:hover {
   background: #f9b461;
 }
-/* line 150, sass/layout.scss */
+/* line 151, sass/layout.scss */
 .site-header .panel .user {
   max-width: 260px;
   float: right;
@@ -248,26 +271,26 @@ input[type="text"]:-webkit-autofill {
   margin: 0 10px 0 10px;
   position: relative;
 }
-/* line 156, sass/layout.scss */
+/* line 157, sass/layout.scss */
 .site-header .panel .user .user_wrap {
   position: relative;
   height: 30px;
 }
-/* line 160, sass/layout.scss */
+/* line 161, sass/layout.scss */
 .site-header .panel .user .user_name {
   display: block;
   max-width: 260px;
   overflow-x: hidden;
   text-decoration: none;
 }
-/* line 166, sass/layout.scss */
+/* line 167, sass/layout.scss */
 .site-header .panel .user .user_controls {
   display: block;
   position: absolute;
   top: 0;
   right: -16px;
 }
-/* line 171, sass/layout.scss */
+/* line 172, sass/layout.scss */
 .site-header .panel .user .user_controls .arrow {
   width: 23px;
   height: 22px;
@@ -276,11 +299,11 @@ input[type="text"]:-webkit-autofill {
   background: url(../images/uc.png) no-repeat 3px 8px;
   cursor: pointer;
 }
-/* line 179, sass/layout.scss */
+/* line 180, sass/layout.scss */
 .site-header .panel .user .user_controls .logo_out {
   display: none;
 }
-/* line 183, sass/layout.scss */
+/* line 184, sass/layout.scss */
 .site-header .panel .user .user_controls:hover .logo_out {
   display: block;
   position: absolute;
@@ -295,16 +318,16 @@ input[type="text"]:-webkit-autofill {
   text-decoration: none;
   text-align: center;
 }
-/* line 196, sass/layout.scss */
+/* line 197, sass/layout.scss */
 .site-header .panel .user .user_controls:hover .logo_out:hover {
   color: #808080;
 }
-/* line 204, sass/layout.scss */
+/* line 205, sass/layout.scss */
 .site-header .navigations {
   margin-top: 20px;
   position: relative;
 }
-/* line 208, sass/layout.scss */
+/* line 209, sass/layout.scss */
 .site-header .navigations .search input {
   width: 280px;
   padding: 0 10px;
@@ -312,7 +335,7 @@ input[type="text"]:-webkit-autofill {
   border: 1px solid #e0e0e0;
   position: relative;
 }
-/* line 215, sass/layout.scss */
+/* line 216, sass/layout.scss */
 .site-header .navigations .search input:last-child {
   width: auto;
   background: none;
@@ -324,30 +347,30 @@ input[type="text"]:-webkit-autofill {
   top: 0;
   right: -3px;
 }
-/* line 227, sass/layout.scss */
+/* line 228, sass/layout.scss */
 .site-header .navigations .logo {
   float: left;
 }
-/* line 230, sass/layout.scss */
+/* line 231, sass/layout.scss */
 .site-header .navigations .search {
   float: right;
 }
-/* line 233, sass/layout.scss */
+/* line 234, sass/layout.scss */
 .site-header .navigations .direction-nav {
   border-bottom: 1px solid #404040;
   padding-bottom: 6px;
   margin: 30px 0 62px 0;
 }
-/* line 237, sass/layout.scss */
+/* line 238, sass/layout.scss */
 .site-header .navigations .direction-nav ul {
   overflow: hidden;
 }
-/* line 239, sass/layout.scss */
+/* line 240, sass/layout.scss */
 .site-header .navigations .direction-nav ul li {
   display: block;
   float: left;
 }
-/* line 242, sass/layout.scss */
+/* line 243, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a {
   display: block;
   float: left;
@@ -359,76 +382,76 @@ input[type="text"]:-webkit-autofill {
   font-weight: bold;
   color: #404040;
 }
-/* line 252, sass/layout.scss */
+/* line 253, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a:hover {
   border: 3px solid #edf2f2;
   padding: 7px 7px;
 }
-/* line 257, sass/layout.scss */
+/* line 258, sass/layout.scss */
 .site-header .navigations .direction-nav ul li:last-child {
   margin-right: 0;
 }
-/* line 261, sass/layout.scss */
+/* line 262, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.current a {
   background: #4c7f82;
   color: #fff;
 }
-/* line 267, sass/layout.scss */
+/* line 268, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers a {
   color: #f7941e;
 }
-/* line 271, sass/layout.scss */
+/* line 272, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers:hover a {
   background: none;
   border: 3px solid #f7941e;
   padding: 7px 7px;
 }
-/* line 278, sass/layout.scss */
+/* line 279, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers.current a {
   color: #fff;
   background: #f7941e;
 }
-/* line 285, sass/layout.scss */
+/* line 286, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers a {
   color: #4c7f82;
 }
-/* line 289, sass/layout.scss */
+/* line 290, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers:hover a {
   background: none;
   border: 3px solid #4c7f82;
   padding: 7px 7px;
 }
-/* line 296, sass/layout.scss */
+/* line 297, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers.current a {
   color: #fff;
   background: #4c7f82;
 }
-/* line 305, sass/layout.scss */
+/* line 306, sass/layout.scss */
 .site-header .navigations .sub-direction-nav {
   position: absolute;
   top: 130px;
 }
-/* line 313, sass/layout.scss */
+/* line 314, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li {
   display: inline;
   margin-right: 24px;
 }
-/* line 316, sass/layout.scss */
+/* line 317, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a {
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
 }
-/* line 320, sass/layout.scss */
+/* line 321, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 326, sass/layout.scss */
+/* line 327, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul .current a {
   font-weight: bold;
 }
 
-/* line 341, sass/layout.scss */
+/* line 342, sass/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -438,16 +461,16 @@ input[type="text"]:-webkit-autofill {
   padding: 30px 0 30px 0;
   font-size: .9em;
 }
-/* line 350, sass/layout.scss */
+/* line 351, sass/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 353, sass/layout.scss */
+/* line 354, sass/layout.scss */
 .site-footer .foot-right {
   width: 378px;
   float: left;
 }
-/* line 356, sass/layout.scss */
+/* line 357, sass/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   letter-spacing: normal;
@@ -458,11 +481,11 @@ input[type="text"]:-webkit-autofill {
   top: -4px;
   margin-left: 9px;
 }
-/* line 362, sass/layout.scss */
+/* line 363, sass/layout.scss */
 .site-footer .foot-right a.social:first-child {
   margin-left: 0;
 }
-/* line 366, sass/layout.scss */
+/* line 367, sass/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   letter-spacing: normal;
@@ -470,74 +493,74 @@ input[type="text"]:-webkit-autofill {
   display: inline-block;
   vertical-align: top;
 }
-/* line 370, sass/layout.scss */
+/* line 371, sass/layout.scss */
 .site-footer .foot-right .mail {
   margin: 0 10px;
 }
-/* line 374, sass/layout.scss */
+/* line 375, sass/layout.scss */
 .site-footer .devs {
   float: right;
   width: 250px;
   margin-right: -40px;
 }
-/* line 378, sass/layout.scss */
+/* line 379, sass/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 382, sass/layout.scss */
+/* line 383, sass/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 387, sass/layout.scss */
+/* line 388, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   text-decoration: underline;
 }
-/* line 393, sass/layout.scss */
+/* line 394, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 50px;
 }
-/* line 399, sass/layout.scss */
+/* line 400, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 402, sass/layout.scss */
+/* line 403, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 404, sass/layout.scss */
+/* line 405, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 413, sass/layout.scss */
+/* line 414, sass/layout.scss */
 .site-footer nav {
   width: 348px;
 }
-/* line 415, sass/layout.scss */
+/* line 416, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 417, sass/layout.scss */
+/* line 418, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
 }
 
-/* line 425, sass/layout.scss */
+/* line 426, sass/layout.scss */
 .errorpage {
   text-align: center;
 }
-/* line 427, sass/layout.scss */
+/* line 428, sass/layout.scss */
 .errorpage h1 {
   font-size: 21px;
   font-weight: bold;
@@ -1764,11 +1787,6 @@ input[type="text"]:-webkit-autofill {
 }
 
 /* line 16, sass/cart.scss */
-.cart.stat {
-  position: static;
-}
-
-/* line 20, sass/cart.scss */
 .cart {
   position: fixed;
   background: #fff;
@@ -1777,7 +1795,7 @@ input[type="text"]:-webkit-autofill {
   width: 100%;
   z-index: 200;
 }
-/* line 27, sass/cart.scss */
+/* line 23, sass/cart.scss */
 .cart .panel {
   position: relative;
   background: #404040;
@@ -1786,17 +1804,17 @@ input[type="text"]:-webkit-autofill {
   font-weight: bold;
   z-index: 250;
 }
-/* line 34, sass/cart.scss */
+/* line 30, sass/cart.scss */
 .cart .panel .panel_in {
   cursor: pointer;
   overflow: hidden;
 }
-/* line 38, sass/cart.scss */
+/* line 34, sass/cart.scss */
 .cart .panel a {
   color: #fff;
   text-decoration: none;
 }
-/* line 42, sass/cart.scss */
+/* line 38, sass/cart.scss */
 .cart .panel .items {
   display: block;
   width: 130px;
@@ -1806,14 +1824,14 @@ input[type="text"]:-webkit-autofill {
   float: left;
   background: #e66f50;
 }
-/* line 51, sass/cart.scss */
+/* line 47, sass/cart.scss */
 .cart .panel .refresh {
   position: absolute;
   right: 36px;
   width: 30px;
   height: 30px;
 }
-/* line 56, sass/cart.scss */
+/* line 52, sass/cart.scss */
 .cart .panel .refresh.active {
   background: url(../images/refresh.png) center center no-repeat;
   -webkit-animation-name: Rotate;
@@ -1821,7 +1839,7 @@ input[type="text"]:-webkit-autofill {
   animation-name: Rotate;
   animation-duration: 1s;
 }
-/* line 64, sass/cart.scss */
+/* line 60, sass/cart.scss */
 .cart .panel .cart-order {
   position: absolute;
   top: 0;
@@ -1834,7 +1852,7 @@ input[type="text"]:-webkit-autofill {
   z-index: 300;
   cursor: pointer;
 }
-/* line 76, sass/cart.scss */
+/* line 72, sass/cart.scss */
 .cart .panel .control {
   display: block;
   height: 25px;
@@ -1842,19 +1860,19 @@ input[type="text"]:-webkit-autofill {
   float: right;
   font-family: kp_icons;
 }
-/* line 82, sass/cart.scss */
+/* line 78, sass/cart.scss */
 .cart .panel .control .close {
   display: none;
 }
-/* line 86, sass/cart.scss */
+/* line 82, sass/cart.scss */
 .cart .panel .control.active .open {
   display: none;
 }
-/* line 89, sass/cart.scss */
+/* line 85, sass/cart.scss */
 .cart .panel .control.active .close {
   display: block;
 }
-/* line 95, sass/cart.scss */
+/* line 91, sass/cart.scss */
 .cart .forsale {
   width: 1100px;
   margin: 0 auto;
@@ -1862,7 +1880,7 @@ input[type="text"]:-webkit-autofill {
   height: 240px;
   overflow-y: auto;
 }
-/* line 101, sass/cart.scss */
+/* line 97, sass/cart.scss */
 .cart .forsale .item {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1873,14 +1891,14 @@ input[type="text"]:-webkit-autofill {
   margin-bottom: 30px;
   overflow: hidden;
 }
-/* line 107, sass/cart.scss */
+/* line 103, sass/cart.scss */
 .cart .forsale .item img {
   display: block;
   float: left;
   width: 60px;
   height: auto;
 }
-/* line 113, sass/cart.scss */
+/* line 109, sass/cart.scss */
 .cart .forsale .item .desc {
   display: block;
   float: left;
@@ -1888,7 +1906,7 @@ input[type="text"]:-webkit-autofill {
   padding: 0 0 0 20px;
   margin-left: -3px;
 }
-/* line 119, sass/cart.scss */
+/* line 115, sass/cart.scss */
 .cart .forsale .item .desc .name {
   display: block;
   color: #202020;
@@ -1896,7 +1914,7 @@ input[type="text"]:-webkit-autofill {
   overflow-y: hidden;
   height: 40px;
 }
-/* line 126, sass/cart.scss */
+/* line 122, sass/cart.scss */
 .cart .forsale .item .desc .price {
   display: block;
   font-size: 14px;
@@ -1904,7 +1922,7 @@ input[type="text"]:-webkit-autofill {
   color: #e66f50;
   margin-bottom: 10px;
 }
-/* line 134, sass/cart.scss */
+/* line 130, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1916,7 +1934,7 @@ input[type="text"]:-webkit-autofill {
   margin-right: 22px;
   border: 1px solid #e2e2e2;
 }
-/* line 141, sass/cart.scss */
+/* line 137, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs a {
   display: block;
   float: left;
@@ -1927,7 +1945,7 @@ input[type="text"]:-webkit-autofill {
   text-align: center;
   color: #808080;
 }
-/* line 151, sass/cart.scss */
+/* line 147, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs .count {
   display: block;
   float: left;
@@ -1938,7 +1956,7 @@ input[type="text"]:-webkit-autofill {
   border: none;
   text-align: center;
 }
-/* line 162, sass/cart.scss */
+/* line 158, sass/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;

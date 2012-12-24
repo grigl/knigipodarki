@@ -9,16 +9,13 @@
 }
 
 @font-face {
-  font-family: 'rouble';
+  font-family: "Rubl Sign";
   src: url("../fonts/rouble.ttf") format('truetype'), url("../fonts/rouble.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'rouble';
-  src: url('../fonts/rouble.eot');
-}
+@font-face { font-family: "Rubl Sign"; src: url('../fonts/ruble.eot'); }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
@@ -58,8 +55,12 @@ input[type="text"]:-webkit-autofill {
   display: none;
 }
 
-.rouble {
-  font-family: rouble;
+span.rouble { font-family: "Rubl Sign"! important; text-transform: uppercase; \/\/text-transform: none; }    
+span.rouble span { position: absolute; overflow: hidden; width: .45em; height: 1em; margin: 0.17em 0 0 -.65em; \/\/display: none; }
+span.rouble span:before { content: '\2013'; }
+
+span.rouble span {
+    margin: 0.105em 0 0 -.65em \0/IE8+9; /* IE8 + 9 + IE10pp4  */
 }
 
 .wrap {
