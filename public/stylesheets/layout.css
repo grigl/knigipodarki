@@ -299,7 +299,7 @@ span.rouble span {
 /* line 238, sass/layout.scss */
 .site-header .navigations .direction-nav ul {
   overflow: hidden;
-  width: 200%;
+  width: 100%;
 }
 /* line 241, sass/layout.scss */
 .site-header .navigations .direction-nav ul li {
