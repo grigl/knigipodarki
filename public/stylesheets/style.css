@@ -711,24 +711,27 @@ span.rouble span {
   border-right: 5px solid #f7941e;
 }
 
-/* line 3, sass/shop.scss */
+/* line 4, sass/shop.scss */
 .catalogue {
   margin-bottom: 50px;
 }
-/* line 5, sass/shop.scss */
+/* line 6, sass/shop.scss */
 .catalogue .item {
-  width: 230px;
+  width: 235px;
   border: 1px solid white;
   position: relative;
   display: inline-block;
   vertical-align: top;
   padding: 30px 0 15px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 12, sass/shop.scss */
+/* line 14, sass/shop.scss */
 .catalogue .item .img_wrap {
   height: 180px;
 }
-/* line 14, sass/shop.scss */
+/* line 16, sass/shop.scss */
 .catalogue .item .img_wrap img {
   display: block;
   margin: 0 auto;
@@ -736,22 +739,21 @@ span.rouble span {
   width: auto;
   height: 100%;
 }
-/* line 22, sass/shop.scss */
+/* line 24, sass/shop.scss */
 .catalogue .item a {
   color: #404040;
   text-decoration: none;
 }
-/* line 26, sass/shop.scss */
+/* line 28, sass/shop.scss */
 .catalogue .item:hover {
-  width: 230px;
   border: 1px solid #fbc98e;
 }
-/* line 30, sass/shop.scss */
+/* line 31, sass/shop.scss */
 .catalogue .item article {
   margin-top: 15px;
   padding: 0 30px 0 30px;
 }
-/* line 33, sass/shop.scss */
+/* line 34, sass/shop.scss */
 .catalogue .item article .price {
   display: block;
   float: left;
@@ -760,16 +762,16 @@ span.rouble span {
   color: #e66f50;
   margin-bottom: 18px;
 }
-/* line 40, sass/shop.scss */
+/* line 41, sass/shop.scss */
 .catalogue .item article .price.ops {
   opacity: .7;
   text-decoration: line-through;
 }
-/* line 44, sass/shop.scss */
+/* line 45, sass/shop.scss */
 .catalogue .item article .price.sale {
   margin-left: 10px;
 }
-/* line 48, sass/shop.scss */
+/* line 49, sass/shop.scss */
 .catalogue .item article .marker {
   margin-left: 20px;
   color: #fff;
@@ -777,18 +779,18 @@ span.rouble span {
   text-transform: uppercase;
   padding: 1px 3px;
 }
-/* line 55, sass/shop.scss */
+/* line 56, sass/shop.scss */
 .catalogue .item article h2 {
   font-size: 16px;
   font-weight: bold;
   clear: both;
 }
-/* line 60, sass/shop.scss */
+/* line 61, sass/shop.scss */
 .catalogue .item article p {
   font-size: 14px;
   font-style: italic;
 }
-/* line 65, sass/shop.scss */
+/* line 66, sass/shop.scss */
 .catalogue .item .add-to-cart {
   display: none;
   position: absolute;
@@ -803,108 +805,108 @@ span.rouble span {
   background: url(../images/cart.png) right top no-repeat;
   z-index: 100;
 }
-/* line 78, sass/shop.scss */
+/* line 79, sass/shop.scss */
 .catalogue .item .add-to-cart:hover {
   color: #e66f50;
 }
-/* line 83, sass/shop.scss */
+/* line 84, sass/shop.scss */
 .catalogue .item:hover .add-to-cart {
   display: block;
 }
-/* line 87, sass/shop.scss */
+/* line 88, sass/shop.scss */
 .catalogue header {
   overflow: hidden;
   border-top: 1px solid #7f7f7f;
   padding: 18px 0 18px 0;
 }
-/* line 91, sass/shop.scss */
+/* line 92, sass/shop.scss */
 .catalogue header h2 {
   float: left;
   font-size: 30px;
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 97, sass/shop.scss */
+/* line 98, sass/shop.scss */
 .catalogue header a {
   float: right;
   font-weight: 300;
   color: #a0a0a0;
   text-decoration: none;
 }
-/* line 102, sass/shop.scss */
+/* line 103, sass/shop.scss */
 .catalogue header a:hover {
   text-decoration: underline;
 }
 
-/* line 109, sass/shop.scss */
+/* line 110, sass/shop.scss */
 .sorting {
   margin: 30px 0;
 }
-/* line 111, sass/shop.scss */
+/* line 112, sass/shop.scss */
 .sorting ul:first-child {
   border-left: none;
   margin-left: 0;
 }
-/* line 115, sass/shop.scss */
+/* line 116, sass/shop.scss */
 .sorting ul {
   display: inline-block;
   border-left: 1px solid #a0a0a0;
   padding-left: 24px;
 }
-/* line 119, sass/shop.scss */
+/* line 120, sass/shop.scss */
 .sorting ul li {
   display: inline;
   margin-right: 24px;
   color: #a0a0a0;
 }
-/* line 123, sass/shop.scss */
+/* line 124, sass/shop.scss */
 .sorting ul li a {
   color: red;
   text-decoration: none;
   border-bottom: 1px dashed #404040;
   color: #404040;
 }
-/* line 128, sass/shop.scss */
+/* line 129, sass/shop.scss */
 .sorting ul li a:hover {
   border-bottom: none;
 }
-/* line 131, sass/shop.scss */
+/* line 132, sass/shop.scss */
 .sorting ul li a:after {
   font-family: kp_icons;
   margin-left: 2px;
   font-weight: normal;
 }
-/* line 136, sass/shop.scss */
+/* line 137, sass/shop.scss */
 .sorting ul li a.up {
   font-weight: bold;
   border-bottom: none;
 }
-/* line 139, sass/shop.scss */
+/* line 140, sass/shop.scss */
 .sorting ul li a.up:after {
   content: '\32';
 }
-/* line 143, sass/shop.scss */
+/* line 144, sass/shop.scss */
 .sorting ul li a.down {
   font-weight: bold;
   border-bottom: none;
 }
-/* line 146, sass/shop.scss */
+/* line 147, sass/shop.scss */
 .sorting ul li a.down:after {
   content: '\31';
 }
 
-/* line 155, sass/shop.scss */
+/* line 156, sass/shop.scss */
 .pagination {
   margin-left: 30px;
 }
-/* line 158, sass/shop.scss */
+/* line 159, sass/shop.scss */
 .pagination ul li {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
   margin-right: 8px;
 }
-/* line 163, sass/shop.scss */
+/* line 164, sass/shop.scss */
 .pagination ul li a {
   display: block;
   height: 30px;
@@ -914,12 +916,12 @@ span.rouble span {
   color: #c0c0c0;
   background: #f8f8f8;
 }
-/* line 172, sass/shop.scss */
+/* line 173, sass/shop.scss */
 .pagination ul li a:hover {
   background: #f8f8f8;
   color: #f7941e;
 }
-/* line 177, sass/shop.scss */
+/* line 178, sass/shop.scss */
 .pagination ul li span {
   display: block;
   width: 42px;
@@ -927,11 +929,11 @@ span.rouble span {
   padding: 12px 14px 0 14px;
   font-size: 24px;
 }
-/* line 187, sass/shop.scss */
+/* line 188, sass/shop.scss */
 .pagination ul .current a {
   color: #000;
 }
-/* line 192, sass/shop.scss */
+/* line 193, sass/shop.scss */
 .pagination ul .arrow a {
   width: 50px;
   height: 36px;
@@ -939,38 +941,38 @@ span.rouble span {
   background: #f0f0f0;
   font-family: kp_icons;
 }
-/* line 198, sass/shop.scss */
+/* line 199, sass/shop.scss */
 .pagination ul .arrow a:hover {
   background: #f0f0f0;
 }
 
-/* line 206, sass/shop.scss */
+/* line 207, sass/shop.scss */
 .tags {
   width: 810px;
   margin: 0 auto;
   padding: 40px;
   border: 1px solid #99b6b7;
 }
-/* line 212, sass/shop.scss */
+/* line 213, sass/shop.scss */
 .tags ul li {
   display: inline;
   margin-left: 10px;
   line-height: 24px;
 }
-/* line 216, sass/shop.scss */
+/* line 217, sass/shop.scss */
 .tags ul li a {
   text-decoration: none;
 }
-/* line 218, sass/shop.scss */
+/* line 219, sass/shop.scss */
 .tags ul li a:hover {
   text-decoration: underline;
 }
 
-/* line 226, sass/shop.scss */
+/* line 227, sass/shop.scss */
 .product {
   margin-bottom: 45px;
 }
-/* line 228, sass/shop.scss */
+/* line 229, sass/shop.scss */
 .product figure {
   letter-spacing: normal;
   word-spacing: normal;
@@ -978,11 +980,11 @@ span.rouble span {
   vertical-align: top;
   width: 300px;
 }
-/* line 232, sass/shop.scss */
+/* line 233, sass/shop.scss */
 .product figure ul {
   margin-left: -17px;
 }
-/* line 234, sass/shop.scss */
+/* line 235, sass/shop.scss */
 .product figure ul li {
   letter-spacing: normal;
   word-spacing: normal;
@@ -990,12 +992,12 @@ span.rouble span {
   vertical-align: top;
   margin-left: 17px;
 }
-/* line 239, sass/shop.scss */
+/* line 240, sass/shop.scss */
 .product figure img {
   border: 1px solid #e8e8e8;
   margin-bottom: 20px;
 }
-/* line 244, sass/shop.scss */
+/* line 245, sass/shop.scss */
 .product article {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1004,22 +1006,22 @@ span.rouble span {
   width: 590px;
   margin-left: 46px;
 }
-/* line 248, sass/shop.scss */
+/* line 249, sass/shop.scss */
 .product article hgroup {
   margin-bottom: 34px;
 }
-/* line 250, sass/shop.scss */
+/* line 251, sass/shop.scss */
 .product article hgroup h4 {
   color: #c0c0c0;
   font-size: 12px;
 }
-/* line 254, sass/shop.scss */
+/* line 255, sass/shop.scss */
 .product article hgroup h1 {
   font-size: 30px;
   margin-bottom: 20px;
   line-height: 40px;
 }
-/* line 259, sass/shop.scss */
+/* line 260, sass/shop.scss */
 .product article hgroup h2 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1029,7 +1031,7 @@ span.rouble span {
   font-size: 21px;
   float: left;
 }
-/* line 265, sass/shop.scss */
+/* line 266, sass/shop.scss */
 .product article hgroup .marker {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1042,7 +1044,7 @@ span.rouble span {
   text-transform: uppercase;
   padding: 1px 3px;
 }
-/* line 274, sass/shop.scss */
+/* line 275, sass/shop.scss */
 .product article hgroup .product-social {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1051,34 +1053,34 @@ span.rouble span {
   vertical-align: middle;
   margin-left: 20px;
 }
-/* line 278, sass/shop.scss */
+/* line 279, sass/shop.scss */
 .product article hgroup .product-social li {
   display: inline;
   font-family: kp_icons;
   font-size: 15px;
   margin-right: 4px;
 }
-/* line 283, sass/shop.scss */
+/* line 284, sass/shop.scss */
 .product article hgroup .product-social li a {
   text-decoration: none;
 }
-/* line 288, sass/shop.scss */
+/* line 289, sass/shop.scss */
 .product article hgroup .product-social .icon-vk a {
   color: #285278;
 }
-/* line 293, sass/shop.scss */
+/* line 294, sass/shop.scss */
 .product article hgroup .product-social .icon-facebook a {
   color: #3c5e96;
 }
-/* line 298, sass/shop.scss */
+/* line 299, sass/shop.scss */
 .product article hgroup .product-social .icon-twitter a {
   color: #52afde;
 }
-/* line 304, sass/shop.scss */
+/* line 305, sass/shop.scss */
 .product article .cartline {
   margin-bottom: 36px;
 }
-/* line 306, sass/shop.scss */
+/* line 307, sass/shop.scss */
 .product article .cartline .single_cart {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1090,30 +1092,30 @@ span.rouble span {
   position: static;
   padding: 10px 18px 10px 12px;
 }
-/* line 313, sass/shop.scss */
+/* line 314, sass/shop.scss */
 .product article .cartline .single_cart span {
   color: #fff;
   font-weight: bold;
   font-size: 18px;
 }
-/* line 318, sass/shop.scss */
+/* line 319, sass/shop.scss */
 .product article .cartline .single_cart span.ops {
   opacity: .7;
   text-decoration: line-through;
   border-right: 2px solid #eb8c73;
   padding-right: 12px;
 }
-/* line 324, sass/shop.scss */
+/* line 325, sass/shop.scss */
 .product article .cartline .single_cart span.no_bord {
   border-right: none;
   padding-right: 0;
   padding-left: 12px;
 }
-/* line 330, sass/shop.scss */
+/* line 331, sass/shop.scss */
 .product article .cartline .single_cart form {
   display: inline-block;
 }
-/* line 333, sass/shop.scss */
+/* line 334, sass/shop.scss */
 .product article .cartline .single_cart a {
   margin-left: 12px;
   font-family: kp_icons;
@@ -1123,7 +1125,7 @@ span.rouble span {
   color: #fff;
   font-size: 22px;
 }
-/* line 343, sass/shop.scss */
+/* line 344, sass/shop.scss */
 .product article .cartline .stock {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1135,7 +1137,7 @@ span.rouble span {
   font-size: 12px;
   color: #e66f50;
 }
-/* line 351, sass/shop.scss */
+/* line 352, sass/shop.scss */
 .product article .cartline .payment {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1147,12 +1149,12 @@ span.rouble span {
   font-size: 12px;
   color: #c0c0c0;
 }
-/* line 361, sass/shop.scss */
+/* line 362, sass/shop.scss */
 .product aside {
   width: 590px;
   margin-left: 350px;
 }
-/* line 365, sass/shop.scss */
+/* line 366, sass/shop.scss */
 .product aside .specs {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1162,14 +1164,14 @@ span.rouble span {
   padding: 20px;
   background: #f8f8f8;
 }
-/* line 370, sass/shop.scss */
+/* line 371, sass/shop.scss */
 .product aside .specs h3 {
   font-size: 16px;
   font-weight: bold;
   color: #808080;
   margin-bottom: 20px;
 }
-/* line 377, sass/shop.scss */
+/* line 378, sass/shop.scss */
 .product aside .product-tags {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1178,17 +1180,17 @@ span.rouble span {
   width: 240px;
   padding: 20px;
 }
-/* line 381, sass/shop.scss */
+/* line 382, sass/shop.scss */
 .product aside .product-tags a {
   font-weight: bold;
 }
 
-/* line 388, sass/shop.scss */
+/* line 389, sass/shop.scss */
 .search-result {
   margin-top: 40px;
   padding-left: 20px;
 }
-/* line 391, sass/shop.scss */
+/* line 392, sass/shop.scss */
 .search-result h1 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1197,11 +1199,11 @@ span.rouble span {
   vertical-align: middle;
   font-size: 21px;
 }
-/* line 395, sass/shop.scss */
+/* line 396, sass/shop.scss */
 .search-result h1 span {
   font-weight: 700;
 }
-/* line 399, sass/shop.scss */
+/* line 400, sass/shop.scss */
 .search-result a {
   letter-spacing: normal;
   word-spacing: normal;
