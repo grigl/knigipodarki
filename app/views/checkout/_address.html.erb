@@ -71,7 +71,7 @@
           $(function() {
           	$('#order_ship_address_attributes_state_id').change(function() {
           		var val = $('#order_ship_address_attributes_state_id option:selected').val();
-          		if (val == 77 or val == 78) {
+          		if (val == 77 || val == 78) {
           			$('#order_ship_address_attributes_city').val($('#order_ship_address_attributes_state_id option:selected').text());
           		}
           	});
