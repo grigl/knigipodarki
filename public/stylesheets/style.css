@@ -469,7 +469,7 @@ span.rouble span {
 }
 /* line 356, sass/layout.scss */
 .site-footer .foot-right {
-  width: 378px;
+  width: 430px;
   float: left;
 }
 /* line 359, sass/layout.scss */
@@ -502,7 +502,7 @@ span.rouble span {
 /* line 377, sass/layout.scss */
 .site-footer .devs {
   float: right;
-  width: 250px;
+  width: 200px;
   margin-right: -40px;
 }
 /* line 381, sass/layout.scss */
