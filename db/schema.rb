@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121126124426) do
+ActiveRecord::Schema.define(:version => 20130110112246) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -373,6 +373,7 @@ ActiveRecord::Schema.define(:version => 20121126124426) do
     t.string   "subname"
     t.string   "material"
     t.boolean  "is_published",                                          :default => false
+    t.integer  "on_hand_add2"
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"
@@ -537,6 +538,7 @@ ActiveRecord::Schema.define(:version => 20121126124426) do
     t.string  "name"
     t.string  "abbr"
     t.integer "country_id"
+    t.integer "sort"
   end
 
   create_table "tags", :force => true do |t|

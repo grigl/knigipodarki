@@ -56,7 +56,7 @@
           </noscript>
           <% state_elements = [
                 ship_form.collection_select(:state_id, @order.bill_address.country.states,
-                                  :id, :name,
+                                  :sort, :name,
                                   {:include_blank => 'Выберите область'},
                                   {:class => have_states ? "required" : "hidden",
                                   :disabled => !have_states}) +
