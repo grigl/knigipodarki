@@ -99,10 +99,10 @@
           	<% offline_shops.push(i.to_s+') ТК Сенная')%>
           	<% i = i + 1 %>
           <% end %>                    
-          <div>
-          	Также в наличие в <a href="/info#about">оффлайн-магазинах</a>:
-          	 <% offline_shops.join(', ') %>.
-          </div>
+          <article>
+          	Также в наличии в <a href="/info#about">оффлайн-магазинах</a>:
+          	 <%= offline_shops.join(', ') %>.
+          </article>
           <% end %>
           <!-- addional info -->
           <aside>
