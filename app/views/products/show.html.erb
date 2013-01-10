@@ -84,6 +84,26 @@
             </p>
           </article>
           <!-- /product content -->
+          <% if @product.on_hand or @product.on_hand_add or @product.on_hand_add2 %>
+          <% offline_shops = [] %>
+          <% i = 1 %>
+          <% if @product.on_hand %>
+          	<% offline_shops.push(i+') Лиговский пр., 74')%>
+          	<% i = i + 1 %>
+          <% end %>
+          <% if @product.on_hand_add %>
+          	<% offline_shops.push(i+') Троицкий')%>
+          	<% i = i + 1 %>
+          <% end %>
+          <% if @product.on_hand_add2 %>
+          	<% offline_shops.push(i+') ТК Сенная')%>
+          	<% i = i + 1 %>
+          <% end %>                    
+          <div>
+          	Также в наличие в <a href="/info#about">оффлайн-магазинах</a>:
+          	 <% offline_shops.join(', ') %>.
+          </div>
+          <% end %>
           <!-- addional info -->
           <aside>
             <%= render 'product_features' %>
