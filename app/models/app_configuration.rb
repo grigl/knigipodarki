@@ -1,7 +1,7 @@
 # encoding: utf-8
 class AppConfiguration < Configuration
 
-  preference :site_name, :string, :default => 'Книгиподарки'
+  preference :site_name, :string, :default => 'КнигиПодарки'
   preference :default_seo_title, :string, :default => ''
   preference :site_url, :string, :default => 'knigipodarki.webbyapp.com'
   preference :default_locale, :string, :default => 'en'

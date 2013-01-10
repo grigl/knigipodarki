@@ -7,7 +7,7 @@ class UserMailer < ActionMailer::Base
     @edit_password_reset_url = edit_user_password_url(:reset_password_token => user.reset_password_token)
 
     mail(:to => user.email,
-         :subject => 'Книгиподарки. ' + I18n.t("password_reset_instructions"),
+         :subject => 'КнигиПодарки. ' + I18n.t("password_reset_instructions"),
          :template_name => 'reset_password')
   end
 

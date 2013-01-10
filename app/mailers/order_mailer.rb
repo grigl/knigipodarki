@@ -7,7 +7,7 @@ class OrderMailer < ActionMailer::Base
     @order = order
     @user = user
     subject = (resend ? "[RESEND] " : "")
-    subject += "Книгиподарки. #{t('subject', :scope =>'order_mailer.confirm_email')} ##{order.number}"
+    subject += "КнигиПодарки. #{t('subject', :scope =>'order_mailer.confirm_email')} ##{order.number}"
     mail(:to => [order.email, 'support@knigipodarki.ru'],
          :subject => subject,
          :template_name => 'confirm')
@@ -16,7 +16,7 @@ class OrderMailer < ActionMailer::Base
   def cancel_email(order, resend=false)
     @order = order
     subject = (resend ? "[RESEND] " : "")
-    subject += "Книгиподарки. #{t('subject', :scope => 'order_mailer.cancel_email')} ##{order.number}"
+    subject += "КнигиПодарки. #{t('subject', :scope => 'order_mailer.cancel_email')} ##{order.number}"
     mail(:to => order.email,
          :subject => subject)         
   end
@@ -24,7 +24,7 @@ class OrderMailer < ActionMailer::Base
   def cancel_admin_email(order, resend=false)
     @order = order
     subject = (resend ? "[RESEND] " : "")
-    subject += "Книгиподарки. Заказ ##{order.number} отменен"
+    subject += "КнигиПодарки. Заказ ##{order.number} отменен"
     mail(:to => 'help@knigipodarki.ru',
          :subject => subject)         
   end  
