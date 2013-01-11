@@ -1,5 +1,5 @@
 <!-- .content -->
-  <% cache (@taxon.name) do %>
+  <% cache({:action => 'taxons_index', :action_suffix => @taxon.name}, :expires_in => 3.hours) do %>
   <section class="site-content">
     <div class="white-wrap">
       <div class="wrap">
