@@ -330,6 +330,7 @@ Product.class_eval do
         related_products.push related
       end 
     end
+    return related_products
   end
 
   private
