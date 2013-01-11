@@ -1,15 +1,15 @@
 <% content_for :meta_title do %>
 <% if @product.category_object && @product.subcategory_object.present? %>
-- <%= @product.name %>
-<% else %>
 - <%= @product.name %> - <%= @product.subcategory %>
+<% else %>
+- <%= @product.name %>
 <% end %>
 <% end %>
 <% content_for :meta_description do %>
 <% if @product.category_object && @product.subcategory_object.present? %>
-<%= @product.name %>
-<% else %>
 <%= @product.subcategory %> - <%= @product.name %>
+<% else %>
+<%= @product.name %>
 <% end %>
 <% end %>
 <%= content_for :subnav do %>
