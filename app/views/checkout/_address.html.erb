@@ -29,22 +29,22 @@
       <fieldset>
         <%= ship_form.label :lastname, 'Фамилия' %>
         <%= ship_form.text_field :lastname, :class => 'required' %>
-        <%= ship_form.error_message_on :lastname %>
+        <%= @order.ship_address.errors[:lastname] %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :firstname, 'Имя' %>
         <%= ship_form.text_field :firstname, :class => 'required' %>
-        <%= ship_form.error_message_on :firstname %>
+        <%= @order.ship_address.errors[:firstname] %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :secondname, 'Отчество' %>
         <%= ship_form.text_field :secondname %>
-        <%= ship_form.error_message_on :secondname %>
+        <%= @order.ship_address.errors[:secondname] %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :country_id, 'Страна' %>
         <%= ship_form.collection_select :country_id, available_countries, :id, :name, {}, {:ass => 'required'} %>
-        <%= ship_form.error_message_on :country_id %>
+        <%= @order.ship_address.errors[:country_id] %>
       </fieldset>
       <fieldset>
         <% have_states = !@order.ship_address.country.states.empty? %>
@@ -76,7 +76,7 @@
           });
           // ]]>
           </script>
-          <%= ship_form.error_message_on :state_id %>
+          <%= @order.ship_address.errors[:state] %>
       </fieldset>
     </div>
     <!-- /.fields -->
@@ -85,22 +85,22 @@
       <fieldset>
         <%= ship_form.label :city, 'Город' %>
         <%= ship_form.text_field :city, :class => 'required' %>
-        <%= ship_form.error_message_on :city %>
+        <%= @order.ship_address.errors[:city] %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :zipcode, 'Индекс' %>
         <%= ship_form.text_field :zipcode, :class => 'required postal_mask' %>
-        <%= ship_form.error_message_on :zipcode %>
+        <%= @order.ship_address.errors[:zipcode] %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :address1, 'Адрес' %>
         <%= ship_form.text_field :address1, :class => 'required' %>
-        <%= ship_form.error_message_on :address1 %>
+        <%= @order.ship_address.errors[:address1] %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :phone, 'Телефон' %>
         <%= ship_form.text_field :phone, :class => 'required phone_mask' %>
-        <%= ship_form.error_message_on :phone %>
+        <%= @order.ship_address.errors[:phone] %>
       </fieldset>
     </div>
     <!-- /.fields -->
