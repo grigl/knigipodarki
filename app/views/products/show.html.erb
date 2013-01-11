@@ -1,8 +1,8 @@
 <% content_for :meta_title do %>
-- <%= @product.name %> - <%= taxon.name %>
+- <%= @product.name %> - <%= @product.subcategory %>
 <% end %>
 <% content_for :meta_description do %>
-<%= taxon.name %> - <%= @product.name %>
+<%= @product.subcategory %> - <%= @product.name %>
 <% end %>
 <%= content_for :subnav do %>
   <nav class="sub-direction-nav">
