@@ -23,30 +23,36 @@
 
   <%= form.fields_for :ship_address do |ship_form| %>
 
-    <% if @order.ship_address.errors %>
-      <% @order.ship_address.errors.each do |field, msg| %>
-        Поле "<%= @order.ship_address.class.human_attribute_name(field) %>" <%= msg %>.<br />
-      <% end %>
-    <% end %>
-
     <div class="all-fields" <%= "style=display:none;" if @addresses.present? && @order.ship_address.errors.empty? %>>
     <!-- .fields -->
     <div class="fields">
       <fieldset>
         <%= ship_form.label :lastname, 'Фамилия' %>
         <%= ship_form.text_field :lastname, :class => 'required' %>
+        <% if @order.ship_address.errors[:lastname].present?%>
+        	<div><%= @order.ship_address.errors[:lastname][0] %></div>
+        <% end %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :firstname, 'Имя' %>
         <%= ship_form.text_field :firstname, :class => 'required' %>
+        <% if @order.ship_address.errors[:firstname].present?%>
+        	<div><%= @order.ship_address.errors[:firstname][0] %></div>
+        <% end %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :secondname, 'Отчество' %>
         <%= ship_form.text_field :secondname %>
+        <% if @order.ship_address.errors[:secondname].present?%>
+        	<div><%= @order.ship_address.errors[:secondname][0] %></div>
+        <% end %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :country_id, 'Страна' %>
         <%= ship_form.collection_select :country_id, available_countries, :id, :name, {}, {:ass => 'required'} %>
+        <% if @order.ship_address.errors[:country_id].present?%>
+        	<div><%= @order.ship_address.errors[:country_id][0] %></div>
+        <% end %>
       </fieldset>
       <fieldset>
         <% have_states = !@order.ship_address.country.states.empty? %>
@@ -78,6 +84,9 @@
           });
           // ]]>
           </script>
+        <% if @order.ship_address.errors[:state].present? %>
+        	<div><%= @order.ship_address.errors[:state][0] %></div>
+        <% end %>
       </fieldset>
     </div>
     <!-- /.fields -->
@@ -86,18 +95,30 @@
       <fieldset>
         <%= ship_form.label :city, 'Город' %>
         <%= ship_form.text_field :city, :class => 'required' %>
+        <% if @order.ship_address.errors[:city].present?%>
+        	<div><%= @order.ship_address.errors[:city][0] %></div>
+        <% end %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :zipcode, 'Индекс' %>
         <%= ship_form.text_field :zipcode, :class => 'required postal_mask' %>
+        <% if @order.ship_address.errors[:zipcode].present?%>
+        	<div><%= @order.ship_address.errors[:zipcode][0] %></div>
+        <% end %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :address1, 'Адрес' %>
         <%= ship_form.text_field :address1, :class => 'required' %>
+        <% if @order.ship_address.errors[:address1].present?%>
+        	<div><%= @order.ship_address.errors[:address1][0] %></div>
+        <% end %>
       </fieldset>
       <fieldset>
         <%= ship_form.label :phone, 'Телефон' %>
         <%= ship_form.text_field :phone, :class => 'required phone_mask' %>
+        <% if @order.ship_address.errors[:phone].present?%>
+        	<div><%= @order.ship_address.errors[:phone][0] %></div>
+        <% end %>
       </fieldset>
     </div>
     <!-- /.fields -->

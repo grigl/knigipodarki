@@ -36,14 +36,23 @@
                 <fieldset>
                   <%= f.label :email, t("email") %>
                   <%= f.text_field :email %>
+    	          <% if @user.errors[:email].present? %>
+			      	<div><%= @user.errors[:email][0] %></div>
+			      <% end %>                  
                 </fieldset>
                 <fieldset>
                   <%= f.label :password, t("password") %>
                   <%= f.password_field :password %>
+    	          <% if @user.errors[:password].present? %>
+			      	<div><%= @user.errors[:password][0] %></div>
+			      <% end %>                  
                 </fieldset>
                 <fieldset>
                   <%= f.label :password_confirmation, t(:confirm_password) %>
                   <%= f.password_field :password_confirmation %>
+    	          <% if @user.errors[:password_confirmation].present? %>
+			      	<div><%= @user.errors[:password_confirmation][0] %></div>
+			      <% end %>                  
                 </fieldset>
               </div>
               <!-- /.fields -->

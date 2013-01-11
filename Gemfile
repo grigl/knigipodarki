@@ -39,3 +39,4 @@ gem "mail"
 gem 'spree_related_products', :git => 'git://github.com/secoint/spree_related_products.git'
 gem 'compass-rails'
 gem 'webbynode'
+gem "dynamic_form", "~> 1.1.4"

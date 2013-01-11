@@ -1,9 +1,4 @@
 <%= form_for @address do |form| %>
-<% if @address.errors %>
-  <% @address.errors.each do |field, msg| %>
-    Поле "<%= @address.class.human_attribute_name(field) %>" <%= msg %>.<br />
-  <% end %>
-<% end %>
 <div class="formset">
   <!-- .fields -->
     <div class="fields">
@@ -13,18 +8,30 @@
       <fieldset>
         <%= form.label :lastname, 'Фамилия' %>
         <%= form.text_field :lastname, :class => 'required' %>
+        <% if @address.errors[:lastname].present? %>
+        	<div><%= @address.errors[:lastname][0] %></div>
+        <% end %>        
       </fieldset>
       <fieldset>
         <%= form.label :firstname, 'Имя' %>
         <%= form.text_field :firstname, :class => 'required' %>
+        <% if @address.errors[:firstname].present? %>
+        	<div><%= @address.errors[:firstname][0] %></div>
+        <% end %>
       </fieldset>
       <fieldset>
         <%= form.label :secondname, 'Отчество' %>
         <%= form.text_field :secondname %>
+        <% if @address.errors[:secondname].present? %>
+        	<div><%= @address.errors[:secondname][0] %></div>
+        <% end %>        
       </fieldset>
       <fieldset>
         <%= form.label :country_id, 'Страна' %>
         <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:ass => 'required'} %>
+        <% if @address.errors[:country_id].present? %>
+        	<div><%= @address.errors[:country_id][0] %></div>
+        <% end %>        
       </fieldset>
       <fieldset>
         <% have_states = !@address.country.states.empty? %>
@@ -46,8 +53,19 @@
           <script type="text/javascript" language="javascript" charset="utf-8">
           // <![CDATA[
           document.write("<%== state_elements %>");
+          $(function() {
+          	$('#address_state_id').change(function() {
+          		var val = $('#address_state_id option:selected').val();
+          		if (val == 77 || val == 78) {
+          			$('#address_city').val($('#address_state_id option:selected').text());
+          		}
+          	});
+          });          
           // ]]>
           </script>
+        <% if @address.errors[:state].present? %>
+        	<div><%= @address.errors[:state][0] %></div>
+        <% end %>          
       </fieldset>
     </div>
     <!-- /.fields -->
@@ -56,18 +74,30 @@
       <fieldset>
         <%= form.label :city, 'Город' %>
         <%= form.text_field :city, :class => 'required' %>
+        <% if @address.errors[:city].present? %>
+        	<div><%= @address.errors[:city][0] %></div>
+        <% end %>        
       </fieldset>
       <fieldset>
         <%= form.label :zipcode, 'Индекс' %>
         <%= form.text_field :zipcode, :class => 'required postal_mask' %>
+        <% if @address.errors[:zipcode].present? %>
+        	<div><%= @address.errors[:zipcode][0] %></div>
+        <% end %>        
       </fieldset>
       <fieldset>
         <%= form.label :address1, 'Адрес' %>
         <%= form.text_field :address1, :class => 'required' %>
+        <% if @address.errors[:address1].present? %>
+        	<div><%= @address.errors[:address1][0] %></div>
+        <% end %>        
       </fieldset>
       <fieldset>
         <%= form.label :phone, 'Телефон' %>
         <%= form.text_field :phone, :class => 'required phone_mask' %>
+        <% if @address.errors[:phone].present? %>
+        	<div><%= @address.errors[:phone][0] %></div>
+        <% end %>        
       </fieldset>
     </div>
     <!-- /.fields -->
