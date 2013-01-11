@@ -1,4 +1,4 @@
-<% products.each do |product| %><% if not product.deleted_at %><div 
+<% products.each do |product| %><% if not product.deleted_at and product.is_published %><div 
     structure="product-preview" class="item" href="">
     <%= link_to product do %>
       <div class="img_wrap">
