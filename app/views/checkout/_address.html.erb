@@ -22,8 +22,6 @@
   </div>
 
   <%= form.fields_for :ship_address do |ship_form| %>
-  
-	<%= @order.ship_address.errors %>
 
     <div class="all-fields" <%= "style=display:none;" if @addresses.present? && @order.ship_address.errors.empty? %>>
     <!-- .fields -->
@@ -86,8 +84,8 @@
           });
           // ]]>
           </script>
-        <% if @order.ship_address.errors[:state_id].present? %>
-        	<div><%= @order.ship_address.errors[:state_id][0] %></div>
+        <% if @order.ship_address.errors[:state].present? %>
+        	<div><%= @order.ship_address.errors[:state][0] %></div>
         <% end %>
       </fieldset>
     </div>
