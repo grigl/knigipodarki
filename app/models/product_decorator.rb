@@ -323,7 +323,13 @@ Product.class_eval do
   def related_products
     relations = self.relations.find_all_by_relation_type_id(1)
 
-    related_products = relations.map { |relation| Product.first('id = ? AND is_published = 1 AND deleted_at IS NOT NULL', relation.related_to_id) } rescue nil
+    _related_products = relations.map { |relation| Product.find(relation.related_to_id) } rescue nil
+    related_products = []
+    _related_products.each do|related|
+      if not related_products.deleted_at and related_products.is_published
+        related_products.push related
+      end 
+    end
   end
 
   private
