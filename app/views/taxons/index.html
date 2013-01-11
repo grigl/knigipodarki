@@ -1,4 +1,5 @@
 <!-- .content -->
+  <% cache (@taxon, :expires_in => 1.hour) do %>
   <section class="site-content">
     <div class="white-wrap">
       <div class="wrap">
@@ -41,4 +42,5 @@
     </div>
     <!-- /.white-wrap -->
   </section>
+  <% end %>
 <!-- /.content -->
