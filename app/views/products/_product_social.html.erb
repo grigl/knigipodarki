@@ -1,2 +1,13 @@
 <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter" style="margin-top: 20px"></div> 
+<script type="text/javascript">
+	new Ya.share({
+		element : 'ya_share',
+		elementStyle : {
+			'type' : 'none',
+			'border' : true,
+			'quickServices' : ['vkontakte', 'facebook', 'twitter']
+		},
+		image : 'http://<%= Spree::Config[:site_url] %>/images/apple-touch-icon.png'
+	}); 
+</script>
+<div id="ya_share"></div>
