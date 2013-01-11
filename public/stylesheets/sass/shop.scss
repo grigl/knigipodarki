@@ -357,8 +357,20 @@
         font-size: 12px;
         color: #c0c0c0;
       }
+      .offline-shops {
+        margin-top: 1em;
+        .offline-shops-label {
+          width: 150px;
+          float: left;
+        }
+        ul {
+          list-style: disc;
+          margin-left: 170px;
+        }
+      }
     }
   }
+
   aside {
     width: 590px;
     margin-left: 350px;
