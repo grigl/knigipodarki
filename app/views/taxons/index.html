@@ -1,5 +1,5 @@
 <!-- .content -->
-  <% cache("taxons_" + @taxon.id, :expires_in => 3.hours) do %>
+  <% cache("taxons_" + @taxon.id.to_s, :expires_in => 3.hours) do %>
   <section class="site-content">
     <div class="white-wrap">
       <div class="wrap">
