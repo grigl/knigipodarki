@@ -13,8 +13,6 @@
                 Скорее всего, ссылка восстановления пароля устарела 
                 или вы попытались восстановить пароль второй раз по одной и той же ссылке.
                 Запросите письмо с инструкциями еще раз и попробуйте снова.<br /><br />
-              <% else %>
-                <%= msg %><br />
               <% end %>
             <% end %>
           <% end %>
@@ -27,10 +25,16 @@
             <fieldset>
               <%= f.label :password %><br />
               <%= f.password_field :password %><br />
+   	          <% if @user.errors[:password].present? %>
+	        	<div><%= @user.errors[:password][0] %></div>
+	          <% end %>                  
             </fieldset>
             <fieldset>
               <%= f.label :password_confirmation %><br />
               <%= f.password_field :password_confirmation %><br />
+   	          	<% if @user.errors[:password_confirmation].present? %>
+	        		<div><%= @user.errors[:password_confirmation][0] %></div>
+	          	<% end %>                  
             </fieldset>
             <%= f.hidden_field :reset_password_token %>
             <div class="controls">

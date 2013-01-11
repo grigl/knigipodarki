@@ -8,11 +8,6 @@
 
           <p>Заполните форму ниже и инструкции для восстановления будут отправлен вам по указанному email.</p>
 
-          <% if @user.errors %>
-            <% @user.errors.full_messages.each do |msg| %>
-              <%= msg %><br />
-            <% end %>
-          <% end %>
           <% if flash %>
             <% flash.each do |msg| %>
               <%= msg[1] %><br />
@@ -23,6 +18,9 @@
             <fieldset>
               <%= f.label :email %>
               <%= f.text_field :email %><br />
+   	          	<% if @user.errors[:email].present? %>
+	        		<div><%= @user.errors[:email][0] %></div>
+	          	<% end %>                  
             </fieldset>
             <div class="controls">
               <input class="blue" type="submit" value="Готово">

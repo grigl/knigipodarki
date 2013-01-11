@@ -6,11 +6,6 @@
 
           <h3><%= t("new_customer") %></h3>
 
-          <% if @user.errors %>
-            <% @user.errors.full_messages.each do |msg| %>
-              <%= msg %><br />
-            <% end %>
-          <% end %>
           <% if flash %>
             <% flash.each do |msg| %>
               <%= msg[1] %><br />
@@ -21,15 +16,24 @@
             <fieldset>
               <%= f.label :email, t("email") %>
               <%= f.text_field :email, :class => 'title'  %>
+   	          <% if @user.errors[:email].present? %>
+	        	<div><%= @user.errors[:email][0] %></div>
+	          <% end %>                 
             </fieldset>
             <fieldset>
                 <%= f.label :password, t("password") %>
                 <%= f.password_field :password, :class => 'title'  %>
+   	          	<% if @user.errors[:password].present? %>
+	        		<div><%= @user.errors[:password][0] %></div>
+	          	<% end %>                  
             </fieldset>
 
             <fieldset>
                 <%= f.label :password_confirmation, t(:confirm_password) %>
                 <%= f.password_field :password_confirmation, :class => 'title' %>
+   	          	<% if @user.errors[:password_confirmation].present? %>
+	        		<div><%= @user.errors[:password_confirmation][0] %></div>
+	          	<% end %>                
             </fieldset>
             <div class="controls">
               <input class="blue" type="submit" value="Сохранить">
