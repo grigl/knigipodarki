@@ -23,11 +23,7 @@
 
   <%= form.fields_for :ship_address do |ship_form| %>
   
-            <% if @order.ship_address.errors %>
-            <% @order.ship_address.errors.full_messages.each do |field,msg| %>
-              <%= field %> <%= msg %><br />
-            <% end %>
-          <% end %>
+	<%= @order.ship_address.errors %>
 
     <div class="all-fields" <%= "style=display:none;" if @addresses.present? && @order.ship_address.errors.empty? %>>
     <!-- .fields -->
