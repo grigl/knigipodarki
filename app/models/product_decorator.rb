@@ -326,7 +326,7 @@ Product.class_eval do
     _related_products = relations.map { |relation| Product.find(relation.related_to_id) } rescue nil
     related_products = []
     _related_products.each do|related|
-      if not related_products.deleted_at and related_products.is_published
+      if not related.deleted_at and related.is_published
         related_products.push related
       end 
     end
