@@ -295,19 +295,18 @@ span.rouble span {
   border-bottom: 1px solid #404040;
   padding-bottom: 6px;
   margin: 30px 0 62px 0;
-  overflow: hidden;
 }
-/* line 239, sass/layout.scss */
+/* line 238, sass/layout.scss */
 .site-header .navigations .direction-nav ul {
   overflow: hidden;
-  width: 200%;
+  width: 115%;
 }
-/* line 242, sass/layout.scss */
+/* line 241, sass/layout.scss */
 .site-header .navigations .direction-nav ul li {
   display: block;
   float: left;
 }
-/* line 245, sass/layout.scss */
+/* line 244, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a {
   display: block;
   float: left;
@@ -319,76 +318,76 @@ span.rouble span {
   font-weight: bold;
   color: #404040;
 }
-/* line 255, sass/layout.scss */
+/* line 254, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a:hover {
   border: 3px solid #edf2f2;
   padding: 7px 7px;
 }
-/* line 260, sass/layout.scss */
+/* line 259, sass/layout.scss */
 .site-header .navigations .direction-nav ul li:last-child {
   margin-right: 0;
 }
-/* line 264, sass/layout.scss */
+/* line 263, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.current a {
   background: #4c7f82;
   color: #fff;
 }
-/* line 270, sass/layout.scss */
+/* line 269, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers a {
   color: #f7941e;
 }
-/* line 274, sass/layout.scss */
+/* line 273, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers:hover a {
   background: none;
   border: 3px solid #f7941e;
   padding: 7px 7px;
 }
-/* line 281, sass/layout.scss */
+/* line 280, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers.current a {
   color: #fff;
   background: #f7941e;
 }
-/* line 288, sass/layout.scss */
+/* line 287, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers a {
   color: #4c7f82;
 }
-/* line 292, sass/layout.scss */
+/* line 291, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers:hover a {
   background: none;
   border: 3px solid #4c7f82;
   padding: 7px 7px;
 }
-/* line 299, sass/layout.scss */
+/* line 298, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers.current a {
   color: #fff;
   background: #4c7f82;
 }
-/* line 308, sass/layout.scss */
+/* line 307, sass/layout.scss */
 .site-header .navigations .sub-direction-nav {
   position: absolute;
   top: 130px;
 }
-/* line 316, sass/layout.scss */
+/* line 315, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li {
   display: inline;
   margin-right: 24px;
 }
-/* line 319, sass/layout.scss */
+/* line 318, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a {
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
 }
-/* line 323, sass/layout.scss */
+/* line 322, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 329, sass/layout.scss */
+/* line 328, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul .current a {
   font-weight: bold;
 }
 
-/* line 344, sass/layout.scss */
+/* line 343, sass/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -398,16 +397,16 @@ span.rouble span {
   padding: 30px 0 30px 0;
   font-size: .9em;
 }
-/* line 353, sass/layout.scss */
+/* line 352, sass/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 356, sass/layout.scss */
+/* line 355, sass/layout.scss */
 .site-footer .foot-right {
   width: 430px;
   float: left;
 }
-/* line 359, sass/layout.scss */
+/* line 358, sass/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   letter-spacing: normal;
@@ -418,11 +417,11 @@ span.rouble span {
   top: -4px;
   margin-left: 9px;
 }
-/* line 365, sass/layout.scss */
+/* line 364, sass/layout.scss */
 .site-footer .foot-right a.social:first-child {
   margin-left: 0;
 }
-/* line 369, sass/layout.scss */
+/* line 368, sass/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   letter-spacing: normal;
@@ -430,74 +429,74 @@ span.rouble span {
   display: inline-block;
   vertical-align: top;
 }
-/* line 373, sass/layout.scss */
+/* line 372, sass/layout.scss */
 .site-footer .foot-right .mail {
   margin: 0 10px;
 }
-/* line 377, sass/layout.scss */
+/* line 376, sass/layout.scss */
 .site-footer .devs {
   float: right;
   width: 200px;
   margin-right: -40px;
 }
-/* line 381, sass/layout.scss */
+/* line 380, sass/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 385, sass/layout.scss */
+/* line 384, sass/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 390, sass/layout.scss */
+/* line 389, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   text-decoration: underline;
 }
-/* line 396, sass/layout.scss */
+/* line 395, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 50px;
 }
-/* line 402, sass/layout.scss */
+/* line 401, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 405, sass/layout.scss */
+/* line 404, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 407, sass/layout.scss */
+/* line 406, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 416, sass/layout.scss */
+/* line 415, sass/layout.scss */
 .site-footer nav {
   width: 348px;
 }
-/* line 418, sass/layout.scss */
+/* line 417, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 420, sass/layout.scss */
+/* line 419, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
 }
 
-/* line 428, sass/layout.scss */
+/* line 427, sass/layout.scss */
 .errorpage {
   text-align: center;
 }
-/* line 430, sass/layout.scss */
+/* line 429, sass/layout.scss */
 .errorpage h1 {
   font-size: 21px;
   font-weight: bold;
