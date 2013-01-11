@@ -24,8 +24,8 @@
   <%= form.fields_for :ship_address do |ship_form| %>
   
             <% if @order.ship_address.errors %>
-            <% @order.ship_address.errors.full_messages.each do |msg| %>
-              <%= msg %><br />
+            <% @order.ship_address.errors.full_messages.each do |field,msg| %>
+              <%= field %> <%= msg %><br />
             <% end %>
           <% end %>
 
