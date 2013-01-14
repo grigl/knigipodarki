@@ -19,6 +19,7 @@ module ApplicationHelper
     else
       categories = all_categories
     end
+    categories = categories.sort_by { |v| v[:name] }
 
     categories.select { |cat| (cat.all_products.select {|product| !product.deleted_at && product.is_published } & brand.all_products.select {|product| !product.deleted_at && product.is_published }) != [] }
   end

@@ -9,7 +9,7 @@
           <!-- .brands -->      
           <section class="brands">
             
-            <% @taxon.children.each do |brand| %>
+            <% @taxon.children_sorted.each do |brand| %>
             <!-- item -->
             <article>
               <h2><%= link_to brand.name, brand.permalink %></h2>

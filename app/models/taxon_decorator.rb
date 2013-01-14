@@ -18,6 +18,11 @@ Taxon.class_eval do
 
   include ::ProductFilters  # for detailed defs of filters
 
+  def children_sorted
+    result = self.children.sort_by { |v| v[:name] }
+    return result
+  end
+
   # indicate which filters should be used for a taxon
   # this method should be customized to your own site
   def applicable_filters
