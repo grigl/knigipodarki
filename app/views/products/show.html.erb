@@ -113,7 +113,7 @@
             <%= render 'product_features' %>
             <div class="product-tags">
               <% @product.tags.each do |tag| %>
-              	<% if tag.name %>
+              	<% if tag.name != '' %>
                 <%= link_to tag.name, products_tags_path(tag.name) %><% unless tag == @product.tags.last %>,<% end %><% end %>
                 <% end %>
             </div>
