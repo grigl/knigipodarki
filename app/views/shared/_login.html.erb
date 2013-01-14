@@ -12,7 +12,7 @@
       <!-- field -->
       <fieldset>
         <%= f.label(:email, t("email")) %>
-        <% if flash.any? && flash[:error].include?('Неправильный адрес или пароль.') %>
+        <% if not flash[:error].empty? && flash[:error].include?('Неправильный адрес или пароль.') %>
           <span class="field_with_errors">
             <%= f.text_field('email') %>
           </span>
