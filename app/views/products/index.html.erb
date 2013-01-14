@@ -10,7 +10,9 @@
           <aside class="tags">
             <ul>
               <% @tags.each do |tag| %>
+                <% if tag.name %>
                 <li><%= link_to tag.name, products_tags_path(tag.name) %></li>
+                <% end %>
               <% end %>
             </ul>
           </aside>
