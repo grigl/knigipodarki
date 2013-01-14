@@ -22,20 +22,11 @@
           <% end %>
 
           <%= form_for @user, :url => user_password_path, :html => {:method => :put, autocomplete: :off} do |f| %>
-            <fieldset>
-              <%= f.label :password %><br />
-              <%= f.password_field :password %><br />
-   	          <% if @user.errors[:password].present? %>
-	        	<div><%= @user.errors[:password][0] %></div>
-	          <% end %>                  
-            </fieldset>
-            <fieldset>
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation %><br />
-   	          	<% if @user.errors[:password_confirmation].present? %>
-	        		<div><%= @user.errors[:password_confirmation][0] %></div>
-	          	<% end %>                  
-            </fieldset>
+
+            <%= render 'shared/field_with_error', form: f, name: :password, errors: @user.errors %>
+
+            <%= render 'shared/field_with_error', form: f, name: :password_confirmation, errors: @user.errors %>
+
             <%= f.hidden_field :reset_password_token %>
             <div class="controls">
               <input class="blue" type="submit" value="Cохранить">

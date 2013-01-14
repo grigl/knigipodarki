@@ -5,35 +5,27 @@
       <% if @address.user_id.nil? %>
         <%= form.hidden_field :user_id, value: current_user.id %>
       <% end %>
-      <fieldset>
-        <%= form.label :lastname, 'Фамилия' %>
-        <%= form.text_field :lastname, :class => 'required' %>
-        <% if @address.errors[:lastname].present? %>
-        	<div><%= @address.errors[:lastname][0] %></div>
-        <% end %>        
-      </fieldset>
-      <fieldset>
-        <%= form.label :firstname, 'Имя' %>
-        <%= form.text_field :firstname, :class => 'required' %>
-        <% if @address.errors[:firstname].present? %>
-        	<div><%= @address.errors[:firstname][0] %></div>
-        <% end %>
-      </fieldset>
-      <fieldset>
-        <%= form.label :secondname, 'Отчество' %>
-        <%= form.text_field :secondname %>
-        <% if @address.errors[:secondname].present? %>
-        	<div><%= @address.errors[:secondname][0] %></div>
-        <% end %>        
-      </fieldset>
-      <fieldset>
+
+      <%= render 'shared/field_with_error', form: form, name: :lastname, 
+                 label: 'Фамилия', class_name: 'required', errors: @address.errors %>
+
+      <%= render 'shared/field_with_error', form: form, name: :firstname, 
+                 label: 'Имя', class_name: 'required', errors: @address.errors %>
+
+      <%= render 'shared/field_with_error', form: form, name: :secondname, 
+                 label: 'Отчество', errors: @address.errors %>
+
+      <% has_errors = @address.errors[:country_id].present? %>
+      <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
         <%= form.label :country_id, 'Страна' %>
         <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:ass => 'required'} %>
-        <% if @address.errors[:country_id].present? %>
-        	<div><%= @address.errors[:country_id][0] %></div>
+        <% if has_errors %>
+        	<div class="error-text"><%= @address.errors[:country_id][0] %></div>
         <% end %>        
       </fieldset>
-      <fieldset>
+
+      <% has_errors = @address.errors[:state].present? %>
+      <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
         <% have_states = !@address.country.states.empty? %>
           <%= form.label :state, 'Регион/область' %>
           <noscript>
@@ -63,42 +55,25 @@
           });          
           // ]]>
           </script>
-        <% if @address.errors[:state].present? %>
-        	<div><%= @address.errors[:state][0] %></div>
+        <% if has_errors %>
+        	<div class="error-text"><%= @address.errors[:state][0] %></div>
         <% end %>          
       </fieldset>
     </div>
     <!-- /.fields -->
     <!-- .fields -->
     <div class="fields">
-      <fieldset>
-        <%= form.label :city, 'Город' %>
-        <%= form.text_field :city, :class => 'required' %>
-        <% if @address.errors[:city].present? %>
-        	<div><%= @address.errors[:city][0] %></div>
-        <% end %>        
-      </fieldset>
-      <fieldset>
-        <%= form.label :zipcode, 'Индекс' %>
-        <%= form.text_field :zipcode, :class => 'required postal_mask' %>
-        <% if @address.errors[:zipcode].present? %>
-        	<div><%= @address.errors[:zipcode][0] %></div>
-        <% end %>        
-      </fieldset>
-      <fieldset>
-        <%= form.label :address1, 'Адрес' %>
-        <%= form.text_field :address1, :class => 'required' %>
-        <% if @address.errors[:address1].present? %>
-        	<div><%= @address.errors[:address1][0] %></div>
-        <% end %>        
-      </fieldset>
-      <fieldset>
-        <%= form.label :phone, 'Телефон' %>
-        <%= form.text_field :phone, :class => 'required phone_mask' %>
-        <% if @address.errors[:phone].present? %>
-        	<div><%= @address.errors[:phone][0] %></div>
-        <% end %>        
-      </fieldset>
+      <%= render 'shared/field_with_error', form: form, name: :city, 
+                 label: 'Город', class_name: 'required', errors: @address.errors %>
+
+      <%= render 'shared/field_with_error', form: form, name: :zipcode, 
+                 label: 'Индекс', class_name: 'required postal_mask', errors: @address.errors %>
+
+      <%= render 'shared/field_with_error', form: form, name: :address1, 
+                 label: 'Адрес', class_name: 'required', errors: @address.errors %>
+
+      <%= render 'shared/field_with_error', form: form, name: :phone, 
+                 label: 'Телефон', class_name: 'required phone_mask', errors: @address.errors %>
     </div>
     <!-- /.fields -->
 

@@ -58,7 +58,7 @@
   font-size: 18px;
   padding-top: 15px;
   margin-top: 15px;
-  border-top: 1px solid #c0c0c0;
+  border-top: 1px solid silver;
 }
 
 /* line 50, sass/checkout.scss */
@@ -77,7 +77,7 @@
 }
 /* line 58, sass/checkout.scss */
 .auth fieldset {
-  margin-bottom: 20px;
+  padding-bottom: 18px;
 }
 /* line 60, sass/checkout.scss */
 .auth fieldset label {
@@ -93,7 +93,7 @@
 /* line 69, sass/checkout.scss */
 .auth fieldset .remember {
   overflow: hidden;
-  margin-top: 10px;
+  margin-top: -10px;
 }
 /* line 72, sass/checkout.scss */
 .auth fieldset .remember label {
@@ -180,7 +180,7 @@
 .adress-choise .payment-comment textarea {
   width: 594px;
   height: 68px;
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
 }
 
 /* line 146, sass/checkout.scss */

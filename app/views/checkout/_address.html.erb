@@ -22,39 +22,30 @@
   </div>
 
   <%= form.fields_for :ship_address do |ship_form| %>
-
     <div class="all-fields" <%= "style=display:none;" if @addresses.present? && @order.ship_address.errors.empty? %>>
     <!-- .fields -->
     <div class="fields">
-      <fieldset>
-        <%= ship_form.label :lastname, 'Фамилия' %>
-        <%= ship_form.text_field :lastname, :class => 'required' %>
-        <% if @order.ship_address.errors[:lastname].present?%>
-        	<div><%= @order.ship_address.errors[:lastname][0] %></div>
-        <% end %>
-      </fieldset>
-      <fieldset>
-        <%= ship_form.label :firstname, 'Имя' %>
-        <%= ship_form.text_field :firstname, :class => 'required' %>
-        <% if @order.ship_address.errors[:firstname].present?%>
-        	<div><%= @order.ship_address.errors[:firstname][0] %></div>
-        <% end %>
-      </fieldset>
-      <fieldset>
-        <%= ship_form.label :secondname, 'Отчество' %>
-        <%= ship_form.text_field :secondname %>
-        <% if @order.ship_address.errors[:secondname].present?%>
-        	<div><%= @order.ship_address.errors[:secondname][0] %></div>
-        <% end %>
-      </fieldset>
-      <fieldset>
+
+      <%= render 'shared/field_with_error', form: ship_form, name: :lastname, 
+                 label: 'Фамилия', class_name: 'required', errors: @order.ship_address.errors %>
+
+      <%= render 'shared/field_with_error', form: ship_form, name: :firstname, 
+                 label: 'Имя', class_name: 'required', errors: @order.ship_address.errors %>
+
+      <%= render 'shared/field_with_error', form: ship_form, name: :secondname, 
+                 label: 'Отчество', errors: @order.ship_address.errors %>
+
+      <% has_errors = @order.ship_address.errors[:country_id].present? %>
+      <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
         <%= ship_form.label :country_id, 'Страна' %>
         <%= ship_form.collection_select :country_id, available_countries, :id, :name, {}, {:ass => 'required'} %>
-        <% if @order.ship_address.errors[:country_id].present?%>
-        	<div><%= @order.ship_address.errors[:country_id][0] %></div>
+        <% if has_errors %>
+        	<div class="error-text"><%= @order.ship_address.errors[:country_id][0] %></div>
         <% end %>
       </fieldset>
-      <fieldset>
+
+      <% has_errors = @order.ship_address.errors[:state].present? %>
+      <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
         <% have_states = !@order.ship_address.country.states.empty? %>
           <%= ship_form.label :state, 'Регион/область' %>
           <noscript>
@@ -84,42 +75,27 @@
           });
           // ]]>
           </script>
-        <% if @order.ship_address.errors[:state].present? %>
-        	<div><%= @order.ship_address.errors[:state][0] %></div>
+        <% if has_errors %>
+        	<div class="error-text"><%= @order.ship_address.errors[:state][0] %></div>
         <% end %>
       </fieldset>
+
     </div>
     <!-- /.fields -->
     <!-- .fields -->
     <div class="fields">
-      <fieldset>
-        <%= ship_form.label :city, 'Город' %>
-        <%= ship_form.text_field :city, :class => 'required' %>
-        <% if @order.ship_address.errors[:city].present?%>
-        	<div><%= @order.ship_address.errors[:city][0] %></div>
-        <% end %>
-      </fieldset>
-      <fieldset>
-        <%= ship_form.label :zipcode, 'Индекс' %>
-        <%= ship_form.text_field :zipcode, :class => 'required postal_mask' %>
-        <% if @order.ship_address.errors[:zipcode].present?%>
-        	<div><%= @order.ship_address.errors[:zipcode][0] %></div>
-        <% end %>
-      </fieldset>
-      <fieldset>
-        <%= ship_form.label :address1, 'Адрес' %>
-        <%= ship_form.text_field :address1, :class => 'required' %>
-        <% if @order.ship_address.errors[:address1].present?%>
-        	<div><%= @order.ship_address.errors[:address1][0] %></div>
-        <% end %>
-      </fieldset>
-      <fieldset>
-        <%= ship_form.label :phone, 'Телефон' %>
-        <%= ship_form.text_field :phone, :class => 'required phone_mask' %>
-        <% if @order.ship_address.errors[:phone].present?%>
-        	<div><%= @order.ship_address.errors[:phone][0] %></div>
-        <% end %>
-      </fieldset>
+
+      <%= render 'shared/field_with_error', form: ship_form, name: :city, 
+                 label: 'Город', class_name: 'required', errors: @order.ship_address.errors %>
+
+      <%= render 'shared/field_with_error', form: ship_form, name: :zipcode, 
+                 label: 'Индекс', class_name: 'required postal_mask', errors: @order.ship_address.errors %>
+
+      <%= render 'shared/field_with_error', form: ship_form, name: :address1, 
+                 label: 'Адрес', class_name: 'required', errors: @order.ship_address.errors %>
+
+      <%= render 'shared/field_with_error', form: ship_form, name: :phone, 
+                 label: 'Телефон', class_name: 'required phone_mask', errors: @order.ship_address.errors %>      
     </div>
     <!-- /.fields -->
   </div>

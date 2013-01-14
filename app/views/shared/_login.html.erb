@@ -1,7 +1,7 @@
 <!-- .forms -->
   <section class="forms auth">
     <h3><%= t("login_as_existing") %></h3>
-    <div class="error">
+    <div class="flash-error">
       <% if flash.any? %>
         <% flash.each do |type, msg| %>
           <%= msg %>
@@ -10,27 +10,36 @@
     </div>
     <%= form_for(:user, :url => user_session_path) do |f| %>
       <!-- field -->
-      <fieldset>
+      <% has_errors = flash.key?(:error) && flash[:error].include?('Неправильный адрес или пароль.') %>
+      <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
         <%= f.label(:email, t("email")) %>
-        <% if flash.key?(:error) && flash[:error].include?('Неправильный адрес или пароль.') %>
+        <% if has_errors %>
           <span class="field_with_errors">
             <%= f.text_field('email') %>
           </span>
         <% else %>
           <%= f.text_field('email') %>
         <% end %>
+        <% if has_errors %>
+          <div class="error-text"></div>
+        <% end %>
       </fieldset>
       <!-- /field -->
       <!-- field -->
-      <fieldset>
+      <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
         <%= f.label :password, t("password") %>
-        <% if flash.key?(:error) && flash[:error].include?('Неправильный адрес или пароль.') %>
+        <% if has_errors %>
           <span class="field_with_errors">
             <%= f.password_field 'password' %>
           </span>
         <% else %>
           <%= f.password_field 'password' %>          
         <% end %>
+        <% if has_errors %>
+          <div class="error-text"></div>
+        <% end %>
+      </fieldset>
+      <fieldset>
         <div class="remember">
           <label>
             <%= f.check_box :remember_me, :class => 'remember_check' %>

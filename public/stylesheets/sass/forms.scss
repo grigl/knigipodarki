@@ -1,4 +1,6 @@
 @import 'mixins';
+@import "compass/css3/box-sizing";
+@import "compass/typography/text/ellipsis";
 
 .forms {
   .formset {
@@ -14,9 +16,10 @@
           margin-bottom: 10px;
         }
         input {
-          width: 276px;
-          height: 28px;
+          width: 300px;
+          height: 32px;
           padding: 0 10px;
+          @include box-sizing(border-box);
         }
         select {
           width: 298px; // до ужаса спорная строка! нужно обсудить с Вадиком
@@ -63,3 +66,28 @@
   }
 }
 
+.fieldset-with-error {
+  position: relative;
+  .error-text {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    bottom: 18px;
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    @include ellipsis;
+  }
+  &:hover, &.hide-error { 
+    .error-text { display:none } 
+  }
+}
+
+.flash-error, .fieldset-with-error .error-text {
+  background: #e66f50;
+  color: white;
+}
+
+.flash-error {
+  margin-bottom: 1em;
+}

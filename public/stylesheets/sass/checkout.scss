@@ -56,7 +56,7 @@
     margin-bottom: 40px;
   }
   fieldset {
-    margin-bottom: 20px;
+    padding-bottom: 18px;
     label {
       display: block;
       margin-bottom: 10px;
@@ -68,7 +68,7 @@
     }
     .remember {
       overflow: hidden;
-      margin-top: 10px;
+      margin-top: -10px;
       label {
         float: left;
         input {

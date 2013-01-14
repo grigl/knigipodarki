@@ -15,4 +15,23 @@
     });
 
   });
+
+  // Error messages under fields
+  $(function(){
+    $('.js-fieldset-with-error').live('change', function(){
+      $(this)
+        .data('hideErrorPerm', true)
+        .addClass('hide-error');
+    });
+    $('.js-fieldset-with-error').live('focus', function(){
+      $(this).addClass('hide-error');
+    });
+    $('.js-fieldset-with-error').live('blur', function(){
+      if (!$(this).data('hideErrorPerm')) {
+        $(this).removeClass('hide-error');
+      }
+    });
+  });
+
 })(jQuery);
+

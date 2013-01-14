@@ -1,4 +1,4 @@
-/* line 5, sass/forms.scss */
+/* line 7, sass/forms.scss */
 .forms .formset .fields {
   letter-spacing: normal;
   word-spacing: normal;
@@ -7,35 +7,38 @@
   width: 282px;
   margin-right: 38px;
 }
-/* line 9, sass/forms.scss */
+/* line 11, sass/forms.scss */
 .forms .formset .fields fieldset {
   height: 80px;
 }
-/* line 11, sass/forms.scss */
+/* line 13, sass/forms.scss */
 .forms .formset .fields fieldset label {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 16, sass/forms.scss */
+/* line 18, sass/forms.scss */
 .forms .formset .fields fieldset input {
-  width: 276px;
-  height: 28px;
+  width: 300px;
+  height: 32px;
   padding: 0 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 21, sass/forms.scss */
+/* line 24, sass/forms.scss */
 .forms .formset .fields fieldset select {
   width: 298px;
   height: 28px;
   padding: 0 0 0 10px;
 }
-/* line 29, sass/forms.scss */
+/* line 32, sass/forms.scss */
 .forms .controls {
   text-align: right;
   padding-top: 18px;
   margin-bottom: 20px;
 }
-/* line 33, sass/forms.scss */
+/* line 36, sass/forms.scss */
 .forms .controls input {
   border: none;
   height: 30px;
@@ -44,19 +47,19 @@
   color: #fff;
   margin-left: 20px;
 }
-/* line 42, sass/forms.scss */
-.forms .top-decor {
-  border-top: 1px solid #c0c0c0;
-}
 /* line 45, sass/forms.scss */
+.forms .top-decor {
+  border-top: 1px solid silver;
+}
+/* line 48, sass/forms.scss */
 .forms .controls-big {
   width: 622px;
 }
-/* line 48, sass/forms.scss */
+/* line 51, sass/forms.scss */
 .forms .controls-small {
   width: 300px;
 }
-/* line 52, sass/forms.scss */
+/* line 55, sass/forms.scss */
 .forms .forms-info article {
   padding: 10px 20px;
   border: 6px solid #e66f50;
@@ -64,8 +67,43 @@
   background: #f8f8f8;
   margin-top: 20px;
 }
-/* line 60, sass/forms.scss */
+/* line 63, sass/forms.scss */
 .forms .info-big {
   width: 622px;
   margin-bottom: 20px;
+}
+
+/* line 69, sass/forms.scss */
+.fieldset-with-error {
+  position: relative;
+}
+/* line 71, sass/forms.scss */
+.fieldset-with-error .error-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  padding: 0 10px;
+  height: 32px;
+  line-height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+/* line 82, sass/forms.scss */
+.fieldset-with-error:hover .error-text, .fieldset-with-error.hide-error .error-text {
+  display: none;
+}
+
+/* line 86, sass/forms.scss */
+.flash-error, .fieldset-with-error .error-text {
+  background: #e66f50;
+  color: white;
+}
+
+/* line 91, sass/forms.scss */
+.flash-error {
+  margin-bottom: 1em;
 }
