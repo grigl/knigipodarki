@@ -330,9 +330,14 @@
         }
         form {
           display: inline-block;
+
+          // need to absolute positioned <a> looked well
+          position: relative;
+          width: 46px;
+          height: 18px;
         }
         a {
-          margin-left: 11px;
+          margin-left: 12px;
           font-family: kp_icons;
           text-decoration: none;
           border-left: 2px solid #eb8c73;
@@ -341,8 +346,8 @@
           font-size: 22px;
 
           // It fixes icon font in android chrome
-          position: relative;
-          left: 1px;
+          position: absolute;
+          height: 22px;
         }
       }
       .stock {
