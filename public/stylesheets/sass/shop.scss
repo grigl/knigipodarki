@@ -330,6 +330,9 @@
         }
         form {
           display: inline-block;
+          width: 47px;
+          height: 22px;
+          position: relative;
         }
         a {
           margin-left: 12px;
@@ -339,6 +342,7 @@
           padding-left: 12px;
           color: #fff;
           font-size: 22px;
+          position: absolute;
         }
       }
       .stock {
