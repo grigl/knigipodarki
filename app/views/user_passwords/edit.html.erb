@@ -23,9 +23,9 @@
 
           <%= form_for @user, :url => user_password_path, :html => {:method => :put, autocomplete: :off} do |f| %>
 
-            <%= render 'shared/field_with_error', form: f, name: :password, errors: @user.errors %>
+            <%= render 'shared/field_with_error', form: f, name: :password, errors: @user.errors, type: :password %>
 
-            <%= render 'shared/field_with_error', form: f, name: :password_confirmation, errors: @user.errors %>
+            <%= render 'shared/field_with_error', form: f, name: :password_confirmation, errors: @user.errors, type: :password %>
 
             <%= f.hidden_field :reset_password_token %>
             <div class="controls">
