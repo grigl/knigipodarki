@@ -1628,6 +1628,7 @@ span.rouble span {
 /* line 91, sass/forms.scss */
 .flash-error {
   margin-bottom: 1em;
+  padding: 6px 10px;
 }
 
 /* line 4, sass/checkout.scss */
