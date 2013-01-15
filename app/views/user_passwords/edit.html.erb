@@ -7,6 +7,7 @@
           <h3><%= t(:change_my_password) %></h3>
 
           <% if @user && @user.errors %>
+            <div class="flash-error">
             <% @user.errors.full_messages.each do |msg| %>
               <% if msg == 'Reset password token имеет неверное значение' || msg == 'Reset password token не может быть пустым' %>
                 Что-то пошло не так и восстановить пароль не удалось. 
@@ -15,6 +16,7 @@
                 Запросите письмо с инструкциями еще раз и попробуйте снова.<br /><br />
               <% end %>
             <% end %>
+            </div>
           <% end %>
 
           <% if @error %>
@@ -23,9 +25,9 @@
 
           <%= form_for @user, :url => user_password_path, :html => {:method => :put, autocomplete: :off} do |f| %>
 
-            <%= render 'shared/field_with_error', form: f, name: :password, errors: @user.errors %>
+            <%= render 'shared/field_with_error', form: f, name: :password, errors: @user.errors, type: :password %>
 
-            <%= render 'shared/field_with_error', form: f, name: :password_confirmation, errors: @user.errors %>
+            <%= render 'shared/field_with_error', form: f, name: :password_confirmation, errors: @user.errors, type: :password %>
 
             <%= f.hidden_field :reset_password_token %>
             <div class="controls">

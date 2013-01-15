@@ -7,12 +7,25 @@ unless defined? label
   label = nil
 end
 
+unless defined? type
+  type = :text
+end
+
 has_errors = errors[name].present?
 %>
 
 <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
   <%= form.label name, label %>
-  <%= form.text_field name, :class => class_name %>
+
+  <%= 
+  case type 
+    when :text
+      form.text_field name, :class => class_name
+    when :password
+      form.password_field name, :class => class_name
+  end
+  %>
+  
   <% if has_errors %>
     <span class="error-text"><%= errors[name][0] %></span>
   <% end %>

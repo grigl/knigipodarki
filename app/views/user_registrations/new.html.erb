@@ -6,11 +6,7 @@
 
           <h3><%= t("new_customer") %></h3>
 
-          <% if flash %>
-            <% flash.each do |msg| %>
-              <%= msg[1] %><br />
-            <% end %>
-          <% end %>
+          <%= render 'shared/flash_error', flash: flash %>
 
           <%= form_for(:user, :url => registration_path(@user), html: {autocomplete: :off}) do |f| %>
 
@@ -18,10 +14,10 @@
                        class_name: 'title', label: t('email'), errors: @user.errors %>
 
             <%= render 'shared/field_with_error', form: f, name: :password, 
-                       class_name: 'title', label: t('password'), errors: @user.errors %>
+                       class_name: 'title', label: t('password'), errors: @user.errors, type: :password %>
 
             <%= render 'shared/field_with_error', form: f, name: :password_confirmation, 
-                       class_name: 'title', label: t(:confirm_password), errors: @user.errors %>
+                       class_name: 'title', label: t(:confirm_password), errors: @user.errors, type: :password %>
 
             <div class="controls">
               <input class="blue" type="submit" value="Сохранить">

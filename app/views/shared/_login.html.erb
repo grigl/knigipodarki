@@ -2,14 +2,8 @@
   <section class="forms auth">
     <h3><%= t("login_as_existing") %></h3>
     
-    <% if flash.any? %>
-      <div class="flash-error">
-        <% flash.each do |type, msg| %>
-          <%= msg %>
-        <% end %>
-      </div>
-    <% end %>
-    
+    <%= render 'shared/flash_error', flash: flash %>
+
     <%= form_for(:user, :url => user_session_path) do |f| %>
       <!-- field -->
       <fieldset>

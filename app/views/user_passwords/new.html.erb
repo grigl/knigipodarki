@@ -8,11 +8,7 @@
 
           <p>Заполните форму ниже и инструкции для восстановления будут отправлен вам по указанному email.</p>
 
-          <% if flash %>
-            <% flash.each do |msg| %>
-              <%= msg[1] %><br />
-            <% end %>
-          <% end %>
+          <%= render 'shared/flash_error', flash: flash %>
 
           <%= form_for User.new, :as => :user, :url => user_password_path do |f| %>
 
