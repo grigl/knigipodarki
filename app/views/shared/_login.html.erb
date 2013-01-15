@@ -10,34 +10,15 @@
     </div>
     <%= form_for(:user, :url => user_session_path) do |f| %>
       <!-- field -->
-      <% has_errors = flash.key?(:error) && flash[:error].include?('Неправильный адрес или пароль.') %>
-      <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
+      <fieldset>
         <%= f.label(:email, t("email")) %>
-        <% if has_errors %>
-          <span class="field_with_errors">
-            <%= f.text_field('email') %>
-          </span>
-        <% else %>
-          <%= f.text_field('email') %>
-        <% end %>
-        <% if has_errors %>
-          <div class="error-text"></div>
-        <% end %>
+        <%= f.text_field('email') %>
       </fieldset>
       <!-- /field -->
       <!-- field -->
-      <fieldset <% if has_errors %>class="fieldset-with-error js-fieldset-with-error"<% end %>>
+      <fieldset>
         <%= f.label :password, t("password") %>
-        <% if has_errors %>
-          <span class="field_with_errors">
-            <%= f.password_field 'password' %>
-          </span>
-        <% else %>
-          <%= f.password_field 'password' %>          
-        <% end %>
-        <% if has_errors %>
-          <div class="error-text"></div>
-        <% end %>
+        <%= f.password_field 'password' %>          
       </fieldset>
       <fieldset>
         <div class="remember">
