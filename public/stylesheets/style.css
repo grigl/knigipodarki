@@ -1017,10 +1017,9 @@ span.rouble span {
 /* line 255, sass/shop.scss */
 .product article hgroup h1 {
   font-size: 30px;
-  margin-bottom: 20px;
   line-height: 40px;
 }
-/* line 260, sass/shop.scss */
+/* line 259, sass/shop.scss */
 .product article hgroup h2 {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1029,6 +1028,7 @@ span.rouble span {
   vertical-align: middle;
   font-size: 21px;
   float: left;
+  margin-bottom: 20px;
 }
 /* line 266, sass/shop.scss */
 .product article hgroup .marker {
