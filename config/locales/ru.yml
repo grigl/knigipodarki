@@ -1,4 +1,6 @@
 ru:
+  multiplier: 'Множитель'
+  zones_description: 'Настройка торговых зон'
   create_a_new_account: 'Зарегистрироваться'
 
   banners:
