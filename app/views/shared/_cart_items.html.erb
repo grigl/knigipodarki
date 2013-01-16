@@ -4,7 +4,11 @@
   <% current_order.line_items.each do |line_item| %>
     <!-- .item -->
       <div class="item">
-        <%= small_image(line_item.variant) %>
+        <% unless product.images.empty? %>
+          <%= image_tag product.images.first.attachment.url(:small) %>
+        <% else %>
+          <%= image_tag '/images/noimage/small.jpg' %>
+        <% end %>      	
         <div class="desc">
           <span class="name"><%= line_item.variant.name.truncate(35) %></span>
           <span class="price"><%= line_item.price %> <span class="rouble">p<span></span></span></span>
