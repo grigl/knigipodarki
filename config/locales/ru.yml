@@ -1,6 +1,9 @@
 ru:
   multiplier: 'Множитель'
+<<<<<<< HEAD
   zones_description: 'Настройка торговых зон'
+=======
+>>>>>>> fcbdd8a88a9a20ae12aaec45eae6b5da98286f76
   create_a_new_account: 'Зарегистрироваться'
 
   banners:
