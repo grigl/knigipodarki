@@ -244,7 +244,8 @@ span.rouble span {
           a {
             display: block;
             float: left;
-            padding: 10px 10px;
+            border: 3px solid transparent;
+            padding: 7px 7px;
             margin-right: 4px;
             text-transform: uppercase;
             text-decoration: none;
@@ -252,8 +253,7 @@ span.rouble span {
             font-weight: bold;
             color: $color;
             &:hover {
-              border: 3px solid #edf2f2;
-              padding: 7px 7px;
+              border-color: #edf2f2;
             }
           }
           &:last-child {
@@ -272,14 +272,14 @@ span.rouble span {
             &:hover {
               a {
                 background: none;
-                border: 3px solid #f7941e;
-                padding: 7px 7px;
+                border-color: #f7941e;
               }
             }
             &.current {
               a {
                 color: #fff;
                 background: #f7941e;
+                border-color: #f7941e;
               }
             }
           } //des
@@ -290,14 +290,14 @@ span.rouble span {
             &:hover {
               a {
                 background: none;
-                border: 3px solid #4c7f82;
-                padding: 7px 7px;
+                border-color: #4c7f82;
               }
             }
             &.current {
               a {
                 color: #fff;
                 background: #4c7f82;
+                border-color: #4c7f82;
               }
             }
           }

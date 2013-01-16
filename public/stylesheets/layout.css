@@ -310,7 +310,8 @@ span.rouble span {
 .site-header .navigations .direction-nav ul li a {
   display: block;
   float: left;
-  padding: 10px 10px;
+  border: 3px solid transparent;
+  padding: 7px 7px;
   margin-right: 4px;
   text-transform: uppercase;
   text-decoration: none;
@@ -318,10 +319,9 @@ span.rouble span {
   font-weight: bold;
   color: #404040;
 }
-/* line 254, sass/layout.scss */
+/* line 255, sass/layout.scss */
 .site-header .navigations .direction-nav ul li a:hover {
-  border: 3px solid #edf2f2;
-  padding: 7px 7px;
+  border-color: #edf2f2;
 }
 /* line 259, sass/layout.scss */
 .site-header .navigations .direction-nav ul li:last-child {
@@ -339,13 +339,13 @@ span.rouble span {
 /* line 273, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers:hover a {
   background: none;
-  border: 3px solid #f7941e;
-  padding: 7px 7px;
+  border-color: #f7941e;
 }
-/* line 280, sass/layout.scss */
+/* line 279, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.designers.current a {
   color: #fff;
   background: #f7941e;
+  border-color: #f7941e;
 }
 /* line 287, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers a {
@@ -354,13 +354,13 @@ span.rouble span {
 /* line 291, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers:hover a {
   background: none;
-  border: 3px solid #4c7f82;
-  padding: 7px 7px;
+  border-color: #4c7f82;
 }
-/* line 298, sass/layout.scss */
+/* line 297, sass/layout.scss */
 .site-header .navigations .direction-nav ul li.publishers.current a {
   color: #fff;
   background: #4c7f82;
+  border-color: #4c7f82;
 }
 /* line 307, sass/layout.scss */
 .site-header .navigations .sub-direction-nav {
