@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/secoint/spree_related_products.git
-  revision: f1f41106ce21a5499f4c4a9df43759b71970f72e
-  branch: 0.60.1
+  revision: ace985694e2ffa63d53e0abac8e1ec5694d99d33
+  ref: ace985694e2ffa63d53e0abac8e1ec5694d99d33
   specs:
     spree_related_products (3.1)
-      spree_core
+      spree_core (>= 0.30.0)
 
 GIT
   remote: git://github.com/spree/spree_i18n.git

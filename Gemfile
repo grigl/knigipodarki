@@ -36,7 +36,7 @@ gem 'will_paginate'
 # end
 gem "xml-simple", "~> 1.1.1"
 gem "mail"
-gem 'spree_related_products', :git => 'git://github.com/secoint/spree_related_products.git', :branch => '0.60.1'
+gem 'spree_related_products', :git => 'git://github.com/secoint/spree_related_products.git', :ref => "ace985694e2ffa63d53e0abac8e1ec5694d99d33"
 gem 'compass-rails'
 gem 'webbynode'
 gem "dynamic_form", "~> 1.1.4"
