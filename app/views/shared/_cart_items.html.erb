@@ -4,8 +4,8 @@
   <% current_order.line_items.each do |line_item| %>
     <!-- .item -->
       <div class="item">
-        <% unless product.images.empty? %>
-          <%= image_tag product.images.first.attachment.url(:small) %>
+        <% unless line_item.product.images.empty? %>
+          <%= image_tag line_item.product.images.first.attachment.url(:small) %>
         <% else %>
           <%= image_tag '/images/noimage/small.jpg' %>
         <% end %>      	
