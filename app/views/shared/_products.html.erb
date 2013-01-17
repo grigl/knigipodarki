@@ -11,10 +11,10 @@
 
       <article>
         <% if product.sale_price %>
-          <span class="price ops"><%= product.price.to_i rescue 0 %> <span class="rouble">p<span></span></span></span>
-          <span class="price sale"><%= product.sale_price.to_i rescue 0 %> <span class="rouble">p<span></span></span></span>
+          <span class="price ops"><%= product.price.to_i rescue 0 %> <span class="rouble">Р<span></span></span></span>
+          <span class="price sale"><%= product.sale_price.to_i rescue 0 %> <span class="rouble">Р<span></span></span></span>
         <% else %>
-          <span class="price"><%= product.price.to_i rescue 0 %> <span class="rouble">p<span></span></span></span>
+          <span class="price"><%= product.price.to_i rescue 0 %> <span class="rouble">Р<span></span></span></span>
         <% end %>
 
         <h2><% if product.author %><span style="font-size: 12px;"><%= product.author%></span><br /><% end %><%= product.name %></h2>
