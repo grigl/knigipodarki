@@ -56,11 +56,10 @@ input[type="text"]:-webkit-autofill {
 }
 
 .rouble {
-  font-family: 'ALSRubl-Verdana', Verdana, sans-serif;
+  font-family: 'ALSRubl-Verdana', Verdana, sans-serif !important;
   line-height: normal;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: uppercase;
+  font-weight: normal !important;
+  font-style: normal !important;
   span {display: none}
 }
 
