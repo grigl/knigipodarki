@@ -4,7 +4,7 @@
   <% current_order.line_items.each do |line_item| %>
     <!-- .item -->
       <div class="item">
-      	<%= link_to product do %>
+      	<%= link_to line_item.product do %>
         <% unless line_item.product.images.empty? %>
           <%= image_tag line_item.product.images.first.attachment.url(:small) %>
         <% else %>
@@ -12,7 +12,7 @@
         <% end %>      	
         <% end %>
         <div class="desc">
-          <span class="name"><%= link_to product do %><%= line_item.variant.name.truncate(35) %><% end %></span>
+          <span class="name"><%= link_to line_item.product do %><%= line_item.variant.name.truncate(35) %><% end %></span>
           <span class="price"><%= line_item.price %> <span class="rouble">Р<span></span></span></span>
           <!-- .contols -->
           <div class="controls">
