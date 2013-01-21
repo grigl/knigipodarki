@@ -68,7 +68,7 @@ class ProductsController < Spree::BaseController
       end
     end
 
-    @products = products.paginate(:page => params[:page], :per_page => 8)
+    @products = products.paginate(:page => params[:page], :per_page => 32)
 
     respond_with(@products)
   end
@@ -101,7 +101,7 @@ class ProductsController < Spree::BaseController
     @tag = Tag.find_by_name!(params[:tag])
     products = @tag.products.not_deleted.published
 
-    @products = products.paginate(:page => params[:page], :per_page => 8)
+    @products = products.paginate(:page => params[:page], :per_page => 32)
 
     respond_with(@product) { |format| format.html { render :index } }
   end

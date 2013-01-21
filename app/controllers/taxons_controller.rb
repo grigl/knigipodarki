@@ -44,7 +44,7 @@ class TaxonsController < Spree::BaseController
       products = products.select { |product| product.material == params[:material] }
     end
 
-    @products = products.paginate(:page => params[:page], :per_page => 30)
+    @products = products.paginate(:page => params[:page], :per_page => 32)
     respond_with(@taxon)
   end
 
@@ -78,7 +78,7 @@ class TaxonsController < Spree::BaseController
       end
     end
 
-    @products = products.paginate(:page => params[:page], :per_page => 30)
+    @products = products.paginate(:page => params[:page], :per_page => 32)
     respond_with(@products) { |format| format.html { render :show } }
   end
 
