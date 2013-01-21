@@ -143,6 +143,13 @@
                 text-decoration: none;
                 text-align: center;
                 color: #808080;
+                &:hover {
+                  background: #f0f0f0;
+                }
+                &:active {
+                  padding-top: 1px;
+                  height: 21px;
+                }
               }
               .count {
                 display: block;
@@ -161,6 +168,12 @@
               font-family: kp_icons;
               text-decoration: none;
               color: #e2e2e2;
+              &:hover {
+                color: darken(#e2e2e2, 10%);
+              }
+              &:active {
+                padding-top: 1px;
+              }
             }
           }
         }

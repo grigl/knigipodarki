@@ -425,27 +425,27 @@ input[type="text"]:-webkit-autofill {
   margin-top: -53px;
   margin-bottom: 12px;
 }
-/* line 324, sass/layout.scss */
+/* line 322, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li {
   display: inline;
   margin-right: 24px;
 }
-/* line 327, sass/layout.scss */
+/* line 325, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a {
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
 }
-/* line 331, sass/layout.scss */
+/* line 329, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 337, sass/layout.scss */
+/* line 335, sass/layout.scss */
 .site-header .navigations .sub-direction-nav ul .current a {
   font-weight: bold;
 }
 
-/* line 353, sass/layout.scss */
+/* line 351, sass/layout.scss */
 .site-footer {
   background: #808080;
   color: #fff;
@@ -455,16 +455,16 @@ input[type="text"]:-webkit-autofill {
   padding: 30px 0 30px 0;
   font-size: .9em;
 }
-/* line 362, sass/layout.scss */
+/* line 360, sass/layout.scss */
 .site-footer a {
   color: #fff;
 }
-/* line 365, sass/layout.scss */
+/* line 363, sass/layout.scss */
 .site-footer .foot-right {
   width: 430px;
   float: left;
 }
-/* line 368, sass/layout.scss */
+/* line 366, sass/layout.scss */
 .site-footer .foot-right a.social {
   width: 30px;
   letter-spacing: normal;
@@ -475,11 +475,11 @@ input[type="text"]:-webkit-autofill {
   top: -4px;
   margin-left: 9px;
 }
-/* line 374, sass/layout.scss */
+/* line 372, sass/layout.scss */
 .site-footer .foot-right a.social:first-child {
   margin-left: 0;
 }
-/* line 378, sass/layout.scss */
+/* line 376, sass/layout.scss */
 .site-footer .foot-right span {
   width: auto;
   letter-spacing: normal;
@@ -487,81 +487,81 @@ input[type="text"]:-webkit-autofill {
   display: inline-block;
   vertical-align: top;
 }
-/* line 382, sass/layout.scss */
+/* line 380, sass/layout.scss */
 .site-footer .foot-right .mail {
   margin: 0 10px;
 }
-/* line 386, sass/layout.scss */
+/* line 384, sass/layout.scss */
 .site-footer .devs {
   float: right;
   width: 200px;
   margin-right: -40px;
 }
-/* line 390, sass/layout.scss */
+/* line 388, sass/layout.scss */
 .site-footer .devs .dev_in {
   display: inline-block;
   vertical-align: top;
 }
-/* line 394, sass/layout.scss */
+/* line 392, sass/layout.scss */
 .site-footer .devs a {
   width: 80px;
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 399, sass/layout.scss */
+/* line 397, sass/layout.scss */
 .site-footer .devs a .name {
   display: inline-block;
   float: left;
   width: 70px;
   text-decoration: underline;
 }
-/* line 405, sass/layout.scss */
+/* line 403, sass/layout.scss */
 .site-footer .devs a .logo {
   display: none;
   width: 80px;
   height: 50px;
 }
-/* line 411, sass/layout.scss */
+/* line 409, sass/layout.scss */
 .site-footer .devs a:hover .name {
   display: none;
 }
-/* line 414, sass/layout.scss */
+/* line 412, sass/layout.scss */
 .site-footer .devs a:hover .logo {
   display: block;
 }
-/* line 416, sass/layout.scss */
+/* line 414, sass/layout.scss */
 .site-footer .devs a:hover .logo img {
   position: absolute;
   top: -16px;
   left: 10px;
 }
-/* line 425, sass/layout.scss */
+/* line 423, sass/layout.scss */
 .site-footer nav {
   width: 348px;
 }
-/* line 427, sass/layout.scss */
+/* line 425, sass/layout.scss */
 .site-footer nav ul {
   float: left;
 }
-/* line 429, sass/layout.scss */
+/* line 427, sass/layout.scss */
 .site-footer nav ul li {
   display: inline;
   margin-right: 20px;
 }
 
-/* line 437, sass/layout.scss */
+/* line 435, sass/layout.scss */
 .errorpage {
   text-align: center;
 }
-/* line 439, sass/layout.scss */
+/* line 437, sass/layout.scss */
 .errorpage h1 {
   font-size: 21px;
   font-weight: bold;
   margin-bottom: 25px;
 }
 
-/* line 446, sass/layout.scss */
+/* line 444, sass/layout.scss */
 a, a:active {
   outline: none;
 }
@@ -2007,7 +2007,16 @@ a, a:active {
   text-align: center;
   color: #808080;
 }
-/* line 147, sass/cart.scss */
+/* line 146, sass/cart.scss */
+.cart .forsale .item .desc .controls .inputs a:hover {
+  background: #f0f0f0;
+}
+/* line 149, sass/cart.scss */
+.cart .forsale .item .desc .controls .inputs a:active {
+  padding-top: 1px;
+  height: 21px;
+}
+/* line 154, sass/cart.scss */
 .cart .forsale .item .desc .controls .inputs .count {
   display: block;
   float: left;
@@ -2018,7 +2027,7 @@ a, a:active {
   border: none;
   text-align: center;
 }
-/* line 158, sass/cart.scss */
+/* line 165, sass/cart.scss */
 .cart .forsale .item .desc .controls .delete {
   letter-spacing: normal;
   word-spacing: normal;
@@ -2028,6 +2037,14 @@ a, a:active {
   font-family: kp_icons;
   text-decoration: none;
   color: #e2e2e2;
+}
+/* line 171, sass/cart.scss */
+.cart .forsale .item .desc .controls .delete:hover {
+  color: #c9c9c9;
+}
+/* line 174, sass/cart.scss */
+.cart .forsale .item .desc .controls .delete:active {
+  padding-top: 1px;
 }
 
 /* line 3, sass/login.scss */
