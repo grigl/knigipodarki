@@ -130,6 +130,8 @@ namespace :sync do
       product.supplier = supplier
       product.category_name = category_name      
       product.master.count_on_hand = count_on_hand
+      product.master.count_on_hand_add = 0
+      product.master.count_on_hand_add2 = 0
       product.save
     end  
     
