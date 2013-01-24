@@ -1304,13 +1304,14 @@ a, a:active {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 15px;
+  line-height: 1;
 }
-/* line 18, sass/brands.scss */
+/* line 19, sass/brands.scss */
 .brand article hgroup h2 {
   font-size: 21px;
 }
 
-/* line 26, sass/brands.scss */
+/* line 27, sass/brands.scss */
 .brands article {
   letter-spacing: normal;
   word-spacing: normal;
@@ -1319,23 +1320,23 @@ a, a:active {
   width: 270px;
   margin: 0 40px 45px 0;
 }
-/* line 30, sass/brands.scss */
+/* line 31, sass/brands.scss */
 .brands article a {
   color: #404040;
   text-decoration: none;
 }
-/* line 33, sass/brands.scss */
+/* line 34, sass/brands.scss */
 .brands article a:hover {
   text-decoration: underline;
 }
-/* line 37, sass/brands.scss */
+/* line 38, sass/brands.scss */
 .brands article h2 {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 44, sass/brands.scss */
+/* line 45, sass/brands.scss */
 .brands article ul li {
   font-style: italic;
   margin-bottom: 10px;
