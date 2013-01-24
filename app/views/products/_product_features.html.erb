@@ -14,7 +14,7 @@
       <% if @product.width.to_i > 0 && @product.height.to_i > 0 %>
         Формат — <%= @product.width.to_i %>x<%= @product.height.to_i %> мм<br>
       <% end %>
-      <% if  @product.weight %>
+      <% if  @product.weight.to_i > 0 %>
         Вес: <%= @product.weight.to_i %> г<br>
       <% end %>
       <% if @product.annotation %>
@@ -29,7 +29,7 @@
       <% if @product.width.to_i > 0 && @product.height.to_i > 0 %>
         Размер: <%= @product.width.to_i %>x<%= @product.height.to_i %> мм<br>
       <% end %>      
-      <% if @product.weight %>
+      <% if @product.weight.to_i > 0 %>
         Вес: <%= @product.weight.to_i %> г<br>
       <% end %>
       <% if @product.annotation %>
