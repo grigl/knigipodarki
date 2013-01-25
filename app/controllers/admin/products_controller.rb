@@ -11,6 +11,12 @@ class Admin::ProductsController < Admin::ResourceController
     end
   end
 
+  def delete_tag
+    id = params[:id]
+    tag_id = params[:tag_id]
+    result = ProductsTag.where(:product_id => id, :tag_id => tag_id).delete_all
+  end
+
   # override the destory method to set deleted_at value
   # instead of actually deleting the product.
   def destroy

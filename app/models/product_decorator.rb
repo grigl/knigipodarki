@@ -30,7 +30,8 @@ Product.class_eval do
   has_and_belongs_to_many :taxons
   belongs_to :shipping_category
 
-  has_and_belongs_to_many :tags
+  has_many :products_tags
+  has_many :tags, :through => :products_tags
   accepts_nested_attributes_for :tags, :allow_destroy => true, reject_if: :all_blank
 
   has_one :master,

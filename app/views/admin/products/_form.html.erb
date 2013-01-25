@@ -128,15 +128,28 @@
       <% end %>
       <h4>Тэги:</h4>
       <p>
-        <a id="add_tag_field"><img alt="Add" src="/images/admin/icons/add.png?1347284078" />Добавить тэг</a><br />
-        <div id="tags_fields">
-          <%= f.fields_for :tags do |tags_form| %>
-            <%= tags_form.text_field :name, class: 'tag_name_field' %>
-            <%= tags_form.check_box :_destroy %>
-            <%= tags_form.label :_destroy, "Удалить" %>
+      	<div>
+          <% @product.tags.each do|tag| %>
+          	<span id="tag_<%= tag.id %>">
+          	<%= tag.name %><a href="/admin/products/<%= @product.id %>/<%= tag.id %>/delete" tag_id="<%= tag.id %>" class="tag_delete"><img alt="Delete" src="/images/admin/icons/delete.png?1344242400"></a>
+          	</span>
           <% end %>
         </div>
+        <div id="tags_fields">
+        </div>      	
+        <a id="add_tag_field"><img alt="Add" src="/images/admin/icons/add.png?1347284078" />Добавить тэг</a><br />
         <script>
+          $('.tag_delete').click(function(e) {
+          	e.preventDefault();
+          	var tag_id = $(this).attr('tag_id');
+          	$.get(
+          		$(this).attr('href'),
+          		function (data) {
+          			$('#tag_' + tag_id).remove();
+          		}	
+          	);
+          	return false;
+          });
           $('#add_tag_field').click(function(e){
             e.preventDefault();
             var tagNumber = $('.tag_name_field').size();

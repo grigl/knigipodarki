@@ -27,6 +27,7 @@ Knigipodarki::Application.routes.draw do
   namespace :admin do
     match '/products/:id/new_tag_id' => 'tags#new_product_tag_id', as: 'new_product_tag_id'
     match 'products/publish' => 'products#publish', as: 'publish_product'
+    match '/products/:id/:tag_id/delete' => 'products#delete_tag', as: 'delete_tag'
 
     resources :banners
 
