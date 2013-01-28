@@ -24,6 +24,7 @@ class ProductsController < Spree::BaseController
       products_by_name = products.where('name LIKE ?', "%#{params[:keywords]}%")
       products_by_description = products.where('description LIKE ?', "%#{params[:keywords]}%")
       products_by_author = products.where('author LIKE ?', "%#{params[:keywords]}%")
+      products_by_sku = products.joins(:master).where('variants.sku LIKE ?', "%#{params[:keywords]}%")
 
       publishers_taxonomy = Taxonomy.where(name: 'Издательства').first
       publishers = Taxon.where(taxonomy_id = publishers_taxonomy.id).where('name LIKE ?', "%#{params[:keywords]}%")
@@ -51,6 +52,9 @@ class ProductsController < Spree::BaseController
       products_by_isbn.each do |product|
         products << product unless products.include?(product)
       end
+      products_by_sku.each do |product|
+        products << product unless products.include?(product)
+      end      
     end
 
     # sorting and order
