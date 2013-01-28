@@ -87,14 +87,14 @@
                   <% end %>
                 <% end %>
               </div>
-              <% if @product.on_hand > 0 %>
+              <% if @product.on_hand.to_i > 0 %>
                 <span class="stock">В наличии</span>
               <% else %>
                 <span class="stock">Нет в наличии</span>
               <% end %>
               <a href="/info#payment" class="payment">Способы оплаты и доставки</a>
-              <% if @product.on_hand %>
-	              <% if @product.on_hand or @product.on_hand_add or @product.on_hand_add2 %>                    
+              <% if @product.on_hand.to_i > 0 %>
+	              <% if @product.on_hand.to_i > 0 or @product.on_hand_add.to_i > 0 or @product.on_hand_add2.to_i > 0 %>                    
 	                <div class="offline-shops">
 	                  <span class="offline-shops-label">Также в <a href="/info#about">оффлайне</a>:</span>
 	                  <ul>
