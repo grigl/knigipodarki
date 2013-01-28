@@ -22,6 +22,7 @@ CheckoutController.class_eval do
 
       if @order.state == "complete" || @order.completed?
         OrderMailer.confirm_email(@order, current_user).deliver
+        OrderMailer.confirm_email_admin(@order, current_user).deliver
         flash[:notice] = I18n.t(:order_processed_successfully)
         flash[:commerce_tracking] = "nothing special"
         respond_with(@order, :location => completion_route)

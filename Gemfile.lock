@@ -56,7 +56,6 @@ GEM
     builder (2.1.2)
     cancan (1.6.4)
     chunky_png (1.2.7)
-    cocoon (1.1.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -219,7 +218,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoon
   compass-rails
   dynamic_form (~> 1.1.4)
   mail

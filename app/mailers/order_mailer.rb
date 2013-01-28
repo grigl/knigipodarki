@@ -8,10 +8,20 @@ class OrderMailer < ActionMailer::Base
     @user = user
     subject = (resend ? "[RESEND] " : "")
     subject += "КнигиПодарки. #{t('subject', :scope =>'order_mailer.confirm_email')} ##{order.number}"
-    mail(:to => [order.email, 'admin@devilmaydie.name'],
+    mail(:to => order.email,
          :subject => subject,
          :template_name => 'confirm')
   end
+  
+  def confirm_email_admin(order, user, resend=false)
+    @order = order
+    @user = user
+    subject = (resend ? "[RESEND] " : "")
+    subject += "КнигиПодарки. #{t('subject', :scope =>'order_mailer.confirm_email')} ##{order.number}"
+    mail(:to => 'admin@devilmaydie.name',
+         :subject => subject,
+         :template_name => 'confirm')
+  end  
 
   def cancel_email(order, resend=false)
     @order = order
