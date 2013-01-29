@@ -62,4 +62,18 @@ Order.class_eval do
     OrderMailer.cancel_email(self).deliver
     OrderMailer.cancel_admin_email(self).deliver
   end 
+  
+  def update_shipment_state
+    self.shipment_state = shipments[0].state
+    self.shipment_state = "backorder" if backordered?
+
+    if old_shipment_state = self.changed_attributes["shipment_state"]
+      self.state_events.create({
+        :previous_state => old_shipment_state,
+        :next_state     => self.shipment_state,
+        :name           => "shipment" ,
+        :user_id        => (User.respond_to?(:current) && User.current && User.current.id) || self.user_id
+      })
+    end
+  end  
 end

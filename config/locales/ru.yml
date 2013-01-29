@@ -74,3 +74,10 @@ ru:
   name_or_sku: Наименование или артикул
   manage_relation_types: Управление взаимосвязями товаров.
   no_relation_types: Вам необходимо сначала настроить Взаимосвязи товаров
+  shipment_states:
+    pending: Ожидается поступление денег 
+    ready: Заказ готов
+    assemble: Собирается
+    assemble_done: Собран
+    ready_to_ship: Готов к выдаче
+    shipped: Отправлен
