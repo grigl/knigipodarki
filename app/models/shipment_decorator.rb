@@ -1,4 +1,6 @@
 Shipment.class_eval do
+  after_update :send_email, :if => :column_state_changed?
+  
   scope :shipped, where(:state => 'shipped')
   scope :ready, where(:state => 'ready')
   scope :pending, where(:state => 'pending')
@@ -26,4 +28,7 @@ Shipment.class_eval do
     order.payment_state == "balance_due" ? "pending" : "ready"
   end  
   
+  def send_email
+    OrderMailer.status_change_email(self.order).deliver
+  end
 end

@@ -38,4 +38,12 @@ class OrderMailer < ActionMailer::Base
     mail(:to => 'support@knigipodarki.ru',
          :subject => subject)         
   end  
+  
+  def status_change_email(order, resend=false)
+    @order = order
+    subject = (resend ? "[RESEND] " : "")
+    subject += "КнигиПодарки. Изменился статус заказа ##{order.number}"
+    mail(:to => order.email,
+         :subject => subject)             
+  end  
 end
