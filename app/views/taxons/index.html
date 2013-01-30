@@ -13,7 +13,7 @@
             <!-- item -->
             <article>
               <h2><%= link_to brand.name, brand.permalink %></h2>
-                <% branch_categoreis_sorted2 = [] %>
+                <% branch_categories_sorted2 = [] %>
                 <% brand_categories_sorted = brand_categories(brand).sort_by { |v| v[:name] } %>
                 <% brand_categories_sorted.each do |category| %>
                   <!-- <li><%= link_to category.name, crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end) %></li> -->
