@@ -10,9 +10,7 @@ module ApplicationHelper
 
   def get_subcategory(params)
     permalink = '/' + params[:taxonomy] + '/' + params[:taxon]
-    result = Taxon.find_by_permalink(permalink)
-    result.children = result.children.sort_by { |v| v[:name] }
-    return result
+    Taxon.find_by_permalink(permalink)
   end
 
   def brand_categories(brand, category = nil)

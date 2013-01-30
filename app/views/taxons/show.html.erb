@@ -39,7 +39,8 @@
               <%= link_to 'Все', get_subcategory(params).permalink %>
           <% end %>
 
-          <% get_subcategory(params).children.each do |taxon| %>
+		  <% _subcats = get_subcategory(params).children.sort_by { |v| v[:name] } %>
+          <% _subcats.each do |taxon| %>
               <% if request.path == taxon.permalink %>
                 <li class="current">
               <% else %>
