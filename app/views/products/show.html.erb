@@ -17,7 +17,8 @@
   <% if @product.category_object && @product.subcategory_object.present? %>
     <ul>
       <li><%= link_to 'Все', @product.subcategory_object.parent.permalink %></li>
-      <% @product.category_object.children.each do |taxon| %>
+      <% _subcat = @product.category_object.children.sort_by { |v| v[:name] } %>
+      <% _subcat.each do |taxon| %>
           <% if @product.subcategory == taxon.name %>
             <li class="current">
           <% else %>
