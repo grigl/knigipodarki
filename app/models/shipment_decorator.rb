@@ -1,6 +1,6 @@
 Shipment.class_eval do
-  after_update :send_email, :if => :column_state_changed?
-  
+  after_update :send_email, :if => :state_changed?
+ 
   scope :shipped, where(:state => 'shipped')
   scope :ready, where(:state => 'ready')
   scope :pending, where(:state => 'pending')
