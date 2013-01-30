@@ -14,7 +14,7 @@
         <article>
           <h2><%= link_to brand.name, brand.permalink %></h2>
           <ul>
-            <% links = [] %>
+            <% links = Hash.new %>
             <% brand_categories(brand).each do |category| %>
             <!-- <li><%= link_to category.name, crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end) %></li> -->
             <% if category.children.present? %>
