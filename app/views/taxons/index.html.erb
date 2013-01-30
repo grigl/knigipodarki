@@ -1,0 +1,47 @@
+<!-- .content -->
+<% cache("taxons_" + @taxon.id.to_s, :expires_in => 3.hours) do %>
+<section class="site-content">
+  <div class="white-wrap">
+    <div class="wrap">
+      <% if @taxon.children.empty? %>
+      Ничего не найдено.
+      <% else %>
+      <!-- .brands -->
+      <section class="brands">
+
+        <% @taxon.children_sorted.each do |brand| %>
+        <!-- item -->
+        <article>
+          <h2><%= link_to brand.name, brand.permalink %></h2>
+          <ul>
+            <% links = [] %>
+            <% brand_categories(brand).each do |category| %>
+            <!-- <li><%= link_to category.name, crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end) %></li> -->
+            <% if category.children.present? %>
+            	<% brand_categories(brand, category).each do |subcategory| %>
+            		<% if subcategory.id != 2 %>
+            			<% links[subcategory.name] = link_to subcategory.name,
+            												 crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end, subcategory: subcategory.permalink_end) %>
+            		<% end %>
+            	<% end %>
+            <% end %>
+          <% end %>
+          <% links.sort.map do |key,value|%>
+          	<%= value %>
+          <% end %>
+          </ul>
+        </article>
+        <!-- /item -->
+        <% end %>
+
+      </section>
+      <!-- /.brands -->
+      <% end %>
+
+    </div>
+    <!-- /.wrap -->
+  </div>
+  <!-- /.white-wrap -->
+</section>
+<% end %>
+<!-- /.content -->
