@@ -29,6 +29,8 @@ Shipment.class_eval do
   end  
   
   def send_email
-    OrderMailer.status_change_email(self.order).deliver
+    if self.state == 'ready_to_shop' or self.state == 'shipped'
+      OrderMailer.status_change_email(self.order).deliver      
+    end
   end
 end
