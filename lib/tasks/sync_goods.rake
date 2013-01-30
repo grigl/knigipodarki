@@ -171,5 +171,17 @@ namespace :sync do
       product.save      
     end
       
+    products = Product.where("BINARY external_id IN (?)", found_ids)
+    products.each do|product|
+      product.deleted_at = nil
+      
+      product.variants.each do |v|
+        v.deleted_at = nil
+        v.save
+      end
+  
+      product.save      
+    end      
+      
   end
 end
