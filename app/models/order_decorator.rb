@@ -64,16 +64,20 @@ Order.class_eval do
   end 
   
   def update_shipment_state
-    self.shipment_state = shipments[0].state
-    self.shipment_state = "backorder" if backordered?
-
-    if old_shipment_state = self.changed_attributes["shipment_state"]
-      self.state_events.create({
-        :previous_state => old_shipment_state,
-        :next_state     => self.shipment_state,
-        :name           => "shipment" ,
-        :user_id        => (User.respond_to?(:current) && User.current && User.current.id) || self.user_id
-      })
+    if shipments.empty?
+      self.shipment_state = "pending"
+    else
+      self.shipment_state = shipments[0].state
+      self.shipment_state = "backorder" if backordered?
+  
+      if old_shipment_state = self.changed_attributes["shipment_state"]
+        self.state_events.create({
+          :previous_state => old_shipment_state,
+          :next_state     => self.shipment_state,
+          :name           => "shipment" ,
+          :user_id        => (User.respond_to?(:current) && User.current && User.current.id) || self.user_id
+        })
+      end      
     end
   end  
 end

@@ -13,24 +13,21 @@
             <!-- item -->
             <article>
               <h2><%= link_to brand.name, brand.permalink %></h2>
-              <ul>
+                <% branch_categoreis_sorted2 = [] %>
                 <% brand_categories_sorted = brand_categories(brand).sort_by { |v| v[:name] } %>
                 <% brand_categories_sorted.each do |category| %>
                   <!-- <li><%= link_to category.name, crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end) %></li> -->
                   <% if category.children.present? %>
-                    <ul>
-                    <% branch_categories_sorted2 = brand_categories(brand, category).sort_by { |v| v[:name] } %>
+                    <% branch_categories_sorted2 += brand_categories(brand, category).sort_by { |v| v[:name] } %>
+                  <% end %>
+                <% end %>
                     <% branch_categories_sorted2.each do |subcategory| %>
                       <% if subcategory.id != 2 %>
                       <li><%= link_to subcategory.name, 
                                       crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end, subcategory: subcategory.permalink_end) %>
                       </li>
                       <% end %>
-                    <% end %>
-                    </ul>
-                  <% end %>
-                <% end %>
-              </ul>
+                    <% end %>                
             </article>
             <!-- /item -->
             <% end %>
