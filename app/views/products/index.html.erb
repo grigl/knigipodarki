@@ -6,11 +6,6 @@
 
       <% if @products.empty? %>
         <div style="margin-bottom: 25px; text-align: center; font-size: 21px; font-weight: bold;"><%= t(:no_products_found) %></div>        
-          <% if params[:scope] %>
-            <h2><%= I18n.t("products_#{params[:scope]}") %></h2>
-          <% end %>
-
-          <%= render "shared/products_sorting", :products => @products %>
         
         <% if @tags && !@tags.empty? %>
           <aside class="tags">
