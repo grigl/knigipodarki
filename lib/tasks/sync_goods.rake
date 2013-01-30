@@ -132,6 +132,9 @@ namespace :sync do
       product.master.count_on_hand = count_on_hand
       product.master.count_on_hand_add = ''
       product.master.count_on_hand_add2 = ''
+      product.sku = sku
+      product.permalink = sku
+      product.isbn = sku      
       product.save
     end  
     
