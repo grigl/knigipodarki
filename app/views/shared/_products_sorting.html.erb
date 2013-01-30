@@ -30,24 +30,16 @@
     <ul>
       <li>Материал:</li>
       <li>
-      	<% if params[:material] == 'all' %><b><% end %>
-        <%= link_to 'Все', request.path + "?material=all" + sort + order + page + keywords %>
-        <% if params[:material] == 'all' %></b><% end %>
+        <%= link_to 'Все', request.path + "?material=all" + sort + order + page + keywords, class: params[:material] == 'all' ? 'active' : 'none' %>
       </li>
       <li>
-      	<% if params[:material] == 'pvh' %><b><% end %>
-        <%= link_to 'ПВХ', request.path + "?material=pvh" + sort + order + page + keywords %>
-        <% if params[:material] == 'pvh' %></b><% end %>
+        <%= link_to 'ПВХ', request.path + "?material=pvh" + sort + order + page + keywords, class: params[:material] == 'pvh' ? 'active' : 'none' %>
       </li>
       <li>
-      	<% if params[:material] == 'textile' %><b><% end %>
-        <%= link_to 'текстиль', request.path + "?material=textile" + sort + order + page + keywords %>
-        <% if params[:material] == 'textile' %></b><% end %>
+        <%= link_to 'текстиль', request.path + "?material=textile" + sort + order + page + keywords, class: params[:material] == 'textile' ? 'active' : 'none' %>
       </li>
       <li>
-      	<% if params[:material] == 'leather' %><b><% end %>
-        <%= link_to 'кожа', request.path + "?material=leather" + sort + order + page + keywords %>
-        <% if params[:material] == 'leather' %></b><% end %>
+        <%= link_to 'кожа', request.path + "?material=leather" + sort + order + page + keywords, class: params[:material] == 'leather' ? 'active' : 'none' %>
       </li>
     </ul>
   <% end %>
