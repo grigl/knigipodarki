@@ -45,7 +45,8 @@
                   <td></td>
                   <% end %>
                   <td>
-				  <% if order.payment_method.is_a?(PaymentMethod::SberBankInvoice) %>
+                  <% @order = order %>
+				  <% if @order.payment_method.is_a?(PaymentMethod::SberBankInvoice) %>
 				  	<%= link_to 'Скачать', orders_sberbank_invoice_path %>
 				  <% end %>                  	
                   </td>                  
