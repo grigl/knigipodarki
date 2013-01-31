@@ -2,9 +2,7 @@
 <div class="formset">
   <!-- .fields -->
     <div class="fields">
-      <% if @address.user_id.nil? %>
-        <%= form.hidden_field :user_id, value: current_user.id %>
-      <% end %>
+      <%= form.hidden_field :user_id, value: current_user.id %>
 
       <%= render 'shared/field_with_error', form: form, name: :lastname, 
                  label: 'Фамилия', class_name: 'required', errors: @address.errors %>
