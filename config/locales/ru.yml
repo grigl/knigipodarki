@@ -76,7 +76,7 @@ ru:
   no_relation_types: Вам необходимо сначала настроить Взаимосвязи товаров
   shipment_states:
     pending: Ожидается поступление денег 
-    ready: Заказ готов
+    ready: Заказ оформлен
     assemble: Собирается
     assemble_done: Собран
     ready_to_ship: Готов к выдаче
