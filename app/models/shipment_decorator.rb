@@ -1,5 +1,5 @@
 Shipment.class_eval do
-  after_update :send_email, :if => :state_changed?
+  after_save :send_email, :if => :state_changed?
  
   scope :shipped, where(:state => 'shipped')
   scope :ready, where(:state => 'ready')
