@@ -60,7 +60,7 @@ CheckoutController.class_eval do
     else
       #@order.bill_address.update_attribute(:user_id, current_user.try(:id))
     end
-    @order.ship_address.update_attribute(:user_id, current_user.try(:id))
+    #@order.ship_address.update_attribute(:user_id, current_user.try(:id))
   end
 
   private
