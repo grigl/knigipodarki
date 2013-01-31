@@ -50,6 +50,19 @@ CheckoutController.class_eval do
     end
   end
 
+  def normalize_addresses
+    return unless params[:state] == "address" && @order.bill_address_id && @order.ship_address_id
+    @order.bill_address.reload
+    @order.ship_address.reload
+    if @order.bill_address_id != @order.ship_address_id && @order.bill_address.same_as?(@order.ship_address)
+      @order.bill_address.destroy
+      @order.update_attribute(:bill_address_id, @order.ship_address.id)
+    else
+      @order.bill_address.update_attribute(:user_id, current_user.try(:id))
+    end
+    #@order.ship_address.update_attribute(:user_id, current_user.try(:id))
+  end
+
   private
 
   def redirect_to_robokassa_form_if_needed
