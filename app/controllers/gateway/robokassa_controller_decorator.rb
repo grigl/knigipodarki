@@ -39,6 +39,7 @@ Gateway::RobokassaController.class_eval do
       OrderMailer.confirm_email(@order, current_user).deliver
       OrderMailer.confirm_email_admin(@order, current_user).deliver
       session[:order_id] = nil
+      flash[:order_complete] = true
       redirect_to order_path(@order), :notice => I18n.t("payment_success")
     else
       flash[:error] =  t("payment_fail")

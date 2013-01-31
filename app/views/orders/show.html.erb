@@ -3,7 +3,15 @@
   <section class="site-content">
     <div class="white-wrap">
       <div class="wrap">
-        
+        <% if flash[:order_complete]%>
+        <div>
+        	<h1 style="margin-bottom: 250px;">Спасибо за заказ!</h1>
+        	<a href="/">Вернуться в магазин</a>
+			<% if @order.payment_method.is_a?(PaymentMethod::SberBankInvoice) %>
+				<br /><%= link_to t('print_sberbank_invoice'), orders_sberbank_invoice_path %>
+			<% end %>
+        </div>
+        <% else %>
         <% if current_user %>
         <!-- .account -->
         <section class="account">
@@ -103,6 +111,7 @@
         <!-- /.order -->
 
       </div>
+      <% end %>
       <!-- /.wrap -->
     </div>
     <!-- /.white-wrap -->
