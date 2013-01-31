@@ -4,7 +4,7 @@
     <div class="white-wrap">
       <div class="wrap">
         <% if flash[:order_complete]%>
-        <div>
+        <div class="about" style="text-align: center;">
         	<h1 style="margin-bottom: 250px;">Спасибо за заказ!</h1>
         	<a href="/">Вернуться в магазин</a>
 			<% if @order.payment_method.is_a?(PaymentMethod::SberBankInvoice) %>
