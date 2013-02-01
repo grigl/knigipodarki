@@ -11,17 +11,17 @@
         <% @addresses.each_with_index do |address, idx| %>
         <fieldset>
           <%= form.radio_button "ship_address_id", address.id, :checked => (idx == 0) %> 
-          <%= form.label "order_ship_address_id" + address.id.to_s, address.to_s %>
+          <%= form.label ["ship_address_id", address.id], address.to_s %>
           </fieldset>
         <% end %>
         <fieldset>
           <%= form.radio_button "ship_address_id", 0, class: 'new_address_radio' %>
-          <%= form.label "order_ship_address_id_0", t('other_address') %>
+          <%= form.label ["ship_address_id", 0], t('other_address') %>
         </fieldset>
       <% end %>
   </div>
 
-  <%= form.fields_for :ship_address do |ship_form| %>  
+  <%= form.fields_for :ship_address do |ship_form| %>
     <div class="all-fields" <%= "style=display:none;" if @addresses.present? && @order.ship_address.errors.empty? %>>
     <!-- .fields -->
     <div class="fields">
