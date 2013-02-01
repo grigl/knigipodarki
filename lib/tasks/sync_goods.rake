@@ -65,9 +65,7 @@ namespace :sync do
       end
     end
     
-    config = XmlSimple.xml_in(xml)
-        
-    found_ids = []    
+    config = XmlSimple.xml_in(xml)  
         
     main_store = []
     second_store = []
@@ -87,12 +85,13 @@ namespace :sync do
       end
     end  
     
-    main_store["items"][0]["item"].each do|item|
+    all_items = main_store["items"][0]["item"] + second_store["items"][0]["item"] + third_store["items"][0]["item"]
+    
+    all_items.each do|item|
       external_id = item["id"][0]
       sku = item["code"][0]
       name = item["modelg"][0]
       supplier = item["firmag"][0]
-      found_ids.push(external_id)
       groupg = ''
       typeg = ''
       if item["groupg"].count
@@ -129,18 +128,39 @@ namespace :sync do
       product.subname = name
       product.supplier = supplier
       product.category_name = category_name      
-      product.master.count_on_hand = count_on_hand
-      product.master.count_on_hand_add = ''
-      product.master.count_on_hand_add2 = ''
+      product.master.count_on_hand = 0
+      product.master.count_on_hand_add = 0
+      product.master.count_on_hand_add2 = 0
       product.sku = sku
       product.permalink = sku
       product.isbn = sku      
       product.save
     end  
+
+    found_ids = []
+    main_store["items"][0]["item"].each do|item|
+      external_id = item["id"][0]
+      count_on_hand = item["count"][0].to_i
+      found_ids.push(external_id)
+          
+      product = Product.where("BINARY external_id = ?", external_id).limit(1)
+      if not product.empty?
+        product = product[0]
+        product.master.count_on_hand = count_on_hand
+        product.save
+      end
+    end
+    products = Product.where("BINARY external_id NOT IN (?)", found_ids)
+    products.each do|product|
+      product.master.count_on_hand = 0  
+      product.save      
+    end         
     
+    found_ids = []
     second_store["items"][0]["item"].each do|item|
       external_id = item["id"][0]
       count_on_hand_add = item["count"][0].to_i
+      found_ids.push(external_id)
           
       product = Product.where("BINARY external_id = ?", external_id).limit(1)
       if not product.empty?
@@ -148,11 +168,18 @@ namespace :sync do
         product.master.count_on_hand_add = count_on_hand_add
         product.save
       end
-    end      
+    end   
+    products = Product.where("BINARY external_id NOT IN (?)", found_ids)
+    products.each do|product|
+      product.master.count_on_hand_add = 0  
+      product.save      
+    end       
     
+    found_ids = []
     third_store["items"][0]["item"].each do|item|
       external_id = item["id"][0]
       count_on_hand_add = item["count"][0].to_i
+      found_ids.push(external_id)
           
       product = Product.where("BINARY external_id = ?", external_id).limit(1)
       if not product.empty?
@@ -161,30 +188,10 @@ namespace :sync do
         product.save
       end
     end   
-    
     products = Product.where("BINARY external_id NOT IN (?)", found_ids)
     products.each do|product|
-      product.deleted_at = Time.now()
-      
-      product.variants.each do |v|
-        v.deleted_at = Time.now()
-        v.save
-      end
-  
-      product.save      
-    end
-      
-    products = Product.where("BINARY external_id IN (?)", found_ids)
-    products.each do|product|
-      product.deleted_at = nil
-      
-      product.variants.each do |v|
-        v.deleted_at = nil
-        v.save
-      end
-  
+      product.master.count_on_hand_add2 = 0  
       product.save      
     end      
-      
   end
 end
