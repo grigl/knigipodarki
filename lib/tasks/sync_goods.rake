@@ -150,11 +150,11 @@ namespace :sync do
         product.save
       end
     end
-    products = Product.where("BINARY external_id NOT IN (?)", found_ids)
-    products.each do|product|
-      product.master.count_on_hand = 0  
-      product.save      
-    end         
+    #products = Product.where("BINARY external_id NOT IN (?)", found_ids)
+    #products.each do|product|
+    #  product.master.count_on_hand = 0  
+    #  product.save      
+    #end         
     
     found_ids = []
     second_store["items"][0]["item"].each do|item|
@@ -169,11 +169,11 @@ namespace :sync do
         product.save
       end
     end   
-    products = Product.where("BINARY external_id NOT IN (?)", found_ids)
-    products.each do|product|
-      product.master.count_on_hand_add = 0  
-      product.save      
-    end       
+    #products = Product.where("BINARY external_id NOT IN (?)", found_ids)
+    #products.each do|product|
+    #  product.master.count_on_hand_add = 0  
+    #  product.save      
+    #end       
     
     found_ids = []
     third_store["items"][0]["item"].each do|item|
@@ -188,10 +188,10 @@ namespace :sync do
         product.save
       end
     end   
-    products = Product.where("BINARY external_id NOT IN (?)", found_ids)
-    products.each do|product|
-      product.master.count_on_hand_add2 = 0  
-      product.save      
-    end      
+    #products = Product.where("BINARY external_id NOT IN (?)", found_ids)
+    #products.each do|product|
+    #  product.master.count_on_hand_add2 = 0  
+    #  product.save      
+    #end      
   end
 end
