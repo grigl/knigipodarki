@@ -59,11 +59,7 @@ Order.class_eval do
   end
  
   def payment_method
-    if payment and payment.payment_method
-      payment.payment_method
-    else
-      available_payment_methods.last
-    end
+    return payments.last
   end 
  
   def after_cancel
