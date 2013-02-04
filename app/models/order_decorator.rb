@@ -58,6 +58,14 @@ Order.class_eval do
     })
   end
  
+  def payment_method
+    if payment and payment.payment_method
+      payment.payment_method
+    else
+      available_payment_methods.last
+    end
+  end 
+ 
   def after_cancel
     OrderMailer.cancel_email(self).deliver
     OrderMailer.cancel_admin_email(self).deliver
