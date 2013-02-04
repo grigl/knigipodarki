@@ -3,6 +3,15 @@ OrdersController.class_eval do
 
   helper :products
 
+  def sberbank_invoice
+    @order = Order.find_by_number(params[:id])
+    render_404 unless @order
+    render_404 unless @order.payment_method_id
+    render_404 unless @order.payment_method.is_a?(PaymentMethod::SberBankInvoice)
+    @preferences = @order.payment_method.preferences
+    render :layout => false
+  end
+
   def index
     render_404
   end
@@ -145,21 +154,6 @@ OrdersController.class_eval do
 
   def accurate_title
     @order && @order.completed? ? "#{Order.human_name} #{@order.number}" : I18n.t(:shopping_cart)
-  end
-  
-  def sberbank_invoice
-    @order = Order.find_by_number(params[:id])
-    if not @order
-      render_404
-    end
-    if not @order.payment_method_id
-      render_404
-    end
-    if not @order.payment_method.is_a?(PaymentMethod::SberBankInvoice)
-      render_404
-    end
-    @preferences = @order.payment_method.preferences
-    render :layout => false
   end
   
 end
