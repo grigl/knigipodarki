@@ -87,6 +87,7 @@ namespace :sync do
     
     all_items = main_store["items"][0]["item"] + second_store["items"][0]["item"] + third_store["items"][0]["item"]
     
+    Variants.update_all("count_on_hand = 0, count_on_hand_add = 0, count_on_hand_add2 = 0")
     all_items.each do|item|
       external_id = item["id"][0]
       sku = item["code"][0]
