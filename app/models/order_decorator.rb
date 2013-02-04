@@ -1,4 +1,8 @@
 Order.class_eval do
+  def payment
+    payments.last
+  end 
+  
   def add_variant(variant, quantity = 1)
     current_item = contains?(variant)
 
@@ -57,10 +61,6 @@ Order.class_eval do
       :user_id        => (User.respond_to?(:current) && User.current.try(:id)) || self.user_id
     })
   end
- 
-  def payment_method
-    return payments.last
-  end 
  
   def after_cancel
     OrderMailer.cancel_email(self).deliver
