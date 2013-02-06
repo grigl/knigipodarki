@@ -1,5 +1,5 @@
 <% if not params[:sort] and not params[:order] %>
-	<% params[:sort] = 'created_at' %>
+	<% params[:sort] = 'id' %>
 	<% params[:order] = 'asc' %>
 <% end %>
 <% params[:page] ? (page = "&page=#{params[:page]}") : (page = '') %>
