@@ -25,6 +25,9 @@ class TaxonsController < Spree::BaseController
     products = @taxon.all_products.select {|product| !product.deleted_at && product.is_published }
 
     # sorting and order
+    if params[:sort] == 'created_at' 
+      params[:sort] = 'id'
+    end    
     if params[:sort] 
       if params[:order] == 'DESC'
         products = products.sort_by! { |product| product.try(params[:sort]) }.reverse
@@ -33,9 +36,9 @@ class TaxonsController < Spree::BaseController
       end
     else
       if params[:order] == 'DESC'
-        products = products.sort_by! { |product| product.created_at }.reverse
+        products = products.sort_by! { |product| product.id }.reverse
       else
-        products = products.sort_by! { |product| product.created_at }
+        products = products.sort_by! { |product| product.id }
       end
     end
 
