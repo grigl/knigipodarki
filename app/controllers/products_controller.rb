@@ -63,9 +63,9 @@ class ProductsController < Spree::BaseController
     end
     if params[:sort] 
       if params[:order] == 'DESC'
-        products = products.sort_by! { |product| [product.try(params[:sort]), product.id] }.reverse
+        products = products.sort_by! { |product| product.try(params[:sort]) }.reverse
       else
-        products = products.sort_by! { |product| [product.try(params[:sort]), product.id] }
+        products = products.sort_by! { |product| product.try(params[:sort]) }
       end
     end
 
