@@ -12,7 +12,7 @@ class ProductsController < Spree::BaseController
 
   def index
     @tags = Tag.all.select {|tag| tag.products.not_deleted.present? }
-    products = Product.order('created_at DESC').not_deleted.published
+    products = Product.order('created_at DESC, id ASC').not_deleted.published
     
     # scopes
     if params[:scope] 
