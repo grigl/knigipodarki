@@ -11,6 +11,7 @@
   </thead>
   <tbody>
     <% product.relations.each do |relation| %>
+      <% if relation.related_to %>
       <tr id="<%= dom_id relation %>">
         <td><%= relation.related_to.name %></td>
         <% if false #Spree::Extension.descendants.map(&:to_s).include? "AutomaticCouponsExtension" %>
@@ -21,6 +22,7 @@
           <%= link_to_delete relation, {:url => '/admin/products/'+relation.relatable_id.to_s+'/relations/'+relation.id.to_s} %>
         </td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
