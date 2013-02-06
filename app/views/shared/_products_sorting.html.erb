@@ -21,7 +21,7 @@
     </li>
     <li>
       <%= link_to 'по новизне', request.path + '?sort=created_at' + order + page + keywords + material, 
-          class: params[:order] && params[:sort] == 'created_at' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %>
+          class: params[:order] && params[:sort] == 'id' ? (params[:order] == 'ASC' ? 'up' : 'down') : 'none' %>
     </li>
   </ul>
 
