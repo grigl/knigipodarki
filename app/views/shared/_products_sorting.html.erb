@@ -1,6 +1,6 @@
 <% if not params[:sort] and not params[:order] %>
-	<% params[:sort] = 'id' %>
-	<% params[:order] = 'asc' %>
+	<% params[:sort] = 'ID' %>
+	<% params[:order] = 'DESC' %>
 <% end %>
 <% params[:page] ? (page = "&page=#{params[:page]}") : (page = '') %>
 <% order = "&order=#{!params[:order] ? 'DESC' : params[:order] == 'DESC' ? 'ASC' : 'DESC'}" %>
