@@ -27,7 +27,10 @@ class TaxonsController < Spree::BaseController
     # sorting and order
     if params[:sort] == 'created_at' 
       params[:sort] = 'id'
-    end    
+    end
+    if not params[:order]
+      params[:order] = 'DESC'
+    end
     if params[:sort] 
       if params[:order] == 'DESC'
         products = products.sort_by! { |product| product.try(params[:sort]) }.reverse
