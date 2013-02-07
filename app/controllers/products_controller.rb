@@ -58,7 +58,7 @@ class ProductsController < Spree::BaseController
     end
 
     # sorting and order
-    if params[:sort] == 'created_at' 
+    if params[:sort] == 'created_at' or not params[:sort]
       params[:sort] = 'id'
     end
     if not params[:order]
