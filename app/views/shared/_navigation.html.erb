@@ -1,42 +1,44 @@
 <!-- .direction-nav -->
   <nav class="direction-nav">
-    <ul>
+    <table>
+   	<tr>
       <% if params[:controller] == 'products' && params[:action] == 'index' %>
-        <li class="current">
+        <td class="current">
       <% else %>
-        <li>
+        <td>
       <% end %>
         <%= link_to 'Все', products_url %>
-      </li>
+      	</td>
 
       <% all_categories.each do |taxon| %>
         <% if params[:taxonomy] && params[:taxon] && '/' + params[:taxonomy] + '/' + params[:taxon] == taxon.permalink %>
-          <li class="current">
+          <td class="current">
         <% elsif @product && @product.category == taxon.name %>
-          <li class="current">  
+          <td class="current">  
         <% else %>
-          <li>
+          <td>
         <% end %>
           <%= link_to taxon.name, taxon.permalink %>
-        </li>
+        </td>
       <% end %>
 
       <% if params[:taxonomy] && '/' + params[:taxonomy] == '/publishers' %>
-        <li class="publishers current">
+        <td class="publishers current">
       <% else %>
-        <li class="publishers">
+        <td class="publishers">
       <% end %>
         <%= link_to 'Издательства', '/publishers' %>
-      </li>
+      </td>
 
       <% if params[:taxonomy] && '/' + params[:taxonomy] == '/designers' %>
-        <li class="designers current">
+        <td class="designers current">
       <% else %>
-        <li class="designers">
+        <td class="designers">
       <% end %>
         <%= link_to 'Дизайнеры', '/designers' %>
-      </li>
-    </ul>
+      </td>
+      </tr>
+    </table>
   </nav>
 <!-- /.direction-nav -->
 
