@@ -47,7 +47,7 @@
                   <td>
                   <% @order = order %>
 				  <% if @order.payment_method.is_a?(PaymentMethod::SberBankInvoice) %>
-				  	<%= link_to 'Скачать', :controller=>"orders", :action=>"sberbank_invoice", :id => @order %>
+				  	<%= link_to 'Скачать', :controller=>"orders", :action=>"sberbank_invoice", :id => @order, :target => "_blank" %>
 				  <% end %>                  	
                   </td>                  
                 </tr>

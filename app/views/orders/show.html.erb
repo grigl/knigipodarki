@@ -8,7 +8,7 @@
         	<h1 style="margin-bottom: 150px;">Спасибо за заказ!</h1>
         	<a href="/">Вернуться в магазин</a>
 			<% if @order.payment_method.is_a?(PaymentMethod::SberBankInvoice) %>
-				<br /><%= link_to t('print_sberbank_invoice'), orders_sberbank_invoice_path %>
+				<br /><%= link_to t('print_sberbank_invoice'), orders_sberbank_invoice_path, :target => "_blank" %>
 			<% end %>
         </div>
         <% else %>
@@ -54,7 +54,7 @@
                   <% end %>
                   <td>
 				  <% if @order.payment_method.is_a?(PaymentMethod::SberBankInvoice) %>
-				  	<%= link_to 'Скачать', :controller=>"orders", :action=>"sberbank_invoice", :id => @order %>
+				  	<%= link_to 'Скачать', :controller=>"orders", :action=>"sberbank_invoice", :id => @order, :target => "_blank" %>
 				  <% end %>                  	
                   </td>
                 </tr>
