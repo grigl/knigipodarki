@@ -39,7 +39,7 @@
 	$(document).ready(function() {
 		$('.fancybox').live('click',function(event){
 			event.preventDefault();
-			$.fancybox({'href': imageSrc});
+			$.fancybox({'href': $(this).attr('href')});
 		})
 	});
 </script>
