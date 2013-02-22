@@ -37,7 +37,10 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.fancybox').fancybox();
+		$('.fancybox').live('click',function(event){
+			event.preventDefault();
+			$.fancybox({'href': imageSrc});
+		})
 	});
 </script>
 
