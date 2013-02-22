@@ -128,7 +128,7 @@ var ProductImages = function() {
     var imageSrc = $(this).attr('href');
     var orignSrc = $(this).attr('href_orig');
     $('#product_image').attr('src', imageSrc);
-    $('#fancyboxmaster').attr('src', originSrc);
+    $('#fancyboxmaster').attr('href', originSrc);
   });
 }
 
