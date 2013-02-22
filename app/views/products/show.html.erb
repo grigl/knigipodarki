@@ -54,7 +54,7 @@
           <!-- product image -->
           <figure>
             <% unless @product.images.empty? %>
-              <a href="<%= @product.images.first.attachment.url(:original) %>" class="fancybox"><%= image_tag @product.images.first.attachment.url(:large), id: 'product_image' %></a>
+              <a href="<%= @product.images.first.attachment.url(:original) %>" class="fancybox" id="fancyboxmaster"><%= image_tag @product.images.first.attachment.url(:large), id: 'product_image' %></a>
             <% else %>
               <%= image_tag '/images/noimage/one_noimage.png' %>
             <% end %>
@@ -62,7 +62,7 @@
             <% unless @product.images.empty? %>
               <ul>
                 <% @product.images.each do |image| %>
-                  <li><a href="<%= image.attachment.url(:large) %>" class="product_image_thumb"><%= image_tag image.attachment.url(:mini) %></a></li>
+                  <li><a href="<%= image.attachment.url(:large) %>" href_orig="<%= image.attachment.url(:original) %>" class="product_image_thumb"><%= image_tag image.attachment.url(:mini) %></a></li>
                 <% end %>
               </ul>
             <% end %>

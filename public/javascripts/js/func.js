@@ -126,7 +126,9 @@ var ProductImages = function() {
   $('.product_image_thumb').live('click', function(e){
     e.preventDefault();
     var imageSrc = $(this).attr('href');
+    var orignSrc = $(this).attr('href_orig');
     $('#product_image').attr('src', imageSrc);
+    $('#fancyboxmaster').attr('src', originSrc);
   });
 }
 
