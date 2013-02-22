@@ -32,6 +32,14 @@
   </nav>
 <% end %>
 
+<script type="text/javascript" src="/fancybox/jquery.fancybox.js?v=2.1.4"></script>
+<link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.fancybox').fancybox();
+</script>
+
 <!-- .content -->
 <div class="site-content-wrap">
   <section class="site-content">
@@ -45,7 +53,7 @@
           <!-- product image -->
           <figure>
             <% unless @product.images.empty? %>
-              <%= image_tag @product.images.first.attachment.url(:large), id: 'product_image' %>
+              <a href="" class="fancybox"><%= image_tag @product.images.first.attachment.url(:large), id: 'product_image' %></a>
             <% else %>
               <%= image_tag '/images/noimage/one_noimage.png' %>
             <% end %>
