@@ -53,7 +53,7 @@
           <!-- product image -->
           <figure>
             <% unless @product.images.empty? %>
-              <a href="" class="fancybox"><%= image_tag @product.images.first.attachment.url(:large), id: 'product_image' %></a>
+              <a href="<%= image_tag @product.images.first.attachment.url(), id: 'product_image' %>" class="fancybox"><%= image_tag @product.images.first.attachment.url(:large), id: 'product_image' %></a>
             <% else %>
               <%= image_tag '/images/noimage/one_noimage.png' %>
             <% end %>
