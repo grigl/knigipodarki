@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130110112246) do
+ActiveRecord::Schema.define(:version => 20130225145554) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -236,19 +236,19 @@ ActiveRecord::Schema.define(:version => 20130110112246) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
-    t.text     "body",                   :limit => 16777215
+    t.text     "body",                         :limit => 16777215
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "show_in_header",                             :default => false, :null => false
-    t.boolean  "show_in_footer",                             :default => false, :null => false
+    t.boolean  "show_in_header",                                   :default => false,                :null => false
+    t.boolean  "show_in_footer",                                   :default => false,                :null => false
     t.string   "foreign_link"
-    t.integer  "position",                                   :default => 1,     :null => false
-    t.boolean  "visible",                                    :default => true
+    t.integer  "position",                                         :default => 1,                    :null => false
+    t.boolean  "visible",                                          :default => true
     t.string   "meta_keywords"
     t.string   "meta_description"
     t.string   "layout"
-    t.boolean  "show_in_sidebar",                            :default => false, :null => false
+    t.boolean  "show_in_sidebar",                                  :default => false,                :null => false
     t.text     "about_knigipodarki"
     t.text     "about_contacts"
     t.text     "payment_robokassa"
@@ -260,6 +260,17 @@ ActiveRecord::Schema.define(:version => 20130110112246) do
     t.text     "business_for_suppliers"
     t.text     "business_details"
     t.text     "business_wholesale"
+    t.string   "about_knigipodarki_title",                         :default => "Магазин"
+    t.string   "about_contacts_title",                             :default => "Контакты"
+    t.string   "payment_robokassa_title",                          :default => "Робокасса"
+    t.string   "payment_courier_title",                            :default => "Наличными курьреры"
+    t.string   "delivery_courier_title",                           :default => "Курьерская"
+    t.string   "delivery_ems_title",                               :default => "EMS Почта России"
+    t.string   "delivery_postamat_title",                          :default => "Постамат"
+    t.string   "delivery_pickup_title",                            :default => "Самовывоз"
+    t.string   "business_for_suppliers_title",                     :default => "Поставщикам"
+    t.string   "business_details_title",                           :default => "Реквизиты"
+    t.string   "business_wholesale_title",                         :default => "Опт"
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug"

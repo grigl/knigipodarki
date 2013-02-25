@@ -2,15 +2,37 @@
 
 <%= f.inputs do %>
   <%= f.input :title %>
-  <%= f.input :about_knigipodarki, label: 'Магазин' %>
-  <%= f.input :about_contacts, label: 'Контакты' %>
-  <%= f.input :payment_robokassa, label: 'Робокасса' %>
-  <%= f.input :payment_courier, label: 'Наличными курьеру' %>
-  <%= f.input :delivery_courier, label: 'Курьерская' %>
-  <%= f.input :delivery_ems, label: 'EMS Почта России' %>
-  <%= f.input :delivery_postamat, label: 'Постамат' %>
-  <%= f.input :delivery_pickup, label: 'Самовывоз' %>
-  <%= f.input :business_for_suppliers, label: 'Поставщикам' %>
-  <%= f.input :business_details, label: 'Реквизиты' %>
-  <%= f.input :business_wholesale, label: 'Опт' %>
+
+  <%= f.input :about_knigipodarki_title %>  
+  <%= f.input :about_knigipodarki %>
+  
+  <%= f.input :about_contacts_title %>  
+  <%= f.input :about_contacts %>
+  
+  <%= f.input :payment_robokassa_title %>  
+  <%= f.input :payment_robokassa %>
+  
+  <%= f.input :payment_courier_title %>
+  <%= f.input :payment_courier %>
+  
+  <%= f.input :delivery_courier_title %>
+  <%= f.input :delivery_courier %>
+  
+  <%= f.input :delivery_ems_title %>
+  <%= f.input :delivery_ems %>
+  
+  <%= f.input :delivery_postamat_title %>
+  <%= f.input :delivery_postamat %>
+  
+  <%= f.input :delivery_pickup_title %>
+  <%= f.input :delivery_pickup %>
+  
+  <%= f.input :business_for_suppliers_title %>
+  <%= f.input :business_for_suppliers %>
+  
+  <%= f.input :business_details_title %>
+  <%= f.input :business_details %>
+  
+  <%= f.input :business_wholesale_title %>
+  <%= f.input :business_wholesale %>
 <% end %>
