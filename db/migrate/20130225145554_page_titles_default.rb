@@ -5,7 +5,7 @@ class PageTitlesDefault < ActiveRecord::Migration
     change_column_default :pages, :about_knigipodarki_title,'Магазин'
     change_column_default :pages, :about_contacts_title,'Контакты'
     change_column_default :pages, :payment_robokassa_title,'Робокасса'
-    change_column_default :pages, :payment_courier_title,'Наличными курьреры'
+    change_column_default :pages, :payment_courier_title,'Наличными курьреру'
     change_column_default :pages, :delivery_courier_title,'Курьерская'
     change_column_default :pages, :delivery_ems_title,'EMS Почта России'
     change_column_default :pages, :delivery_postamat_title,'Постамат'
