@@ -94,6 +94,8 @@ Product.class_eval do
   scope :not_deleted,     where("products.deleted_at is NULL")
 
   scope :published, where('products.is_published is TRUE')
+  
+  scope :published_ant_not_deleted, where('products.deleted_at is NULL AND products.is_published is TRUE')
 
   scope :available,       lambda { |*on| where("products.available_on <= ?", on.first || Time.zone.now ) }
 
