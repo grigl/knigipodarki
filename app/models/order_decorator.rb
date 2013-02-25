@@ -1,6 +1,6 @@
 Order.class_eval do
   def available_payment_methods
-    return self.shipping_method.payment_methods.where("active = 1 AND display_on = 'front_end'")
+    return self.shipping_method.payment_methods.where("active = 1 AND (display_on = 'front_end' or display_on = '') ")
   end
   
   def payment
