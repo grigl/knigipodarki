@@ -1,4 +1,4 @@
-<% @tags = Tag.all.select {|tag| tag.products.not_deleted.present? } %>
+<% @tags = Tag.all.select {|tag| tag.products.published_ant_not_deleted.present? } %>
 <!-- .content -->
 <section class="site-content">
   <div class="white-wrap">
