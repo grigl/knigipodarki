@@ -105,7 +105,7 @@
       <% if @product.product_type == 'not_book' %>
         <p>
           <%= f.label :material, 'Материал' %><br />
-          <%= f.select :material, [['ПВХ','pvh'],['текстиль', 'textile'],['кожа','leather']] , :include_blank => true %>&ensp;*для товаров категории "на паспорт"
+          <%= f.select :material, [['ПВХ','pvh'],['кожзам', 'textile'],['кожа','leather']] , :include_blank => true %>&ensp;*для товаров категории "на паспорт"
         </p>
       <% end %>
       <% if @product.product_type == 'book' %>
