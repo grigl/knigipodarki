@@ -32,7 +32,7 @@
         <%- locals = {:shipping_method => shipping_method} %>
         <%= hook :admin_shipping_methods_index_rows, locals do %>
           <td><%= shipping_method.name %></td>
-          <% if shipping_method.zone do %>
+          <% if shipping_method.zone %>
           <td><%= shipping_method.zone.name %></td>
           <% else %>
           <td></td>
