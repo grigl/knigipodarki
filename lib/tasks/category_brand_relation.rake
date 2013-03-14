@@ -15,7 +15,7 @@ namespace :relation do
           subcategories = brand_categories(brand, category)
           subcategories.each do|subcategory|
             if subcategory.id != 2 then
-              links[brand.id][subcategory.id] = '<a href="'+permalink+'/'+[brand.permalink_end, category.permalink_end, subcategory.permalink_end].join('/')+'">'+subcategory.name+'</a>'
+              links[brand.id][subcategory.name] = '<a href="'+permalink+'/'+[brand.permalink_end, category.permalink_end, subcategory.permalink_end].join('/')+'">'+subcategory.name+'</a>'
             end
           end        
         end
@@ -24,7 +24,7 @@ namespace :relation do
     puts 'Filling database'
     links.each do|brand_id, brand_link|
       CategoryBrand.where('brand_id = ?', brand_id).delete_all()
-      brand_link.each do|category_id, link|
+      brand_link.sort.map do|category_id, link|
         category_brand = CategoryBrand.new
         category_brand.brand_id = brand_id
         category_brand.link = link
