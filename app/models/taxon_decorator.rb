@@ -34,6 +34,11 @@ Taxon.class_eval do
     fs << ProductFilters.brand_filter if ProductFilters.respond_to?(:brand_filter)
     fs
   end
+  
+  def links
+    links = CategoryBrand.where('brand_id = ?', self.id)
+    return links
+  end
 
   def destroy_icon_if_needed
     return unless self.destroy_icon == '1' && self.icon

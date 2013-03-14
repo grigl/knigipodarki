@@ -1,5 +1,4 @@
 <!-- .content -->
-<% cache("taxons_" + @taxon.id.to_s, :expires_in => 3.hours) do %>
 <section class="site-content">
   <div class="white-wrap">
     <div class="wrap">
@@ -14,21 +13,9 @@
         <article>
           <h2><%= link_to brand.name, brand.permalink %></h2>
           <ul>
-            <% links = Hash.new %>
-            <% brand_categories(brand).each do |category| %>
-            <!-- <li><%= link_to category.name, crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end) %></li> -->
-            <% if category.children.present? %>
-            	<% brand_categories(brand, category).each do |subcategory| %>
-            		<% if subcategory.id != 2 %>
-            			<% links[subcategory.name] = link_to subcategory.name,
-            												 crosstaxons_path(brand: brand.permalink_end, category: category.permalink_end, subcategory: subcategory.permalink_end) %>
-            		<% end %>
-            	<% end %>
-            <% end %>
-          <% end %>
-          <% links.sort.map do |key,value|%>
-          	<li><%= value %></li>
-          <% end %>
+          	<% brand.links.each do|link|%>
+          		<li><%=raw link.link %></li>
+          	<% end %>
           </ul>
         </article>
         <!-- /item -->
@@ -43,5 +30,4 @@
   </div>
   <!-- /.white-wrap -->
 </section>
-<% end %>
 <!-- /.content -->
