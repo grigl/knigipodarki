@@ -24,8 +24,10 @@ Gateway::RobokassaController.class_eval do
       payment.state = "completed"
       payment.amount = params["OutSum"].to_f
       payment.save
+      @order.payment_state = 'paid'
       @order.save!
       @order.state = "complete"
+      @order.save!
       @order.update!
       
       render :text => "OK#{@order.id}"
