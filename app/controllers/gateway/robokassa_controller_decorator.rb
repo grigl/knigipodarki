@@ -20,7 +20,8 @@ Gateway::RobokassaController.class_eval do
 
   def result
     if @order && @gateway && valid_signature?(@gateway.options[:password2])
-      payment = @order.payments.build(:payment_method => @gateway)
+      @payment_method = PaymentMethod.where('type = ?', Gateway::Robokassa)
+      payment = @order.payments.build(:payment_method => @payment_method)
       payment.state = "complete"
       payment.amount = params["OutSum"].to_f
       payment.save
