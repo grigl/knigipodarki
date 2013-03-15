@@ -3,6 +3,14 @@ Order.class_eval do
     return self.shipping_method.payment_methods.where("active = 1 AND (display_on = 'front_end' or display_on = '') ")
   end
   
+  def payment_method
+    if payment and payment.payment_method
+      payment.payment_method
+    else
+      available_payment_methods.first
+    end
+  end  
+  
   def payment
     payments.last
   end 
