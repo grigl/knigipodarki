@@ -26,7 +26,6 @@ Gateway::RobokassaController.class_eval do
       payment.save
       @order.payment_state = 'paid'
       @order.save!
-      @order.state = "complete"
       @order.next! until @order.state == "complete"
       @order.update!
       
