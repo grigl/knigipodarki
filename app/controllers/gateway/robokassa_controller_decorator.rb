@@ -25,7 +25,7 @@ Gateway::RobokassaController.class_eval do
       payment.amount = params["OutSum"].to_f
       payment.save
       @order.save!
-      @order.next! until @order.state == "complete"
+      @order.state = "complete"
       @order.update!
       
       render :text => "OK#{@order.id}"
