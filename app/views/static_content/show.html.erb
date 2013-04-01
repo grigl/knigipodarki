@@ -67,8 +67,8 @@
           <!-- item -->
           <article>
             <img src="/images/about_delivery.png" alt="">
-            <h2 class=""><%= @page.delivery_courier_title.html_safe rescue '' %></h2>
-            <p>
+            <h2 class=""><a href="javascript: void(0);" style="border-bottom: 1px solid black;" onclick="$('#delivery_courier_body').slideToggle();"><%= @page.delivery_courier_title.html_safe rescue '' %></a></h2>
+            <p id="delivery_courier_body">
               <%= @page.delivery_courier.html_safe rescue '' %>
             </p>
           </article>
@@ -82,8 +82,8 @@
               <%= @page.delivery_ems.html_safe rescue '' %>
             </p>
             <img src="/images/about_postamat.png" alt="">
-            <h2 class=""><%= @page.delivery_postamat_title.html_safe rescue '' %></h2>
-            <p>
+            <h2 class=""><a href="javascript: void(0);" style="border-bottom: 1px solid black;" onclick="$('#delivery_postamat_body').slideToggle();"><%= @page.delivery_postamat_title.html_safe rescue '' %></a></h2>
+            <p id="delivery_postamat_body">
               <%= @page.delivery_postamat.html_safe rescue '' %>
             </p>
             <img src="/images/about_self.png" alt="">
